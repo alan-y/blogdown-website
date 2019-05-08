@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alan-y</title>
+    <link>/authors/admin/</link>
+    <description>Recent content on alan-y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emergence of Novel Psychoactive Substance injecting associated with rapid rise in the population prevalence of hepatitis C virus</title>
+      <link>/publication/journal-article_nps_hcv/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_nps_hcv/</guid>
+      <description>This study provides one of the first epidemiological analyses of the association between NPS injecting and HCV among a population level sample of PWID.</description>
+    </item>
+    
+    <item>
+      <title>Association between universal hepatitis B prison vaccination, vaccine uptake and hepatitis B infection among people who inject drugs</title>
+      <link>/publication/journal-article_hbv_prison/</link>
+      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_hbv_prison/</guid>
+      <description>This study examines the impact of the HBV vaccination programme for prisoners in Scotland among people who inject drugs (PWID) in the community</description>
+    </item>
+    
+    <item>
+      <title>Assessing the impact of a temporary class drug order on ethylphenidate-related infections among people who inject drugs in Lothian, Scotland: an interrupted time-series analysis</title>
+      <link>/publication/journal-article_nps_tcdo/</link>
+      <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_nps_tcdo/</guid>
+      <description>In April 2015, the UK government enacted a temporary class drug order (TCDO) on ethylphenidate in response to reported harms associated with its use, in particular an outbreak of infections among people who inject drugs (PWID) in Lothian, Scotland.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/authors/admin/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/admin/</guid>
+      <description>Alan Yeung is a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland (HPS). His principal research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. At HPS, he provides analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV. He is also an advocate for the widespread adoption of open-source statistical software within the NHS, particularly for the use of R.</description>
+    </item>
+    
+  </channel>
+</rss>

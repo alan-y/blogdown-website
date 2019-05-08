@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RStudio on alan-y</title>
+    <link>/tags/rstudio/</link>
+    <description>Recent content in RStudio on alan-y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>phiproject</title>
+      <link>/project/phiproject/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/phiproject/</guid>
+      <description>A project template type for R that can be configured using the RStudio IDE.</description>
+    </item>
+    
+    <item>
+      <title>objectremover RStudio Addin</title>
+      <link>/project/external-project/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/external-project/</guid>
+      <description>An &amp;lsquo;RStudio&amp;rsquo; addin to assist with removing objects from the global environment. Features include removing objects according to name patterns and object type.</description>
+    </item>
+    
+  </channel>
+</rss>
