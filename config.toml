@@ -5,7 +5,7 @@
 # Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
 
 # Title of your site
-title = "alan-y"
+title = "Alan Yeung"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
@@ -13,7 +13,7 @@ baseurl = "https://alan-y.netlify.com/"
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = ""
+copyright = "&copy; 2019 Alan Yeung"
 
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
@@ -52,6 +52,22 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 	angledQuotes = false
 	latexDashes = true
   extensions = ["backslashLineBreak"]
+  
+[params]
+  name = "Alan Yeung"
+  description = ""
+  role = "Research Fellow, School of Health and Life Sciences"
+  organization = "Glasgow Caledonian University"
+  organization_url = "https://www.gcu.ac.uk/"
+  avatar = ""
+  email = "alan_y987@hotmail.com"
+  address = ""
+  office_hours = ""
+  phone = ""
+  skype = ""
+  telegram = ""
+  twitter = "alan_y"
+  github = "alan-y"
 
 [imaging]
   resampleFilter = "lanczos"
