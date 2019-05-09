@@ -21,9 +21,9 @@ organizations:
   url: "http://researchonline.gcu.ac.uk/portal/en/persons/alan-yeung(614524b9-0129-49e1-802b-34bf2f9f7c8c).html"
 role: Research Fellow
 social:
-- icon: envelope
-  icon_pack: fas
-  link: '#contact'
+#- icon: envelope
+#  icon_pack: fas
+#  link: '#contact'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/alan_y
@@ -33,6 +33,15 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/alan-y
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/alanyeung1
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0001-5226-3695
+- icon: researchgate
+  icon_pack: fab
+  link: https://www.researchgate.net/profile/Alan_Yeung2
 superuser: true
 user_groups:
 - Researchers

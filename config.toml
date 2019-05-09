@@ -52,22 +52,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 	angledQuotes = false
 	latexDashes = true
   extensions = ["backslashLineBreak"]
-  
-[params]
-  name = "Alan Yeung"
-  description = ""
-  role = "Research Fellow, School of Health and Life Sciences"
-  organization = "Glasgow Caledonian University"
-  organization_url = "https://www.gcu.ac.uk/"
-  avatar = ""
-  email = "alan_y987@hotmail.com"
-  address = ""
-  office_hours = ""
-  phone = ""
-  skype = ""
-  telegram = ""
-  twitter = "alan_y"
-  github = "alan-y"
 
 [imaging]
   resampleFilter = "lanczos"
