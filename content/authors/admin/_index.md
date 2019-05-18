@@ -48,4 +48,4 @@ user_groups:
 - Visitors
 ---
 
-Alan Yeung is a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland (HPS). His principal research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. At HPS, he provides analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV.  He is also an advocate for the widespread adoption of open-source statistical software within the NHS, particularly for the use of R.
+I am a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland (HPS). My main research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. At HPS, I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV.  I am also an advocate for the widespread adoption of open-source statistical software within the NHS, particularly for the use of R.
