@@ -1,0 +1,21 @@
+---
+title: Post Number One
+author: Alan Yeung
+date: '2019-05-19'
+slug: post-number-one
+categories: ["Personal"]
+tags: []
+image:
+  caption: ''
+  focal_point: ''
+---
+
+I suppose this is my *hello world* post -- I've never been good at getting my messages out there (I'm minimally active on social media, etc) but this is part of my attempt to rectify that a little. I have wanted to start a blog for a long time and in fact, I previously started one but failed to keep it going (hopefully this time it'll be different!). I had called that one 'Quietly Analysing' which was mostly inspired from a quote by Ian Hacking in 1936.
+
+> *The quiet statisticians have changed our world - not by discovering new facts or technical developments but by changing the ways we reason, experiment and form our opinions about it.*
+
+It's still one of my favourite quotes about statistics but I won't be continuing with that name as this will be more of a personal/professional website for myself. That blog no longer exists so this is effectively a new start for me. I intend to use this website as a place where I can refer others to my academic and analytical work/projects (e.g. at conferences and for current/future employers) but also as a place where I can write up things to aid my own learning. Occasionally I may write something personal. This point about writing is important as I've always felt that I need to get better at writing so hopefully just trying to do this more will help me improve.  
+  
+As part of this, I am also hoping to contribute more as a member of the R community -- a community that I have always found to be warm, friendly and welcoming. Since I am from Scotland I have to give a particular mention to [EdinbR](http://edinbr.org), who have been doing a great job of promoting R in Scotland (and I have to shamefully admit that I haven't been able to be a part of as much as I wish).    
+  
+I am still fairly new to using web tools so still count myself as a beginner in this area and I'm basically learning as I go. Therefore, I really have to acknowledge some people who have created amazing tools and resources that have helped me immensely in getting this website up and running. I am very grateful to [Yihui Xie](https://yihui.name/en) for creating [blogdown](https://bookdown.org/yihui/blogdown) (and so many other fantastic tools such as [RMarkdown](https://rmarkdown.rstudio.com) and [bookdown](https://bookdown.org)) which I am using to create this website; to [George Cushen](https://georgecushen.com) for the [Hugo Academic template](https://github.com/gcushen/hugo-academic); to [Alison Presmanes Hill](https://alison.rbind.io), [Amber Thomas](https://amber.rbind.io) and [Leslie Myint](https://lmyint.github.io) for their useful tips in setting up with blogdown and the Hugo Acadmic template. 
