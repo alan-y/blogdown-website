@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: My research interests include the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field.
+bio: I am an applied statistician, carrying out research mainly on the epidemiology and prevention of blood borne viruses. I have a general interest in statistical methods and am also a supporter of open-source software, particularly for the use of R.
 education:
   courses:
   - course: PhD in Statistics
@@ -17,9 +17,9 @@ interests:
 - Epidemiology
 name: Alan Yeung
 organizations:
-- name: Glasgow Caledonian University
+- name: Glasgow Caledonian University and Health Protection Scotland
   url: "http://researchonline.gcu.ac.uk/portal/en/persons/alan-yeung(614524b9-0129-49e1-802b-34bf2f9f7c8c).html"
-role: Research Fellow
+role: Research Fellow and Analyst
 social:
 #- icon: envelope
 #  icon_pack: fas
@@ -48,4 +48,4 @@ user_groups:
 - Visitors
 ---
 
-I am a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland (HPS). My main research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. At HPS, I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV.  I am also an advocate for the widespread adoption of open-source statistical software within the NHS, particularly for the use of R.
+I am a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland (HPS). My main research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. At HPS, I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV.  I am also a supporter for the widespread adoption of open-source statistical software within the NHS, particularly for the use of R.
