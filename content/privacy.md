@@ -8,4 +8,4 @@ share: false
 title: Privacy Policy
 ---
 
-...
+Any original content created by me for this website such as blog posts are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0).
