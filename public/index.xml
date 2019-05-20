@@ -165,6 +165,18 @@
     </item>
     
     <item>
+      <title>Redoc</title>
+      <link>/talk/redoc/</link>
+      <pubDate>Tue, 26 Mar 2019 11:00:00 +0000</pubDate>
+      
+      <guid>/talk/redoc/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://noamross.github.io/redoc&#34; target=&#34;_blank&#34;&gt;redoc&lt;/a&gt; is an R package by Noam Ross that enables a two-way R Markdown-Microsoft Word workflow. It generates Word documents that can be de-rendered back into R Markdown, retaining edits on the Word document, including tracked changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE redoc was updated on May, 2019 so some aspects of the talk are now out-of-date.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>objectremover RStudio Addin</title>
       <link>/project/external-project/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>

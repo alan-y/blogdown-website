@@ -1,0 +1,34 @@
+---
+abstract: I briefly talk about and demo my experience of using the (currently experimental) redoc R package for dealing with comments and tracked changes in MS Word documents produced by RMarkdown.
+all_day: false
+authors: []
+date: "2019-03-26T11:00:00Z"
+date_end: "2019-03-26T12:30:00Z"
+event: PHI useR Group
+event_url: https://github.com/Health-SocialCare-Scotland/PHI-useR-group
+featured: false
+image:
+  caption: ''
+  focal_point: Right
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/alan_y
+location: Edinburgh, Scotland
+math: true
+projects:
+publishDate: "2019-03-26T00:00:00Z"
+slides:
+summary: A quick summary and demo of my experience of using the redoc package.
+tags: []
+title: Redoc
+url_code: ""
+url_pdf: ""
+url_slides: "https://alan-y.github.io/redoc-xaringan/redoc_slides_AY#1"
+url_video: ""
+---
+
+[redoc](https://noamross.github.io/redoc) is an R package by Noam Ross that enables a two-way R Markdown-Microsoft Word workflow. It generates Word documents that can be de-rendered back into R Markdown, retaining edits on the Word document, including tracked changes.  
+  
+**UPDATE redoc was updated on May, 2019 so some aspects of the talk are now out-of-date.**

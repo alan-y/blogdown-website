@@ -21,5 +21,14 @@
       <description>An example talk using Academic&amp;rsquo;s Markdown slides feature.</description>
     </item>
     
+    <item>
+      <title>Redoc</title>
+      <link>/talk/redoc/</link>
+      <pubDate>Tue, 26 Mar 2019 11:00:00 +0000</pubDate>
+      
+      <guid>/talk/redoc/</guid>
+      <description>A quick summary and demo of my experience of using the redoc package.</description>
+    </item>
+    
   </channel>
 </rss>
