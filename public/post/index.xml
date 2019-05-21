@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Glasgow R User Group</title>
+      <link>/post/glasgow-r-user-group/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/glasgow-r-user-group/</guid>
+      <description>I am very excited to hear that there are attempts to create a brand new R user group in Glasgow! I had just talked in Post Number One about my guilt at not having been able to attend EdinbR as often as I wished but it should be much easier for me to find time to attend a group based in Glasgow. If you are based in (or near) Glasgow and would like to join the R community, this sounds like the place to be – I hope this idea takes off!</description>
+    </item>
     
     <item>
       <title>Post Number One</title>
