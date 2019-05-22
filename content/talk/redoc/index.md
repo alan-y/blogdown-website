@@ -31,4 +31,4 @@ url_video: ""
 
 [redoc](https://noamross.github.io/redoc) is an R package by Noam Ross that enables a two-way R Markdown-Microsoft Word workflow. It generates Word documents that can be de-rendered back into R Markdown, retaining edits on the Word document, including tracked changes.  
   
-**UPDATE redoc was updated on May, 2019 so some aspects of the talk are now out-of-date.**
+**UPDATE: redoc was updated on May 5, 2019 so some aspects of the talk are now out-of-date. For example `undoc()` has been replaced by `dedoc()` and `redoc_diff()` lets you view changes more easily.**
