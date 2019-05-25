@@ -4,7 +4,7 @@ author: Alan Yeung
 date: '2019-05-19'
 slug: post-number-one
 categories: ["Personal"]
-tags: []
+tags: ["blogdown"]
 image:
   caption: ''
   focal_point: ''

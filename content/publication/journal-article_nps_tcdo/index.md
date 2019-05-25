@@ -17,17 +17,15 @@ slides:
 summary: In April 2015, the UK government enacted a temporary class drug order (TCDO) on ethylphenidate in response to reported harms associated with its use, in particular an outbreak of infections among people who inject drugs (PWID) in Lothian, Scotland.
 tags:
 - NPS
+- PWID
+- time-series
 title: 'Assessing the impact of a temporary class drug order on ethylphenidate-related infections among people who inject drugs in Lothian, Scotland: an interrupted time-series analysis'
 url_code: ""
 url_dataset: ""
 url_pdf: http://researchonline.gcu.ac.uk/portal/files/25096133/McAuley_nps_report_20170529.pdf
 url_poster: ""
 url_project: ""
-url_slides: "Alan-Yeung-Thursday-AM.pptx"
+url_slides: "NPS_TCDO_RSS2017.pptx"
 url_source: ""
 url_video: ""
 ---
-
-{{% alert note %}}
-Supplementary notes can be added here, including [code and math](https://sourcethemes.com/academic/docs/writing-markdown-latex/).
-{{% /alert %}}

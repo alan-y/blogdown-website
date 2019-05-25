@@ -14,10 +14,10 @@
     
     <item>
       <title>R Training Resources and Tips</title>
-      <link>/project/internal-project/</link>
+      <link>/project/r-resources-tips/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/project/internal-project/</guid>
+      <guid>/project/r-resources-tips/</guid>
       <description>A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.</description>
     </item>
     
@@ -27,16 +27,16 @@
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/project/phiproject/</guid>
-      <description>A project template type for R that can be configured using the RStudio IDE.</description>
+      <description>An Rstudio project template incorporating some best practices.</description>
     </item>
     
     <item>
       <title>objectremover RStudio Addin</title>
-      <link>/project/external-project/</link>
+      <link>/project/objectremover/</link>
       <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>/project/external-project/</guid>
-      <description>An &amp;lsquo;RStudio&amp;rsquo; addin to assist with removing objects from the global environment. Features include removing objects according to name patterns and object type.</description>
+      <guid>/project/objectremover/</guid>
+      <description>An RStudio addin to assist with removing objects from the global environment. Features include removing objects according to name patterns and object type.</description>
     </item>
     
   </channel>

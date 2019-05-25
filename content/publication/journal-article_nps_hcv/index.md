@@ -17,6 +17,7 @@ slides: ""
 summary: This study provides one of the first epidemiological analyses of the association between NPS injecting and HCV among a population level sample of PWID.
 tags:
 - NPS
+- HCV
 title: Emergence of Novel Psychoactive Substance injecting associated with rapid rise in the population prevalence of hepatitis C virus
 url_code: ""
 url_dataset: ""

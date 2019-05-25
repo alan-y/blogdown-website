@@ -13,6 +13,9 @@ slides: example
 summary: A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.
 tags:
 - R
+- training
+- tidyverse
+- bookdown
 title: R Training Resources and Tips
 url_code: ""
 url_pdf: ""

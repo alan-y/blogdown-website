@@ -17,6 +17,9 @@ slides: ""
 summary: This study examines the impact of the HBV vaccination programme for prisoners in Scotland among people who inject drugs (PWID) in the community
 tags:
 - HBV
+- PWID
+- prison
+- vaccination
 title: Association between universal hepatitis B prison vaccination, vaccine uptake and hepatitis B infection among people who inject drugs
 url_code: ""
 url_dataset: ""

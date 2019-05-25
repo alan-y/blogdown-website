@@ -5,7 +5,7 @@ date: '2019-05-21'
 slug: glasgow-r-user-group
 categories:
   - R
-tags: []
+tags: ["R"]
 image:
   caption: ''
   focal_point: ''

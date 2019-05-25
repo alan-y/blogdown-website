@@ -4,7 +4,7 @@ external_link: https://cran.r-project.org/web/packages/objectremover/index.html
 image:
   caption: objectremover RStudio Addin
   focal_point: Smart
-summary: An 'RStudio' addin to assist with removing objects from the global environment. Features include removing objects according to name patterns and object type.
+summary: An RStudio addin to assist with removing objects from the global environment. Features include removing objects according to name patterns and object type.
 tags:
 - R
 - RStudio

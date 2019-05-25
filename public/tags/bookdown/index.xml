@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bookdown on Alan Yeung</title>
+    <link>/tags/bookdown/</link>
+    <description>Recent content in bookdown on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Tue, 07 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/bookdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Training Resources and Tips</title>
+      <link>/project/r-resources-tips/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/r-resources-tips/</guid>
+      <description>A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.</description>
+    </item>
+    
+  </channel>
+</rss>

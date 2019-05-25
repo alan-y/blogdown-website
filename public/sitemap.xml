@@ -19,18 +19,8 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+    <lastmod>2019-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/talk/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -56,6 +46,18 @@
   </url>
   
   <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2019-05-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-05-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/bio/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
   </url>
@@ -72,24 +74,36 @@
   </url>
   
   <url>
+    <loc>/tags/blogdown/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/project/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>/project/r-resources-tips/</loc>
+    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/bookdown/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/project/internal-project/</loc>
+    <loc>/tags/tidyverse/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/tags/training/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -114,6 +128,12 @@
   <url>
     <loc>/publication/journal-article_nps_hcv/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hcv/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -145,24 +165,18 @@
   </url>
   
   <url>
+    <loc>/talk/</loc>
+    <lastmod>2019-03-26T11:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/talk/redoc/</loc>
     <lastmod>2019-03-26T11:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/external-project/</loc>
+    <loc>/project/objectremover/</loc>
     <lastmod>2019-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/slides/example/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -182,8 +196,32 @@
   </url>
   
   <url>
+    <loc>/tags/pwid/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/prison/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/vaccination/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/publication/journal-article_nps_tcdo/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/time-series/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
