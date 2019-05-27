@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open-data</title>
+      <link>/tags/open-data/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-data/</guid>
       <description></description>
     </item>
     

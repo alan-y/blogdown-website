@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -81,6 +81,21 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CKAN API</title>
+      <link>/post/ckan-api/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ckan-api/</guid>
+      <description>
+
+
+&lt;p&gt;I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing these up into blog posts – at the very least, this should make it easier to find things later! To start this process, I am writing a short post here about how to download data from the CKAN API directly into R – &lt;a href=&#34;https://ckan.org&#34;&gt;CKAN&lt;/a&gt; is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that &lt;a href=&#34;https://www.opendata.nhs.scot&#34;&gt;NHS Scotland has chosen to host their open data&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It is becoming increasingly important for public sector organisations to make their data open. This is clear from the &lt;a href=&#34;https://www.gov.scot/publications/open-data-strategy&#34;&gt;Scottish Government’s open data strategy&lt;/a&gt;, who believe it not only aids transparency, but should also result in wider social and economic benefits in the long run. The level of open data provision by organisations in Scotland is currently lagging behind other parts of the UK but encouragingly, the situation is improving (see &lt;a href=&#34;https://codethecity.co.uk/2019/02/24/scotlands-open-data-february-2019-an-update&#34;&gt;this blog post by Ian Watt&lt;/a&gt; for more on this). NHS Scotland has contributed to this improvement by launching their open data platform – I will simply refer to this as CKAN from hereafter.&lt;/p&gt;
+&lt;p&gt;All of the data held on this platform is licensed under the &lt;a href=&#34;http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3&#34;&gt;UK Open Government Licence (OGL)&lt;/a&gt; (what you can and can’t do with the data is well described there). Each dataset held on CKAN is assigned a &lt;em&gt;resource ID&lt;/em&gt; which can be found in the ‘Additional Information’ section once you are on a dataset’s page. It is essential to know the resource ID of the dataset you are interested in when you are working with the CKAN API.&lt;/p&gt;
 </description>
     </item>
     
