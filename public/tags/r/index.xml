@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>CKAN API</title>
+      <title>Getting Open Data into R from CKAN</title>
       <link>/post/ckan-api/</link>
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/ckan-api/</guid>
-      <description>I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing these up into blog posts – at the very least, this should make it easier to find things later! To start this process, I am writing a short post here about how to download data from the CKAN API directly into R – CKAN is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that NHS Scotland has chosen to host their open data.</description>
+      <description>Open Data in ScotlandCKAN Resource IDsGetting Data into R from CKANQueriesI’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!</description>
     </item>
     
     <item>

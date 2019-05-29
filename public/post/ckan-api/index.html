@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing these up into blog posts – at the very least, this should make it easier to find things later! To start this process, I am writing a short post here about how to download data from the CKAN API directly into R – CKAN is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that NHS Scotland has chosen to host their open data.">
+  <meta name="description" content="Open Data in ScotlandCKAN Resource IDsGetting Data into R from CKANQueriesI’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/ckan-api/">
@@ -121,8 +121,8 @@
   
   <meta property="og:site_name" content="Alan Yeung">
   <meta property="og:url" content="/post/ckan-api/">
-  <meta property="og:title" content="CKAN API | Alan Yeung">
-  <meta property="og:description" content="I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing these up into blog posts – at the very least, this should make it easier to find things later! To start this process, I am writing a short post here about how to download data from the CKAN API directly into R – CKAN is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that NHS Scotland has chosen to host their open data."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:title" content="Getting Open Data into R from CKAN | Alan Yeung">
+  <meta property="og:description" content="Open Data in ScotlandCKAN Resource IDsGetting Data into R from CKANQueriesI’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-05-27T00:00:00&#43;00:00">
@@ -134,7 +134,7 @@
 
   
 
-  <title>CKAN API | Alan Yeung</title>
+  <title>Getting Open Data into R from CKAN | Alan Yeung</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -457,7 +457,7 @@
   
   
 <div class="article-container pt-3">
-  <h1 itemprop="name">CKAN API</h1>
+  <h1 itemprop="name">Getting Open Data into R from CKAN</h1>
 
   
 
@@ -489,7 +489,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    4 min read
   </span>
   
 
@@ -578,10 +578,61 @@
     <div class="article-style" itemprop="articleBody">
       
 
+<div id="TOC">
+<ul>
+<li><a href="#open-data-in-scotland">Open Data in Scotland</a></li>
+<li><a href="#ckan-resource-ids">CKAN Resource IDs</a></li>
+<li><a href="#getting-data-into-r-from-ckan">Getting Data into R from CKAN</a><ul>
+<li><a href="#queries">Queries</a></li>
+</ul></li>
+</ul>
+</div>
 
-<p>I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing these up into blog posts – at the very least, this should make it easier to find things later! To start this process, I am writing a short post here about how to download data from the CKAN API directly into R – <a href="https://ckan.org">CKAN</a> is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that <a href="https://www.opendata.nhs.scot">NHS Scotland has chosen to host their open data</a>.</p>
-<p>It is becoming increasingly important for public sector organisations to make their data open. This is clear from the <a href="https://www.gov.scot/publications/open-data-strategy">Scottish Government’s open data strategy</a>, who believe it not only aids transparency, but should also result in wider social and economic benefits in the long run. The level of open data provision by organisations in Scotland is currently lagging behind other parts of the UK but encouragingly, the situation is improving (see <a href="https://codethecity.co.uk/2019/02/24/scotlands-open-data-february-2019-an-update">this blog post by Ian Watt</a> for more on this). NHS Scotland has contributed to this improvement by launching their open data platform – I will simply refer to this as CKAN from hereafter.</p>
-<p>All of the data held on this platform is licensed under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">UK Open Government Licence (OGL)</a> (what you can and can’t do with the data is well described there). Each dataset held on CKAN is assigned a <em>resource ID</em> which can be found in the ‘Additional Information’ section once you are on a dataset’s page. It is essential to know the resource ID of the dataset you are interested in when you are working with the CKAN API.</p>
+<p>I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later! To start with, I am writing a short post here about how to download data from the CKAN API directly into R – <a href="https://ckan.org">CKAN</a> is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that <a href="https://www.opendata.nhs.scot">NHS Scotland has chosen to host their open data</a>.</p>
+<div id="open-data-in-scotland" class="section level2">
+<h2>Open Data in Scotland</h2>
+<p>It is becoming increasingly important for public sector organisations to make their data open. In Scotland, this is clear from the <a href="https://www.gov.scot/publications/open-data-strategy">Scottish Government’s open data strategy</a>. They believe that providing open data not only aids transparency, but should also result in wider social and economic benefits in the long run. My opinion generally matches this but I feel that one thing to be wary of is the potential for users to interpret data incorrectly so therefore it is absolutely crucial to provide as much information as possible about the datasets. On balance, the upsides of providing open data should definitely outweigh the downsides, particularly if pragmatic steps are taken to mitigate potential issues around using the data incorrectly or producing misleading analyses.</p>
+<p>Much work needs to be done. The level of open data provision by organisations in Scotland is currently lagging behind other parts of the UK but encouragingly, the situation is improving (see <a href="https://codethecity.co.uk/2019/02/24/scotlands-open-data-february-2019-an-update">this blog post by Ian Watt</a> for more on this). NHS Scotland has contributed to this improvement by launching their open data platform – I will simply refer to this as CKAN from hereafter. All of the data held on this platform is licensed under the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">UK Open Government Licence (OGL)</a> (what you can and can’t do with the data is well described there in detail but to me, the gist of it seems to be that more or less do what you want with the data as long as you properly acknowledge the source).</p>
+</div>
+<div id="ckan-resource-ids" class="section level2">
+<h2>CKAN Resource IDs</h2>
+<p>Each dataset held on CKAN is assigned a <code>resource ID</code> which can be found in the <strong>Additional Information</strong> section once you are on a dataset’s page. It is essential to know the resource ID of the dataset you are interested in when you are working with the CKAN API.</p>
+<p>As an example, let’s say we are interested in downloading data about <a href="https://www.opendata.nhs.scot/dataset/population-estimates/resource/c505f490-c201-44bd-abd1-1bd7a64285ee">Data Zone (2011) Population Estimates</a>, then, the resource ID for this is <code>c505f490-c201-44bd-abd1-1bd7a64285ee</code>. Note that this ID is also contained in the weblink for the dataset.</p>
+</div>
+<div id="getting-data-into-r-from-ckan" class="section level2">
+<h2>Getting Data into R from CKAN</h2>
+<p>Two R packages are required to help with getting data from a CKAN resource directly into R: <code>httr</code> and <code>jsonlite</code>. The <code>httr</code> package is needed to work with the API and <code>jsonlite</code> is needed to convert the downloaded JSON data into a dataframe.</p>
+<p><strong>If you want to make a query on a resource, then you need build this into the URL. This can be done using the API’s own language or using a SQL query.</strong></p>
+<p>If you wanted to download the entire Data Zone (2011) Population Estimates dataset, you only have to attach the resource ID to the end of a web url that interacts with the CKAN API – for example, <a href="https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee" class="uri">https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee</a>. To check that this URL is correct in R, you can check that the status code using <code>GET()</code> and <code>status_code()</code> – if you get a status code of the form ‘2XX’ like 200, then this means it was successful.</p>
+<pre class="r"><code>library(httr)
+library(jsonlite)
+
+url &lt;- &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&quot;
+page &lt;- GET(url) # API request
+status_code(page)
+# [1] 200
+
+# Status codes:
+# 1XX - Informational
+# 2XX - Success!
+# 3XX - Client Error (something’s not right on your end)
+# 4XX - Server Error (something’s not right on their end)</code></pre>
+<p>Now to get the data into R, you need to use <code>fromJSON()</code>. This gives you a list, from which you can extract the actual data out of.</p>
+<pre class="r"><code># Convert from JSON to R object
+dz2011_list &lt;- fromJSON(url)
+dz2011 &lt;- dz2011_list$result$records</code></pre>
+<div id="queries" class="section level3">
+<h3>Queries</h3>
+<p>One of the big benefits of working with the CKAN API is that it lets you download only the data you need from a resource (if you simply wanted the entire dataset, CKAN provides csv files for each dataset which can easily be read into R). If you want to make a query on a resource, then you need build this into the URL. This can be done using the API’s own language or using a SQL query. For example, to download only the first 5 rows, you can use</p>
+<pre class="r"><code>url_5r &lt;- &quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&amp;limit=5&quot;
+dz2011_list_5r &lt;- fromJSON(url_5r)
+dz2011_5r &lt;- dz2011_list_5r$result$records</code></pre>
+<p>SQL queries also work</p>
+<pre class="r"><code>url_sql &lt;- &#39;https://www.opendata.nhs.scot/api/3/action/datastore_search_sql?sql=SELECT%20%22DZ2011%22%20from%20%22c505f490-c201-44bd-abd1-1bd7a64285ee%22&#39;
+dz2011_list_1c &lt;- fromJSON(url_sql)
+dz2011_1c &lt;- dz2011_list_1c$result$records</code></pre>
+</div>
+</div>
 
     </div>
 
@@ -592,6 +643,8 @@
   <a class="badge badge-light" href="/tags/r/">R</a>
   
   <a class="badge badge-light" href="/tags/open-data/">open-data</a>
+  
+  <a class="badge badge-light" href="/tags/api/">API</a>
   
 </div>
 
