@@ -1,0 +1,11 @@
+/*
+body {
+  text-align: justify;
+}
+*/
+
+.article-container {
+  max-width: 820px;
+  padding: 1rem 20px 0 20px;
+  margin: 0 auto 0 auto;
+}

@@ -48,4 +48,6 @@ user_groups:
 - Visitors
 ---
 
+<DIV align="justify">
 I am a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland. My main research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV.  I am also a supporter for the widespread adoption of open-source statistical software within the public sector in Scotland, particularly for the use of R.
+</DIV>

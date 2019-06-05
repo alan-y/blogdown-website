@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -87,65 +87,147 @@
     <item>
       <title>Getting Open Data into R from CKAN</title>
       <link>/post/ckan-api/</link>
-      <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/ckan-api/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preamble&#34;&gt;Preamble&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#open-data-in-scotland&#34;&gt;Open Data in Scotland&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ckan-resource-ids&#34;&gt;CKAN Resource IDs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#getting-data-into-r-from-ckan&#34;&gt;Getting Data into R from CKAN&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#queries&#34;&gt;Queries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#querying-ckan&#34;&gt;Querying CKAN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#querying-with-custom-json&#34;&gt;Querying with Custom JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#querying-with-sql&#34;&gt;Querying with SQL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions-and-further-work&#34;&gt;Conclusions and Further Work&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;I’ve already got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I think it might be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later! To start with, I am writing a short post here about how to download data from the CKAN API directly into R – &lt;a href=&#34;https://ckan.org&#34;&gt;CKAN&lt;/a&gt; is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that &lt;a href=&#34;https://www.opendata.nhs.scot&#34;&gt;NHS Scotland has chosen to host their open data&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;preamble&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Preamble&lt;/h2&gt;
+&lt;p&gt;I’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later! To start with, I am writing a short post here about how to download data from the CKAN API directly into R – &lt;a href=&#34;https://ckan.org&#34;&gt;CKAN&lt;/a&gt; is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that &lt;a href=&#34;https://www.opendata.nhs.scot&#34;&gt;NHS Scotland has chosen to host their open data&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div id=&#34;open-data-in-scotland&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Open Data in Scotland&lt;/h2&gt;
-&lt;p&gt;It is becoming increasingly important for public sector organisations to make their data open. In Scotland, this is clear from the &lt;a href=&#34;https://www.gov.scot/publications/open-data-strategy&#34;&gt;Scottish Government’s open data strategy&lt;/a&gt;. They believe that providing open data not only aids transparency, but should also result in wider social and economic benefits in the long run. My opinion generally matches this but I feel that one thing to be wary of is the potential for users to interpret data incorrectly so therefore it is absolutely crucial to provide as much information as possible about the datasets. On balance, the upsides of providing open data should definitely outweigh the downsides, particularly if pragmatic steps are taken to mitigate potential issues around using the data incorrectly or producing misleading analyses.&lt;/p&gt;
-&lt;p&gt;Much work needs to be done. The level of open data provision by organisations in Scotland is currently lagging behind other parts of the UK but encouragingly, the situation is improving (see &lt;a href=&#34;https://codethecity.co.uk/2019/02/24/scotlands-open-data-february-2019-an-update&#34;&gt;this blog post by Ian Watt&lt;/a&gt; for more on this). NHS Scotland has contributed to this improvement by launching their open data platform – I will simply refer to this as CKAN from hereafter. All of the data held on this platform is licensed under the &lt;a href=&#34;http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3&#34;&gt;UK Open Government Licence (OGL)&lt;/a&gt; (what you can and can’t do with the data is well described there in detail but to me, the gist of it seems to be that more or less do what you want with the data as long as you properly acknowledge the source).&lt;/p&gt;
+&lt;p&gt;It is becoming increasingly important for public sector organisations to make their data open. In Scotland, this is clear from the &lt;a href=&#34;https://www.gov.scot/publications/open-data-strategy&#34;&gt;Scottish Government’s open data strategy&lt;/a&gt;. They believe that providing open data not only aids transparency, but should also result in wider social and economic benefits in the long run. My opinion generally matches this but I feel that one thing to be wary of is the potential for users to interpret data incorrectly so therefore I feel it is absolutely crucial to provide as much information as possible about the datasets (i.e. provide comprehensive metadata). On balance, the upsides of providing open data should definitely outweigh the downsides, particularly if pragmatic steps are taken to mitigate potential issues such as using the data incorrectly which can lead to producing misleading analyses.&lt;/p&gt;
+&lt;p&gt;Much work needs to be done on the open data front in Scotland. The level of open data provision by organisations in Scotland is currently lagging behind other parts of the UK in terms of the number of open datasets available but also in terms of how up-to-date the datasets provided are (see &lt;a href=&#34;https://codethecity.co.uk/2019/02/24/scotlands-open-data-february-2019-an-update&#34;&gt;this blog post writting in February 2019 by Ian Watt&lt;/a&gt; for more on this). Encouragingly though the situation is improving. NHS Scotland is contributing to this improvement by launching their open data platform (which I will simply refer to as CKAN from hereafter). All of the data held on this platform is licensed under the &lt;a href=&#34;http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3&#34;&gt;UK Open Government Licence (OGL)&lt;/a&gt;. What you can and can’t do with the data is well described there in detail but to me, the gist of it seems to be that you can more or less do what you want with the data as long as you properly acknowledge the source (please read the detail though rather than just taking my word for it!).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ckan-resource-ids&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;CKAN Resource IDs&lt;/h2&gt;
-&lt;p&gt;Each dataset held on CKAN is assigned a &lt;code&gt;resource ID&lt;/code&gt; which can be found in the &lt;strong&gt;Additional Information&lt;/strong&gt; section once you are on a dataset’s page. It is essential to know the resource ID of the dataset you are interested in when you are working with the CKAN API.&lt;/p&gt;
-&lt;p&gt;As an example, let’s say we are interested in downloading data about &lt;a href=&#34;https://www.opendata.nhs.scot/dataset/population-estimates/resource/c505f490-c201-44bd-abd1-1bd7a64285ee&#34;&gt;Data Zone (2011) Population Estimates&lt;/a&gt;, then, the resource ID for this is &lt;code&gt;c505f490-c201-44bd-abd1-1bd7a64285ee&lt;/code&gt;. Note that this ID is also contained in the weblink for the dataset.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;getting-data-into-r-from-ckan&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Getting Data into R from CKAN&lt;/h2&gt;
-&lt;p&gt;Two R packages are required to help with getting data from a CKAN resource directly into R: &lt;code&gt;httr&lt;/code&gt; and &lt;code&gt;jsonlite&lt;/code&gt;. The &lt;code&gt;httr&lt;/code&gt; package is needed to work with the API and &lt;code&gt;jsonlite&lt;/code&gt; is needed to convert the downloaded JSON data into a dataframe.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;If you want to make a query on a resource, then you need build this into the URL. This can be done using the API’s own language or using a SQL query.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If you wanted to download the entire Data Zone (2011) Population Estimates dataset, you only have to attach the resource ID to the end of a web url that interacts with the CKAN API – for example, &lt;a href=&#34;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&#34; class=&#34;uri&#34;&gt;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&lt;/a&gt;. To check that this URL is correct in R, you can check that the status code using &lt;code&gt;GET()&lt;/code&gt; and &lt;code&gt;status_code()&lt;/code&gt; – if you get a status code of the form ‘2XX’ like 200, then this means it was successful.&lt;/p&gt;
+&lt;div id=&#34;querying-ckan&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Querying CKAN&lt;/h2&gt;
+&lt;p&gt;Each dataset held on CKAN is assigned a &lt;code&gt;resource ID&lt;/code&gt; which uniquely identifies it and to make a query on a particular dataset, you will need to know this. The resource ID can be found in the &lt;strong&gt;Additional Information&lt;/strong&gt; section once you are on a dataset’s page. As an example, let’s say we are interested in downloading data about &lt;a href=&#34;https://www.opendata.nhs.scot/dataset/population-estimates/resource/c505f490-c201-44bd-abd1-1bd7a64285ee&#34;&gt;Data Zone (2011) Population Estimates&lt;/a&gt; (this gives data on population estimates for all 6,976 &lt;a href=&#34;https://data.gov.uk/dataset/ab9f1f20-3b7f-4efa-9bd2-239acf63b540/data-zone-boundaries-2011&#34;&gt;data zones (2011) in Scotland&lt;/a&gt; from 2011 to 2017), then, the resource ID for this is &lt;code&gt;c505f490-c201-44bd-abd1-1bd7a64285ee&lt;/code&gt;. Note that this resource ID is also contained in the weblink for the dataset so you do not actually need to navigate down to the Additional Information section to find it.&lt;/p&gt;
+&lt;p&gt;There are &lt;a href=&#34;https://docs.ckan.org/en/ckan-2.2.3/datastore.html#datastore-search-htsql&#34;&gt;three querying methods&lt;/a&gt; that you can use which are Custom JSON, SQL and &lt;a href=&#34;http://htsql.org/doc/overview.html#what-is-htsql&#34;&gt;HTSQL&lt;/a&gt;. Each of these methods supports different features but I will only discuss some basic querying using Custom JSON and SQL here. The basic idea of making a query on the CKAN API is that you build this into the web URL and the form of the URL will depend on the querying method you decide to use.&lt;/p&gt;
+&lt;div id=&#34;querying-with-custom-json&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Querying with Custom JSON&lt;/h3&gt;
+&lt;p&gt;For Custom JSON, the URL should take the form&lt;br /&gt;
+&lt;code&gt;https://www.opendata.nhs.scot/api/3/action/&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;datastore_search?&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;resource_id=long-id-number&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;&amp;amp;your-CustomJSON-query&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Let’s test this in R by downloading the Data Zone (2011) Population Estimates dataset. Two R packages are required to help with this: &lt;code&gt;httr&lt;/code&gt; and &lt;code&gt;jsonlite&lt;/code&gt;. The &lt;code&gt;httr&lt;/code&gt; package is needed to work with the API and &lt;code&gt;jsonlite&lt;/code&gt; is needed to convert the downloaded JSON data into an R dataframe. I will also load the tidyverse package for good measure!&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(httr)
 library(jsonlite)
+library(tidyverse)
 
-url &amp;lt;- &amp;quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&amp;quot;
+url &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+              &amp;quot;datastore_search?&amp;quot;,
+              &amp;quot;resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&amp;quot;)
 page &amp;lt;- GET(url) # API request
-status_code(page)
+status_code(page) # # Check that the call is successful
 # [1] 200
+# This means it was successful
 
 # Status codes:
 # 1XX - Informational
 # 2XX - Success!
 # 3XX - Client Error (something’s not right on your end)
-# 4XX - Server Error (something’s not right on their end)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Now to get the data into R, you need to use &lt;code&gt;fromJSON()&lt;/code&gt;. This gives you a list, from which you can extract the actual data out of.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Convert from JSON to R object
+# 4XX - Server Error (something’s not right on their end)
+
+# Download the JSON data and convert to an R list
 dz2011_list &amp;lt;- fromJSON(url)
-dz2011 &amp;lt;- dz2011_list$result$records&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;queries&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Queries&lt;/h3&gt;
-&lt;p&gt;One of the big benefits of working with the CKAN API is that it lets you download only the data you need from a resource (if you simply wanted the entire dataset, CKAN provides csv files for each dataset which can easily be read into R). If you want to make a query on a resource, then you need build this into the URL. This can be done using the API’s own language or using a SQL query. For example, to download only the first 5 rows, you can use&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_5r &amp;lt;- &amp;quot;https://www.opendata.nhs.scot/api/3/action/datastore_search?resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&amp;amp;limit=5&amp;quot;
-dz2011_list_5r &amp;lt;- fromJSON(url_5r)
-dz2011_5r &amp;lt;- dz2011_list_5r$result$records&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;SQL queries also work&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_sql &amp;lt;- &amp;#39;https://www.opendata.nhs.scot/api/3/action/datastore_search_sql?sql=SELECT%20%22DZ2011%22%20from%20%22c505f490-c201-44bd-abd1-1bd7a64285ee%22&amp;#39;
-dz2011_list_1c &amp;lt;- fromJSON(url_sql)
-dz2011_1c &amp;lt;- dz2011_list_1c$result$records&lt;/code&gt;&lt;/pre&gt;
+# Extract the actual data from the list
+dz2011 &amp;lt;- dz2011_list$result$records
+glimpse(dz2011[, 1:10], width = 50)
+# Observations: 100
+# Variables: 10
+# $ `_id`    &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 1...
+# $ Year     &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 2011...
+# $ DZ2011   &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S...
+# $ DZ2011QF &amp;lt;chr&amp;gt; &amp;quot;d&amp;quot;, &amp;quot;d&amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;...
+# $ Sex      &amp;lt;chr&amp;gt; &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;F...
+# $ AllAges  &amp;lt;int&amp;gt; 2570300, 2729600, 419, 463, ...
+# $ Age0     &amp;lt;int&amp;gt; 30877, 29488, 3, 10, 4, 4, 9...
+# $ Age1     &amp;lt;int&amp;gt; 29388, 28294, 5, 8, 6, 0, 3,...
+# $ Age2     &amp;lt;int&amp;gt; 30189, 29190, 5, 7, 1, 3, 4,...
+# $ Age3     &amp;lt;int&amp;gt; 30173, 29061, 5, 7, 5, 6, 1,...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that when I used the &lt;code&gt;glimpse()&lt;/code&gt; function, I chose to only display the first 10 variables as this dataset contains a lot of variables and I wanted to keep the output fairly concise (I will do the same for the rest of the examples in this post where appropriate). A further thing to note is that the default setting using Custom JSON is to download only the first 100 records from the dataset which you can also see from the number of observations in the output of &lt;code&gt;glimpse()&lt;/code&gt;; if you want to download more rows than this you need to explicitly set this in the query. For example, if you wanted the first 150 rows you can simply add this query into the URL.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_150r &amp;lt;- paste0(url, &amp;quot;&amp;amp;limit=150&amp;quot;)
+dz2011_list_150r &amp;lt;- fromJSON(url_150r)
+dz2011_150r &amp;lt;- dz2011_list_150r$result$records
+glimpse(dz2011_150r[, 1:10], width = 50)
+# Observations: 150
+# Variables: 10
+# $ `_id`    &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 1...
+# $ Year     &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 2011...
+# $ DZ2011   &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S...
+# $ DZ2011QF &amp;lt;chr&amp;gt; &amp;quot;d&amp;quot;, &amp;quot;d&amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;...
+# $ Sex      &amp;lt;chr&amp;gt; &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;F...
+# $ AllAges  &amp;lt;int&amp;gt; 2570300, 2729600, 419, 463, ...
+# $ Age0     &amp;lt;int&amp;gt; 30877, 29488, 3, 10, 4, 4, 9...
+# $ Age1     &amp;lt;int&amp;gt; 29388, 28294, 5, 8, 6, 0, 3,...
+# $ Age2     &amp;lt;int&amp;gt; 30189, 29190, 5, 7, 1, 3, 4,...
+# $ Age3     &amp;lt;int&amp;gt; 30173, 29061, 5, 7, 5, 6, 1,...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I am not yet sure how to set up the query in Custom JSON so that it just downloads all the records but I suppose you could just set the limit to a very high number that you know will cover everything.&lt;/p&gt;
 &lt;/div&gt;
+&lt;div id=&#34;querying-with-sql&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Querying with SQL&lt;/h3&gt;
+&lt;p&gt;For SQL, the URL should take the form&lt;br /&gt;
+&lt;code&gt;https://www.opendata.nhs.scot/api/3/action/&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;datastore_search_sql?&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;sql=&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;your-SQL-query&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;There are a couple of quirks about how to make SQL query work in R. You need to enclose the name of the resource ID in speech marks (“resource-ID”) so if like me, your default method of creating strings is to use speech marks rather than the apostrophe character (’), you will need to escape the speech mark using the backslash (\&#34;). Similarly, you need to enclose other things such as variable names in speech marks when making more complicated queries. You also need to &lt;a href=&#34;https://en.wikipedia.org/wiki/Percent-encoding&#34;&gt;percent-encode&lt;/a&gt; your special characters to make them work as a URL – luckily the &lt;code&gt;URLencode()&lt;/code&gt; function makes this easy!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Download the whole dataset using a SQL query
+url_sql &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                  &amp;quot;datastore_search_sql?&amp;quot;,
+                  &amp;quot;sql=&amp;quot;,
+                  URLencode(&amp;quot;SELECT * from \&amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee\&amp;quot;&amp;quot;))
+
+dz2011_list_sql &amp;lt;- fromJSON(url_sql)
+dz2011_sql &amp;lt;- dz2011_list_sql$result$records
+glimpse(dz2011_sql[, 1:10], width = 50)
+# Observations: 97,678
+# Variables: 10
+# $ Age28 &amp;lt;chr&amp;gt; &amp;quot;33649&amp;quot;, &amp;quot;35002&amp;quot;, &amp;quot;12&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;6...
+# $ Age29 &amp;lt;chr&amp;gt; &amp;quot;33865&amp;quot;, &amp;quot;35698&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;1...
+# $ Age26 &amp;lt;chr&amp;gt; &amp;quot;34410&amp;quot;, &amp;quot;35491&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;1...
+# $ Age27 &amp;lt;chr&amp;gt; &amp;quot;33302&amp;quot;, &amp;quot;34274&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;5...
+# $ Age24 &amp;lt;chr&amp;gt; &amp;quot;35129&amp;quot;, &amp;quot;36098&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;1&amp;quot;...
+# $ Age25 &amp;lt;chr&amp;gt; &amp;quot;35166&amp;quot;, &amp;quot;35492&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;2&amp;quot;...
+# $ Age22 &amp;lt;chr&amp;gt; &amp;quot;36117&amp;quot;, &amp;quot;36450&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;3&amp;quot;...
+# $ Age23 &amp;lt;chr&amp;gt; &amp;quot;36710&amp;quot;, &amp;quot;37038&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;3&amp;quot;...
+# $ Age20 &amp;lt;chr&amp;gt; &amp;quot;37785&amp;quot;, &amp;quot;37513&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;6&amp;quot;...
+# $ Age21 &amp;lt;chr&amp;gt; &amp;quot;36354&amp;quot;, &amp;quot;36386&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;4&amp;quot;...
+
+
+# Download only the DZ2011 variable
+url_sql_1c &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                     &amp;quot;datastore_search_sql?&amp;quot;,
+                     &amp;quot;sql=&amp;quot;,
+                     URLencode(&amp;quot;SELECT \&amp;quot;DZ2011\&amp;quot; from \&amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee\&amp;quot;&amp;quot;))
+
+dz2011_list_1c &amp;lt;- fromJSON(url_sql_1c)
+dz2011_1c &amp;lt;- dz2011_list_1c$result$records
+glimpse(dz2011_1c, width = 50)
+# Observations: 97,678
+# Variables: 1
+# $ DZ2011 &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S01...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that when you use SQL to query CKAN, all 97,678 records are downloaded from the dataset (unless you explicitly tell it not to) so therefore, the query took much longer to finish.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions-and-further-work&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusions and Further Work&lt;/h2&gt;
+&lt;p&gt;This post has given a little bit of background to open data in Scotland as well as an introduction to downloading NHS Scotland open data directly into R using simple queries with the CKAN API but there are, of course, much fancier things that you can do when constructing queries (e.g. joins on datasets) which I’ve not covered. I may cover some of these in a future post but for now, the interested reader can trawl through the &lt;a href=&#34;https://docs.ckan.org/en/2.8/user-guide.html&#34;&gt;CKAN user guide&lt;/a&gt; to find out more about features like that! As a final point, I think it would be neat to write some wrapper functions in R to make it easier to make queries to CKAN (this could even be packaged up) – it might be a future project!&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
