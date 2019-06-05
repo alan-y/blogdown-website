@@ -28,7 +28,7 @@
 &lt;li&gt;&lt;a href=&#34;#querying-with-custom-json&#34;&gt;Querying with Custom JSON&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#querying-with-sql&#34;&gt;Querying with SQL&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#conclusions-and-further-work&#34;&gt;Conclusions and Further Work&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions-and-further-ideas&#34;&gt;Conclusions and Further Ideas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -75,26 +75,26 @@ status_code(page) # # Check that the call is successful
 dz2011_list &amp;lt;- fromJSON(url)
 # Extract the actual data from the list
 dz2011 &amp;lt;- dz2011_list$result$records
-glimpse(dz2011[, 1:10], width = 50)
+glimpse(dz2011, width = 50)
 # Observations: 100
-# Variables: 10
-# $ `_id`    &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 1...
-# $ Year     &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 2011...
-# $ DZ2011   &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S...
-# $ DZ2011QF &amp;lt;chr&amp;gt; &amp;quot;d&amp;quot;, &amp;quot;d&amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;...
-# $ Sex      &amp;lt;chr&amp;gt; &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;F...
-# $ AllAges  &amp;lt;int&amp;gt; 2570300, 2729600, 419, 463, ...
-# $ Age0     &amp;lt;int&amp;gt; 30877, 29488, 3, 10, 4, 4, 9...
-# $ Age1     &amp;lt;int&amp;gt; 29388, 28294, 5, 8, 6, 0, 3,...
-# $ Age2     &amp;lt;int&amp;gt; 30189, 29190, 5, 7, 1, 3, 4,...
-# $ Age3     &amp;lt;int&amp;gt; 30173, 29061, 5, 7, 5, 6, 1,...&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Note that when I used the &lt;code&gt;glimpse()&lt;/code&gt; function, I chose to only display the first 10 variables as this dataset contains a lot of variables and I wanted to keep the output fairly concise (I will do the same for the rest of the examples in this post where appropriate). A further thing to note is that the default setting using Custom JSON is to download only the first 100 records from the dataset which you can also see from the number of observations in the output of &lt;code&gt;glimpse()&lt;/code&gt;; if you want to download more rows than this you need to explicitly set this in the query. For example, if you wanted the first 150 rows you can simply add this query into the URL.&lt;/p&gt;
+# Variables: 97
+# $ `_id`     &amp;lt;int&amp;gt; 178, 179, 180, 181, 182, 18...
+# $ Year      &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 201...
+# $ DZ2011    &amp;lt;chr&amp;gt; &amp;quot;S01006593&amp;quot;, &amp;quot;S01006594&amp;quot;, &amp;quot;...
+# $ DZ2011QF  &amp;lt;chr&amp;gt; &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; ...
+# $ Sex       &amp;lt;chr&amp;gt; &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;,...
+# $ AllAges   &amp;lt;int&amp;gt; 325, 252, 296, 478, 454, 36...
+# $ Age0      &amp;lt;int&amp;gt; 2, 2, 6, 8, 2, 4, 4, 3, 1, ...
+# $ Age1      &amp;lt;int&amp;gt; 4, 4, 0, 3, 4, 2, 6, 1, 3, ...
+# $ Age2      &amp;lt;int&amp;gt; 2, 2, 3, 1, 4, 4, 4, 1, 2, ...
+# $ Age3      &amp;lt;int&amp;gt; 6, 1, 0, 5, 1, 4, 4, 2, 1, ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that when I used the &lt;code&gt;glimpse()&lt;/code&gt; function, I’ve only shown the first 10 variables as this dataset contains 97 variables and I wanted to keep the output fairly concise (I will do the same for the rest of the examples in this post where appropriate). A further thing to note is that the default setting using Custom JSON is to download only the first 100 records from the dataset which you can also see from the number of observations in the output of &lt;code&gt;glimpse()&lt;/code&gt;; if you want to download more rows than this you need to explicitly set this in the query. For example, if you wanted the first 150 rows you can simply add this query into the URL.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_150r &amp;lt;- paste0(url, &amp;quot;&amp;amp;limit=150&amp;quot;)
 dz2011_list_150r &amp;lt;- fromJSON(url_150r)
 dz2011_150r &amp;lt;- dz2011_list_150r$result$records
-glimpse(dz2011_150r[, 1:10], width = 50)
+glimpse(dz2011_150r, width = 50)
 # Observations: 150
-# Variables: 10
+# Variables: 97
 # $ `_id`    &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 1...
 # $ Year     &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 2011...
 # $ DZ2011   &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S...
@@ -109,7 +109,7 @@ glimpse(dz2011_150r[, 1:10], width = 50)
 &lt;/div&gt;
 &lt;div id=&#34;querying-with-sql&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Querying with SQL&lt;/h3&gt;
-&lt;p&gt;For SQL, the URL should take the form&lt;br /&gt;
+&lt;p&gt;To query with SQL you will obviously need to know how to write SQL queries. I won’t be discussing SQL queries here as the focus is on using the CKAN API. For SQL, the URL should take the form&lt;br /&gt;
 &lt;code&gt;https://www.opendata.nhs.scot/api/3/action/&lt;/code&gt; +&lt;br /&gt;
 &lt;code&gt;datastore_search_sql?&lt;/code&gt; +&lt;br /&gt;
 &lt;code&gt;sql=&lt;/code&gt; +&lt;br /&gt;
@@ -123,9 +123,9 @@ url_sql &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&a
 
 dz2011_list_sql &amp;lt;- fromJSON(url_sql)
 dz2011_sql &amp;lt;- dz2011_list_sql$result$records
-glimpse(dz2011_sql[, 1:10], width = 50)
+glimpse(dz2011_sql, width = 50)
 # Observations: 97,678
-# Variables: 10
+# Variables: 98
 # $ Age28 &amp;lt;chr&amp;gt; &amp;quot;33649&amp;quot;, &amp;quot;35002&amp;quot;, &amp;quot;12&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;6...
 # $ Age29 &amp;lt;chr&amp;gt; &amp;quot;33865&amp;quot;, &amp;quot;35698&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;1...
 # $ Age26 &amp;lt;chr&amp;gt; &amp;quot;34410&amp;quot;, &amp;quot;35491&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;1...
@@ -135,27 +135,26 @@ glimpse(dz2011_sql[, 1:10], width = 50)
 # $ Age22 &amp;lt;chr&amp;gt; &amp;quot;36117&amp;quot;, &amp;quot;36450&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;3&amp;quot;...
 # $ Age23 &amp;lt;chr&amp;gt; &amp;quot;36710&amp;quot;, &amp;quot;37038&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;3&amp;quot;...
 # $ Age20 &amp;lt;chr&amp;gt; &amp;quot;37785&amp;quot;, &amp;quot;37513&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;6&amp;quot;...
-# $ Age21 &amp;lt;chr&amp;gt; &amp;quot;36354&amp;quot;, &amp;quot;36386&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;4&amp;quot;...
-
-
-# Download only the DZ2011 variable
-url_sql_1c &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+# $ Age21 &amp;lt;chr&amp;gt; &amp;quot;36354&amp;quot;, &amp;quot;36386&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;4&amp;quot;...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that when you use SQL to query CKAN, all 97,678 records are downloaded from the dataset (unless you explicitly tell it not to) so therefore, the query took much longer to finish. The data has been extracted but with a couple of strange issues. The variables are in a weird order and there are 98 variables here instead of the 97 we got previously – it seems to have extracted a variable called &lt;code&gt;_full_text&lt;/code&gt;. I don’t know why it does this but I suppose these issues can be sorted out easily enough with some dplyr. Let’s also make a query to download just one variable to demonstrate how to write a marginally more complicated SQL query.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Download only the DZ2011 variable
+url_sql_1v &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
                      &amp;quot;datastore_search_sql?&amp;quot;,
                      &amp;quot;sql=&amp;quot;,
                      URLencode(&amp;quot;SELECT \&amp;quot;DZ2011\&amp;quot; from \&amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee\&amp;quot;&amp;quot;))
 
-dz2011_list_1c &amp;lt;- fromJSON(url_sql_1c)
-dz2011_1c &amp;lt;- dz2011_list_1c$result$records
-glimpse(dz2011_1c, width = 50)
+dz2011_list_1v &amp;lt;- fromJSON(url_sql_1v)
+dz2011_1v &amp;lt;- dz2011_list_1v$result$records
+glimpse(dz2011_1v, width = 50)
 # Observations: 97,678
 # Variables: 1
 # $ DZ2011 &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S01...&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Notice that when you use SQL to query CKAN, all 97,678 records are downloaded from the dataset (unless you explicitly tell it not to) so therefore, the query took much longer to finish.&lt;/p&gt;
+&lt;p&gt;No issues with this query and everything was extracted as expected.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;conclusions-and-further-work&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Conclusions and Further Work&lt;/h2&gt;
-&lt;p&gt;This post has given a little bit of background to open data in Scotland as well as an introduction to downloading NHS Scotland open data directly into R using simple queries with the CKAN API but there are, of course, much fancier things that you can do when constructing queries (e.g. joins on datasets) which I’ve not covered. I may cover some of these in a future post but for now, the interested reader can trawl through the &lt;a href=&#34;https://docs.ckan.org/en/2.8/user-guide.html&#34;&gt;CKAN user guide&lt;/a&gt; to find out more about features like that! As a final point, I think it would be neat to write some wrapper functions in R to make it easier to make queries to CKAN (this could even be packaged up) – it might be a future project!&lt;/p&gt;
+&lt;div id=&#34;conclusions-and-further-ideas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusions and Further Ideas&lt;/h2&gt;
+&lt;p&gt;This post has given a little bit of background to open data in Scotland as well as an introduction to downloading NHS Scotland open data directly into R using simple queries with the CKAN API but there are, of course, much fancier things that you can do when constructing queries (e.g. joins on datasets) which I’ve not covered. I may cover some of these in a future post but for now, the interested reader can trawl through the &lt;a href=&#34;https://docs.ckan.org/en/2.8/user-guide.html&#34;&gt;CKAN user guide&lt;/a&gt; to find out more about features like that! As a final point, I think it would be neat to write some wrapper functions in R to make it easier to make queries to CKAN (this could even be packaged up) – it might be a future project! I envision that this would work similarly to the &lt;a href=&#34;https://github.com/jsphdms/opendatascot&#34;&gt;opendatascot&lt;/a&gt; package which has been built to help with extracting data from &lt;a href=&#34;https://statistics.gov.scot/home&#34;&gt;statistics.gov.scot&lt;/a&gt;. Anyway that’s for another day.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
