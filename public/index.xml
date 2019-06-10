@@ -363,7 +363,33 @@ glimpse(dz2011_1v, width = 50)
       <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>/publication/phd-thesis/</guid>
-      <description></description>
+      <description>
+
+&lt;h2 id=&#34;chapter-list&#34;&gt;Chapter List:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Tuberculosis in Scotland
+
+&lt;ul&gt;
+&lt;li&gt;Finding Potential Strain Clusters&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Characteristics of 2009 Pandemic Influenza in Scotland&lt;/li&gt;
+&lt;li&gt;Methods of Estimating Reproductive Numbers (&lt;em&gt;Literature Review&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Estimation of Reproductive Numbers for 2009 Pandemic Influenza in Scotland
+
+&lt;ul&gt;
+&lt;li&gt;Spatial Method&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Studies of Influenza Vaccine Effectiveness (&lt;em&gt;Literature Review&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Influenza Vaccine Effectiveness in Scotland
+
+&lt;ul&gt;
+&lt;li&gt;Season 2011-12 and 2012-13&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Conclusions&lt;/li&gt;
+&lt;/ol&gt;
+</description>
     </item>
     
   </channel>

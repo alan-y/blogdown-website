@@ -28,3 +28,17 @@ url_slides: ""
 url_source: ""
 url_video: ""
 ---
+
+## Chapter List:
+
+1. Introduction
+2. Tuberculosis in Scotland
+    + Finding Potential Strain Clusters
+3. Characteristics of 2009 Pandemic Influenza in Scotland
+4. Methods of Estimating Reproductive Numbers (*Literature Review*)
+5. Estimation of Reproductive Numbers for 2009 Pandemic Influenza in Scotland
+    + Spatial Method
+6. Studies of Influenza Vaccine Effectiveness (*Literature Review*)
+7. Influenza Vaccine Effectiveness in Scotland
+    + Season 2011-12 and 2012-13
+8. Conclusions
