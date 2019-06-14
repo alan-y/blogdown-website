@@ -1,7 +1,6 @@
 ---
 abstract: 'In April 2015, the UK government enacted a temporary class drug order (TCDO) on ethylphenidate in response to reported harms associated with its use, in particular an outbreak of infections among people who inject drugs (PWID) in Lothian, Scotland. This study assesses the effect that the TCDO had on reducing the most common infections identified during the outbreak: Streptococcus pyogenes and Staphylococcus aureus.'
-authors:
-- admin
+authors: ["admin", "Amanda Weir", "Hannah Austin", "Kirsty Morrison", "Donald Inverarity", "Jim Sherval", "Naomi Henderson", "Shruti Joshi", "Roisin Ure", "Andrew McAuley"]
 date: "2017-06-10"
 doi: "10.1111/add.13898"
 featured: true

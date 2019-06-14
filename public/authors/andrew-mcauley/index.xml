@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Andrew McAuley on Alan Yeung</title>
+    <link>/authors/andrew-mcauley/</link>
+    <description>Recent content in Andrew McAuley on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/andrew-mcauley/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Emergence of Novel Psychoactive Substance injecting associated with rapid rise in the population prevalence of hepatitis C virus</title>
+      <link>/publication/journal-article_nps_hcv/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_nps_hcv/</guid>
+      <description>This study provides one of the first epidemiological analyses of the association between NPS injecting and HCV among a population level sample of PWID.</description>
+    </item>
+    
+    <item>
+      <title>Assessing the impact of a temporary class drug order on ethylphenidate-related infections among people who inject drugs in Lothian, Scotland: an interrupted time-series analysis</title>
+      <link>/publication/journal-article_nps_tcdo/</link>
+      <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_nps_tcdo/</guid>
+      <description>In April 2015, the UK government enacted a temporary class drug order (TCDO) on ethylphenidate in response to reported harms associated with its use, in particular an outbreak of infections among people who inject drugs (PWID) in Lothian, Scotland.</description>
+    </item>
+    
+  </channel>
+</rss>

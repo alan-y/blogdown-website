@@ -1,7 +1,6 @@
 ---
 abstract: 'Disease outbreaks are a constant threat to public health and so effective management of these outbreaks is vital. By using statistical methods, we can better understand how a disease is affecting populations and monitor the progression of diseases over time. This thesis applies and develops statistical methods to studies of vaccine-preventable disease outbreaks in Scotland and aims to aid in the detection and management of outbreaks.'
-authors:
-- admin
+authors: ["admin", "Chris Robertson"]
 date: "2016-07-24"
 doi: ""
 featured: false

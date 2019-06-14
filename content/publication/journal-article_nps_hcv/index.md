@@ -1,7 +1,6 @@
 ---
 abstract: Novel Psychoactive Substance (NPS) use has increased in recent years and generated significant concern within public health. People who inject drugs (PWID) are at increased risk of blood borne viruses, in particular Hepatitis C virus (HCV). However, little is known about the extent of NPS injecting at a national level and its association with HCV. This study provides one of the first epidemiological analyses of the association between NPS injecting and HCV among a population level sample of PWID.
-authors:
-- admin
+authors: ["Andrew McAuley", "admin", "Avril Taylor", "Sharon Hutchinson", "David Goldberg", "Alison Munro"]
 date: "2019-04-01"
 doi: "10.1016/j.drugpo.2019.01.008"
 featured: true

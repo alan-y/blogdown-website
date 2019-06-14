@@ -137,7 +137,31 @@
   </url>
   
   <url>
+    <loc>/authors/alison-munro/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/andrew-mcauley/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/authors/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/avril-taylor/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/david-goldberg/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -177,6 +201,12 @@
   </url>
   
   <url>
+    <loc>/authors/sharon-hutchinson/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/project/phiproject/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
@@ -202,8 +232,20 @@
   </url>
   
   <url>
+    <loc>/authors/alan-mitchell/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/publication/journal-article_hbv_prison/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/celia-aitken/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -213,7 +255,31 @@
   </url>
   
   <url>
+    <loc>/authors/lesley-wallace/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/norah-palmateer/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/pwid/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/rory-gunson/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/samantha-shepherd/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -231,8 +297,56 @@
   </url>
   
   <url>
+    <loc>/authors/amanda-weir/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/publication/journal-article_nps_tcdo/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/donald-inverarity/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/hannah-austin/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/jim-sherval/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kirsty-morrison/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/naomi-henderson/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/roisin-ure/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/shruti-joshi/</loc>
+    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -243,6 +357,12 @@
   
   <url>
     <loc>/publication_types/7/</loc>
+    <lastmod>2016-07-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/chris-robertson/</loc>
     <lastmod>2016-07-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

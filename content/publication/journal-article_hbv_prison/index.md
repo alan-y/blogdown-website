@@ -1,7 +1,6 @@
 ---
 abstract: In Scotland, hepatitis B virus (HBV) vaccination for all prisoners was introduced in 1999; here, we examine the impact of this programme among people who inject drugs (PWID) in the community. This study aimed to compare rates of HBV vaccine uptake before and after implementation of the prison programme and to estimate the determinants of vaccine uptake, the levels of ever/current HBV infection and the associations between vaccine uptake and ever/current HBV infection.
-authors:
-- admin
+authors: ["Norah Palmateer", "David Goldberg", "Alison Munro", "Avril Taylor", "admin", "Lesley Wallace", "Alan Mitchell", "Samantha Shepherd", "Rory Gunson", "Celia Aitken", "Sharon Hutchinson"]
 date: "2017-07-15"
 doi: "10.1111/add.13944"
 featured: false
