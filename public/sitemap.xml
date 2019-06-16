@@ -46,13 +46,13 @@
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>/tags/r/</loc>
     <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2019-06-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -239,8 +239,20 @@
   </url>
   
   <url>
+    <loc>/authors/health-protection-scotland/</loc>
+    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/publication/report-hiv_prep_year_one/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/information-services-division/</loc>
+    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

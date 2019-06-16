@@ -1,6 +1,6 @@
 ---
 abstract: 'Scotland established a national HIV PrEP (HIV Pre-Exposure Prophylaxis) service which can be freely accessed by those at high risk of acquiring HIV. This report looks at the first year of the HIV PrEP programme in Scotland, covering the period from July 2017 to June 2018. It describes how the service was implemented and monitored. This includes providing data on PrEP uptake and preliminary data on outcomes.'
-authors: 
+authors: ["Health Protection Scotland", "Information Services Division"]
 date: "2019-02-26"
 doi: ""
 featured: false
