@@ -1,0 +1,144 @@
+---
+title: Hacking dbplyr for CKAN
+author: Alan Yeung
+date: '2019-07-07'
+slug: ckan-dbplyr
+categories:
+  - R
+tags:
+  - R
+  - API
+  - open-data
+image:
+  caption: ''
+  focal_point: ''
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#aim">Aim</a></li>
+<li><a href="#create-a-dummy-database">Create a dummy database</a></li>
+<li><a href="#test-dbplyrs-sql-translation">Test dbplyr’s SQL translation</a></li>
+<li><a href="#modify-dbplyrs-sql-translation">Modify dbplyr’s SQL translation</a></li>
+<li><a href="#testing-the-dbplyr-hack">Testing the dbplyr hack</a></li>
+<li><a href="#concluding-notes">Concluding notes</a></li>
+</ul>
+</div>
+
+<p>At the end of my <a href="../ckan-api">first post on CKAN</a> discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler. Well another idea came to my mind that I think would be even more cool to get working – would it be possible to hack the <a href="https://dbplyr.tidyverse.org/articles/translation-verb.html">SQL translation from dbplyr</a> to make it work effectively for extracting data from CKAN?</p>
+<p>Just for background info, <a href="https://dbplyr.tidyverse.org">dbplyr</a> is a package that lets you use <a href="https://dplyr.tidyverse.org">dplyr</a> code to interact with databases (a database backend for dplyr), which saves you learning SQL (I still recommend that people learn SQL though as it is likely to come in useful anyway!). One of the conveniences of using dbplyr is that you can take advantage of some of the dplyr’s helper functions (e.g <code>starts_with()</code>, <code>ends_with()</code>) to assist with tasks such as selecting variables – a task which can be quite tedious in SQL as you must list all of the variables you want to extract.</p>
+<div id="aim" class="section level2">
+<h2>Aim</h2>
+<p>The aim here is not to be too ambitious for the hack but to just get the <code>select()</code> and <code>filter()</code> functions to work for this hack. My feeling is that if you can get these features working, then you should be able to easily extract just the variables and rows of data you want from CKAN using dplyr code and this is hopefully sufficient for most people. This should be a good starting point for helping people to not download entire datasets when they don’t need to. Anyway, with the brief intro out of the way, let’s see if we can get this little hack working!</p>
+</div>
+<div id="create-a-dummy-database" class="section level2">
+<h2>Create a dummy database</h2>
+<p>Since datasets held on CKAN will not be identified by dbplyr as a ‘database’, we have to create a sort of <em>dummy database</em> within R so that it identifies a CKAN resource as a database. To do this, I created a function called <code>ckan_nhs_init()</code>. This function simply downloads one row of data from a CKAN resource and stores this in an <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/src_memdb"><em>in-memory SQLite database</em></a>. The key thing here is that extracting one row of data will give us a list of all the variable names for the dummy database. In the code below, please note that I have loaded some required packages to make the function work (if it turns out later that this idea is actually not bad, I’ll write up the code more appropriately for packaging up).</p>
+<pre class="r"><code>library(tidyverse)
+library(dbplyr)
+library(httr)
+library(jsonlite)
+
+ckan_nhs_init &lt;- function(id) {
+  url &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/&quot;,
+                &quot;datastore_search?&quot;,
+                &quot;resource_id=&quot;, id,
+                &quot;&amp;limit=1&quot;)
+  status &lt;- status_code(GET(url))
+  stopifnot(str_detect(status, &quot;^2&quot;))
+  
+  df &lt;- fromJSON(url)$result$records
+  copy_to(src_memdb(), df, name = id, overwrite = TRUE)
+}</code></pre>
+</div>
+<div id="test-dbplyrs-sql-translation" class="section level2">
+<h2>Test dbplyr’s SQL translation</h2>
+<p>After creating a dummy database (and thus, successfully fooling dbplyr into believing that a CKAN resource is a database), we have to make some modifications to the SQL translation from dbplyr so that the SQL query actually works for interacting with the CKAN API. First let’s test a couple of simple queries to see what dbplyr’s SQL translation produces. We’ll use the Data Zone (2011) Population Estimates dataset (resource ID <code>c505f490-c201-44bd-abd1-1bd7a64285ee</code>) for testing throughout this post. So what does the SQL translation look like when we just use <code>select()</code>?</p>
+<pre class="r"><code>id &lt;- &quot;c505f490-c201-44bd-abd1-1bd7a64285ee&quot;
+
+ckan_nhs_init(id) %&gt;% 
+  select(Year, DZ2011) %&gt;% 
+  show_query()
+# &lt;SQL&gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`</code></pre>
+<p>Immediately I can see that the CKAN API isn’t going to like those backticks (<code>`</code>) around the variable and database names so we’ll have to remove them. We’ll also have to remove the line breaks (<code>\n</code>). Now let’s test the SQL translation for <code>filter()</code>.</p>
+<pre class="r"><code>ckan_nhs_init(id) %&gt;%
+  filter(Year == 2011L)
+# &lt;SQL&gt;
+# SELECT *
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)</code></pre>
+<p>Now I can see that the CKAN API isn’t going to like those brackets around the WHERE statement so we’ll also have to remove them. Lastly let’s test the translation for a <code>select()</code> combined with a <code>filter()</code>.</p>
+<pre class="r"><code># select() and then filter()
+ckan_nhs_init(id) %&gt;% 
+    select(Year, DZ2011) %&gt;% 
+    filter(Year == 2011L) %&gt;% 
+    show_query()
+# &lt;SQL&gt;
+# SELECT *
+# FROM (SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`)
+# WHERE (`Year` = 2011)
+
+
+# filter() and then select()
+ckan_nhs_init(id) %&gt;% 
+    filter(Year == 2011L) %&gt;% 
+    select(Year, DZ2011) %&gt;% 
+    show_query()
+# &lt;SQL&gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)</code></pre>
+<p>From here, we can see that when using <code>filter()</code> and then <code>select()</code>, the query looks fairly concise but when using <code>select()</code> and then <code>filter()</code>, we have some work to do to remove the unnecessary <code>SELECT * FROM</code> at the beginning (note that this SQL is perfectly good normally but it won’t be for the CKAN API). In any case, I think we now have all the information we need to modify dbplyr’s SQL translation to make it work for CKAN.</p>
+</div>
+<div id="modify-dbplyrs-sql-translation" class="section level2">
+<h2>Modify dbplyr’s SQL translation</h2>
+<p>Using the information just attained, I created the <code>ckan_nhs_extract()</code> function to make the required modifications to the SQL translation. Note that in the function I use <code>sql_render()</code> instead of <code>show_query()</code> as I need the SQL query as a string variable in R rather than just printed to the console. I’ve also added a warning message using <code>cat()</code> to warn the user that some queries may take a while.</p>
+<pre class="r"><code>ckan_nhs_extract &lt;- function(db_qry) {
+  db_qry &lt;- sql_render(db_qry) %&gt;%
+    str_replace_all(&quot;`&quot;, &#39;&quot;&#39;) %&gt;%
+    str_replace_all(&quot;\n&quot;, &quot; &quot;)
+  
+  # Check if there is more than one SELECT statement
+  n_select &lt;- str_count(db_qry, &quot;SELECT&quot;)
+  
+  # Remove unnecessary SELECT statement if needed
+  if (n_select &gt; 1) {
+    db_qry &lt;- str_remove(db_qry, &quot;^(SELECT \\* FROM )&quot;)
+  }
+  
+  db_qry &lt;- str_remove_all(db_qry, &quot;\\(|\\)&quot;)
+  db_qry &lt;- URLencode(db_qry)
+  
+  db_qry &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/&quot;,
+                   &quot;datastore_search_sql?&quot;,
+                   &quot;sql=&quot;,
+                   db_qry)
+  
+  cat(&quot;Extracting: this may take a while\n\n&quot;)
+  as_tibble(fromJSON(db_qry)$result$records)
+}</code></pre>
+</div>
+<div id="testing-the-dbplyr-hack" class="section level2">
+<h2>Testing the dbplyr hack</h2>
+<p>To test this hack, we will make a simple query using <code>select()</code> and then <code>filter()</code> which is the more complicated scenario.</p>
+<pre class="r"><code>ckan_nhs_init(id) %&gt;%
+  select(Year, DZ2011) %&gt;%
+  filter(Year == 2011, DZ2011 == &quot;S92000003&quot;) %&gt;%
+  ckan_nhs_extract()
+# Extracting: this may take a while
+# 
+# # A tibble: 2 x 2
+#   DZ2011    Year 
+#   &lt;chr&gt;     &lt;chr&gt;
+# 1 S92000003 2011 
+# 2 S92000003 2011 </code></pre>
+<p>This produces the desired result so it’s a job well done for now!</p>
+</div>
+<div id="concluding-notes" class="section level2">
+<h2>Concluding notes</h2>
+<p>This hack needs a lot more testing as there are probably lots of things that could potentially break it (but obviously I’m hoping not!). There’s also a niggling issue in that I don’t yet know how to remove an in-memory SQLite database from R (or whether this is even possible) which I guess should be done after you’ve extracted the data you need just to clean things up nicely in R. But in saying that, it likely isn’t a big issue as <code>src_memdb()</code> has been specifically designed for creating a temporary in-memory database so everything will of course, be cleaned up after you exit your R session anyway. If this hack turns out to be useful and doesn’t break too easily, I may put in a bit of effort to package it up onto Github later. Please let me know what you think if you ever use it!</p>
+</div>

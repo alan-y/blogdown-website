@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Wed, 05 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -81,6 +81,144 @@
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hacking dbplyr for CKAN</title>
+      <link>/post/ckan-dbplyr/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ckan-dbplyr/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#aim&#34;&gt;Aim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#create-a-dummy-database&#34;&gt;Create a dummy database&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-dbplyrs-sql-translation&#34;&gt;Test dbplyr’s SQL translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#modify-dbplyrs-sql-translation&#34;&gt;Modify dbplyr’s SQL translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#testing-the-dbplyr-hack&#34;&gt;Testing the dbplyr hack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concluding-notes&#34;&gt;Concluding notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;At the end of my &lt;a href=&#34;../ckan-api&#34;&gt;first post on CKAN&lt;/a&gt; discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler. Well another idea came to my mind that I think would be even more cool to get working – would it be possible to hack the &lt;a href=&#34;https://dbplyr.tidyverse.org/articles/translation-verb.html&#34;&gt;SQL translation from dbplyr&lt;/a&gt; to make it work effectively for extracting data from CKAN?&lt;/p&gt;
+&lt;p&gt;Just for background info, &lt;a href=&#34;https://dbplyr.tidyverse.org&#34;&gt;dbplyr&lt;/a&gt; is a package that lets you use &lt;a href=&#34;https://dplyr.tidyverse.org&#34;&gt;dplyr&lt;/a&gt; code to interact with databases (a database backend for dplyr), which saves you learning SQL (I still recommend that people learn SQL though as it is likely to come in useful anyway!). One of the conveniences of using dbplyr is that you can take advantage of some of the dplyr’s helper functions (e.g &lt;code&gt;starts_with()&lt;/code&gt;, &lt;code&gt;ends_with()&lt;/code&gt;) to assist with tasks such as selecting variables – a task which can be quite tedious in SQL as you must list all of the variables you want to extract.&lt;/p&gt;
+&lt;div id=&#34;aim&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The aim here is not to be too ambitious for the hack but to just get the &lt;code&gt;select()&lt;/code&gt; and &lt;code&gt;filter()&lt;/code&gt; functions to work for this hack. My feeling is that if you can get these features working, then you should be able to easily extract just the variables and rows of data you want from CKAN using dplyr code and this is hopefully sufficient for most people. This should be a good starting point for helping people to not download entire datasets when they don’t need to. Anyway, with the brief intro out of the way, let’s see if we can get this little hack working!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;create-a-dummy-database&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Create a dummy database&lt;/h2&gt;
+&lt;p&gt;Since datasets held on CKAN will not be identified by dbplyr as a ‘database’, we have to create a sort of &lt;em&gt;dummy database&lt;/em&gt; within R so that it identifies a CKAN resource as a database. To do this, I created a function called &lt;code&gt;ckan_nhs_init()&lt;/code&gt;. This function simply downloads one row of data from a CKAN resource and stores this in an &lt;a href=&#34;https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/src_memdb&#34;&gt;&lt;em&gt;in-memory SQLite database&lt;/em&gt;&lt;/a&gt;. The key thing here is that extracting one row of data will give us a list of all the variable names for the dummy database. In the code below, please note that I have loaded some required packages to make the function work (if it turns out later that this idea is actually not bad, I’ll write up the code more appropriately for packaging up).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(dbplyr)
+library(httr)
+library(jsonlite)
+
+ckan_nhs_init &amp;lt;- function(id) {
+  url &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                &amp;quot;datastore_search?&amp;quot;,
+                &amp;quot;resource_id=&amp;quot;, id,
+                &amp;quot;&amp;amp;limit=1&amp;quot;)
+  status &amp;lt;- status_code(GET(url))
+  stopifnot(str_detect(status, &amp;quot;^2&amp;quot;))
+  
+  df &amp;lt;- fromJSON(url)$result$records
+  copy_to(src_memdb(), df, name = id, overwrite = TRUE)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;test-dbplyrs-sql-translation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Test dbplyr’s SQL translation&lt;/h2&gt;
+&lt;p&gt;After creating a dummy database (and thus, successfully fooling dbplyr into believing that a CKAN resource is a database), we have to make some modifications to the SQL translation from dbplyr so that the SQL query actually works for interacting with the CKAN API. First let’s test a couple of simple queries to see what dbplyr’s SQL translation produces. We’ll use the Data Zone (2011) Population Estimates dataset (resource ID &lt;code&gt;c505f490-c201-44bd-abd1-1bd7a64285ee&lt;/code&gt;) for testing throughout this post. So what does the SQL translation look like when we just use &lt;code&gt;select()&lt;/code&gt;?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;id &amp;lt;- &amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee&amp;quot;
+
+ckan_nhs_init(id) %&amp;gt;% 
+  select(Year, DZ2011) %&amp;gt;% 
+  show_query()
+# &amp;lt;SQL&amp;gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Immediately I can see that the CKAN API isn’t going to like those backticks (&lt;code&gt;`&lt;/code&gt;) around the variable and database names so we’ll have to remove them. We’ll also have to remove the line breaks (&lt;code&gt;\n&lt;/code&gt;). Now let’s test the SQL translation for &lt;code&gt;filter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan_nhs_init(id) %&amp;gt;%
+  filter(Year == 2011L)
+# &amp;lt;SQL&amp;gt;
+# SELECT *
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now I can see that the CKAN API isn’t going to like those brackets around the WHERE statement so we’ll also have to remove them. Lastly let’s test the translation for a &lt;code&gt;select()&lt;/code&gt; combined with a &lt;code&gt;filter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select() and then filter()
+ckan_nhs_init(id) %&amp;gt;% 
+    select(Year, DZ2011) %&amp;gt;% 
+    filter(Year == 2011L) %&amp;gt;% 
+    show_query()
+# &amp;lt;SQL&amp;gt;
+# SELECT *
+# FROM (SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`)
+# WHERE (`Year` = 2011)
+
+
+# filter() and then select()
+ckan_nhs_init(id) %&amp;gt;% 
+    filter(Year == 2011L) %&amp;gt;% 
+    select(Year, DZ2011) %&amp;gt;% 
+    show_query()
+# &amp;lt;SQL&amp;gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From here, we can see that when using &lt;code&gt;filter()&lt;/code&gt; and then &lt;code&gt;select()&lt;/code&gt;, the query looks fairly concise but when using &lt;code&gt;select()&lt;/code&gt; and then &lt;code&gt;filter()&lt;/code&gt;, we have some work to do to remove the unnecessary &lt;code&gt;SELECT * FROM&lt;/code&gt; at the beginning (note that this SQL is perfectly good normally but it won’t be for the CKAN API). In any case, I think we now have all the information we need to modify dbplyr’s SQL translation to make it work for CKAN.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modify-dbplyrs-sql-translation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modify dbplyr’s SQL translation&lt;/h2&gt;
+&lt;p&gt;Using the information just attained, I created the &lt;code&gt;ckan_nhs_extract()&lt;/code&gt; function to make the required modifications to the SQL translation. Note that in the function I use &lt;code&gt;sql_render()&lt;/code&gt; instead of &lt;code&gt;show_query()&lt;/code&gt; as I need the SQL query as a string variable in R rather than just printed to the console. I’ve also added a warning message using &lt;code&gt;cat()&lt;/code&gt; to warn the user that some queries may take a while.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan_nhs_extract &amp;lt;- function(db_qry) {
+  db_qry &amp;lt;- sql_render(db_qry) %&amp;gt;%
+    str_replace_all(&amp;quot;`&amp;quot;, &amp;#39;&amp;quot;&amp;#39;) %&amp;gt;%
+    str_replace_all(&amp;quot;\n&amp;quot;, &amp;quot; &amp;quot;)
+  
+  # Check if there is more than one SELECT statement
+  n_select &amp;lt;- str_count(db_qry, &amp;quot;SELECT&amp;quot;)
+  
+  # Remove unnecessary SELECT statement if needed
+  if (n_select &amp;gt; 1) {
+    db_qry &amp;lt;- str_remove(db_qry, &amp;quot;^(SELECT \\* FROM )&amp;quot;)
+  }
+  
+  db_qry &amp;lt;- str_remove_all(db_qry, &amp;quot;\\(|\\)&amp;quot;)
+  db_qry &amp;lt;- URLencode(db_qry)
+  
+  db_qry &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                   &amp;quot;datastore_search_sql?&amp;quot;,
+                   &amp;quot;sql=&amp;quot;,
+                   db_qry)
+  
+  cat(&amp;quot;Extracting: this may take a while\n\n&amp;quot;)
+  as_tibble(fromJSON(db_qry)$result$records)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;testing-the-dbplyr-hack&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Testing the dbplyr hack&lt;/h2&gt;
+&lt;p&gt;To test this hack, we will make a simple query using &lt;code&gt;select()&lt;/code&gt; and then &lt;code&gt;filter()&lt;/code&gt; which is the more complicated scenario.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan_nhs_init(id) %&amp;gt;%
+  select(Year, DZ2011) %&amp;gt;%
+  filter(Year == 2011, DZ2011 == &amp;quot;S92000003&amp;quot;) %&amp;gt;%
+  ckan_nhs_extract()
+# Extracting: this may take a while
+# 
+# # A tibble: 2 x 2
+#   DZ2011    Year 
+#   &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;
+# 1 S92000003 2011 
+# 2 S92000003 2011 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This produces the desired result so it’s a job well done for now!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;concluding-notes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concluding notes&lt;/h2&gt;
+&lt;p&gt;This hack needs a lot more testing as there are probably lots of things that could potentially break it (but obviously I’m hoping not!). There’s also a niggling issue in that I don’t yet know how to remove an in-memory SQLite database from R (or whether this is even possible) which I guess should be done after you’ve extracted the data you need just to clean things up nicely in R. But in saying that, it likely isn’t a big issue as &lt;code&gt;src_memdb()&lt;/code&gt; has been specifically designed for creating a temporary in-memory database so everything will of course, be cleaned up after you exit your R session anyway. If this hack turns out to be useful and doesn’t break too easily, I may put in a bit of effort to package it up onto Github later. Please let me know what you think if you ever use it!&lt;/p&gt;
+&lt;/div&gt;
 </description>
     </item>
     
@@ -240,7 +378,7 @@ glimpse(dz2011_1v, width = 50)
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/post/2019-05-21-glasgow-r-user-group_files/glasgowR.png&#34; style=&#34;width:50.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/glasgowR.png&#34; style=&#34;width:50.0%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I am very excited to hear that there are attempts to create a brand new &lt;a href=&#34;https://www.meetup.com/Glasgow-R-User-Group&#34;&gt;R user group in Glasgow&lt;/a&gt;! I had just talked in &lt;a href=&#34;../post-number-one&#34;&gt;Post Number One&lt;/a&gt; about my guilt at not having been able to attend &lt;a href=&#34;http://edinbr.org&#34;&gt;EdinbR&lt;/a&gt; as often as I wished but it should be much easier for me to find time to attend a group based in Glasgow. If you are based in (or near) Glasgow and would like to join the R community, this sounds like the place to be – I hope this idea takes off! This is the blurb from their meetup page.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This group is for people who use R (or want to start to). This meetup is a first attempt to get together people in Glasgow interested in R, meet and decide how to go about the organisation. There are several R User around the world and would be nice to ave one in Glasgow as well.&lt;/p&gt;

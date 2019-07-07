@@ -11,7 +11,7 @@ image:
   focal_point: ''
 ---
 
-![](/post/2019-05-21-glasgow-r-user-group_files/glasgowR.png){width=50%}
+![](/img/glasgowR.png){width=50%}
 
 I am very excited to hear that there are attempts to create a brand new [R user group in Glasgow](https://www.meetup.com/Glasgow-R-User-Group)! I had just talked in [Post Number One](../post-number-one) about my guilt at not having been able to attend [EdinbR](http://edinbr.org) as often as I wished but it should be much easier for me to find time to attend a group based in Glasgow. If you are based in (or near) Glasgow and would like to join the R community, this sounds like the place to be -- I hope this idea takes off! This is the blurb from their meetup page.
 

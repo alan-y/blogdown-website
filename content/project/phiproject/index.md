@@ -4,7 +4,7 @@ external_link: https://github.com/Health-SocialCare-Scotland/phiproject
 image:
   caption: phiproject
   focal_point: Smart
-summary: An Rstudio project template incorporating some best practices.
+summary: An RStudio project template incorporating some best practices.
 tags:
 - R 
 - RStudio

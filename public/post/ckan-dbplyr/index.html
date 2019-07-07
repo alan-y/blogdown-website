@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Alan Yeung">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="AimCreate a dummy databaseTest dbplyr’s SQL translationModify dbplyr’s SQL translationTesting the dbplyr hackConcluding notesAt the end of my first post on CKAN discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/ckan-dbplyr/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/tomorrow.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.7c1a3a7b7357a37b22706cb5db6dae8e.css">
+
+  
+    
+    
+    
+    
+      
+    
+    
+    
+    <link rel="stylesheet" href="/css/academic.482fdc6cd8b1e7a4a9b35cb38d449e5c.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-142501204-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/ckan-dbplyr/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@alan_y">
+  <meta property="twitter:creator" content="@alan_y">
+  
+  <meta property="og:site_name" content="Alan Yeung">
+  <meta property="og:url" content="/post/ckan-dbplyr/">
+  <meta property="og:title" content="Hacking dbplyr for CKAN | Alan Yeung">
+  <meta property="og:description" content="AimCreate a dummy databaseTest dbplyr’s SQL translationModify dbplyr’s SQL translationTesting the dbplyr hackConcluding notesAt the end of my first post on CKAN discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-07-07T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-07-07T00:00:00&#43;00:00">
+  
+
+  
+
+  
+
+  <title>Hacking dbplyr for CKAN | Alan Yeung</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Alan Yeung</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/bio/">
+            
+            <span>Bio</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/blogroll/">
+            
+            <span>Blogroll</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Hacking dbplyr for CKAN</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2019-07-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2019-07-07 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jul 7, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/post/ckan-dbplyr/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/r/">R</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<div id="TOC">
+<ul>
+<li><a href="#aim">Aim</a></li>
+<li><a href="#create-a-dummy-database">Create a dummy database</a></li>
+<li><a href="#test-dbplyrs-sql-translation">Test dbplyr’s SQL translation</a></li>
+<li><a href="#modify-dbplyrs-sql-translation">Modify dbplyr’s SQL translation</a></li>
+<li><a href="#testing-the-dbplyr-hack">Testing the dbplyr hack</a></li>
+<li><a href="#concluding-notes">Concluding notes</a></li>
+</ul>
+</div>
+
+<p>At the end of my <a href="../ckan-api">first post on CKAN</a> discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler. Well another idea came to my mind that I think would be even more cool to get working – would it be possible to hack the <a href="https://dbplyr.tidyverse.org/articles/translation-verb.html">SQL translation from dbplyr</a> to make it work effectively for extracting data from CKAN?</p>
+<p>Just for background info, <a href="https://dbplyr.tidyverse.org">dbplyr</a> is a package that lets you use <a href="https://dplyr.tidyverse.org">dplyr</a> code to interact with databases (a database backend for dplyr), which saves you learning SQL (I still recommend that people learn SQL though as it is likely to come in useful anyway!). One of the conveniences of using dbplyr is that you can take advantage of some of the dplyr’s helper functions (e.g <code>starts_with()</code>, <code>ends_with()</code>) to assist with tasks such as selecting variables – a task which can be quite tedious in SQL as you must list all of the variables you want to extract.</p>
+<div id="aim" class="section level2">
+<h2>Aim</h2>
+<p>The aim here is not to be too ambitious for the hack but to just get the <code>select()</code> and <code>filter()</code> functions to work for this hack. My feeling is that if you can get these features working, then you should be able to easily extract just the variables and rows of data you want from CKAN using dplyr code and this is hopefully sufficient for most people. This should be a good starting point for helping people to not download entire datasets when they don’t need to. Anyway, with the brief intro out of the way, let’s see if we can get this little hack working!</p>
+</div>
+<div id="create-a-dummy-database" class="section level2">
+<h2>Create a dummy database</h2>
+<p>Since datasets held on CKAN will not be identified by dbplyr as a ‘database’, we have to create a sort of <em>dummy database</em> within R so that it identifies a CKAN resource as a database. To do this, I created a function called <code>ckan_nhs_init()</code>. This function simply downloads one row of data from a CKAN resource and stores this in an <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/src_memdb"><em>in-memory SQLite database</em></a>. The key thing here is that extracting one row of data will give us a list of all the variable names for the dummy database. In the code below, please note that I have loaded some required packages to make the function work (if it turns out later that this idea is actually not bad, I’ll write up the code more appropriately for packaging up).</p>
+<pre class="r"><code>library(tidyverse)
+library(dbplyr)
+library(httr)
+library(jsonlite)
+
+ckan_nhs_init &lt;- function(id) {
+  url &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/&quot;,
+                &quot;datastore_search?&quot;,
+                &quot;resource_id=&quot;, id,
+                &quot;&amp;limit=1&quot;)
+  status &lt;- status_code(GET(url))
+  stopifnot(str_detect(status, &quot;^2&quot;))
+  
+  df &lt;- fromJSON(url)$result$records
+  copy_to(src_memdb(), df, name = id, overwrite = TRUE)
+}</code></pre>
+</div>
+<div id="test-dbplyrs-sql-translation" class="section level2">
+<h2>Test dbplyr’s SQL translation</h2>
+<p>After creating a dummy database (and thus, successfully fooling dbplyr into believing that a CKAN resource is a database), we have to make some modifications to the SQL translation from dbplyr so that the SQL query actually works for interacting with the CKAN API. First let’s test a couple of simple queries to see what dbplyr’s SQL translation produces. We’ll use the Data Zone (2011) Population Estimates dataset (resource ID <code>c505f490-c201-44bd-abd1-1bd7a64285ee</code>) for testing throughout this post. So what does the SQL translation look like when we just use <code>select()</code>?</p>
+<pre class="r"><code>id &lt;- &quot;c505f490-c201-44bd-abd1-1bd7a64285ee&quot;
+
+ckan_nhs_init(id) %&gt;% 
+  select(Year, DZ2011) %&gt;% 
+  show_query()
+# &lt;SQL&gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`</code></pre>
+<p>Immediately I can see that the CKAN API isn’t going to like those backticks (<code>`</code>) around the variable and database names so we’ll have to remove them. We’ll also have to remove the line breaks (<code>\n</code>). Now let’s test the SQL translation for <code>filter()</code>.</p>
+<pre class="r"><code>ckan_nhs_init(id) %&gt;%
+  filter(Year == 2011L)
+# &lt;SQL&gt;
+# SELECT *
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)</code></pre>
+<p>Now I can see that the CKAN API isn’t going to like those brackets around the WHERE statement so we’ll also have to remove them. Lastly let’s test the translation for a <code>select()</code> combined with a <code>filter()</code>.</p>
+<pre class="r"><code># select() and then filter()
+ckan_nhs_init(id) %&gt;% 
+    select(Year, DZ2011) %&gt;% 
+    filter(Year == 2011L) %&gt;% 
+    show_query()
+# &lt;SQL&gt;
+# SELECT *
+# FROM (SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`)
+# WHERE (`Year` = 2011)
+
+
+# filter() and then select()
+ckan_nhs_init(id) %&gt;% 
+    filter(Year == 2011L) %&gt;% 
+    select(Year, DZ2011) %&gt;% 
+    show_query()
+# &lt;SQL&gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)</code></pre>
+<p>From here, we can see that when using <code>filter()</code> and then <code>select()</code>, the query looks fairly concise but when using <code>select()</code> and then <code>filter()</code>, we have some work to do to remove the unnecessary <code>SELECT * FROM</code> at the beginning (note that this SQL is perfectly good normally but it won’t be for the CKAN API). In any case, I think we now have all the information we need to modify dbplyr’s SQL translation to make it work for CKAN.</p>
+</div>
+<div id="modify-dbplyrs-sql-translation" class="section level2">
+<h2>Modify dbplyr’s SQL translation</h2>
+<p>Using the information just attained, I created the <code>ckan_nhs_extract()</code> function to make the required modifications to the SQL translation. Note that in the function I use <code>sql_render()</code> instead of <code>show_query()</code> as I need the SQL query as a string variable in R rather than just printed to the console. I’ve also added a warning message using <code>cat()</code> to warn the user that some queries may take a while.</p>
+<pre class="r"><code>ckan_nhs_extract &lt;- function(db_qry) {
+  db_qry &lt;- sql_render(db_qry) %&gt;%
+    str_replace_all(&quot;`&quot;, &#39;&quot;&#39;) %&gt;%
+    str_replace_all(&quot;\n&quot;, &quot; &quot;)
+  
+  # Check if there is more than one SELECT statement
+  n_select &lt;- str_count(db_qry, &quot;SELECT&quot;)
+  
+  # Remove unnecessary SELECT statement if needed
+  if (n_select &gt; 1) {
+    db_qry &lt;- str_remove(db_qry, &quot;^(SELECT \\* FROM )&quot;)
+  }
+  
+  db_qry &lt;- str_remove_all(db_qry, &quot;\\(|\\)&quot;)
+  db_qry &lt;- URLencode(db_qry)
+  
+  db_qry &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/&quot;,
+                   &quot;datastore_search_sql?&quot;,
+                   &quot;sql=&quot;,
+                   db_qry)
+  
+  cat(&quot;Extracting: this may take a while\n\n&quot;)
+  as_tibble(fromJSON(db_qry)$result$records)
+}</code></pre>
+</div>
+<div id="testing-the-dbplyr-hack" class="section level2">
+<h2>Testing the dbplyr hack</h2>
+<p>To test this hack, we will make a simple query using <code>select()</code> and then <code>filter()</code> which is the more complicated scenario.</p>
+<pre class="r"><code>ckan_nhs_init(id) %&gt;%
+  select(Year, DZ2011) %&gt;%
+  filter(Year == 2011, DZ2011 == &quot;S92000003&quot;) %&gt;%
+  ckan_nhs_extract()
+# Extracting: this may take a while
+# 
+# # A tibble: 2 x 2
+#   DZ2011    Year 
+#   &lt;chr&gt;     &lt;chr&gt;
+# 1 S92000003 2011 
+# 2 S92000003 2011 </code></pre>
+<p>This produces the desired result so it’s a job well done for now!</p>
+</div>
+<div id="concluding-notes" class="section level2">
+<h2>Concluding notes</h2>
+<p>This hack needs a lot more testing as there are probably lots of things that could potentially break it (but obviously I’m hoping not!). There’s also a niggling issue in that I don’t yet know how to remove an in-memory SQLite database from R (or whether this is even possible) which I guess should be done after you’ve extracted the data you need just to clean things up nicely in R. But in saying that, it likely isn’t a big issue as <code>src_memdb()</code> has been specifically designed for creating a temporary in-memory database so everything will of course, be cleaned up after you exit your R session anyway. If this hack turns out to be useful and doesn’t break too easily, I may put in a bit of effort to package it up onto Github later. Please let me know what you think if you ever use it!</p>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+  <a class="badge badge-light" href="/tags/api/">API</a>
+  
+  <a class="badge badge-light" href="/tags/open-data/">open-data</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu83c7a36ebecf434484f99f4fe62dcf37_44401_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/admin/">Alan Yeung</a></h5>
+      <h6 class="card-subtitle">Research Fellow and Analyst</h6>
+      <p class="card-text" itemprop="description">Applied statistician, currently working mainly on blood borne viruses. Supporter of all things R.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/alan_y" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=KScwYQ0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alan-y" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alanyeung1" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://orcid.org/0000-0001-5226-3695" target="_blank" rel="noopener">
+              <i class="ai ai-orcid"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.researchgate.net/profile/Alan_Yeung2" target="_blank" rel="noopener">
+              <i class="fab fa-researchgate"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/ckan-api/">Getting Open Data into R from CKAN</a></li>
+          
+          <li><a href="/post/glasgow-r-user-group/">Glasgow R User Group</a></li>
+          
+          <li><a href="/project/r-resources-tips/">R Training Resources and Tips</a></li>
+          
+          <li><a href="/project/phiproject/">phiproject</a></li>
+          
+          <li><a href="/project/objectremover/">objectremover RStudio Addin</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    <div id="disqus_thread"></div>
+<script>
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://alan-y.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; 2019 Alan Yeung &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/bash.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/cs.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/http.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/javascript.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/json.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/markdown.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/xml.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+
+    
+    
+    
+    <script id="dsq-count-scr" src="//alan-y.disqus.com/count.js" async></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.3258b3a711acd6208568ec000de4beec.js"></script>
+
+  </body>
+</html>
+

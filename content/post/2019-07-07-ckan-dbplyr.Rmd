@@ -1,0 +1,152 @@
+---
+title: Hacking dbplyr for CKAN
+author: Alan Yeung
+date: '2019-07-07'
+slug: ckan-dbplyr
+categories:
+  - R
+tags:
+  - R
+  - API
+  - open-data
+image:
+  caption: ''
+  focal_point: ''
+---
+
+At the end of my [first post on CKAN](../ckan-api) discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler. Well another idea came to my mind that I think would be even more cool to get working -- would it be possible to hack the [SQL translation from dbplyr](https://dbplyr.tidyverse.org/articles/translation-verb.html) to make it work effectively for extracting data from CKAN?  
+  
+Just for background info, [dbplyr](https://dbplyr.tidyverse.org) is a package that lets you use [dplyr](https://dplyr.tidyverse.org) code to interact with databases (a database backend for dplyr), which saves you learning SQL (I still recommend that people learn SQL though as it is likely to come in useful anyway!). One of the conveniences of using dbplyr is that you can take advantage of some of the dplyr's helper functions (e.g `starts_with()`, `ends_with()`) to assist with tasks such as selecting variables -- a task which can be quite tedious in SQL as you must list all of the variables you want to extract.  
+
+## Aim
+The aim here is not to be too ambitious for the hack but to just get the `select()` and `filter()` functions to work for this hack. My feeling is that if you can get these features working, then you should be able to easily extract just the variables and rows of data you want from CKAN using dplyr code and this is hopefully sufficient for most people. This should be a good starting point for helping people to not download entire datasets when they don't need to. Anyway, with the brief intro out of the way, let's see if we can get this little hack working!
+
+## Create a dummy database
+Since datasets held on CKAN will not be identified by dbplyr as a 'database', we have to create a sort of *dummy database* within R so that it identifies a CKAN resource as a database. To do this, I created a function called `ckan_nhs_init()`. This function simply downloads one row of data from a CKAN resource and stores this in an [*in-memory SQLite database*](https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/src_memdb). The key thing here is that extracting one row of data will give us a list of all the variable names for the dummy database. In the code below, please note that I have loaded some required packages to make the function work (if it turns out later that this idea is actually not bad, I'll write up the code more appropriately for packaging up).
+
+```{r ckan_nhs_init, eval=FALSE}
+library(tidyverse)
+library(dbplyr)
+library(httr)
+library(jsonlite)
+
+ckan_nhs_init <- function(id) {
+  url <- paste0("https://www.opendata.nhs.scot/api/3/action/",
+                "datastore_search?",
+                "resource_id=", id,
+                "&limit=1")
+  status <- status_code(GET(url))
+  stopifnot(str_detect(status, "^2"))
+  
+  df <- fromJSON(url)$result$records
+  copy_to(src_memdb(), df, name = id, overwrite = TRUE)
+}
+```
+
+## Test dbplyr's SQL translation
+After creating a dummy database (and thus, successfully fooling dbplyr into believing that a CKAN resource is a database), we have to make some modifications to the SQL translation from dbplyr so that the SQL query actually works for interacting with the CKAN API. First let's test a couple of simple queries to see what dbplyr's SQL translation produces. We'll use the Data Zone (2011) Population Estimates dataset (resource ID `c505f490-c201-44bd-abd1-1bd7a64285ee`) for testing throughout this post. So what does the SQL translation look like when we just use `select()`?
+
+```{r select_query, eval=FALSE}
+id <- "c505f490-c201-44bd-abd1-1bd7a64285ee"
+
+ckan_nhs_init(id) %>% 
+  select(Year, DZ2011) %>% 
+  show_query()
+# <SQL>
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+```
+
+Immediately I can see that the CKAN API isn't going to like those backticks (`` ` ``) around the variable and database names so we'll have to remove them. We'll also have to remove the line breaks (`\n`). Now let's test the SQL translation for `filter()`.
+
+```{r filter_query, eval=FALSE}
+ckan_nhs_init(id) %>%
+  filter(Year == 2011L)
+# <SQL>
+# SELECT *
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)
+```
+
+Now I can see that the CKAN API isn't going to like those brackets around the WHERE statement so we'll also have to remove them. Lastly let's test the translation for a `select()` combined with a `filter()`.
+
+```{r select_filter_query, eval=FALSE}
+# select() and then filter()
+ckan_nhs_init(id) %>% 
+    select(Year, DZ2011) %>% 
+    filter(Year == 2011L) %>% 
+    show_query()
+# <SQL>
+# SELECT *
+# FROM (SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`)
+# WHERE (`Year` = 2011)
+
+
+# filter() and then select()
+ckan_nhs_init(id) %>% 
+    filter(Year == 2011L) %>% 
+    select(Year, DZ2011) %>% 
+    show_query()
+# <SQL>
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)
+```
+
+From here, we can see that when using `filter()` and then `select()`, the query looks fairly concise but when using `select()` and then `filter()`, we have some work to do to remove the unnecessary `SELECT * FROM` at the beginning (note that this SQL is perfectly good normally but it won't be for the CKAN API). In any case, I think we now have all the information we need to modify dbplyr's SQL translation to make it work for CKAN.
+
+
+## Modify dbplyr's SQL translation
+Using the information just attained, I created the `ckan_nhs_extract()` function to make the required modifications to the SQL translation. Note that in the function I use `sql_render()` instead of `show_query()` as I need the SQL query as a string variable in R rather than just printed to the console. I've also added a warning message using `cat()` to warn the user that some queries may take a while.
+
+
+```{r ckan_nhs_extract, eval=FALSE}
+ckan_nhs_extract <- function(db_qry) {
+  db_qry <- sql_render(db_qry) %>%
+    str_replace_all("`", '"') %>%
+    str_replace_all("\n", " ")
+  
+  # Check if there is more than one SELECT statement
+  n_select <- str_count(db_qry, "SELECT")
+  
+  # Remove unnecessary SELECT statement if needed
+  if (n_select > 1) {
+    db_qry <- str_remove(db_qry, "^(SELECT \\* FROM )")
+  }
+  
+  db_qry <- str_remove_all(db_qry, "\\(|\\)")
+  db_qry <- URLencode(db_qry)
+  
+  db_qry <- paste0("https://www.opendata.nhs.scot/api/3/action/",
+                   "datastore_search_sql?",
+                   "sql=",
+                   db_qry)
+  
+  cat("Extracting: this may take a while\n\n")
+  as_tibble(fromJSON(db_qry)$result$records)
+}
+```
+
+## Testing the dbplyr hack
+To test this hack, we will make a simple query using `select()` and then `filter()` which is the more complicated scenario.
+
+```{r test_hack, eval=FALSE}
+ckan_nhs_init(id) %>%
+  select(Year, DZ2011) %>%
+  filter(Year == 2011, DZ2011 == "S92000003") %>%
+  ckan_nhs_extract()
+# Extracting: this may take a while
+# 
+# # A tibble: 2 x 2
+#   DZ2011    Year 
+#   <chr>     <chr>
+# 1 S92000003 2011 
+# 2 S92000003 2011 
+```
+
+This produces the desired result so it's a job well done for now!
+
+
+## Concluding notes
+This hack needs a lot more testing as there are probably lots of things that could potentially break it (but obviously I'm hoping not!). There's also a niggling issue in that I don't yet know how to remove an in-memory SQLite database from R (or whether this is even possible) which I guess should be done after you've extracted the data you need just to clean things up nicely in R. But in saying that, it likely isn't a big issue as `src_memdb()` has been specifically designed for creating a temporary in-memory database so everything will of course, be cleaned up after you exit your R session anyway. If this hack turns out to be useful and doesn't break too easily, I may put in a bit of effort to package it up onto Github later. Please let me know what you think if you ever use it!
