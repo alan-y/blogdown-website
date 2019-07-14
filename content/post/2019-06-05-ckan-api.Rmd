@@ -6,7 +6,6 @@ slug: ckan-api
 categories:
   - R
 tags:
-  - R
   - open-data
   - API
 image:
