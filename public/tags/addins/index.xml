@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RStudio on Alan Yeung</title>
-    <link>/tags/rstudio/</link>
-    <description>Recent content in RStudio on Alan Yeung</description>
+    <title>Addins on Alan Yeung</title>
+    <link>/tags/addins/</link>
+    <description>Recent content in Addins on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Mon, 12 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/rstudio/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/addins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,24 +19,6 @@
       
       <guid>/post/objectremover-rstudio-addin/</guid>
       <description>A Learning ExerciseWorkflowI created my first ever R package and got it released onto CRAN in March 2019. It’s taken me a while to get round to actually writing about this which tells me that despite many years of trying to overcome procrastination, I’m obviously still not there! The package is actually an RStudio addin called objectremover that helps you to quickly remove objects stored in memory (specifically objects saved in the Global environment) within an R session.</description>
-    </item>
-    
-    <item>
-      <title>phiproject</title>
-      <link>/project/phiproject/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/project/phiproject/</guid>
-      <description>An RStudio project template incorporating some best practices.</description>
-    </item>
-    
-    <item>
-      <title>objectremover RStudio Addin</title>
-      <link>/project/objectremover/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/project/objectremover/</guid>
-      <description>An RStudio addin to assist with removing objects from the global environment. Features include removing objects according to name patterns and object type.</description>
     </item>
     
   </channel>
