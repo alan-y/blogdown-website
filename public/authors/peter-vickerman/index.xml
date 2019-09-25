@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Peter Vickerman on Alan Yeung</title>
+    <link>/authors/peter-vickerman/</link>
+    <description>Recent content in Peter Vickerman on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Tue, 24 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/authors/peter-vickerman/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Evaluating the population impact of hepatitis C direct acting antiviral treatment as prevention for people who inject drugs (EPIToPe) – a natural experiment (protocol)</title>
+      <link>/publication/journal-article_hcv_epitope_protocol/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_hcv_epitope_protocol/</guid>
+      <description>This is a protocol paper for a natural experiment that looks at the population impact of scaling up hepatitis C treatment with direct acting antiviral treatments as a way to prevent disease transmission and reduce prevalence/incidence among people who inject drugs.</description>
+    </item>
+    
+  </channel>
+</rss>

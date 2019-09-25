@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,10 +15,442 @@
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>/authors/admin/</guid>
       <description>I am a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland. My main research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV. I am also a supporter for the widespread adoption of open-source statistical software within the public sector in Scotland, particularly for the use of R.</description>
+    </item>
+    
+    <item>
+      <title>Alex Murray</title>
+      <link>/authors/alex-murray/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/alex-murray/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew McAuley</title>
+      <link>/authors/andrew-mcauley/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/andrew-mcauley/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Andrew Radley</title>
+      <link>/authors/andrew-radley/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/andrew-radley/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ann Eriksen</title>
+      <link>/authors/ann-eriksen/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/ann-eriksen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anne Presanis</title>
+      <link>/authors/anne-presanis/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/anne-presanis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Athene Lane</title>
+      <link>/authors/athene-lane/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/athene-lane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chris Metcalfe</title>
+      <link>/authors/chris-metcalfe/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/chris-metcalfe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Daniela De Angelis</title>
+      <link>/authors/daniela-de-angelis/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/daniela-de-angelis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Goldberg</title>
+      <link>/authors/david-goldberg/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/david-goldberg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Liddell</title>
+      <link>/authors/david-liddell/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/david-liddell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Whiteley</title>
+      <link>/authors/david-whiteley/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/david-whiteley/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ellen Heinsbroek</title>
+      <link>/authors/ellen-heinsbroek/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/ellen-heinsbroek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Emma Hamilton</title>
+      <link>/authors/emma-hamilton/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/emma-hamilton/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gabriele Vojt</title>
+      <link>/authors/gabriele-vojt/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/gabriele-vojt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gareth Myring</title>
+      <link>/authors/gareth-myring/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/gareth-myring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Graham Foster</title>
+      <link>/authors/graham-foster/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/graham-foster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hamish Innes</title>
+      <link>/authors/hamish-innes/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/hamish-innes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hannah Fraser</title>
+      <link>/authors/hannah-fraser/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/hannah-fraser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Helen Harris</title>
+      <link>/authors/helen-harris/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/helen-harris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jade Meadows</title>
+      <link>/authors/jade-meadows/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/jade-meadows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jeremy Horwood</title>
+      <link>/authors/jeremy-horwood/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/jeremy-horwood/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>John Dillon</title>
+      <link>/authors/john-dillon/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/john-dillon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kate Drysdale</title>
+      <link>/authors/kate-drysdale/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/kate-drysdale/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Katy Sinka</title>
+      <link>/authors/katy-sinka/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/katy-sinka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lawrie Elliott</title>
+      <link>/authors/lawrie-elliott/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/lawrie-elliott/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lesley Graham</title>
+      <link>/authors/lesley-graham/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/lesley-graham/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lewis Beer</title>
+      <link>/authors/lewis-beer/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/lewis-beer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Magdalena Harris</title>
+      <link>/authors/magdalena-harris/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/magdalena-harris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mary Ramsay</title>
+      <link>/authors/mary-ramsay/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/mary-ramsay/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matthew Hickman</title>
+      <link>/authors/matthew-hickman/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/matthew-hickman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Natasha Martin</title>
+      <link>/authors/natasha-martin/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/natasha-martin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Norah Palmateer</title>
+      <link>/authors/norah-palmateer/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/norah-palmateer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pantelis Samartsidis</title>
+      <link>/authors/pantelis-samartsidis/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/pantelis-samartsidis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paul Flowers</title>
+      <link>/authors/paul-flowers/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/paul-flowers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peter Donnan</title>
+      <link>/authors/peter-donnan/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/peter-donnan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Peter Vickerman</title>
+      <link>/authors/peter-vickerman/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/peter-vickerman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rachel Glass</title>
+      <link>/authors/rachel-glass/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/rachel-glass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rory Gunson</title>
+      <link>/authors/rory-gunson/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/rory-gunson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ross Harris</title>
+      <link>/authors/ross-harris/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/ross-harris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruth Simmons</title>
+      <link>/authors/ruth-simmons/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/ruth-simmons/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Samreen Ijaz</title>
+      <link>/authors/samreen-ijaz/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/samreen-ijaz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sarah Karen Inglis</title>
+      <link>/authors/sarah-karen-inglis/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/sarah-karen-inglis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sema Mandal</title>
+      <link>/authors/sema-mandal/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/sema-mandal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sharon Hutchinson</title>
+      <link>/authors/sharon-hutchinson/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/sharon-hutchinson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stephanie Migchelsen</title>
+      <link>/authors/stephanie-migchelsen/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/stephanie-migchelsen/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vivian Hope</title>
+      <link>/authors/vivian-hope/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/vivian-hope/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>William Hollingworth</title>
+      <link>/authors/william-hollingworth/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/william-hollingworth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zoe Ward</title>
+      <link>/authors/zoe-ward/</link>
+      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/authors/zoe-ward/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -31,38 +463,11 @@
     </item>
     
     <item>
-      <title>Andrew McAuley</title>
-      <link>/authors/andrew-mcauley/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/andrew-mcauley/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Avril Taylor</title>
       <link>/authors/avril-taylor/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>/authors/avril-taylor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>David Goldberg</title>
-      <link>/authors/david-goldberg/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/david-goldberg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sharon Hutchinson</title>
-      <link>/authors/sharon-hutchinson/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/sharon-hutchinson/</guid>
       <description></description>
     </item>
     
@@ -108,24 +513,6 @@
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/authors/lesley-wallace/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Norah Palmateer</title>
-      <link>/authors/norah-palmateer/</link>
-      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/norah-palmateer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rory Gunson</title>
-      <link>/authors/rory-gunson/</link>
-      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/rory-gunson/</guid>
       <description></description>
     </item>
     
