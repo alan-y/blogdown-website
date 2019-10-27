@@ -37,6 +37,11 @@
   name = "Blogroll"
   url = "/blogroll/"
   weight = 80
+  
+[[main]]
+  name = "Upwork"
+  url = "https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212"
+  weight = 90
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
