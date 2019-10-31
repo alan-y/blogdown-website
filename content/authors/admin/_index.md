@@ -52,7 +52,7 @@ user_groups:
 <DIV align="justify">
 I am a research fellow at Glasgow Caledonian University and an analyst at Health Protection Scotland. My research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV. I am a supporter for the widespread adoption of open-source statistical software within the public sector in Scotland, particularly for the use of R.  
   
-I also work as a freelancer on the [Upwork](https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212) platform and am interested in taking on data science projects, ranging from the simple to the more complex. If you have a project that you feel I could help with, please get in touch.  
+I also work as a freelancer on the [Upwork](https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212) platform and I am interested in taking on data science projects, ranging from the simple to the more complex. If you have a project that you feel I could help with, please get in touch.  
   
 **All views and opinions expressed here are my own.**
 </DIV>
