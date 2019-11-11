@@ -1,0 +1,69 @@
+---
+title: Trying the ckanr Package
+author: Alan Yeung
+date: '2019-11-11'
+slug: trying-ckanr
+categories:
+  - R
+tags:
+  - API
+  - open-data
+image:
+  caption: ''
+  focal_point: ''
+draft: TRUE
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#how-resources-are-grouped-in-ckan">How Resources are Grouped in CKAN</a></li>
+</ul>
+</div>
+
+<p>In previous blog posts (<a href="../ckan-dbplyr">Hacking dbplyr for CKAN</a>, <a href="../ckan-api">Getting Open Data into R from CKAN</a>) I have been exploring how to download data from the <a href="https://www.opendata.nhs.scot">NHS Scotland open data platform</a> into R. I’ve recently discovered that <a href="https://ropensci.org">ROpenSci</a> has a package to help with just this called <a href="https://docs.ropensci.org/ckanr">ckanr</a> and I wish I’d known about it earlier as it is really pretty handy!</p>
+<div id="how-resources-are-grouped-in-ckan" class="section level2">
+<h2>How Resources are Grouped in CKAN</h2>
+<p>Before we start testing out some code from ckanr, it is important to consider how resources (or specific data items) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within ‘Datasets’, ‘Groups’, ‘Tags’ and ‘Themes’ (and possibly more that I don’t yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could be mistaken about this).</p>
+<div class="figure">
+<img src="/img/ckan_groupings.PNG" alt="Figure: How resources are grouped in CKAN." style="width:60.0%" />
+<p class="caption"><strong>Figure</strong>: How resources are grouped in CKAN.</p>
+</div>
+<pre class="r"><code>library(tidyverse)
+library(ckanr)
+
+ckanr_setup(url = &quot;https://www.opendata.nhs.scot&quot;)
+
+# View available groups and packages/datasets
+group_list(as = &#39;table&#39;)
+package_list(as = &quot;table&quot;)
+
+
+
+# Download from one resource ----------------------------------------------
+
+ckan &lt;- ckanr::src_ckan(&quot;https://www.opendata.nhs.scot&quot;)
+res_id &lt;- &quot;3988df43-3516-4190-93da-16189db7329a&quot;
+dplyr::tbl(src = ckan$con, from = res_id) %&gt;% as_tibble(.)
+
+# Select variables and filter with dplyr interface
+dplyr::tbl(src = ckan$con, from = res_id) %&gt;% 
+  select(Quarter, HBT2014) %&gt;% 
+  filter(HBT2014 == &quot;S08000015&quot;) %&gt;% 
+  as_tibble()
+
+
+# Download all resources from a package/dataset ---------------------------
+
+z &lt;- package_show(&quot;consultant-vacancies&quot;, as = &quot;table&quot;)$resources
+z2 &lt;- z$id
+
+z_fun &lt;- function(res_id) {
+  dplyr::tbl(src = ckan$con, from = res_id) %&gt;% as_tibble(.)
+}
+
+z_list &lt;- map(z2, z_fun)
+map_dbl(z_list, length) # Not all datasets have the same structure
+
+bind_rows(z_list[1:3])</code></pre>
+</div>

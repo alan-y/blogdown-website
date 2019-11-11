@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 24 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>API</title>
+      <link>/tags/api/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open-data</title>
+      <link>/tags/open-data/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/open-data/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HCV</title>
@@ -45,24 +63,6 @@
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/rstudio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>API</title>
-      <link>/tags/api/</link>
-      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>open-data</title>
-      <link>/tags/open-data/</link>
-      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/open-data/</guid>
       <description></description>
     </item>
     

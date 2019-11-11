@@ -1,0 +1,64 @@
+---
+title: Trying the ckanr Package
+author: Alan Yeung
+date: '2019-11-11'
+slug: trying-ckanr
+categories:
+  - R
+tags:
+  - API
+  - open-data
+image:
+  caption: ''
+  focal_point: ''
+draft: TRUE
+---
+
+In previous blog posts ([Hacking dbplyr for CKAN](../ckan-dbplyr), [Getting Open Data into R from CKAN](../ckan-api)) I have been exploring how to download data from the [NHS Scotland open data platform](https://www.opendata.nhs.scot) into R. I've recently discovered that [ROpenSci](https://ropensci.org) has a package to help with just this called [ckanr](https://docs.ropensci.org/ckanr) and I wish I'd known about it earlier as it is really pretty handy!
+
+## How Resources are Grouped in CKAN
+Before we start testing out some code from ckanr, it is important to consider how resources (or specific data items) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within 'Datasets', 'Groups', 'Tags' and 'Themes' (and possibly more that I don't yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could be mistaken about this).
+
+![**Figure**: How resources are grouped in CKAN.](/img/ckan_groupings.PNG){width=60%}
+
+
+```{r to-tidy, eval=FALSE}
+library(tidyverse)
+library(ckanr)
+
+ckanr_setup(url = "https://www.opendata.nhs.scot")
+
+# View available groups and packages/datasets
+group_list(as = 'table')
+package_list(as = "table")
+
+
+
+# Download from one resource ----------------------------------------------
+
+ckan <- ckanr::src_ckan("https://www.opendata.nhs.scot")
+res_id <- "3988df43-3516-4190-93da-16189db7329a"
+dplyr::tbl(src = ckan$con, from = res_id) %>% as_tibble(.)
+
+# Select variables and filter with dplyr interface
+dplyr::tbl(src = ckan$con, from = res_id) %>% 
+  select(Quarter, HBT2014) %>% 
+  filter(HBT2014 == "S08000015") %>% 
+  as_tibble()
+
+
+# Download all resources from a package/dataset ---------------------------
+
+z <- package_show("consultant-vacancies", as = "table")$resources
+z2 <- z$id
+
+z_fun <- function(res_id) {
+  dplyr::tbl(src = ckan$con, from = res_id) %>% as_tibble(.)
+}
+
+z_list <- map(z2, z_fun)
+map_dbl(z_list, length) # Not all datasets have the same structure
+
+bind_rows(z_list[1:3])
+```
+
