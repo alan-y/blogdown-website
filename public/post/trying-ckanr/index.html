@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="How Resources are Grouped in CKANIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!">
+  <meta name="description" content="How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/trying-ckanr/">
@@ -144,7 +144,7 @@
   <meta property="og:site_name" content="Alan Yeung">
   <meta property="og:url" content="/post/trying-ckanr/">
   <meta property="og:title" content="Trying the ckanr Package | Alan Yeung">
-  <meta property="og:description" content="How Resources are Grouped in CKANIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!"><meta property="og:image" content="/img/icon-192.png">
+  <meta property="og:description" content="How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2019-11-11T00:00:00&#43;00:00">
@@ -539,7 +539,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    6 min read
   </span>
   
 
@@ -630,46 +630,155 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#how-resources-are-grouped-in-ckan">How Resources are Grouped in CKAN</a></li>
+<li><a href="#how-resources-are-grouped-in-ckan">How resources are grouped in CKAN</a></li>
+<li><a href="#initialising-ckanr-and-exploring-groups-of-resources">Initialising ckanr and exploring groups of resources</a></li>
+<li><a href="#connect-to-ckan-with-dplyr-and-download-from-one-resource">Connect to CKAN with dplyr and download from one resource</a></li>
+<li><a href="#downloading-all-resources-from-a-dataset">Downloading all resources from a dataset</a></li>
 </ul>
 </div>
 
-<p>In previous blog posts (<a href="../ckan-dbplyr">Hacking dbplyr for CKAN</a>, <a href="../ckan-api">Getting Open Data into R from CKAN</a>) I have been exploring how to download data from the <a href="https://www.opendata.nhs.scot">NHS Scotland open data platform</a> into R. I’ve recently discovered that <a href="https://ropensci.org">ROpenSci</a> has a package to help with just this called <a href="https://docs.ropensci.org/ckanr">ckanr</a> and I wish I’d known about it earlier as it is really pretty handy!</p>
+<p>In previous blog posts (<a href="../ckan-dbplyr">Hacking dbplyr for CKAN</a>, <a href="../ckan-api">Getting Open Data into R from CKAN</a>) I have been exploring how to download data from the <a href="https://www.opendata.nhs.scot">NHS Scotland open data platform</a> into R. I’ve recently discovered that <a href="https://ropensci.org">ROpenSci</a> has a package to help with just this called <a href="https://docs.ropensci.org/ckanr">ckanr</a> and I wish I’d known about it earlier as it is really pretty handy! It certainly would’ve saved me some time if I’d know about it earlier but I suppose the positive I can take from it is that some of the functions in ckanr perform similar functions to the ideas I had so I guess that shows that my ideas are not completely wacky!</p>
 <div id="how-resources-are-grouped-in-ckan" class="section level2">
-<h2>How Resources are Grouped in CKAN</h2>
-<p>Before we start testing out some code from ckanr, it is important to consider how resources (or specific data items) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within ‘Datasets’, ‘Groups’, ‘Tags’ and ‘Themes’ (and possibly more that I don’t yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could be mistaken about this).</p>
+<h2>How resources are grouped in CKAN</h2>
+<p>Before we start testing out some code from ckanr, it is important to consider how resources (<em>I am going to call the individual data items such as specific csv files hosted on CKAN as ‘resources’ but I am not sure if this is necessarily correct</em>) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within ‘Datasets’, ‘Groups’, ‘Tags’ and ‘Themes’ (and possibly more that I don’t yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could be mistaken about this). With this out of the way, let’s delve into some code.</p>
 <div class="figure">
-<img src="/img/ckan_groupings.PNG" alt="Figure: How resources are grouped in CKAN." style="width:60.0%" />
+<img src="/img/ckan_groupings.PNG" style="width:60.0%" alt="" />
 <p class="caption"><strong>Figure</strong>: How resources are grouped in CKAN.</p>
 </div>
+</div>
+<div id="initialising-ckanr-and-exploring-groups-of-resources" class="section level2">
+<h2>Initialising ckanr and exploring groups of resources</h2>
+<p>There are, of course, many different data portals that are powered by CKAN so the first thing we need to do with the ckanr package is to tell it which URL to use by default with <code>ckanr_setup()</code>.</p>
 <pre class="r"><code>library(tidyverse)
 library(ckanr)
 
-ckanr_setup(url = &quot;https://www.opendata.nhs.scot&quot;)
+ckanr_setup(url = &quot;https://www.opendata.nhs.scot&quot;)</code></pre>
+<p>Now we can explore the groupings available in the NHS Scotland CKAN website with <code>group_list()</code>, <code>package_list()</code> and <code>tag_list()</code>; from the Figure above, these correspond to ‘Groups’, ‘datasets’ and ‘Tags’ respectively. Note that I only show 10 records in each case to keep things concise.</p>
+<pre class="r"><code># View available groups and packages/datasets
+group_list(as = &quot;table&quot;)[1:10]
+#  [1] &quot;acute-hospital-activity&quot;                  &quot;cancer&quot;                                  
+#  [3] &quot;child-health&quot;                             &quot;dental-care&quot;                             
+#  [5] &quot;deprivation&quot;                              &quot;emergency-care&quot;                          
+#  [7] &quot;general-practice&quot;                         &quot;geography&quot;                               
+#  [9] &quot;hospital-activity&quot;                        &quot;infection-disease-and-virus-surveillance&quot;                             
 
-# View available groups and packages/datasets
-group_list(as = &#39;table&#39;)
-package_list(as = &quot;table&quot;)
+package_list(as = &quot;table&quot;)[1:10]
+#  [1] &quot;18-weeks-referral-to-treatment&quot;                           
+#  [2] &quot;27-30-month-review-statistics&quot;                            
+#  [3] &quot;alcohol-related-hospital-statistics-scotland&quot;             
+#  [4] &quot;allied-health-professionals-musculoskeletal-waiting-times&quot;
+#  [5] &quot;allied-health-professional-vacancies&quot;                     
+#  [6] &quot;annual-cancer-incidence&quot;                                  
+#  [7] &quot;births-in-scottish-hospitals&quot;                             
+#  [8] &quot;cancelled-planned-operations&quot;                             
+#  [9] &quot;cancer-mortality&quot;                                         
+# [10] &quot;cancer-waiting-times&quot;                  
 
-
-
-# Download from one resource ----------------------------------------------
-
-ckan &lt;- ckanr::src_ckan(&quot;https://www.opendata.nhs.scot&quot;)
+tag_list(as = &quot;table&quot;)$name[1:10]
+# [1] &quot;31 day&quot;                 &quot;62 day&quot;                
+# [3] &quot;address&quot;                &quot;adolescent&quot;            
+# [5] &quot;adult&quot;                  &quot;age&quot;                   
+# [7] &quot;agenda for change&quot;      &quot;agenda for change band&quot;
+# [9] &quot;ahp&quot;                    &quot;ailment&quot;        </code></pre>
+<p>Being able to see the names related to different groupings is useful if you want to download data from all resources in a particular group. I’ll give an example of doing this later but first I want to mimic some of the things I done in previous blog posts but using ckanr.</p>
+</div>
+<div id="connect-to-ckan-with-dplyr-and-download-from-one-resource" class="section level2">
+<h2>Connect to CKAN with dplyr and download from one resource</h2>
+<p>Let’s demonstrate downloading from one resource using the fairly small <a href="https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times/resource/3988df43-3516-4190-93da-16189db7329a">Patients Referred</a> dataset within <a href="https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times">Allied Health Professionals - Musculoskeletal Waiting Times</a>. We start by using <code>src_ckan()</code> to create a connection to CKAN (similar to how you would do so for other non-CKAN databases). From there, you can download data in a similar way to when using <a href="https://dbplyr.tidyverse.org">dbplyr</a> but using a CKAN resource ID instead of a database table name.</p>
+<pre class="r"><code>ckan &lt;- src_ckan(&quot;https://www.opendata.nhs.scot&quot;)
 res_id &lt;- &quot;3988df43-3516-4190-93da-16189db7329a&quot;
-dplyr::tbl(src = ckan$con, from = res_id) %&gt;% as_tibble(.)
 
-# Select variables and filter with dplyr interface
 dplyr::tbl(src = ckan$con, from = res_id) %&gt;% 
+  as_tibble()
+
+# A tibble: 1,115 x 9
+#    `_id` HBT2014 ReferralsPerOne~ `_full_text` Specialty NumberOfReferra~ NumberOfReferra~
+#    &lt;chr&gt; &lt;chr&gt;              &lt;dbl&gt; &lt;chr&gt;        &lt;chr&gt;                &lt;dbl&gt; &lt;chr&gt;           
+#  1 1     S08000~           2890.  &#39;2015q3&#39;:9 ~ All AHP ~             8904 d               
+#  2 2     S08000~            411.  &#39;1267&#39;:5 &#39;2~ Chiropod~             1267 &quot;&quot;              
+#  3 3     S08000~             94.4 &#39;2015q3&#39;:3 ~ Occupati~              291 &quot;&quot;              
+#  4 4     S08000~            178.  &#39;178.17&#39;:5 ~ Orthotics              549 &quot;&quot;              
+#  5 5     S08000~           2206.  &#39;2015q3&#39;:2 ~ Physioth~             6797 &quot;&quot;              
+#  6 6     S08000~           1530.  &#39;1472&#39;:7 &#39;1~ All AHP ~             1472 d               
+#  7 7     S08000~            165.  &#39;159&#39;:1 &#39;16~ Orthotics              159 &quot;&quot;              
+#  8 8     S08000~           1365.  &#39;1313&#39;:2 &#39;1~ Physioth~             1313 &quot;&quot;              
+#  9 9     S08000~           2562.  &#39;2015q3&#39;:7 ~ All AHP ~             3212 d               
+# 10 10    S08000~            197.  &#39;197.02&#39;:1 ~ Chiropod~              247 &quot;&quot;              
+# # ... with 1,105 more rows, and 2 more variables: Quarter &lt;chr&gt;,
+# #   ReferralsPerOneHundredThousandPopulationQF &lt;chr&gt;</code></pre>
+<p>The variables look like they’ve been downloaded in a bit of a random order and that <code>_full_text</code> variable seems to have appeared so this makes me think that ckanr is using <a href="../ckan-api/#querying-with-sql">SQL to download the data</a>. This is easy enough to confirm.</p>
+<pre class="r"><code>getAnywhere(tbl.src_ckan)
+
+function (src, from, ..., name = NULL) 
+{
+    if (is.null(name)) {
+        tbl_sql(&quot;ckan&quot;, src = src, from = sql(from), ...)
+    }
+    else {
+        tbl_sql(subclass = &quot;ckan&quot;, src = src, from = sql(sprintf(&quot;SELECT * FROM \&quot;%s\&quot;&quot;, 
+            name)))
+    }
+}</code></pre>
+<p>Now let’s try combining this with some basic dplyr functions.</p>
+<pre class="r"><code>dplyr::tbl(src = ckan$con, from = res_id) %&gt;% 
   select(Quarter, HBT2014) %&gt;% 
   filter(HBT2014 == &quot;S08000015&quot;) %&gt;% 
   as_tibble()
 
-
-# Download all resources from a package/dataset ---------------------------
-
-z &lt;- package_show(&quot;consultant-vacancies&quot;, as = &quot;table&quot;)$resources
-z2 &lt;- z$id
+# A tibble: 89 x 2
+#    Quarter HBT2014  
+#    &lt;chr&gt;   &lt;chr&gt;    
+#  1 2015Q3  S08000015
+#  2 2015Q3  S08000015
+#  3 2015Q3  S08000015
+#  4 2015Q3  S08000015
+#  5 2015Q3  S08000015
+#  6 2015Q4  S08000015
+#  7 2015Q4  S08000015
+#  8 2015Q4  S08000015
+#  9 2015Q4  S08000015
+# 10 2015Q4  S08000015
+# # ... with 79 more rows
+# Warning messages:
+# 1: Translator is missing window variants of the following aggregate functions:
+# * all
+# * any
+# * cor
+# * cov
+# * paste
+# * sd
+#  
+# 2: Translator is missing window variants of the following aggregate functions:
+# * all
+# * any
+# * cor
+# * cov
+# * paste
+# * sd
+#  
+# 3: Translator is missing window variants of the following aggregate functions:
+# * all
+# * any
+# * cor
+# * cov
+# * paste
+# * sd</code></pre>
+<p>We get a long list of warnings explaining what you cannot do with the SQL translation available in ckanr but otherwise, works great!</p>
+</div>
+<div id="downloading-all-resources-from-a-dataset" class="section level2">
+<h2>Downloading all resources from a dataset</h2>
+<p>Often, a dataset on CKAN contains many resources related to the same thing. For example, the <a href="https://www.opendata.nhs.scot/dataset/consultant-vacancies">Consultant Vacancies</a> dataset (remember you can see all available ‘Datasets’ using <code>package_list()</code>) contains different csv files for vacancies at different time points.</p>
+<pre class="r"><code>cons_vac &lt;- package_show(&quot;consultant-vacancies&quot;, as = &quot;table&quot;)$resources
+cons_vac %&gt;% 
+  select(name, id)
+#                       name                                   id
+# 1      Vacancies June 2019 16e27935-325c-471b-89dc-d41c84b3a744
+# 2     Vacancies March 2019 ca67b2a4-b2f3-4420-8b77-3771c53b01f4
+# 3  Vacancies December 2018 5da80103-4da8-4694-a8b5-2332dfc43e25
+# 4 Vacancies September 2018 91d7b780-f2cb-47fb-919f-1c165ed7d301
+# 5      Vacancies June 2018 e874f6f4-6cf5-402c-af1d-2d4f26cc669f
+# 6     Vacancies March 2018 415c2f86-db7c-4c12-9a64-0cd9cf0d9118</code></pre>
+<pre class="r"><code>z2 &lt;- cons_vac$id
 
 z_fun &lt;- function(res_id) {
   dplyr::tbl(src = ckan$con, from = res_id) %&gt;% as_tibble(.)
@@ -1030,7 +1139,7 @@ s.setAttribute('data-timestamp', +new Date());
     
     
     
-    <script src="/js/academic.min.ee8463f2a394889d45e169a983fe913d.js"></script>
+    <script src="/js/academic.min.3258b3a711acd6208568ec000de4beec.js"></script>
 
   </body>
 </html>
