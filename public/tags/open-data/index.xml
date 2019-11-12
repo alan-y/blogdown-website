@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/open-data/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Trying the ckanr Package</title>
       <link>/post/trying-ckanr/</link>
-      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/trying-ckanr/</guid>
       <description>How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!</description>

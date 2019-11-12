@@ -1,7 +1,7 @@
 ---
 title: Trying the ckanr Package
 author: Alan Yeung
-date: '2019-11-11'
+date: '2019-11-12'
 slug: trying-ckanr
 categories:
   - R
@@ -11,19 +11,20 @@ tags:
 image:
   caption: ''
   focal_point: ''
-draft: TRUE
+editor_options: 
+  chunk_output_type: console
 ---
 
 In previous blog posts ([Hacking dbplyr for CKAN](../ckan-dbplyr), [Getting Open Data into R from CKAN](../ckan-api)) I have been exploring how to download data from the [NHS Scotland open data platform](https://www.opendata.nhs.scot) into R. I've recently discovered that [ROpenSci](https://ropensci.org) has a package to help with just this called [ckanr](https://docs.ropensci.org/ckanr) and I wish I'd known about it earlier as it is really pretty handy! It certainly would've saved me some time if I'd know about it earlier but I suppose the positive I can take from it is that some of the functions in ckanr perform similar functions to the ideas I had so I guess that shows that my ideas are not completely wacky!
 
 ## How resources are grouped in CKAN
-Before we start testing out some code from ckanr, it is important to consider how resources (*I am going to call the individual data items such as specific csv files hosted on CKAN as 'resources' but I am not sure if this is necessarily correct*) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within 'Datasets', 'Groups', 'Tags' and 'Themes' (and possibly more that I don't yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could be mistaken about this). With this out of the way, let's delve into some code.
+Before we start testing out some code from ckanr, it is important to consider how resources (*I am going to call the individual data items such as specific csv files hosted on CKAN as 'resources' but I am not sure if this is necessarily correct*) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within 'Datasets', 'Groups', 'Tags' and 'Themes' (and possibly more that I don't yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could also be mistaken about this). With this out of the way, let's delve into some code.
 
-![**Figure**: How resources are grouped in CKAN.](/img/ckan_groupings.PNG){width=60%}
+![**Figure**: How resources are grouped in CKAN.](/img/ckan_groupings.PNG){width=75%}
 
 
 ## Initialising ckanr and exploring groups of resources
-There are, of course, many different data portals that are powered by CKAN so the first thing we need to do with the ckanr package is to tell it which URL to use by default with `ckanr_setup()`.
+There are, of course, many different data portals that are powered by CKAN so the first thing we need to do with the ckanr package is to tell it which URL to use by default with `ckanr_setup()`. Note that if you are working in a place where you need to use a proxy to connect R to the internet, this can also be set within `ckanr_setup()` using the `proxy` argument.
 
 ```{r ckanr-init, eval=FALSE}
 library(tidyverse)
@@ -63,11 +64,11 @@ tag_list(as = "table")$name[1:10]
 # [9] "ahp"                    "ailment"        
 ```
 
-Being able to see the names related to different groupings is useful if you want to download data from all resources in a particular group. I'll give an example of doing this later but first I want to mimic some of the things I done in previous blog posts but using ckanr.
+Being able to see the names related to different groupings is useful if you want to download data from all resources in a particular group. I'll give an [example of doing this later](#downloading-all-resources-from-a-dataset) but first I want to mimic some of the things I done in previous blog posts but using ckanr.
 
 
 ## Connect to CKAN with dplyr and download from one resource
-Let's demonstrate downloading from one resource using the fairly small [Patients Referred](https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times/resource/3988df43-3516-4190-93da-16189db7329a) dataset within [Allied Health Professionals - Musculoskeletal Waiting Times](https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times). We start by using `src_ckan()` to create a connection to CKAN (similar to how you would do so for other non-CKAN databases). From there, you can download data in a similar way to when using [dbplyr](https://dbplyr.tidyverse.org) but using a CKAN resource ID instead of a database table name.
+Let's demonstrate downloading from one resource using the fairly small [Patients Referred](https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times/resource/3988df43-3516-4190-93da-16189db7329a) dataset within [Allied Health Professionals - Musculoskeletal Waiting Times](https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times) which has resource ID `3988df43-3516-4190-93da-16189db7329a`. We start by using `src_ckan()` to create a connection to CKAN (similar to how you would do so for other non-CKAN databases). From there, you can download data in a similar way to when using [dbplyr](https://dbplyr.tidyverse.org) but using a CKAN resource ID instead of a database table name.
 
 ```{r ckanr-one-resource, eval=FALSE}
 ckan <- src_ckan("https://www.opendata.nhs.scot")
@@ -110,7 +111,7 @@ function (src, from, ..., name = NULL)
 }
 ```
 
-Now let's try combining this with some basic dplyr functions.
+Now let's try combining this with some basic dplyr functions like `select()` and `filter()`.
 
 ```{r ckanr-dplyr, eval=FALSE}
 dplyr::tbl(src = ckan$con, from = res_id) %>% 
@@ -178,16 +179,60 @@ cons_vac %>%
 # 6     Vacancies March 2018 415c2f86-db7c-4c12-9a64-0cd9cf0d9118
 ```
 
+Now if you extract the required resource IDs, you can download all of the datasets with some help from the fantastic [purrr](https://purrr.tidyverse.org) package.
+
 ```{r ckan-all-resources-download, eval=FALSE}
-z2 <- cons_vac$id
+id_list <- cons_vac$id
 
-z_fun <- function(res_id) {
-  dplyr::tbl(src = ckan$con, from = res_id) %>% as_tibble(.)
-}
+# Download each resource into a list item
+cons_vac_list <- map(id_list, ~as_tibble(dplyr::tbl(src = ckan$con, from = .x)))
 
-z_list <- map(z2, z_fun)
-map_dbl(z_list, length) # Not all datasets have the same structure
+# Check how many variables in each resource
+map_dbl(cons_vac_list, length)
+# [1] 12 12 12 14 15 12
+# Not all resources have the same structure
 
-bind_rows(z_list[1:3])
+# Check variable names for a couple that differ
+map(cons_vac_list[3:4], names)
+# [[1]]
+#  [1] "WorkforceRegionGrouping" "HB2014"                 
+#  [3] "HB2014QF"                "TotalVacancies"         
+#  [5] "_full_text"              "Specialty"              
+#  [7] "VacanciesGreater6Months" "Date"                   
+#  [9] "SpecialtyQF"             "_id"                    
+# [11] "Establishment"           "StaffInPost"            
+# 
+# [[2]]
+#  [1] "WorkforceRegionGrouping" "HB2014"                 
+#  [3] "HB2014QF"                "TotalVacancies"         
+#  [5] "TotalVacanciesQF"        "_full_text"             
+#  [7] "Specialty"               "EstablishmentQF"        
+#  [9] "VacanciesGreater6Months" "Date"                   
+# [11] "SpecialtyQF"             "_id"                    
+# [13] "Establishment"           "StaffInPost"
+
+# TotalVacanciesQF and EstablishmentQF not in resource 3 but are in resource 4
+
+# Combine just the first 3 resources which look like they all have the same structure
+bind_rows(cons_vac_list[1:3])
+# A tibble: 1,822 x 12
+#    WorkforceRegion~ HB2014 HB2014QF TotalVacancies `_full_text`
+#    <chr>            <chr>  <chr>             <dbl> <chr>       
+#  1 National Bodies~ SB0806 ""                    0 '0':9 '1.4'~
+#  2 Scotland         S9200~ d                     0 '0':5 '2019~
+#  3 Scotland         S9200~ d                     0 '0':5 '2.1'~
+#  4 National Bodies~ SB0807 ""                    0 '0':9 '0.3'~
+#  5 North            S0800~ ""                    0 '0':5 '0.1'~
+#  6 National Bodies~ SB0808 ""                    0 '0':9 '1.2'~
+#  7 East             S0800~ ""                    0 '0':3 '12.1~
+#  8 East             S0800~ ""                    0 '0':3 '1.7'~
+#  9 National Bodies~ SB0804 ""                    0 '0':1 '1':9~
+# 10 National Bodies~ SB0807 ""                    0 '0':9 '0.4'~
+# ... with 1,812 more rows, and 7 more variables: Specialty <chr>,
+#   VacanciesGreater6Months <dbl>, Date <dbl>, SpecialtyQF <chr>,
+#   `_id` <chr>, Establishment <dbl>, StaffInPost <dbl>
 ```
 
+So that is a basic workflow using ckanr alongside functions from purrr for combining related resources into one dataset. I've also presented some ways of checking consistency in the structure of those datasets (an essential step when trying to do something like this) and in this case, not all of the datasets were the same so I just combined the most recent 3 datasets for consultant vacancies at the end for simplicity here; in reality you might want to look at ways to make all of the data consistent first and then combine them up but I'll leave that data wrangling exercise up to the interested reader.  
+  
+**My final verdict**: ckanr is definitely recommended for working with data from CKAN!
