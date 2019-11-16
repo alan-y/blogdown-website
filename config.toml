@@ -19,7 +19,7 @@ copyright = "&copy; 2019 Alan Yeung"
 googleAnalytics = "UA-142501204-1"
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = "alan-y"
+disqusShortname = ""
 
 ############################
 ## Advanced options below ##
