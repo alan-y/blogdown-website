@@ -7,6 +7,7 @@
 
 [class^="ic-"], [class*=" ic-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
+  display: inline-block;
   font-family: 'fontchido' !important;
   speak: none;
   font-style: normal;
@@ -37,7 +38,7 @@
 
 .ic-upwork-circle:before{
   content: "D";
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .ic-dotnet:before {
