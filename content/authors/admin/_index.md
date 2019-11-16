@@ -43,6 +43,9 @@ social:
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Alan_Yeung2
+- icon: upwork-circle
+  icon_pack: ic
+  link: https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212
 superuser: true
 user_groups:
 - Researchers
