@@ -9,17 +9,31 @@
   /* use !important to prevent issues with browser extensions that change fonts */
   display: inline-block;
   font-family: 'fontchido' !important;
+  font-size: inherit;
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  line-height: 1;
+  line-height: 1.2;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
 
 .ic-archlinux:before {
   content: "A";
@@ -38,7 +52,6 @@
 
 .ic-upwork-circle:before{
   content: "D";
-  font-size: 2.5rem;
 }
 
 .ic-dotnet:before {

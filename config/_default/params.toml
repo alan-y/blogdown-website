@@ -65,6 +65,7 @@ appointment_url = ""
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "DM me on Twitter @alan_y", link = "https://twitter.com/alan_y"},
   {icon = "linkedin", icon_pack = "fab", name = "Send me a message on LinkedIn", link = "https://www.linkedin.com/in/alanyeung1"},
+  {icon = "upwork-circle", icon_pack = "ic", name = "Contact me on Upwork", link = "https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212"}
   # {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
   # {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
   # {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
