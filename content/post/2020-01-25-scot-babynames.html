@@ -1,0 +1,156 @@
+---
+title: Scotland's Most Popular Babynames
+author: Alan Yeung
+date: '2020-01-25'
+slug: scot-babynames
+categories:
+  - R
+tags:
+  - Shiny
+image:
+  caption: ''
+  focal_point: ''
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#downloading-the-data">Downloading the data</a></li>
+<li><a href="#shiny-app">Shiny App</a></li>
+</ul>
+</div>
+
+<p>I recently saw this <a href="https://flowingdata.com/2020/01/21/name-guess">great post on Nathan Yau’s FlowingData website</a> which <em>guesses</em> a person’s name based on what the name starts with. It also needs you to select a gender and a decade for when you were born before it can guess. Of course, it isn’t really a guess and is really just based on proportions calculated after restricting the data to what has been selected.</p>
+<p>It uses data from the Social Security Administration in America so results more specifically apply to the US. I thought it’d be cool to see how it looks for Scottish data which is available from the <a href="https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names">National Records of Scotland (NRS)</a>. I’ve embedded the Shiny app below into an <a href="https://www.w3schools.com/html/html_iframe.asp">iframe</a> but you can view the app in it’s own page by going to <a href="https://alan-y.shinyapps.io/name_guess" class="uri">https://alan-y.shinyapps.io/name_guess</a>. I used a little bit of <a href="https://stackoverflow.com/questions/17838607/making-an-iframe-responsive">css to make the iframe <em>responsive</em></a> (resizes based on the amount of screen/window space available). The app is hosted on <a href="https://www.shinyapps.io">shinyapps.io</a> on a free account so if nobody visits it for a while, it will no longer be available (unless I restart it). So apologies if you happen to visit this page further down the line and it’s not working!</p>
+<p>The R code I used to download and wrangle the data as well as create the Shiny app is provided further down the page. I hope the app is interesting to some people and my acknowledgements again, to Nathan Yau as this is clearly based off his work.</p>
+<div class="wrapper">
+<p><iframe src="https://alan-y.shinyapps.io/name_guess" width="800" height="575"></iframe></p>
+</div>
+<div id="downloading-the-data" class="section level2">
+<h2>Downloading the data</h2>
+<p>First I identified the webpages from the NRS website that contained the required babynames csv files and then scraped the links to all the csv files with help from the <a href="https://rvest.tidyverse.org">rvest</a> package. I created some helper functions (one to grab the csv links and one to read the csv files into R and tidy them up) to use with the <code>map()</code> functions from purrr.</p>
+<pre class="r"><code>library(tidyverse)
+library(janitor)
+library(rvest)
+
+# Helper functions
+get_csv_links &lt;- function(link) {
+  read_html(link) %&gt;% 
+    html_nodes(&quot;a&quot;) %&gt;% 
+    html_attr(&quot;href&quot;) %&gt;% 
+    str_subset(&quot;\\.csv&quot;) %&gt;% 
+    paste0(&quot;https://www.nrscotland.gov.uk/&quot;, .)
+}
+
+read_babynames &lt;- function(link, yr) {
+  b &lt;- read_csv(link, skip = 6) %&gt;% 
+    remove_empty() %&gt;% 
+    select(-contains(&quot;Position&quot;)) %&gt;% 
+    clean_names()
+
+  boy &lt;- b %&gt;%
+    select(1:2) %&gt;%
+    set_names(c(&quot;name&quot;, &quot;number_of_babies&quot;)) %&gt;% 
+    mutate(gender = &quot;boy&quot;)
+
+  girl &lt;- b %&gt;%
+    select(3:4) %&gt;%
+    set_names(c(&quot;name&quot;, &quot;number_of_babies&quot;)) %&gt;%
+    mutate(gender = &quot;girl&quot;)
+
+  bind_rows(boy, girl) %&gt;% 
+    mutate(year = yr) %&gt;% 
+    filter(!is.na(number_of_babies))
+}
+
+# List of webpages containing the csv files
+pages &lt;- c(&quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-archive/full-lists-of-babies-first-names-1974-to-1979&quot;,
+           &quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-archive/full-lists-of-babies-first-names-1980-to-1989&quot;,
+           &quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-archive/full-lists-of-babies-first-names-1990-to-1999&quot;,
+           &quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-2000-to-2009&quot;,
+           &quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-2010-to-2014&quot;)
+
+csv_links &lt;- map(pages, get_csv_links) %&gt;% 
+  unlist()
+
+# Find the years for each csv file
+yr &lt;- parse_number(str_extract(csv_links, &quot;[0-9]+\\.csv&quot;)) %&gt;% 
+  if_else(is.na(.), 2018, .) %&gt;% 
+  if_else(. &lt; 1000, . + 2000, .)
+
+babynames &lt;- map2_df(csv_links, yr, read_babynames)
+
+babynames2 &lt;- babynames %&gt;% 
+  mutate(decade = paste0(str_sub(year, 1, 3), &quot;0s&quot;)) %&gt;% 
+  group_by(decade, gender, name) %&gt;% 
+  summarise(number_of_babies = sum(number_of_babies)) %&gt;% 
+  ungroup()
+
+# Save as rds so it can be quickly read in for the Shiny app
+saveRDS(babynames2, &quot;babynames.rds&quot;)</code></pre>
+</div>
+<div id="shiny-app" class="section level2">
+<h2>Shiny App</h2>
+<p>I created the Shiny app by amending the Shiny template available in RStudio as required – all fairly straightforward stuff and nothing fancy involved at all!</p>
+<pre class="r"><code># Shiny App: Scotland&#39;s most popular babynames by decade
+
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(stringr)
+theme_set(theme_minimal(base_size = 14))
+
+babynames &lt;- readRDS(&quot;babynames.rds&quot;)
+
+
+ui &lt;- fluidPage(
+    
+    titlePanel(&quot;Scotland&#39;s Most Popular Babynames&quot;),
+    
+    sidebarLayout(
+        sidebarPanel(
+            selectInput(&quot;decade&quot;, &quot;Born in Decade:&quot;,
+                        c(&quot;1970s&quot; = &quot;1970s&quot;,
+                          &quot;1980s&quot; = &quot;1980s&quot;,
+                          &quot;1990s&quot; = &quot;1990s&quot;,
+                          &quot;2000s&quot; = &quot;2000s&quot;,
+                          &quot;2010s&quot; = &quot;2010s&quot;)),
+            radioButtons(&quot;gender&quot;, &quot;Gender:&quot;,
+                         c(&quot;Boy&quot; = &quot;boy&quot;,
+                           &quot;Girl&quot; = &quot;girl&quot;)),
+            
+            textInput(&quot;name_start&quot;, &quot;Name starts with&quot;, &quot;&quot;),
+        ),
+        
+        mainPanel(
+            plotOutput(&quot;barPlot&quot;)
+        )
+    )
+)
+
+
+server &lt;- function(input, output) {
+    
+    output$barPlot &lt;- renderPlot({
+        babynames %&gt;% 
+            filter(decade == input$decade,
+                   gender == input$gender,
+                   str_detect(name, paste0(&quot;^&quot;, str_to_title(input$name_start)))) %&gt;% 
+            arrange(desc(number_of_babies)) %&gt;% 
+            mutate(perc = number_of_babies / sum(.$number_of_babies),
+                   name = factor(name, levels = rev(.$name))) %&gt;% 
+            slice(1:20) %&gt;% 
+            ggplot(aes(x = name, y = perc)) +
+            geom_bar(stat = &quot;identity&quot;, fill = &quot;orange&quot;, width = 0.7) +
+            scale_y_continuous(labels = percent, limits = c(0, 1)) +
+            labs(x = NULL, y = NULL,
+                 caption = &quot;Source: National Records of Scotland\nBabynames Data 1974-2018&quot;) +
+            coord_flip() +
+            theme(panel.grid.major.y = element_blank())
+    })
+}
+
+
+shinyApp(ui = ui, server = server)</code></pre>
+</div>
