@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -18,13 +18,180 @@
   </url>
   
   <url>
+    <loc>/authors/admin/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/2/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/allan-mcleod/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/amanda-weir/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/andrew-fraser/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/cirrhosis/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/daa/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/david-goldberg/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hcv/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/hamish-innes/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/heather-valerio/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/john-dillon/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kate-templeton/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/kevin-pollock/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/nicholas-kennedy/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/peter-bramley/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/peter-hayes/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/journal-article-hcv_daa_dc/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/authors/raymond-fox/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/rory-gunson/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/scott-mcdonald/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/shanley-smith/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/sharon-hutchinson/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/stephen-barclay/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -35,6 +202,7 @@
   <url>
     <loc>/categories/r/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -45,21 +213,13 @@
   <url>
     <loc>/tags/shiny/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-01-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/api/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/open-data/</loc>
-    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -68,83 +228,81 @@
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <loc>/tags/open-data/</loc>
+    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/alex-murray/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/andrew-mcauley/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/andrew-radley/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/ann-eriksen/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/anne-presanis/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/athene-lane/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/chris-metcalfe/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/daniela-de-angelis/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/david-goldberg/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/david-liddell/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/david-whiteley/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/ellen-heinsbroek/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/emma-hamilton/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -155,210 +313,209 @@
   <url>
     <loc>/authors/gabriele-vojt/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/gareth-myring/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/graham-foster/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/hamish-innes/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/hannah-fraser/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/hcv/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/helen-harris/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/jade-meadows/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/jeremy-horwood/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/john-dillon/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/kate-drysdale/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/katy-sinka/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/lawrie-elliott/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/lesley-graham/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/lewis-beer/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/magdalena-harris/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/mary-ramsay/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/matthew-hickman/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/natasha-martin/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/norah-palmateer/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/pantelis-samartsidis/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/paul-flowers/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/peter-donnan/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/peter-vickerman/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/pwid/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/pantelis-samartsidis/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/paul-flowers/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/peter-donnan/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/peter-vickerman/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/rachel-glass/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/rory-gunson/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/ross-harris/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/ruth-simmons/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/samreen-ijaz/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/sarah-karen-inglis/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/sema-mandal/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/sharon-hutchinson/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/stephanie-migchelsen/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/vivian-hope/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/william-hollingworth/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/zoe-ward/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/addins/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/objectremover-rstudio-addin/</loc>
-    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/rstudio/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/objectremover-rstudio-addin/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
   </url>
   
@@ -380,6 +537,7 @@
   <url>
     <loc>/tags/r-events/</loc>
     <lastmod>2019-05-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -388,13 +546,9 @@
   </url>
   
   <url>
-    <loc>/tags/blogdown/</loc>
-    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/personal/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -403,18 +557,21 @@
   </url>
   
   <url>
-    <loc>/tags/bookdown/</loc>
-    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <loc>/tags/blogdown/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/project/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/r/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -423,23 +580,33 @@
   </url>
   
   <url>
+    <loc>/tags/bookdown/</loc>
+    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/tidyverse/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/training/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/alison-munro/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/avril-taylor/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -450,6 +617,7 @@
   <url>
     <loc>/tags/nps/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -475,16 +643,19 @@
   <url>
     <loc>/publication_types/4/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/health-protection-scotland/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/hiv/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/health-protection-scotland/</loc>
+    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -495,6 +666,7 @@
   <url>
     <loc>/authors/information-services-division/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -505,6 +677,7 @@
   <url>
     <loc>/authors/alan-mitchell/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -515,36 +688,37 @@
   <url>
     <loc>/authors/celia-aitken/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/hbv/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/lesley-wallace/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/prison/</loc>
-    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/samantha-shepherd/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/prison/</loc>
+    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/vaccination/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/amanda-weir/</loc>
-    <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -555,46 +729,55 @@
   <url>
     <loc>/authors/donald-inverarity/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/hannah-austin/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/jim-sherval/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/kirsty-morrison/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/naomi-henderson/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/roisin-ure/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/shruti-joshi/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/time-series/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/beth-cullen/</loc>
     <lastmod>2017-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -603,23 +786,21 @@
   </url>
   
   <url>
-    <loc>/authors/kate-templeton/</loc>
-    <lastmod>2017-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/authors/kirsten-trayner/</loc>
     <lastmod>2017-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/publication_types/7/</loc>
     <lastmod>2016-07-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/chris-robertson/</loc>
     <lastmod>2016-07-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -630,6 +811,7 @@
   <url>
     <loc>/tags/statistics/</loc>
     <lastmod>2016-07-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

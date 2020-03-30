@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alan Yeung</title>
@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cirrhosis</title>
+      <link>/tags/cirrhosis/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cirrhosis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DAA</title>
+      <link>/tags/daa/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/daa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCV</title>
+      <link>/tags/hcv/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hcv/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Shiny</title>
@@ -36,15 +63,6 @@
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/open-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCV</title>
-      <link>/tags/hcv/</link>
-      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hcv/</guid>
       <description></description>
     </item>
     
@@ -94,20 +112,20 @@
     </item>
     
     <item>
-      <title>bookdown</title>
-      <link>/tags/bookdown/</link>
-      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/bookdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>R</title>
       <link>/tags/r/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bookdown</title>
+      <link>/tags/bookdown/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bookdown/</guid>
       <description></description>
     </item>
     

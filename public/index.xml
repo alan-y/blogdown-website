@@ -7,27 +7,813 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Posts</title>
-      <link>/post/</link>
-      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      <title>Example Page 1</title>
+      <link>/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/post/</guid>
+      <guid>/courses/example/example1/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Page 2</title>
+      <link>/courses/example/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>/courses/example/example2/</guid>
+      <description>
+
+&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Population impact of direct-acting antiviral treatment on new presentations of hepatitis C-related decompensated cirrhosis: a national record-linkage study</title>
+      <link>/publication/journal-article-hcv_daa_dc/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article-hcv_daa_dc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>/publication/</link>
+      <title>Scotland&#39;s Most Popular Babynames</title>
+      <link>/post/scot-babynames/</link>
+      <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/scot-babynames/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#downloading-the-data&#34;&gt;Downloading the data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#shiny-app&#34;&gt;Shiny App&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I recently saw this &lt;a href=&#34;https://flowingdata.com/2020/01/21/name-guess&#34;&gt;great post on Nathan Yau’s FlowingData website&lt;/a&gt; which &lt;em&gt;guesses&lt;/em&gt; a person’s name based on what the name starts with. It also needs you to select a gender and a decade for when you were born before it can guess. Of course, it isn’t really a guess and is really just based on proportions calculated after restricting the data to what has been selected.&lt;/p&gt;
+&lt;p&gt;It uses data from the Social Security Administration in America so results more specifically apply to the US. I thought it’d be cool to see how it looks for Scottish data which is available from the &lt;a href=&#34;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names&#34;&gt;National Records of Scotland (NRS)&lt;/a&gt;. I’ve embedded the Shiny app below into an &lt;a href=&#34;https://www.w3schools.com/html/html_iframe.asp&#34;&gt;iframe&lt;/a&gt; but you can view the app in it’s own page by going to &lt;a href=&#34;https://alan-y.shinyapps.io/name_guess&#34; class=&#34;uri&#34;&gt;https://alan-y.shinyapps.io/name_guess&lt;/a&gt;. I used a little bit of &lt;a href=&#34;https://stackoverflow.com/questions/17838607/making-an-iframe-responsive&#34;&gt;css to make the iframe &lt;em&gt;responsive&lt;/em&gt;&lt;/a&gt; (resizes based on the amount of screen/window space available). The app is hosted on &lt;a href=&#34;https://www.shinyapps.io&#34;&gt;shinyapps.io&lt;/a&gt; on a free account so if nobody visits it for a while, it will no longer be available (unless I restart it). So apologies if you happen to visit this page further down the line and it’s not working!&lt;/p&gt;
+&lt;p&gt;The R code I used to download and wrangle the data as well as create the Shiny app is provided further down the page. I hope the app is interesting to some people and my acknowledgements again, to Nathan Yau as this is clearly based off his work.&lt;/p&gt;
+&lt;div class=&#34;wrapper&#34;&gt;
+&lt;p&gt;&lt;iframe src=&#34;https://alan-y.shinyapps.io/name_guess&#34; width=&#34;800&#34; height=&#34;575&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;downloading-the-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Downloading the data&lt;/h2&gt;
+&lt;p&gt;First I identified the webpages from the NRS website that contained the required babynames csv files and then scraped the links to all the csv files with help from the &lt;a href=&#34;https://rvest.tidyverse.org&#34;&gt;rvest&lt;/a&gt; package. I created some helper functions (one to grab the csv links and one to read the csv files into R and tidy them up) to use with the &lt;code&gt;map()&lt;/code&gt; functions from purrr.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(janitor)
+library(rvest)
+
+# Helper functions
+get_csv_links &amp;lt;- function(link) {
+  read_html(link) %&amp;gt;% 
+    html_nodes(&amp;quot;a&amp;quot;) %&amp;gt;% 
+    html_attr(&amp;quot;href&amp;quot;) %&amp;gt;% 
+    str_subset(&amp;quot;\\.csv&amp;quot;) %&amp;gt;% 
+    paste0(&amp;quot;https://www.nrscotland.gov.uk/&amp;quot;, .)
+}
+
+read_babynames &amp;lt;- function(link, yr) {
+  b &amp;lt;- read_csv(link, skip = 6) %&amp;gt;% 
+    remove_empty() %&amp;gt;% 
+    select(-contains(&amp;quot;Position&amp;quot;)) %&amp;gt;% 
+    clean_names()
+
+  boy &amp;lt;- b %&amp;gt;%
+    select(1:2) %&amp;gt;%
+    set_names(c(&amp;quot;name&amp;quot;, &amp;quot;number_of_babies&amp;quot;)) %&amp;gt;% 
+    mutate(gender = &amp;quot;boy&amp;quot;)
+
+  girl &amp;lt;- b %&amp;gt;%
+    select(3:4) %&amp;gt;%
+    set_names(c(&amp;quot;name&amp;quot;, &amp;quot;number_of_babies&amp;quot;)) %&amp;gt;%
+    mutate(gender = &amp;quot;girl&amp;quot;)
+
+  bind_rows(boy, girl) %&amp;gt;% 
+    mutate(year = yr) %&amp;gt;% 
+    filter(!is.na(number_of_babies))
+}
+
+# List of webpages containing the csv files
+pages &amp;lt;- c(&amp;quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-archive/full-lists-of-babies-first-names-1974-to-1979&amp;quot;,
+           &amp;quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-archive/full-lists-of-babies-first-names-1980-to-1989&amp;quot;,
+           &amp;quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-archive/full-lists-of-babies-first-names-1990-to-1999&amp;quot;,
+           &amp;quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-2000-to-2009&amp;quot;,
+           &amp;quot;https://www.nrscotland.gov.uk/statistics-and-data/statistics/statistics-by-theme/vital-events/names/babies-first-names/full-lists-of-babies-first-names-2010-to-2014&amp;quot;)
+
+csv_links &amp;lt;- map(pages, get_csv_links) %&amp;gt;% 
+  unlist()
+
+# Find the years for each csv file
+yr &amp;lt;- parse_number(str_extract(csv_links, &amp;quot;[0-9]+\\.csv&amp;quot;)) %&amp;gt;% 
+  if_else(is.na(.), 2018, .) %&amp;gt;% 
+  if_else(. &amp;lt; 1000, . + 2000, .)
+
+babynames &amp;lt;- map2_df(csv_links, yr, read_babynames)
+
+babynames2 &amp;lt;- babynames %&amp;gt;% 
+  mutate(decade = paste0(str_sub(year, 1, 3), &amp;quot;0s&amp;quot;)) %&amp;gt;% 
+  group_by(decade, gender, name) %&amp;gt;% 
+  summarise(number_of_babies = sum(number_of_babies)) %&amp;gt;% 
+  ungroup()
+
+# Save as rds so it can be quickly read in for the Shiny app
+saveRDS(babynames2, &amp;quot;babynames.rds&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;shiny-app&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Shiny App&lt;/h2&gt;
+&lt;p&gt;I created the Shiny app by amending the Shiny template available in RStudio as required – all fairly straightforward stuff and nothing fancy involved at all!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Shiny App: Scotland&amp;#39;s most popular babynames by decade
+
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(stringr)
+theme_set(theme_minimal(base_size = 14))
+
+babynames &amp;lt;- readRDS(&amp;quot;babynames.rds&amp;quot;)
+
+
+ui &amp;lt;- fluidPage(
+    
+    titlePanel(&amp;quot;Scotland&amp;#39;s Most Popular Babynames&amp;quot;),
+    
+    sidebarLayout(
+        sidebarPanel(
+            selectInput(&amp;quot;decade&amp;quot;, &amp;quot;Born in Decade:&amp;quot;,
+                        c(&amp;quot;1970s&amp;quot; = &amp;quot;1970s&amp;quot;,
+                          &amp;quot;1980s&amp;quot; = &amp;quot;1980s&amp;quot;,
+                          &amp;quot;1990s&amp;quot; = &amp;quot;1990s&amp;quot;,
+                          &amp;quot;2000s&amp;quot; = &amp;quot;2000s&amp;quot;,
+                          &amp;quot;2010s&amp;quot; = &amp;quot;2010s&amp;quot;)),
+            radioButtons(&amp;quot;gender&amp;quot;, &amp;quot;Gender:&amp;quot;,
+                         c(&amp;quot;Boy&amp;quot; = &amp;quot;boy&amp;quot;,
+                           &amp;quot;Girl&amp;quot; = &amp;quot;girl&amp;quot;)),
+            
+            textInput(&amp;quot;name_start&amp;quot;, &amp;quot;Name starts with&amp;quot;, &amp;quot;&amp;quot;),
+        ),
+        
+        mainPanel(
+            plotOutput(&amp;quot;barPlot&amp;quot;)
+        )
+    )
+)
+
+
+server &amp;lt;- function(input, output) {
+    
+    output$barPlot &amp;lt;- renderPlot({
+        babynames %&amp;gt;% 
+            filter(decade == input$decade,
+                   gender == input$gender,
+                   str_detect(name, paste0(&amp;quot;^&amp;quot;, str_to_title(input$name_start)))) %&amp;gt;% 
+            arrange(desc(number_of_babies)) %&amp;gt;% 
+            mutate(perc = number_of_babies / sum(.$number_of_babies),
+                   name = factor(name, levels = rev(.$name))) %&amp;gt;% 
+            slice(1:20) %&amp;gt;% 
+            ggplot(aes(x = name, y = perc)) +
+            geom_bar(stat = &amp;quot;identity&amp;quot;, fill = &amp;quot;orange&amp;quot;, width = 0.7) +
+            scale_y_continuous(labels = percent, limits = c(0, 1)) +
+            labs(x = NULL, y = NULL,
+                 caption = &amp;quot;Source: National Records of Scotland\nBabynames Data 1974-2018&amp;quot;) +
+            coord_flip() +
+            theme(panel.grid.major.y = element_blank())
+    })
+}
+
+
+shinyApp(ui = ui, server = server)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Trying the ckanr Package</title>
+      <link>/post/trying-ckanr/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/trying-ckanr/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#how-resources-are-grouped-in-ckan&#34;&gt;How resources are grouped in CKAN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#initialising-ckanr-and-exploring-groups-of-resources&#34;&gt;Initialising ckanr and exploring groups of resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#connect-to-ckan-with-dplyr-and-download-from-one-resource&#34;&gt;Connect to CKAN with dplyr and download from one resource&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#downloading-all-resources-from-a-dataset&#34;&gt;Downloading all resources from a dataset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In previous blog posts (&lt;a href=&#34;../ckan-dbplyr&#34;&gt;Hacking dbplyr for CKAN&lt;/a&gt;, &lt;a href=&#34;../ckan-api&#34;&gt;Getting Open Data into R from CKAN&lt;/a&gt;) I have been exploring how to download data from the &lt;a href=&#34;https://www.opendata.nhs.scot&#34;&gt;NHS Scotland open data platform&lt;/a&gt; into R. I’ve recently discovered that &lt;a href=&#34;https://ropensci.org&#34;&gt;ROpenSci&lt;/a&gt; has a package to help with just this called &lt;a href=&#34;https://docs.ropensci.org/ckanr&#34;&gt;ckanr&lt;/a&gt; and I wish I’d known about it earlier as it is really pretty handy! It certainly would’ve saved me some time if I’d know about it earlier but I suppose the positive I can take from it is that some of the functions in ckanr perform similar functions to the ideas I had so I guess that shows that my ideas are not completely wacky!&lt;/p&gt;
+&lt;div id=&#34;how-resources-are-grouped-in-ckan&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;How resources are grouped in CKAN&lt;/h2&gt;
+&lt;p&gt;Before we start testing out some code from ckanr, it is important to consider how resources (&lt;em&gt;I am going to call the individual data items such as specific csv files hosted on CKAN as ‘resources’ but I am not sure if this is necessarily correct&lt;/em&gt;) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within ‘Datasets’, ‘Groups’, ‘Tags’ and ‘Themes’ (and possibly more that I don’t yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could also be mistaken about this). With this out of the way, let’s delve into some code.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;/img/ckan_groupings.PNG&#34; alt=&#34;Figure: How resources are grouped in CKAN.&#34; style=&#34;width:75.0%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;&lt;strong&gt;Figure&lt;/strong&gt;: How resources are grouped in CKAN.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;initialising-ckanr-and-exploring-groups-of-resources&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Initialising ckanr and exploring groups of resources&lt;/h2&gt;
+&lt;p&gt;There are, of course, many different data portals that are powered by CKAN so the first thing we need to do with the ckanr package is to tell it which URL to use by default with &lt;code&gt;ckanr_setup()&lt;/code&gt;. Note that if you are working in a place where you need to use a proxy to connect R to the internet, this can also be set within &lt;code&gt;ckanr_setup()&lt;/code&gt; using the &lt;code&gt;proxy&lt;/code&gt; argument.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(ckanr)
+
+ckanr_setup(url = &amp;quot;https://www.opendata.nhs.scot&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we can explore the groupings available in the NHS Scotland CKAN website with &lt;code&gt;group_list()&lt;/code&gt;, &lt;code&gt;package_list()&lt;/code&gt; and &lt;code&gt;tag_list()&lt;/code&gt;; from the Figure above, these correspond to ‘Groups’, ‘datasets’ and ‘Tags’ respectively. Note that I only show 10 records in each case to keep things concise.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# View available groups and packages/datasets
+group_list(as = &amp;quot;table&amp;quot;)[1:10]
+#  [1] &amp;quot;acute-hospital-activity&amp;quot;                  &amp;quot;cancer&amp;quot;                                  
+#  [3] &amp;quot;child-health&amp;quot;                             &amp;quot;dental-care&amp;quot;                             
+#  [5] &amp;quot;deprivation&amp;quot;                              &amp;quot;emergency-care&amp;quot;                          
+#  [7] &amp;quot;general-practice&amp;quot;                         &amp;quot;geography&amp;quot;                               
+#  [9] &amp;quot;hospital-activity&amp;quot;                        &amp;quot;infection-disease-and-virus-surveillance&amp;quot;                             
+
+package_list(as = &amp;quot;table&amp;quot;)[1:10]
+#  [1] &amp;quot;18-weeks-referral-to-treatment&amp;quot;                           
+#  [2] &amp;quot;27-30-month-review-statistics&amp;quot;                            
+#  [3] &amp;quot;alcohol-related-hospital-statistics-scotland&amp;quot;             
+#  [4] &amp;quot;allied-health-professionals-musculoskeletal-waiting-times&amp;quot;
+#  [5] &amp;quot;allied-health-professional-vacancies&amp;quot;                     
+#  [6] &amp;quot;annual-cancer-incidence&amp;quot;                                  
+#  [7] &amp;quot;births-in-scottish-hospitals&amp;quot;                             
+#  [8] &amp;quot;cancelled-planned-operations&amp;quot;                             
+#  [9] &amp;quot;cancer-mortality&amp;quot;                                         
+# [10] &amp;quot;cancer-waiting-times&amp;quot;                  
+
+tag_list(as = &amp;quot;table&amp;quot;)$name[1:10]
+# [1] &amp;quot;31 day&amp;quot;                 &amp;quot;62 day&amp;quot;                
+# [3] &amp;quot;address&amp;quot;                &amp;quot;adolescent&amp;quot;            
+# [5] &amp;quot;adult&amp;quot;                  &amp;quot;age&amp;quot;                   
+# [7] &amp;quot;agenda for change&amp;quot;      &amp;quot;agenda for change band&amp;quot;
+# [9] &amp;quot;ahp&amp;quot;                    &amp;quot;ailment&amp;quot;        &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Being able to see the names related to different groupings is useful if you want to download data from all resources in a particular group. I’ll give an &lt;a href=&#34;#downloading-all-resources-from-a-dataset&#34;&gt;example of doing this later&lt;/a&gt; but first I want to mimic some of the things I done in previous blog posts but using ckanr.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;connect-to-ckan-with-dplyr-and-download-from-one-resource&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Connect to CKAN with dplyr and download from one resource&lt;/h2&gt;
+&lt;p&gt;Let’s demonstrate downloading from one resource using the fairly small &lt;a href=&#34;https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times/resource/3988df43-3516-4190-93da-16189db7329a&#34;&gt;Patients Referred&lt;/a&gt; dataset within &lt;a href=&#34;https://www.opendata.nhs.scot/dataset/allied-health-professionals-musculoskeletal-waiting-times&#34;&gt;Allied Health Professionals - Musculoskeletal Waiting Times&lt;/a&gt; which has resource ID &lt;code&gt;3988df43-3516-4190-93da-16189db7329a&lt;/code&gt;. We start by using &lt;code&gt;src_ckan()&lt;/code&gt; to create a connection to CKAN (similar to how you would do so for other non-CKAN databases). From there, you can download data in a similar way to when using &lt;a href=&#34;https://dbplyr.tidyverse.org&#34;&gt;dbplyr&lt;/a&gt; but using a CKAN resource ID instead of a database table name.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan &amp;lt;- src_ckan(&amp;quot;https://www.opendata.nhs.scot&amp;quot;)
+res_id &amp;lt;- &amp;quot;3988df43-3516-4190-93da-16189db7329a&amp;quot;
+
+dplyr::tbl(src = ckan$con, from = res_id) %&amp;gt;% 
+  as_tibble()
+
+# A tibble: 1,115 x 9
+#    `_id` HBT2014 ReferralsPerOne~ `_full_text` Specialty NumberOfReferra~ NumberOfReferra~
+#    &amp;lt;chr&amp;gt; &amp;lt;chr&amp;gt;              &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;        &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;           
+#  1 1     S08000~           2890.  &amp;#39;2015q3&amp;#39;:9 ~ All AHP ~             8904 d               
+#  2 2     S08000~            411.  &amp;#39;1267&amp;#39;:5 &amp;#39;2~ Chiropod~             1267 &amp;quot;&amp;quot;              
+#  3 3     S08000~             94.4 &amp;#39;2015q3&amp;#39;:3 ~ Occupati~              291 &amp;quot;&amp;quot;              
+#  4 4     S08000~            178.  &amp;#39;178.17&amp;#39;:5 ~ Orthotics              549 &amp;quot;&amp;quot;              
+#  5 5     S08000~           2206.  &amp;#39;2015q3&amp;#39;:2 ~ Physioth~             6797 &amp;quot;&amp;quot;              
+#  6 6     S08000~           1530.  &amp;#39;1472&amp;#39;:7 &amp;#39;1~ All AHP ~             1472 d               
+#  7 7     S08000~            165.  &amp;#39;159&amp;#39;:1 &amp;#39;16~ Orthotics              159 &amp;quot;&amp;quot;              
+#  8 8     S08000~           1365.  &amp;#39;1313&amp;#39;:2 &amp;#39;1~ Physioth~             1313 &amp;quot;&amp;quot;              
+#  9 9     S08000~           2562.  &amp;#39;2015q3&amp;#39;:7 ~ All AHP ~             3212 d               
+# 10 10    S08000~            197.  &amp;#39;197.02&amp;#39;:1 ~ Chiropod~              247 &amp;quot;&amp;quot;              
+# # ... with 1,105 more rows, and 2 more variables: Quarter &amp;lt;chr&amp;gt;,
+# #   ReferralsPerOneHundredThousandPopulationQF &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The variables look like they’ve been downloaded in a bit of a random order and that &lt;code&gt;_full_text&lt;/code&gt; variable seems to have appeared so this makes me think that ckanr is using &lt;a href=&#34;../ckan-api/#querying-with-sql&#34;&gt;SQL to download the data&lt;/a&gt;. This is easy enough to confirm.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;getAnywhere(tbl.src_ckan)
+
+function (src, from, ..., name = NULL) 
+{
+    if (is.null(name)) {
+        tbl_sql(&amp;quot;ckan&amp;quot;, src = src, from = sql(from), ...)
+    }
+    else {
+        tbl_sql(subclass = &amp;quot;ckan&amp;quot;, src = src, from = sql(sprintf(&amp;quot;SELECT * FROM \&amp;quot;%s\&amp;quot;&amp;quot;, 
+            name)))
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now let’s try combining this with some basic dplyr functions like &lt;code&gt;select()&lt;/code&gt; and &lt;code&gt;filter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dplyr::tbl(src = ckan$con, from = res_id) %&amp;gt;% 
+  select(Quarter, HBT2014) %&amp;gt;% 
+  filter(HBT2014 == &amp;quot;S08000015&amp;quot;) %&amp;gt;% 
+  as_tibble()
+
+# A tibble: 89 x 2
+#    Quarter HBT2014  
+#    &amp;lt;chr&amp;gt;   &amp;lt;chr&amp;gt;    
+#  1 2015Q3  S08000015
+#  2 2015Q3  S08000015
+#  3 2015Q3  S08000015
+#  4 2015Q3  S08000015
+#  5 2015Q3  S08000015
+#  6 2015Q4  S08000015
+#  7 2015Q4  S08000015
+#  8 2015Q4  S08000015
+#  9 2015Q4  S08000015
+# 10 2015Q4  S08000015
+# # ... with 79 more rows
+# Warning messages:
+# 1: Translator is missing window variants of the following aggregate functions:
+# * all
+# * any
+# * cor
+# * cov
+# * paste
+# * sd
+#  
+# 2: Translator is missing window variants of the following aggregate functions:
+# * all
+# * any
+# * cor
+# * cov
+# * paste
+# * sd
+#  
+# 3: Translator is missing window variants of the following aggregate functions:
+# * all
+# * any
+# * cor
+# * cov
+# * paste
+# * sd&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We get a long list of warnings explaining what you cannot do with the SQL translation available in ckanr but otherwise, works great!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;downloading-all-resources-from-a-dataset&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Downloading all resources from a dataset&lt;/h2&gt;
+&lt;p&gt;Often, a dataset on CKAN contains many resources related to the same thing. For example, the &lt;a href=&#34;https://www.opendata.nhs.scot/dataset/consultant-vacancies&#34;&gt;Consultant Vacancies&lt;/a&gt; dataset (remember you can see all available ‘Datasets’ using &lt;code&gt;package_list()&lt;/code&gt;) contains different csv files for vacancies at different time points.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cons_vac &amp;lt;- package_show(&amp;quot;consultant-vacancies&amp;quot;, as = &amp;quot;table&amp;quot;)$resources
+cons_vac %&amp;gt;% 
+  select(name, id)
+#                       name                                   id
+# 1      Vacancies June 2019 16e27935-325c-471b-89dc-d41c84b3a744
+# 2     Vacancies March 2019 ca67b2a4-b2f3-4420-8b77-3771c53b01f4
+# 3  Vacancies December 2018 5da80103-4da8-4694-a8b5-2332dfc43e25
+# 4 Vacancies September 2018 91d7b780-f2cb-47fb-919f-1c165ed7d301
+# 5      Vacancies June 2018 e874f6f4-6cf5-402c-af1d-2d4f26cc669f
+# 6     Vacancies March 2018 415c2f86-db7c-4c12-9a64-0cd9cf0d9118&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now if you extract the required resource IDs, you can download all of the datasets with some help from the fantastic &lt;a href=&#34;https://purrr.tidyverse.org&#34;&gt;purrr&lt;/a&gt; package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;id_list &amp;lt;- cons_vac$id
+
+# Download each resource into a list item
+cons_vac_list &amp;lt;- map(id_list, ~as_tibble(dplyr::tbl(src = ckan$con, from = .x)))
+
+# Check how many variables in each resource
+map_dbl(cons_vac_list, length)
+# [1] 12 12 12 14 15 12
+# Not all resources have the same structure
+
+# Check variable names for a couple that differ
+map(cons_vac_list[3:4], names)
+# [[1]]
+#  [1] &amp;quot;WorkforceRegionGrouping&amp;quot; &amp;quot;HB2014&amp;quot;                 
+#  [3] &amp;quot;HB2014QF&amp;quot;                &amp;quot;TotalVacancies&amp;quot;         
+#  [5] &amp;quot;_full_text&amp;quot;              &amp;quot;Specialty&amp;quot;              
+#  [7] &amp;quot;VacanciesGreater6Months&amp;quot; &amp;quot;Date&amp;quot;                   
+#  [9] &amp;quot;SpecialtyQF&amp;quot;             &amp;quot;_id&amp;quot;                    
+# [11] &amp;quot;Establishment&amp;quot;           &amp;quot;StaffInPost&amp;quot;            
+# 
+# [[2]]
+#  [1] &amp;quot;WorkforceRegionGrouping&amp;quot; &amp;quot;HB2014&amp;quot;                 
+#  [3] &amp;quot;HB2014QF&amp;quot;                &amp;quot;TotalVacancies&amp;quot;         
+#  [5] &amp;quot;TotalVacanciesQF&amp;quot;        &amp;quot;_full_text&amp;quot;             
+#  [7] &amp;quot;Specialty&amp;quot;               &amp;quot;EstablishmentQF&amp;quot;        
+#  [9] &amp;quot;VacanciesGreater6Months&amp;quot; &amp;quot;Date&amp;quot;                   
+# [11] &amp;quot;SpecialtyQF&amp;quot;             &amp;quot;_id&amp;quot;                    
+# [13] &amp;quot;Establishment&amp;quot;           &amp;quot;StaffInPost&amp;quot;
+
+# TotalVacanciesQF and EstablishmentQF not in resource 3 but are in resource 4
+
+# Combine just the first 3 resources which look like they all have the same structure
+bind_rows(cons_vac_list[1:3])
+# A tibble: 1,822 x 12
+#    WorkforceRegion~ HB2014 HB2014QF TotalVacancies `_full_text`
+#    &amp;lt;chr&amp;gt;            &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;       
+#  1 National Bodies~ SB0806 &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:9 &amp;#39;1.4&amp;#39;~
+#  2 Scotland         S9200~ d                     0 &amp;#39;0&amp;#39;:5 &amp;#39;2019~
+#  3 Scotland         S9200~ d                     0 &amp;#39;0&amp;#39;:5 &amp;#39;2.1&amp;#39;~
+#  4 National Bodies~ SB0807 &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:9 &amp;#39;0.3&amp;#39;~
+#  5 North            S0800~ &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:5 &amp;#39;0.1&amp;#39;~
+#  6 National Bodies~ SB0808 &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:9 &amp;#39;1.2&amp;#39;~
+#  7 East             S0800~ &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:3 &amp;#39;12.1~
+#  8 East             S0800~ &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:3 &amp;#39;1.7&amp;#39;~
+#  9 National Bodies~ SB0804 &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:1 &amp;#39;1&amp;#39;:9~
+# 10 National Bodies~ SB0807 &amp;quot;&amp;quot;                    0 &amp;#39;0&amp;#39;:9 &amp;#39;0.4&amp;#39;~
+# ... with 1,812 more rows, and 7 more variables: Specialty &amp;lt;chr&amp;gt;,
+#   VacanciesGreater6Months &amp;lt;dbl&amp;gt;, Date &amp;lt;dbl&amp;gt;, SpecialtyQF &amp;lt;chr&amp;gt;,
+#   `_id` &amp;lt;chr&amp;gt;, Establishment &amp;lt;dbl&amp;gt;, StaffInPost &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So that is a basic workflow using ckanr alongside functions from purrr for combining related resources into one dataset. I’ve also presented some ways of checking consistency in the structure of those datasets (an essential step when trying to do something like this) and in this case, not all of the datasets were the same so I just combined the most recent 3 datasets for consultant vacancies at the end for simplicity here; in reality you might want to look at ways to make all of the data consistent first and then combine them up but I’ll leave that data wrangling exercise up to the interested reader.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My final verdict&lt;/strong&gt;: ckanr is definitely recommended for working with data from CKAN!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Evaluating the population impact of hepatitis C direct acting antiviral treatment as prevention for people who inject drugs (EPIToPe) – a natural experiment (protocol)</title>
+      <link>/publication/journal-article_hcv_epitope_protocol/</link>
       <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/</guid>
+      <guid>/publication/journal-article_hcv_epitope_protocol/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>objectremover RStudio Addin</title>
+      <link>/post/objectremover-rstudio-addin/</link>
+      <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/objectremover-rstudio-addin/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#a-learning-exercise&#34;&gt;A Learning Exercise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#workflow&#34;&gt;Workflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I created my first ever R package and got it released onto CRAN in March 2019. It’s taken me a while to get round to actually writing about this which tells me that despite many years of trying to overcome procrastination, I’m obviously still not there! The package is actually an &lt;a href=&#34;https://rstudio.github.io/rstudioaddins&#34;&gt;RStudio addin&lt;/a&gt; called &lt;a href=&#34;https://github.com/alan-y/objectremover&#34;&gt;objectremover&lt;/a&gt; that helps you to quickly remove objects stored in memory (specifically objects saved in the Global environment) within an R session. The main features include removing objects by&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Starting pattern of object name&lt;/li&gt;
+&lt;li&gt;Ending pattern of object name&lt;/li&gt;
+&lt;li&gt;Regular expression&lt;/li&gt;
+&lt;li&gt;Object type (dataframe, function and other)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a quick demo of objectremover in action.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/alan-y/objectremover/master/inst/img/objectremover_demo.gif&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I made sure to include a couple of safety features to help ensure that you don’t remove objects by mistake. Firstly, it displays what objects will be removed based on the options you’ve selected in real-time and when you click ‘Done’, another warning popup box appears to get a second confirmation that you want to remove these objects. I put this warning popup in as you could remove all saved objects (perhaps by mistake) if, for example, you use a regular expression with no pattern.&lt;/p&gt;
+&lt;p&gt;I recently also got objectremover added to the &lt;a href=&#34;https://github.com/daattali/addinslist&#34;&gt;list of addins&lt;/a&gt; started and maintained by &lt;a href=&#34;https://deanattali.com&#34;&gt;Dean Attali&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&#34;a-learning-exercise&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A Learning Exercise&lt;/h2&gt;
+&lt;p&gt;Creating this package was largely a learning exercise for me and I really learned loads in the process. To create the package, I tried the &lt;a href=&#34;https://usethis.r-lib.org&#34;&gt;usethis&lt;/a&gt; package for the first time to help get various things set up. When I got to the stage where the package was mostly developed, I tested that the package builds successfully in various operating systems and R versions using &lt;a href=&#34;https://travis-ci.org&#34;&gt;Travis CI&lt;/a&gt; and the &lt;a href=&#34;https://builder.r-hub.io&#34;&gt;R-hub builder&lt;/a&gt; (again, this was the first time I’ve used these tools). A continous integration service like Travis is useful for ensuring that the package still builds properly whenever you make changes to the package and push onto Github. I even had a go at creating a hex sticker for the package (with the help of the &lt;a href=&#34;https://github.com/GuangchuangYu/hexSticker&#34;&gt;hexsticker package&lt;/a&gt;) and anybody that knows me at all knows that this isn’t the sort of thing I’m good at! But I’m happy I gave it a go as that’s the only way to get better.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/alan-y/objectremover/master/inst/img/objectremover_hex.png&#34; style=&#34;width:20.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When I submitted to CRAN, the package got knocked back a few times but I followed the &lt;a href=&#34;http://r-pkgs.had.co.nz/release.html&#34;&gt;wise advice of Hadley Wickham&lt;/a&gt; to not take any criticism personally (particularly as the CRAN maintainers are very busy people and have a hard job) and just tackled all the obstacles in a respectful manner. This advice probably applies to many things in life beyond building R packages so I try to follow this approach as much as humanly possible (but as I am actually human, it stands to reason that I still fail in this regard – and more often than I’d like as well unfortunately!).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;workflow&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Workflow&lt;/h2&gt;
+&lt;p&gt;The idea for the package came about as I tend to create a lot of temporary objects in R as I work through analyses and I just wanted a quick way to remove these objects. I often call these objects with names starting with the letter ‘z’ so that they will be easy to spot. This was something I learned from my former PhD supervisor and has actually become pretty invaluable as naming things is something that can sometimes cause me more stress and take up more energy than you would imagine for something this basic and fundamental! So having a way of removing the need for this decision-making helps to focus on solving problems quickly rather than putting energy into things such as naming objects.&lt;/p&gt;
+&lt;p&gt;Having said this, I do always go through my code carefully after I’ve solved the problems I’m working on and tidy the script up to make sure I can understand everything I’ve done. This process is sometimes known as &lt;a href=&#34;https://en.wikipedia.org/wiki/Code_refactoring&#34;&gt;code refactoring&lt;/a&gt;. It is something that is sometimes overlooked but is really important for ensuring that you and others can better understand what a script is doing. This quote sums up the benefits pretty well.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By continuously improving the design of code, we make it easier and easier to work with. This is in sharp contrast to what typically happens: little refactoring and a great deal of attention paid to expediently adding new features. If you get into the hygienic habit of refactoring continuously, you’ll find that it is easier to extend and maintain code.&lt;/p&gt;
+&lt;p&gt;— &lt;cite&gt;Joshua Kerievsky&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Part of what I do for this includes putting in section breaks into my script (in RStudio, the shortcut to do this is ctrl+shift+R) to split things into more manageable blocks. I’ll also give meaningful names to objects that I do want to track, particularly for longer projects. For example, there may be several data processing stages involved in going from a raw dataset up to the dataset you use for analysis. I will usually create a number of temporary objects (beginning with ‘z’) that help me get to the &lt;em&gt;analysis dataset&lt;/em&gt; (often via various &lt;a href=&#34;https://dplyr.tidyverse.org/reference/join.html&#34;&gt;joins&lt;/a&gt; between datasets). In this case, the raw and analysis datasets would get meaningful names and the temporary objects could be removed. At the end, I may save the raw and analysis datasets into an R workspace (or as &lt;a href=&#34;https://stackoverflow.com/questions/21370132/r-data-formats-rdata-rda-rds-etc&#34;&gt;RDS format&lt;/a&gt;) that can be easily loaded into scripts created for other parts of a long project.&lt;/p&gt;
+&lt;p&gt;Anyway that’s just an example of a workflow that I sometimes use and find pretty efficient for long projects. I’m sure there are many other great ways to work efficiently in creating outputs for long projects so if you know of some, please let me know as I always like to hear about ways to work efficiently in R. Oh and of course, I hope some people find &lt;a href=&#34;https://github.com/alan-y/objectremover&#34;&gt;objectremover&lt;/a&gt; useful!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hacking dbplyr for CKAN</title>
+      <link>/post/ckan-dbplyr/</link>
+      <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ckan-dbplyr/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#aim&#34;&gt;Aim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#create-a-dummy-database&#34;&gt;Create a dummy database&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#test-dbplyrs-sql-translation&#34;&gt;Test dbplyr’s SQL translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#modify-dbplyrs-sql-translation&#34;&gt;Modify dbplyr’s SQL translation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#testing-the-dbplyr-hack&#34;&gt;Testing the dbplyr hack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concluding-notes&#34;&gt;Concluding notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;At the end of my &lt;a href=&#34;../ckan-api&#34;&gt;first post on CKAN&lt;/a&gt; discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler. Well another idea came to my mind that I think would be even more cool to get working – would it be possible to hack the &lt;a href=&#34;https://dbplyr.tidyverse.org/articles/translation-verb.html&#34;&gt;SQL translation from dbplyr&lt;/a&gt; to make it work effectively for extracting data from CKAN?&lt;/p&gt;
+&lt;p&gt;Just for background info, &lt;a href=&#34;https://dbplyr.tidyverse.org&#34;&gt;dbplyr&lt;/a&gt; is a package that lets you use &lt;a href=&#34;https://dplyr.tidyverse.org&#34;&gt;dplyr&lt;/a&gt; code to interact with databases (a database backend for dplyr), which saves you learning SQL (I still recommend that people learn SQL though as it is likely to come in useful anyway!). One of the conveniences of using dbplyr is that you can take advantage of some of the dplyr’s helper functions (e.g &lt;code&gt;starts_with()&lt;/code&gt;, &lt;code&gt;ends_with()&lt;/code&gt;) to assist with tasks such as selecting variables – a task which can be quite tedious in SQL as you must list all of the variables you want to extract.&lt;/p&gt;
+&lt;div id=&#34;aim&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Aim&lt;/h2&gt;
+&lt;p&gt;The aim here is not to be too ambitious for the hack but to just get the &lt;code&gt;select()&lt;/code&gt; and &lt;code&gt;filter()&lt;/code&gt; functions to work for this hack. My feeling is that if you can get these features working, then you should be able to easily extract just the variables and rows of data you want from CKAN using dplyr code and this is hopefully sufficient for most people. This should be a good starting point for helping people to not download entire datasets when they don’t need to. Anyway, with the brief intro out of the way, let’s see if we can get this little hack working!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;create-a-dummy-database&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Create a dummy database&lt;/h2&gt;
+&lt;p&gt;Since datasets held on CKAN will not be identified by dbplyr as a ‘database’, we have to create a sort of &lt;em&gt;dummy database&lt;/em&gt; within R so that it identifies a CKAN resource as a database. To do this, I created a function called &lt;code&gt;ckan_nhs_init()&lt;/code&gt;. This function simply downloads one row of data from a CKAN resource and stores this in an &lt;a href=&#34;https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/src_memdb&#34;&gt;&lt;em&gt;in-memory SQLite database&lt;/em&gt;&lt;/a&gt;. The key thing here is that extracting one row of data will give us a list of all the variable names for the dummy database. In the code below, please note that I have loaded some required packages to make the function work (if it turns out later that this idea is actually not bad, I’ll write up the code more appropriately for packaging up).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(dbplyr)
+library(httr)
+library(jsonlite)
+
+ckan_nhs_init &amp;lt;- function(id) {
+  url &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                &amp;quot;datastore_search?&amp;quot;,
+                &amp;quot;resource_id=&amp;quot;, id,
+                &amp;quot;&amp;amp;limit=1&amp;quot;)
+  status &amp;lt;- status_code(GET(url))
+  stopifnot(str_detect(status, &amp;quot;^2&amp;quot;))
+  
+  df &amp;lt;- fromJSON(url)$result$records
+  copy_to(src_memdb(), df, name = id, overwrite = TRUE)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;test-dbplyrs-sql-translation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Test dbplyr’s SQL translation&lt;/h2&gt;
+&lt;p&gt;After creating a dummy database (and thus, successfully fooling dbplyr into believing that a CKAN resource is a database), we have to make some modifications to the SQL translation from dbplyr so that the SQL query actually works for interacting with the CKAN API. First let’s test a couple of simple queries to see what dbplyr’s SQL translation produces. We’ll use the Data Zone (2011) Population Estimates dataset (resource ID &lt;code&gt;c505f490-c201-44bd-abd1-1bd7a64285ee&lt;/code&gt;) for testing throughout this post. So what does the SQL translation look like when we just use &lt;code&gt;select()&lt;/code&gt;?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;id &amp;lt;- &amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee&amp;quot;
+
+ckan_nhs_init(id) %&amp;gt;% 
+  select(Year, DZ2011) %&amp;gt;% 
+  show_query()
+# &amp;lt;SQL&amp;gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Immediately I can see that the CKAN API isn’t going to like those backticks (&lt;code&gt;`&lt;/code&gt;) around the variable and database names so we’ll have to remove them. We’ll also have to remove the line breaks (&lt;code&gt;\n&lt;/code&gt;). Now let’s test the SQL translation for &lt;code&gt;filter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan_nhs_init(id) %&amp;gt;%
+  filter(Year == 2011L)
+# &amp;lt;SQL&amp;gt;
+# SELECT *
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now I can see that the CKAN API isn’t going to like those brackets around the WHERE statement so we’ll also have to remove them. Lastly let’s test the translation for a &lt;code&gt;select()&lt;/code&gt; combined with a &lt;code&gt;filter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# select() and then filter()
+ckan_nhs_init(id) %&amp;gt;% 
+    select(Year, DZ2011) %&amp;gt;% 
+    filter(Year == 2011L) %&amp;gt;% 
+    show_query()
+# &amp;lt;SQL&amp;gt;
+# SELECT *
+# FROM (SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`)
+# WHERE (`Year` = 2011)
+
+
+# filter() and then select()
+ckan_nhs_init(id) %&amp;gt;% 
+    filter(Year == 2011L) %&amp;gt;% 
+    select(Year, DZ2011) %&amp;gt;% 
+    show_query()
+# &amp;lt;SQL&amp;gt;
+# SELECT `Year`, `DZ2011`
+# FROM `c505f490-c201-44bd-abd1-1bd7a64285ee`
+# WHERE (`Year` = 2011)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From here, we can see that when using &lt;code&gt;filter()&lt;/code&gt; and then &lt;code&gt;select()&lt;/code&gt;, the query looks fairly concise but when using &lt;code&gt;select()&lt;/code&gt; and then &lt;code&gt;filter()&lt;/code&gt;, we have some work to do to remove the unnecessary &lt;code&gt;SELECT * FROM&lt;/code&gt; at the beginning (note that this SQL is perfectly good normally but it won’t be for the CKAN API). In any case, I think we now have all the information we need to modify dbplyr’s SQL translation to make it work for CKAN.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;modify-dbplyrs-sql-translation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Modify dbplyr’s SQL translation&lt;/h2&gt;
+&lt;p&gt;Using the information just attained, I created the &lt;code&gt;ckan_nhs_extract()&lt;/code&gt; function to make the required modifications to the SQL translation. Note that in the function I use &lt;code&gt;sql_render()&lt;/code&gt; instead of &lt;code&gt;show_query()&lt;/code&gt; as I need the SQL query as a string variable in R rather than just printed to the console. I’ve also added a warning message using &lt;code&gt;cat()&lt;/code&gt; to warn the user that some queries may take a while.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan_nhs_extract &amp;lt;- function(db_qry) {
+  db_qry &amp;lt;- sql_render(db_qry) %&amp;gt;%
+    str_replace_all(&amp;quot;`&amp;quot;, &amp;#39;&amp;quot;&amp;#39;) %&amp;gt;%
+    str_replace_all(&amp;quot;\n&amp;quot;, &amp;quot; &amp;quot;)
+  
+  # Check if there is more than one SELECT statement
+  n_select &amp;lt;- str_count(db_qry, &amp;quot;SELECT&amp;quot;)
+  
+  # Remove unnecessary SELECT statement if needed
+  if (n_select &amp;gt; 1) {
+    db_qry &amp;lt;- str_remove(db_qry, &amp;quot;^(SELECT \\* FROM )&amp;quot;)
+  }
+  
+  db_qry &amp;lt;- str_remove_all(db_qry, &amp;quot;\\(|\\)&amp;quot;)
+  db_qry &amp;lt;- URLencode(db_qry)
+  
+  db_qry &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                   &amp;quot;datastore_search_sql?&amp;quot;,
+                   &amp;quot;sql=&amp;quot;,
+                   db_qry)
+  
+  cat(&amp;quot;Extracting: this may take a while\n\n&amp;quot;)
+  as_tibble(fromJSON(db_qry)$result$records)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;testing-the-dbplyr-hack&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Testing the dbplyr hack&lt;/h2&gt;
+&lt;p&gt;To test this hack, we will make a simple query using &lt;code&gt;select()&lt;/code&gt; and then &lt;code&gt;filter()&lt;/code&gt; which is the more complicated scenario.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ckan_nhs_init(id) %&amp;gt;%
+  select(Year, DZ2011) %&amp;gt;%
+  filter(Year == 2011, DZ2011 == &amp;quot;S92000003&amp;quot;) %&amp;gt;%
+  ckan_nhs_extract()
+# Extracting: this may take a while
+# 
+# # A tibble: 2 x 2
+#   DZ2011    Year 
+#   &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;
+# 1 S92000003 2011 
+# 2 S92000003 2011 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This produces the desired result so it’s a job well done for now!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;concluding-notes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Concluding notes&lt;/h2&gt;
+&lt;p&gt;This hack needs a lot more testing as there are probably lots of things that could potentially break it (but obviously I’m hoping not!). There’s also a niggling issue in that I don’t yet know how to remove an in-memory SQLite database from R (or whether this is even possible) which I guess should be done after you’ve extracted the data you need just to clean things up nicely in R. But in saying that, it likely isn’t a big issue as &lt;code&gt;src_memdb()&lt;/code&gt; has been specifically designed for creating a temporary in-memory database so everything will of course, be cleaned up after you exit your R session anyway. If this hack turns out to be useful and doesn’t break too easily, I may put in a bit of effort to package it up onto Github later. Please let me know what you think if you ever use it!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Getting Open Data into R from CKAN</title>
+      <link>/post/ckan-api/</link>
+      <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/ckan-api/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#preamble&#34;&gt;Preamble&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#open-data-in-scotland&#34;&gt;Open Data in Scotland&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#querying-ckan&#34;&gt;Querying CKAN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#querying-with-custom-json&#34;&gt;Querying with Custom JSON&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#querying-with-sql&#34;&gt;Querying with SQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#conclusions-and-further-ideas&#34;&gt;Conclusions and Further Ideas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;preamble&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Preamble&lt;/h2&gt;
+&lt;p&gt;I’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later! To start with, I am writing a short post here about how to download data from the CKAN API directly into R – &lt;a href=&#34;https://ckan.org&#34;&gt;CKAN&lt;/a&gt; is an open source data portal platform (basically a tool for making open data websites) and the reason I became interested in it is because this is the platform that &lt;a href=&#34;https://www.opendata.nhs.scot&#34;&gt;NHS Scotland has chosen to host their open data&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;open-data-in-scotland&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Open Data in Scotland&lt;/h2&gt;
+&lt;p&gt;It is becoming increasingly important for public sector organisations to make their data open. In Scotland, this is clear from the &lt;a href=&#34;https://www.gov.scot/publications/open-data-strategy&#34;&gt;Scottish Government’s open data strategy&lt;/a&gt;. They believe that providing open data not only aids transparency, but should also result in wider social and economic benefits in the long run. My opinion generally matches this but I feel that one thing to be wary of is the potential for users to interpret data incorrectly so therefore I feel it is absolutely crucial to provide as much information as possible about the datasets (i.e. provide comprehensive metadata). On balance, the upsides of providing open data should definitely outweigh the downsides, particularly if pragmatic steps are taken to mitigate potential issues such as using the data incorrectly which can lead to producing misleading analyses.&lt;/p&gt;
+&lt;p&gt;Much work needs to be done on the open data front in Scotland. The level of open data provision by organisations in Scotland is currently lagging behind other parts of the UK in terms of the number of open datasets available but also in terms of how up-to-date the datasets provided are (see &lt;a href=&#34;https://codethecity.co.uk/2019/02/24/scotlands-open-data-february-2019-an-update&#34;&gt;this blog post written in February 2019 by Ian Watt&lt;/a&gt; for more on this). Encouragingly though the situation is improving. NHS Scotland is contributing to this improvement by launching their open data platform (which I will simply refer to as CKAN from hereafter). All of the data held on this platform is licensed under the &lt;a href=&#34;http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3&#34;&gt;UK Open Government Licence (OGL)&lt;/a&gt;. What you can and can’t do with the data is well described there in detail but to me, the gist of it seems to be that you can more or less do what you want with the data as long as you properly acknowledge the source (please read the detail though rather than just taking my word for it!).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;querying-ckan&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Querying CKAN&lt;/h2&gt;
+&lt;p&gt;Each dataset held on CKAN is assigned a &lt;code&gt;resource ID&lt;/code&gt; which uniquely identifies it and to make a query on a particular dataset, you will need to know this. The resource ID can be found in the &lt;strong&gt;Additional Information&lt;/strong&gt; section once you are on a dataset’s page. As an example, let’s say we are interested in downloading data about &lt;a href=&#34;https://www.opendata.nhs.scot/dataset/population-estimates/resource/c505f490-c201-44bd-abd1-1bd7a64285ee&#34;&gt;Data Zone (2011) Population Estimates&lt;/a&gt; (this gives data on population estimates for all 6,976 &lt;a href=&#34;https://data.gov.uk/dataset/ab9f1f20-3b7f-4efa-9bd2-239acf63b540/data-zone-boundaries-2011&#34;&gt;data zones (2011) in Scotland&lt;/a&gt; from 2011 to 2017), then, the resource ID for this is &lt;code&gt;c505f490-c201-44bd-abd1-1bd7a64285ee&lt;/code&gt;. Note that this resource ID is also contained in the weblink for the dataset so you do not actually need to navigate down to the Additional Information section to find it.&lt;/p&gt;
+&lt;p&gt;There are &lt;a href=&#34;https://docs.ckan.org/en/ckan-2.2.3/datastore.html#datastore-search-htsql&#34;&gt;three querying methods&lt;/a&gt; that you can use which are Custom JSON, SQL and &lt;a href=&#34;http://htsql.org/doc/overview.html#what-is-htsql&#34;&gt;HTSQL&lt;/a&gt;. Each of these methods supports different features but I will only discuss some basic querying using Custom JSON and SQL here. The basic idea of making a query on the CKAN API is that you build this into the web URL and the form of the URL will depend on the querying method you decide to use.&lt;/p&gt;
+&lt;div id=&#34;querying-with-custom-json&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Querying with Custom JSON&lt;/h3&gt;
+&lt;p&gt;For Custom JSON, the URL should take the form&lt;br /&gt;
+&lt;code&gt;https://www.opendata.nhs.scot/api/3/action/&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;datastore_search?&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;resource_id=long-id-number&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;&amp;amp;your-CustomJSON-query&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Let’s test this in R by downloading the Data Zone (2011) Population Estimates dataset. Two R packages are required to help with this: &lt;code&gt;httr&lt;/code&gt; and &lt;code&gt;jsonlite&lt;/code&gt;. The &lt;code&gt;httr&lt;/code&gt; package is needed to work with the API and &lt;code&gt;jsonlite&lt;/code&gt; is needed to convert the downloaded JSON data into an R object. I will also load the tidyverse package for good measure!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(httr)
+library(jsonlite)
+library(tidyverse)
+
+url &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+              &amp;quot;datastore_search?&amp;quot;,
+              &amp;quot;resource_id=c505f490-c201-44bd-abd1-1bd7a64285ee&amp;quot;)
+page &amp;lt;- GET(url) # API request
+status_code(page) # # Check that the call is successful
+# [1] 200
+# This means it was successful
+
+# Status codes:
+# 1XX - Informational
+# 2XX - Success!
+# 3XX - Client Error (something’s not right on your end)
+# 4XX - Server Error (something’s not right on their end)
+
+# Download the JSON data and convert to an R list
+dz2011_list &amp;lt;- fromJSON(url)
+# Extract the actual data from the list
+dz2011 &amp;lt;- dz2011_list$result$records
+glimpse(dz2011, width = 50)
+# Observations: 100
+# Variables: 97
+# $ `_id`     &amp;lt;int&amp;gt; 178, 179, 180, 181, 182, 18...
+# $ Year      &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 201...
+# $ DZ2011    &amp;lt;chr&amp;gt; &amp;quot;S01006593&amp;quot;, &amp;quot;S01006594&amp;quot;, &amp;quot;...
+# $ DZ2011QF  &amp;lt;chr&amp;gt; &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; ...
+# $ Sex       &amp;lt;chr&amp;gt; &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;,...
+# $ AllAges   &amp;lt;int&amp;gt; 325, 252, 296, 478, 454, 36...
+# $ Age0      &amp;lt;int&amp;gt; 2, 2, 6, 8, 2, 4, 4, 3, 1, ...
+# $ Age1      &amp;lt;int&amp;gt; 4, 4, 0, 3, 4, 2, 6, 1, 3, ...
+# $ Age2      &amp;lt;int&amp;gt; 2, 2, 3, 1, 4, 4, 4, 1, 2, ...
+# $ Age3      &amp;lt;int&amp;gt; 6, 1, 0, 5, 1, 4, 4, 2, 1, ...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that when I used the &lt;code&gt;glimpse()&lt;/code&gt; function, I’ve only shown the first 10 variables as this dataset contains 97 variables and I wanted to keep the output fairly concise (I will do the same for the rest of the examples in this post where appropriate). A further thing to note is that the default setting using Custom JSON is to download only the first 100 records from the dataset which you can also see from the number of observations in the output of &lt;code&gt;glimpse()&lt;/code&gt;; if you want to download more rows than this you need to explicitly set this in the query. For example, if you wanted the first 150 rows you can simply add this query into the URL.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_150r &amp;lt;- paste0(url, &amp;quot;&amp;amp;limit=150&amp;quot;)
+dz2011_list_150r &amp;lt;- fromJSON(url_150r)
+dz2011_150r &amp;lt;- dz2011_list_150r$result$records
+glimpse(dz2011_150r, width = 50)
+# Observations: 150
+# Variables: 97
+# $ `_id`    &amp;lt;int&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 1...
+# $ Year     &amp;lt;int&amp;gt; 2011, 2011, 2011, 2011, 2011...
+# $ DZ2011   &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S...
+# $ DZ2011QF &amp;lt;chr&amp;gt; &amp;quot;d&amp;quot;, &amp;quot;d&amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;, &amp;quot; &amp;quot;...
+# $ Sex      &amp;lt;chr&amp;gt; &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;F...
+# $ AllAges  &amp;lt;int&amp;gt; 2570300, 2729600, 419, 463, ...
+# $ Age0     &amp;lt;int&amp;gt; 30877, 29488, 3, 10, 4, 4, 9...
+# $ Age1     &amp;lt;int&amp;gt; 29388, 28294, 5, 8, 6, 0, 3,...
+# $ Age2     &amp;lt;int&amp;gt; 30189, 29190, 5, 7, 1, 3, 4,...
+# $ Age3     &amp;lt;int&amp;gt; 30173, 29061, 5, 7, 5, 6, 1,...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I am not yet sure how to set up the query in Custom JSON so that it just downloads all the records but I suppose you could just set the limit to a very high number that you know will cover everything.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;querying-with-sql&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Querying with SQL&lt;/h3&gt;
+&lt;p&gt;To query with SQL you will obviously need to know how to write SQL queries. I won’t be discussing SQL queries here as the focus is on using the CKAN API. For SQL, the URL should take the form&lt;br /&gt;
+&lt;code&gt;https://www.opendata.nhs.scot/api/3/action/&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;datastore_search_sql?&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;sql=&lt;/code&gt; +&lt;br /&gt;
+&lt;code&gt;your-SQL-query&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;There are a couple of quirks about how to make SQL query work in R. You need to enclose the name of the resource ID in speech marks (“resource-ID”) so if like me, your default method of creating strings is to use speech marks rather than the apostrophe character (’), you will need to escape the speech mark using the backslash (\&#34;). Similarly, you need to enclose other things such as variable names in speech marks when making more complicated queries. You also need to &lt;a href=&#34;https://en.wikipedia.org/wiki/Percent-encoding&#34;&gt;percent-encode&lt;/a&gt; your special characters to make them work as a URL – luckily the &lt;code&gt;URLencode()&lt;/code&gt; function makes this easy!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Download the whole dataset using a SQL query
+url_sql &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                  &amp;quot;datastore_search_sql?&amp;quot;,
+                  &amp;quot;sql=&amp;quot;,
+                  URLencode(&amp;quot;SELECT * from \&amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee\&amp;quot;&amp;quot;))
+
+dz2011_list_sql &amp;lt;- fromJSON(url_sql)
+dz2011_sql &amp;lt;- dz2011_list_sql$result$records
+glimpse(dz2011_sql, width = 50)
+# Observations: 97,678
+# Variables: 98
+# $ Age28 &amp;lt;chr&amp;gt; &amp;quot;33649&amp;quot;, &amp;quot;35002&amp;quot;, &amp;quot;12&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;6...
+# $ Age29 &amp;lt;chr&amp;gt; &amp;quot;33865&amp;quot;, &amp;quot;35698&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;1...
+# $ Age26 &amp;lt;chr&amp;gt; &amp;quot;34410&amp;quot;, &amp;quot;35491&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;1...
+# $ Age27 &amp;lt;chr&amp;gt; &amp;quot;33302&amp;quot;, &amp;quot;34274&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;5...
+# $ Age24 &amp;lt;chr&amp;gt; &amp;quot;35129&amp;quot;, &amp;quot;36098&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;1&amp;quot;...
+# $ Age25 &amp;lt;chr&amp;gt; &amp;quot;35166&amp;quot;, &amp;quot;35492&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;2&amp;quot;...
+# $ Age22 &amp;lt;chr&amp;gt; &amp;quot;36117&amp;quot;, &amp;quot;36450&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;3&amp;quot;...
+# $ Age23 &amp;lt;chr&amp;gt; &amp;quot;36710&amp;quot;, &amp;quot;37038&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;3&amp;quot;...
+# $ Age20 &amp;lt;chr&amp;gt; &amp;quot;37785&amp;quot;, &amp;quot;37513&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;6&amp;quot;...
+# $ Age21 &amp;lt;chr&amp;gt; &amp;quot;36354&amp;quot;, &amp;quot;36386&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;9&amp;quot;, &amp;quot;4&amp;quot;...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that when you use SQL to query CKAN, all 97,678 records are downloaded from the dataset (unless you explicitly tell it not to) so therefore, the query took much longer to finish. The data has been extracted but with a couple of strange issues. The variables are in a weird order and there are 98 variables here instead of the 97 we got previously – it seems to have extracted a variable called &lt;code&gt;_full_text&lt;/code&gt;. I don’t know why it does this but I suppose these issues can be sorted out easily enough with some dplyr. Let’s also make a query to download just one variable to demonstrate how to write a marginally more complicated SQL query.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Download only the DZ2011 variable
+url_sql_1v &amp;lt;- paste0(&amp;quot;https://www.opendata.nhs.scot/api/3/action/&amp;quot;,
+                     &amp;quot;datastore_search_sql?&amp;quot;,
+                     &amp;quot;sql=&amp;quot;,
+                     URLencode(&amp;quot;SELECT \&amp;quot;DZ2011\&amp;quot; from \&amp;quot;c505f490-c201-44bd-abd1-1bd7a64285ee\&amp;quot;&amp;quot;))
+
+dz2011_list_1v &amp;lt;- fromJSON(url_sql_1v)
+dz2011_1v &amp;lt;- dz2011_list_1v$result$records
+glimpse(dz2011_1v, width = 50)
+# Observations: 97,678
+# Variables: 1
+# $ DZ2011 &amp;lt;chr&amp;gt; &amp;quot;S92000003&amp;quot;, &amp;quot;S92000003&amp;quot;, &amp;quot;S01...&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;No issues with this query and everything was extracted as expected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusions-and-further-ideas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Conclusions and Further Ideas&lt;/h2&gt;
+&lt;p&gt;This post has given a little bit of background to open data in Scotland as well as an introduction to downloading NHS Scotland open data directly into R using simple queries with the CKAN API but there are, of course, much fancier things that you can do when constructing queries (e.g. joins on datasets using SQL or using the API to search CKAN for datasets with a particular tag) which I’ve not covered. I may cover some of these in a future post but for now, the interested reader can trawl through the &lt;a href=&#34;https://docs.ckan.org/en/2.8/user-guide.html&#34;&gt;CKAN user guide&lt;/a&gt; to find out more about features like that! As a final point, I think it would be neat to write some wrapper functions in R to make it easier to make queries to CKAN (this could even be packaged up) – it might be a future project! I envision that this would work similarly to the &lt;a href=&#34;https://github.com/jsphdms/opendatascot&#34;&gt;opendatascot&lt;/a&gt; package which has been built to help with extracting data from &lt;a href=&#34;https://statistics.gov.scot/home&#34;&gt;statistics.gov.scot&lt;/a&gt;. Anyway that’s for another day.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Glasgow R User Group</title>
+      <link>/post/glasgow-r-user-group/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/glasgow-r-user-group/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;img src=&#34;/img/glasgowR.png&#34; style=&#34;width:50.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;I am very excited to hear that there are attempts to create a brand new &lt;a href=&#34;https://www.meetup.com/Glasgow-R-User-Group&#34;&gt;R user group in Glasgow&lt;/a&gt;! I had just talked in &lt;a href=&#34;../post-number-one&#34;&gt;Post Number One&lt;/a&gt; about my guilt at not having been able to attend &lt;a href=&#34;http://edinbr.org&#34;&gt;EdinbR&lt;/a&gt; as often as I wished but it should be much easier for me to find time to attend a group based in Glasgow. If you are based in (or near) Glasgow and would like to join the R community, this sounds like the place to be – I hope this idea takes off! This is the blurb from their meetup page.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This group is for people who use R (or want to start to). This meetup is a first attempt to get together people in Glasgow interested in R, meet and decide how to go about the organisation. There are several R User around the world and would be nice to ave one in Glasgow as well.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>
@@ -40,21 +826,88 @@
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>/project/</link>
+      <title>Post Number One</title>
+      <link>/post/post-number-one/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/post-number-one/</guid>
+      <description>
+
+
+&lt;p&gt;I suppose this is my &lt;em&gt;hello world&lt;/em&gt; post – I’ve never been good at getting my messages out there (I’m minimally active on social media, etc) but this is part of my attempt to rectify that a little. I have wanted to start a blog for a long time and in fact, I previously started one but failed to keep it going (hopefully this time it’ll be different!). I had called that one ‘Quietly Analysing’ which was mostly inspired from a quote by Ian Hacking in 1936.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;The quiet statisticians have changed our world - not by discovering new facts or technical developments but by changing the ways we reason, experiment and form our opinions about it.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It’s still one of my favourite quotes about statistics but I won’t be continuing with that name as this will be more of a personal/professional website for myself. That blog no longer exists so this is effectively a new start for me. I intend to use this website as a place where I can refer others to my academic and analytical work/projects (e.g. at conferences and for current/future employers) but also as a place where I can write up things to aid my own learning and share with others. Occasionally I may write something personal. This point about writing is important as I’ve always felt that I need to get better at writing so hopefully just trying to do this more will help me improve.&lt;/p&gt;
+&lt;p&gt;As part of this, I am also hoping to contribute more as a member of the R community – a community that I have always found to be warm, friendly and welcoming. Since I am from Scotland I have to give a particular mention to &lt;a href=&#34;http://edinbr.org&#34;&gt;EdinbR&lt;/a&gt;, who have been doing a great job of promoting R in Scotland (and I have to shamefully admit that I haven’t been able to be a part of as much as I wish).&lt;/p&gt;
+&lt;p&gt;I am still fairly new to using web tools so still count myself as a beginner in this area and I’m basically learning as I go. Therefore, I really have to acknowledge some people who have created amazing tools and resources that have helped me immensely in getting this website up and running. I am very grateful to &lt;a href=&#34;https://yihui.name/en&#34;&gt;Yihui Xie&lt;/a&gt; for creating &lt;a href=&#34;https://bookdown.org/yihui/blogdown&#34;&gt;blogdown&lt;/a&gt; (and so many other fantastic tools such as &lt;a href=&#34;https://rmarkdown.rstudio.com&#34;&gt;RMarkdown&lt;/a&gt; and &lt;a href=&#34;https://bookdown.org&#34;&gt;bookdown&lt;/a&gt;) which I am using to create this website; to &lt;a href=&#34;https://georgecushen.com&#34;&gt;George Cushen&lt;/a&gt; for the &lt;a href=&#34;https://github.com/gcushen/hugo-academic&#34;&gt;Hugo Academic template&lt;/a&gt;; to &lt;a href=&#34;https://alison.rbind.io&#34;&gt;Alison Presmanes Hill&lt;/a&gt;, &lt;a href=&#34;https://amber.rbind.io&#34;&gt;Amber Thomas&lt;/a&gt; and &lt;a href=&#34;https://lmyint.github.io&#34;&gt;Leslie Myint&lt;/a&gt; for their useful tips in setting up with blogdown and the Hugo Academic template.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>R Training Resources and Tips</title>
+      <link>/project/r-resources-tips/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/project/</guid>
+      <guid>/project/r-resources-tips/</guid>
+      <description>&lt;p&gt;A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Emergence of Novel Psychoactive Substance injecting associated with rapid rise in the population prevalence of hepatitis C virus</title>
+      <link>/publication/journal-article_nps_hcv/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/journal-article_nps_hcv/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Recent &amp; Upcoming Talks</title>
-      <link>/talk/</link>
+      <title>phiproject</title>
+      <link>/project/phiproject/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/phiproject/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redoc</title>
+      <link>/talk/redoc/</link>
       <pubDate>Tue, 26 Mar 2019 11:00:00 +0000</pubDate>
       
-      <guid>/talk/</guid>
+      <guid>/talk/redoc/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;a href=&#34;https://noamross.github.io/redoc&#34;&gt;redoc&lt;/a&gt; is an R package by Noam Ross that enables a two-way R Markdown-Microsoft Word workflow. It generates Word documents that can be de-rendered back into R Markdown, retaining edits on the Word document, including tracked changes.&lt;/p&gt;
+&lt;iframe src=&#34;https://alan-y.github.io/redoc-xaringan/redoc_slides_AY#1&#34; width=&#34;576&#34; height=&#34;400px&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE: redoc was updated on May 5, 2019 so some aspects of the talk are now out-of-date. For example &lt;code&gt;undoc()&lt;/code&gt; has been replaced by &lt;code&gt;dedoc()&lt;/code&gt; and &lt;code&gt;redoc_diff()&lt;/code&gt; lets you view changes more easily.&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>objectremover RStudio Addin</title>
+      <link>/project/objectremover/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/project/objectremover/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Implementation of HIV PrEP in Scotland: First Year Report</title>
+      <link>/publication/report-hiv_prep_year_one/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/report-hiv_prep_year_one/</guid>
+      <description>&lt;p&gt;The Report was prepared by a writing committee stemming from Scotland’s National HIV PrEP
+Coordinating Group. It has been written on behalf of the National Coordination Group and its subgroups (see Appendix 1 of the report for details).&lt;/p&gt;
+
+&lt;p&gt;My main contributions to the report were to chapter 5: Evaluating the Impact of HIV PrEP.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -68,32 +921,65 @@
     </item>
     
     <item>
-      <title></title>
-      <link></link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Association between universal hepatitis B prison vaccination, vaccine uptake and hepatitis B infection among people who inject drugs</title>
+      <link>/publication/journal-article_hbv_prison/</link>
+      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid></guid>
+      <guid>/publication/journal-article_hbv_prison/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Blogroll</title>
-      <link>/blogroll/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Assessing the impact of a temporary class drug order on ethylphenidate-related infections among people who inject drugs in Lothian, Scotland: an interrupted time-series analysis</title>
+      <link>/publication/journal-article_nps_tcdo/</link>
+      <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blogroll/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com&#34; target=&#34;_blank&#34;&gt;R Bloggers&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://yihui.name/en&#34; target=&#34;_blank&#34;&gt;Yihui Xie&lt;/a&gt;&lt;/p&gt;
+      <guid>/publication/journal-article_nps_tcdo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hepatitis B infection in Scotland: 2015</title>
+      <link>/publication/report-hbv2015_hps/</link>
+      <pubDate>Tue, 17 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/report-hbv2015_hps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistical Applications in the Analysis of Vaccine Preventable Diseases</title>
+      <link>/publication/phd-thesis/</link>
+      <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/phd-thesis/</guid>
+      <description>
+
+&lt;h2 id=&#34;chapter-list&#34;&gt;Chapter List:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Tuberculosis in Scotland
+
+&lt;ul&gt;
+&lt;li&gt;Finding Potential Strain Clusters&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Characteristics of 2009 Pandemic Influenza in Scotland&lt;/li&gt;
+&lt;li&gt;Methods of Estimating Reproductive Numbers (&lt;em&gt;Literature Review&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Estimation of Reproductive Numbers for 2009 Pandemic Influenza in Scotland
+
+&lt;ul&gt;
+&lt;li&gt;Spatial Method&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Studies of Influenza Vaccine Effectiveness (&lt;em&gt;Literature Review&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Influenza Vaccine Effectiveness in Scotland
+
+&lt;ul&gt;
+&lt;li&gt;Season 2011-12 and 2012-13&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Conclusions&lt;/li&gt;
+&lt;/ol&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Courses</title>
-      <link>/courses/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/courses/</guid>
-      <description></description>
     </item>
     
   </channel>
