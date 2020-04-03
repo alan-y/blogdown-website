@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RStudio on Alan Yeung</title>
@@ -22,12 +22,12 @@
     </item>
     
     <item>
-      <title>phiproject</title>
-      <link>/project/phiproject/</link>
+      <title>phstemplates</title>
+      <link>/project/phstemplates/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/project/phiproject/</guid>
-      <description>An RStudio project template incorporating some best practices.</description>
+      <guid>/project/phstemplates/</guid>
+      <description>An R package containing standard templates for use by Public Health Scotland.</description>
     </item>
     
     <item>
