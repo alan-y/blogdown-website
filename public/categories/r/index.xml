@@ -7,10 +7,33 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sat, 25 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Updating packages on a drat repo</title>
+      <link>/post/updating-packages-on-a-drat-repo/</link>
+      <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/updating-packages-on-a-drat-repo/</guid>
+      <description>
+
+
+&lt;p&gt;This is just a small note (mainly for myself but hopefully may be of some use to a few others!) to remind of how to update a package on a &lt;a href=&#34;https://github.com/eddelbuettel/drat&#34;&gt;drat&lt;/a&gt; repo.&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Create the source file for the package you want to host on the drat repo using &lt;code&gt;devtools::build()&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Clone the drat repo hosting the package (in my case &lt;a href=&#34;https://github.com/alan-y/drat&#34; class=&#34;uri&#34;&gt;https://github.com/alan-y/drat&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;drat::insertPackage(&#34;package-source.tar.gz&#34;, getwd())&lt;/code&gt; to add the package to the drat repo (&lt;code&gt;getwd()&lt;/code&gt; works for me if my working directory is at the top level of the drat repo). Note this also updates the &lt;code&gt;PACKAGES&lt;/code&gt; file that contains details on the packages hosted in the drat repo.&lt;/li&gt;
+&lt;li&gt;Git push the package to all branches (master and gh-pages) using &lt;code&gt;git push origin --all&lt;/code&gt;. It is particularly important that changes are pushed to the gh-pages branch in order for this to work.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;After this, packages can be installed using, for example:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;drat::addRepo(&amp;quot;alan-y&amp;quot;)
+install.packages(&amp;quot;phstemplates&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want the drat repo to be available at startup &lt;code&gt;drat::add()&lt;/code&gt; or &lt;code&gt;drat::addRepo()&lt;/code&gt; can be added to a &lt;code&gt;.Rprofile&lt;/code&gt; file.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Scotland&#39;s Most Popular Babynames</title>

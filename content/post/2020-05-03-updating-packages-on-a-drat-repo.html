@@ -1,0 +1,27 @@
+---
+title: Updating packages on a drat repo
+author: Alan Yeung
+date: '2020-05-03'
+slug: updating-packages-on-a-drat-repo
+categories:
+  - R
+tags:
+  - R-packages
+image:
+  caption: ''
+  focal_point: ''
+---
+
+
+
+<p>This is just a small note (mainly for myself but hopefully may be of some use to a few others!) to remind of how to update a package on a <a href="https://github.com/eddelbuettel/drat">drat</a> repo.</p>
+<ol style="list-style-type: decimal">
+<li>Create the source file for the package you want to host on the drat repo using <code>devtools::build()</code>.</li>
+<li>Clone the drat repo hosting the package (in my case <a href="https://github.com/alan-y/drat" class="uri">https://github.com/alan-y/drat</a>).</li>
+<li>Use <code>drat::insertPackage("package-source.tar.gz", getwd())</code> to add the package to the drat repo (<code>getwd()</code> works for me if my working directory is at the top level of the drat repo). Note this also updates the <code>PACKAGES</code> file that contains details on the packages hosted in the drat repo.</li>
+<li>Git push the package to all branches (master and gh-pages) using <code>git push origin --all</code>. It is particularly important that changes are pushed to the gh-pages branch in order for this to work.</li>
+</ol>
+<p>After this, packages can be installed using, for example:</p>
+<pre class="r"><code>drat::addRepo(&quot;alan-y&quot;)
+install.packages(&quot;phstemplates&quot;)</code></pre>
+<p>If you want the drat repo to be available at startup <code>drat::add()</code> or <code>drat::addRepo()</code> can be added to a <code>.Rprofile</code> file.</p>

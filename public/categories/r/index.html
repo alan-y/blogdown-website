@@ -155,7 +155,7 @@
   <meta property="og:description" content="Research Fellow and Analyst"><meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2020-01-25T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2020-05-03T00:00:00&#43;00:00">
   
 
   
@@ -519,6 +519,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/updating-packages-on-a-drat-repo/">Updating packages on a drat repo</a></h2>
+    <div class="article-style">
+      
+      This is just a small note (mainly for myself but hopefully may be of some use to a few others!) to remind of how to update a package on a drat repo.
+Create the source file for the package you want to host on the drat repo using devtools::build().Clone the drat repo hosting the package (in my case https://github.com/alan-y/drat).Use drat::insertPackage("package-source.tar.gz", getwd()) to add the package to the drat repo (getwd() works for me if my working directory is at the top level of the drat repo).
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/scot-babynames/">Scotland&#39;s Most Popular Babynames</a></h2>
