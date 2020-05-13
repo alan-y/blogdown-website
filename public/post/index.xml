@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Alan Yeung</title>
@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Filtering with string statements in dplyr</title>
+      <link>/post/filtering-string-dplyr/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/filtering-string-dplyr/</guid>
+      <description>A question came up recently at work about how to use a filter statement entered as a complete string variable inside dplyr’s filter() function – for example dplyr::filter(my_data, &#34;var1 == &#39;a&#39;&#34;). There does not seem to be much out there on this and I was not sure how to do it either but luckily jakeybob had a neat solution that seems to work well.
+some_data %&amp;gt;% filter(eval(rlang::parse_expr(selection_statement)))Let’s see it in action using the iris flowers dataset.</description>
+    </item>
     
     <item>
       <title>Updating packages on a drat repo</title>

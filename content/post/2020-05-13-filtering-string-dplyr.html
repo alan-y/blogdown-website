@@ -1,0 +1,57 @@
+---
+title: Filtering with string statements in dplyr
+author: Alan Yeung
+date: '2020-05-13'
+slug: filtering-string-dplyr
+categories:
+  - R
+tags:
+  - tidy-evaluation
+image:
+  caption: ''
+  focal_point: ''
+---
+
+
+
+<p>A question came up recently at work about how to use a filter statement entered as a complete string variable inside dplyr’s <code>filter()</code> function – for example <code>dplyr::filter(my_data, "var1 == 'a'")</code>. There does not seem to be much out there on this and I was not sure how to do it either but luckily <a href="https://github.com/jakeybob">jakeybob</a> had a neat solution that seems to work well.</p>
+<pre class="r"><code>some_data %&gt;% 
+    filter(eval(rlang::parse_expr(selection_statement)))</code></pre>
+<p>Let’s see it in action using the <code>iris</code> flowers dataset. First note how many records there are for each species (<em>n</em> = 50 for each) so we can check that the filtering has worked later.</p>
+<pre class="r"><code>library(tidyverse)
+
+iris2 &lt;- as_tibble(iris)
+count(iris2, Species)
+# # A tibble: 3 x 2
+#   Species        n
+#   &lt;fct&gt;      &lt;int&gt;
+# 1 setosa        50
+# 2 versicolor    50
+# 3 virginica     50</code></pre>
+<p>Now filter to get only setosa records and we can see only 50 records so that’s worked.</p>
+<pre class="r"><code>selection_statement &lt;- &quot;Species == &#39;setosa&#39;&quot;
+
+iris2 %&gt;% 
+    filter(rlang::eval_tidy(rlang::parse_expr(selection_statement)))
+# # A tibble: 50 x 5
+#    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+#  1          5.1         3.5          1.4         0.2 setosa 
+#  2          4.9         3            1.4         0.2 setosa 
+#  3          4.7         3.2          1.3         0.2 setosa 
+#  4          4.6         3.1          1.5         0.2 setosa 
+#  5          5           3.6          1.4         0.2 setosa</code></pre>
+<p>I thought this method might fail if we create a variable called <code>Species</code> in the global environment but it still works completely fine which is great!</p>
+<pre class="r"><code>Species &lt;- &quot;abc&quot;
+
+iris2 %&gt;% 
+    filter(rlang::eval_tidy(rlang::parse_expr(selection_statement)))
+# # A tibble: 50 x 5
+#    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#           &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
+#  1          5.1         3.5          1.4         0.2 setosa 
+#  2          4.9         3            1.4         0.2 setosa 
+#  3          4.7         3.2          1.3         0.2 setosa 
+#  4          4.6         3.1          1.5         0.2 setosa 
+#  5          5           3.6          1.4         0.2 setosa</code></pre>
+<p>So it makes me wonder why there is nothing much out there on this? My feeling is that something will make this method fail but what is it? Where does it fail? Let me know in the comments if you know please, thanks!</p>

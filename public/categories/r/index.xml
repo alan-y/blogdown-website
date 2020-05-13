@@ -7,10 +7,63 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 03 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Filtering with string statements in dplyr</title>
+      <link>/post/filtering-string-dplyr/</link>
+      <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/filtering-string-dplyr/</guid>
+      <description>
+
+
+&lt;p&gt;A question came up recently at work about how to use a filter statement entered as a complete string variable inside dplyr’s &lt;code&gt;filter()&lt;/code&gt; function – for example &lt;code&gt;dplyr::filter(my_data, &#34;var1 == &#39;a&#39;&#34;)&lt;/code&gt;. There does not seem to be much out there on this and I was not sure how to do it either but luckily &lt;a href=&#34;https://github.com/jakeybob&#34;&gt;jakeybob&lt;/a&gt; had a neat solution that seems to work well.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;some_data %&amp;gt;% 
+    filter(eval(rlang::parse_expr(selection_statement)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let’s see it in action using the &lt;code&gt;iris&lt;/code&gt; flowers dataset. First note how many records there are for each species (&lt;em&gt;n&lt;/em&gt; = 50 for each) so we can check that the filtering has worked later.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+
+iris2 &amp;lt;- as_tibble(iris)
+count(iris2, Species)
+# # A tibble: 3 x 2
+#   Species        n
+#   &amp;lt;fct&amp;gt;      &amp;lt;int&amp;gt;
+# 1 setosa        50
+# 2 versicolor    50
+# 3 virginica     50&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now filter to get only setosa records and we can see only 50 records so that’s worked.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;selection_statement &amp;lt;- &amp;quot;Species == &amp;#39;setosa&amp;#39;&amp;quot;
+
+iris2 %&amp;gt;% 
+    filter(rlang::eval_tidy(rlang::parse_expr(selection_statement)))
+# # A tibble: 50 x 5
+#    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#           &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt;  
+#  1          5.1         3.5          1.4         0.2 setosa 
+#  2          4.9         3            1.4         0.2 setosa 
+#  3          4.7         3.2          1.3         0.2 setosa 
+#  4          4.6         3.1          1.5         0.2 setosa 
+#  5          5           3.6          1.4         0.2 setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I thought this method might fail if we create a variable called &lt;code&gt;Species&lt;/code&gt; in the global environment but it still works completely fine which is great!&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Species &amp;lt;- &amp;quot;abc&amp;quot;
+
+iris2 %&amp;gt;% 
+    filter(rlang::eval_tidy(rlang::parse_expr(selection_statement)))
+# # A tibble: 50 x 5
+#    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+#           &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt; &amp;lt;fct&amp;gt;  
+#  1          5.1         3.5          1.4         0.2 setosa 
+#  2          4.9         3            1.4         0.2 setosa 
+#  3          4.7         3.2          1.3         0.2 setosa 
+#  4          4.6         3.1          1.5         0.2 setosa 
+#  5          5           3.6          1.4         0.2 setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So it makes me wonder why there is nothing much out there on this? My feeling is that something will make this method fail but what is it? Where does it fail? Let me know in the comments if you know please, thanks!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Updating packages on a drat repo</title>
