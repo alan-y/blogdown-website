@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Alan Yeung</title>
-    <link>/categories/r/</link>
+    <link>https://alan-y.netlify.com/categories/r/</link>
     <description>Recent content in R on Alan Yeung</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://alan-y.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Filtering with string statements in dplyr</title>
-      <link>/post/filtering-string-dplyr/</link>
+      <link>https://alan-y.netlify.com/post/filtering-string-dplyr/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/filtering-string-dplyr/</guid>
+      <guid>https://alan-y.netlify.com/post/filtering-string-dplyr/</guid>
       <description>
 
 
@@ -67,10 +67,10 @@ iris2 %&amp;gt;%
     
     <item>
       <title>Updating packages on a drat repo</title>
-      <link>/post/updating-packages-on-a-drat-repo/</link>
+      <link>https://alan-y.netlify.com/post/updating-packages-on-a-drat-repo/</link>
       <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/updating-packages-on-a-drat-repo/</guid>
+      <guid>https://alan-y.netlify.com/post/updating-packages-on-a-drat-repo/</guid>
       <description>
 
 
@@ -90,10 +90,10 @@ install.packages(&amp;quot;phstemplates&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Scotland&#39;s Most Popular Babynames</title>
-      <link>/post/scot-babynames/</link>
+      <link>https://alan-y.netlify.com/post/scot-babynames/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/scot-babynames/</guid>
+      <guid>https://alan-y.netlify.com/post/scot-babynames/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -242,10 +242,10 @@ shinyApp(ui = ui, server = server)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Trying the ckanr Package</title>
-      <link>/post/trying-ckanr/</link>
+      <link>https://alan-y.netlify.com/post/trying-ckanr/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/trying-ckanr/</guid>
+      <guid>https://alan-y.netlify.com/post/trying-ckanr/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -262,7 +262,7 @@ shinyApp(ui = ui, server = server)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;How resources are grouped in CKAN&lt;/h2&gt;
 &lt;p&gt;Before we start testing out some code from ckanr, it is important to consider how resources (&lt;em&gt;I am going to call the individual data items such as specific csv files hosted on CKAN as ‘resources’ but I am not sure if this is necessarily correct&lt;/em&gt;) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within ‘Datasets’, ‘Groups’, ‘Tags’ and ‘Themes’ (and possibly more that I don’t yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could also be mistaken about this). With this out of the way, let’s delve into some code.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;/img/ckan_groupings.PNG&#34; alt=&#34;Figure: How resources are grouped in CKAN.&#34; style=&#34;width:75.0%&#34; /&gt;
+&lt;img src=&#34;https://alan-y.netlify.com/img/ckan_groupings.PNG&#34; alt=&#34;Figure: How resources are grouped in CKAN.&#34; style=&#34;width:75.0%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;&lt;strong&gt;Figure&lt;/strong&gt;: How resources are grouped in CKAN.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -456,10 +456,10 @@ bind_rows(cons_vac_list[1:3])
     
     <item>
       <title>objectremover RStudio Addin</title>
-      <link>/post/objectremover-rstudio-addin/</link>
+      <link>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/objectremover-rstudio-addin/</guid>
+      <guid>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -502,10 +502,10 @@ bind_rows(cons_vac_list[1:3])
     
     <item>
       <title>Hacking dbplyr for CKAN</title>
-      <link>/post/ckan-dbplyr/</link>
+      <link>https://alan-y.netlify.com/post/ckan-dbplyr/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ckan-dbplyr/</guid>
+      <guid>https://alan-y.netlify.com/post/ckan-dbplyr/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -640,10 +640,10 @@ ckan_nhs_init(id) %&amp;gt;%
     
     <item>
       <title>Getting Open Data into R from CKAN</title>
-      <link>/post/ckan-api/</link>
+      <link>https://alan-y.netlify.com/post/ckan-api/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ckan-api/</guid>
+      <guid>https://alan-y.netlify.com/post/ckan-api/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -787,14 +787,14 @@ glimpse(dz2011_1v, width = 50)
     
     <item>
       <title>Glasgow R User Group</title>
-      <link>/post/glasgow-r-user-group/</link>
+      <link>https://alan-y.netlify.com/post/glasgow-r-user-group/</link>
       <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/glasgow-r-user-group/</guid>
+      <guid>https://alan-y.netlify.com/post/glasgow-r-user-group/</guid>
       <description>
 
 
-&lt;p&gt;&lt;img src=&#34;/img/glasgowR.png&#34; style=&#34;width:50.0%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://alan-y.netlify.com/img/glasgowR.png&#34; style=&#34;width:50.0%&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;I am very excited to hear that there are attempts to create a brand new &lt;a href=&#34;https://www.meetup.com/Glasgow-R-User-Group&#34;&gt;R user group in Glasgow&lt;/a&gt;! I had just talked in &lt;a href=&#34;../post-number-one&#34;&gt;Post Number One&lt;/a&gt; about my guilt at not having been able to attend &lt;a href=&#34;http://edinbr.org&#34;&gt;EdinbR&lt;/a&gt; as often as I wished but it should be much easier for me to find time to attend a group based in Glasgow. If you are based in (or near) Glasgow and would like to join the R community, this sounds like the place to be – I hope this idea takes off! This is the blurb from their meetup page.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This group is for people who use R (or want to start to). This meetup is a first attempt to get together people in Glasgow interested in R, meet and decide how to go about the organisation. There are several R User around the world and would be nice to ave one in Glasgow as well.&lt;/p&gt;

@@ -1,32 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vaccination on Alan Yeung</title>
-    <link>/tags/vaccination/</link>
+    <link>https://alan-y.netlify.com/tags/vaccination/</link>
     <description>Recent content in vaccination on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Sat, 15 Jul 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/vaccination/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/vaccination/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Association between universal hepatitis B prison vaccination, vaccine uptake and hepatitis B infection among people who inject drugs</title>
-      <link>/publication/journal-article_hbv_prison/</link>
+      <link>https://alan-y.netlify.com/publication/journal-article_hbv_prison/</link>
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/publication/journal-article_hbv_prison/</guid>
+      <guid>https://alan-y.netlify.com/publication/journal-article_hbv_prison/</guid>
       <description>This study examines the impact of the HBV vaccination programme for prisoners in Scotland among people who inject drugs (PWID) in the community</description>
     </item>
     
     <item>
       <title>Statistical Applications in the Analysis of Vaccine Preventable Diseases</title>
-      <link>/publication/phd-thesis/</link>
+      <link>https://alan-y.netlify.com/publication/phd-thesis/</link>
       <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/phd-thesis/</guid>
+      <guid>https://alan-y.netlify.com/publication/phd-thesis/</guid>
       <description>This thesis applies and develops statistical methods to studies of vaccine-preventable disease outbreaks in Scotland and aims to aid in the detection and management of outbreaks.</description>
     </item>
     

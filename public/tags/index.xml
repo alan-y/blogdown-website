@@ -1,230 +1,248 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Alan Yeung</title>
-    <link>/tags/</link>
+    <link>https://alan-y.netlify.com/tags/</link>
     <description>Recent content in Tags on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>HIV</title>
+      <link>https://alan-y.netlify.com/tags/hiv/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/hiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Incidence</title>
+      <link>https://alan-y.netlify.com/tags/incidence/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/incidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PrEP</title>
+      <link>https://alan-y.netlify.com/tags/prep/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/prep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tidy-evaluation</title>
-      <link>/tags/tidy-evaluation/</link>
+      <link>https://alan-y.netlify.com/tags/tidy-evaluation/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tidy-evaluation/</guid>
+      <guid>https://alan-y.netlify.com/tags/tidy-evaluation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R-packages</title>
-      <link>/tags/r-packages/</link>
+      <link>https://alan-y.netlify.com/tags/r-packages/</link>
       <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-packages/</guid>
+      <guid>https://alan-y.netlify.com/tags/r-packages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cirrhosis</title>
-      <link>/tags/cirrhosis/</link>
+      <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/cirrhosis/</guid>
+      <guid>https://alan-y.netlify.com/tags/cirrhosis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DAA</title>
-      <link>/tags/daa/</link>
+      <link>https://alan-y.netlify.com/tags/daa/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/daa/</guid>
+      <guid>https://alan-y.netlify.com/tags/daa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HCV</title>
-      <link>/tags/hcv/</link>
+      <link>https://alan-y.netlify.com/tags/hcv/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hcv/</guid>
+      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shiny</title>
-      <link>/tags/shiny/</link>
+      <link>https://alan-y.netlify.com/tags/shiny/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/shiny/</guid>
+      <guid>https://alan-y.netlify.com/tags/shiny/</guid>
       <description></description>
     </item>
     
     <item>
       <title>API</title>
-      <link>/tags/api/</link>
+      <link>https://alan-y.netlify.com/tags/api/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/api/</guid>
+      <guid>https://alan-y.netlify.com/tags/api/</guid>
       <description></description>
     </item>
     
     <item>
       <title>open-data</title>
-      <link>/tags/open-data/</link>
+      <link>https://alan-y.netlify.com/tags/open-data/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/open-data/</guid>
+      <guid>https://alan-y.netlify.com/tags/open-data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PWID</title>
-      <link>/tags/pwid/</link>
+      <link>https://alan-y.netlify.com/tags/pwid/</link>
       <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/pwid/</guid>
+      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Addins</title>
-      <link>/tags/addins/</link>
+      <link>https://alan-y.netlify.com/tags/addins/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/addins/</guid>
+      <guid>https://alan-y.netlify.com/tags/addins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>RStudio</title>
-      <link>/tags/rstudio/</link>
+      <link>https://alan-y.netlify.com/tags/rstudio/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/rstudio/</guid>
+      <guid>https://alan-y.netlify.com/tags/rstudio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R-events</title>
-      <link>/tags/r-events/</link>
+      <link>https://alan-y.netlify.com/tags/r-events/</link>
       <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r-events/</guid>
+      <guid>https://alan-y.netlify.com/tags/r-events/</guid>
       <description></description>
     </item>
     
     <item>
       <title>blogdown</title>
-      <link>/tags/blogdown/</link>
+      <link>https://alan-y.netlify.com/tags/blogdown/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/blogdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
+      <guid>https://alan-y.netlify.com/tags/blogdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>bookdown</title>
-      <link>/tags/bookdown/</link>
+      <link>https://alan-y.netlify.com/tags/bookdown/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/bookdown/</guid>
+      <guid>https://alan-y.netlify.com/tags/bookdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://alan-y.netlify.com/tags/r/</link>
+      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tidyverse</title>
-      <link>/tags/tidyverse/</link>
+      <link>https://alan-y.netlify.com/tags/tidyverse/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/tidyverse/</guid>
+      <guid>https://alan-y.netlify.com/tags/tidyverse/</guid>
       <description></description>
     </item>
     
     <item>
       <title>training</title>
-      <link>/tags/training/</link>
+      <link>https://alan-y.netlify.com/tags/training/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/training/</guid>
+      <guid>https://alan-y.netlify.com/tags/training/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NPS</title>
-      <link>/tags/nps/</link>
+      <link>https://alan-y.netlify.com/tags/nps/</link>
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/nps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HIV</title>
-      <link>/tags/hiv/</link>
-      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/hiv/</guid>
+      <guid>https://alan-y.netlify.com/tags/nps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>HBV</title>
-      <link>/tags/hbv/</link>
+      <link>https://alan-y.netlify.com/tags/hbv/</link>
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/hbv/</guid>
+      <guid>https://alan-y.netlify.com/tags/hbv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>prison</title>
-      <link>/tags/prison/</link>
+      <link>https://alan-y.netlify.com/tags/prison/</link>
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/prison/</guid>
+      <guid>https://alan-y.netlify.com/tags/prison/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vaccination</title>
-      <link>/tags/vaccination/</link>
+      <link>https://alan-y.netlify.com/tags/vaccination/</link>
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/vaccination/</guid>
+      <guid>https://alan-y.netlify.com/tags/vaccination/</guid>
       <description></description>
     </item>
     
     <item>
       <title>time-series</title>
-      <link>/tags/time-series/</link>
+      <link>https://alan-y.netlify.com/tags/time-series/</link>
       <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>/tags/time-series/</guid>
+      <guid>https://alan-y.netlify.com/tags/time-series/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>/tags/statistics/</link>
+      <link>https://alan-y.netlify.com/tags/statistics/</link>
       <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/statistics/</guid>
+      <guid>https://alan-y.netlify.com/tags/statistics/</guid>
       <description></description>
     </item>
     

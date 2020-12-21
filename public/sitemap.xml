@@ -1,847 +1,763 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
+    <loc>https://alan-y.netlify.com/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/</loc>
+    <loc>https://alan-y.netlify.com/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/example/example2/</loc>
+    <loc>https://alan-y.netlify.com/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/authors/admin/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/publication_types/2/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/filtering-string-dplyr/</loc>
+    <loc>https://alan-y.netlify.com/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/beth-cullen/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/claudia-estcourt/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/david-goldberg/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/hiv/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/incidence/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/lesley-wallace/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/nicola-steedman/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/publication/journal-article-prep-incidence/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/prep/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/publication_types/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/publication/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/rak-nandwani/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/sharon-hutchinson/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/</loc>
+    <lastmod>2020-12-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/categories/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://alan-y.netlify.com/post/filtering-string-dplyr/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>https://alan-y.netlify.com/post/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://alan-y.netlify.com/categories/r/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/tidy-evaluation/</loc>
+    <loc>https://alan-y.netlify.com/tags/tidy-evaluation/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r-packages/</loc>
+    <loc>https://alan-y.netlify.com/tags/r-packages/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/updating-packages-on-a-drat-repo/</loc>
+    <loc>https://alan-y.netlify.com/post/updating-packages-on-a-drat-repo/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/admin/</loc>
+    <loc>https://alan-y.netlify.com/authors/allan-mcleod/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/2/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/allan-mcleod/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/amanda-weir/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/andrew-fraser/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/cirrhosis/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/daa/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/david-goldberg/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/hcv/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/hamish-innes/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/heather-valerio/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/john-dillon/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/kate-templeton/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/kevin-pollock/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/nicholas-kennedy/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/peter-bramley/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/peter-hayes/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article-hcv_daa_dc/</loc>
+    <loc>https://alan-y.netlify.com/authors/amanda-weir/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/</loc>
+    <loc>https://alan-y.netlify.com/authors/andrew-fraser/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/raymond-fox/</loc>
+    <loc>https://alan-y.netlify.com/tags/cirrhosis/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/rory-gunson/</loc>
+    <loc>https://alan-y.netlify.com/tags/daa/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/scott-mcdonald/</loc>
+    <loc>https://alan-y.netlify.com/authors/hamish-innes/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/shanley-smith/</loc>
+    <loc>https://alan-y.netlify.com/tags/hcv/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/sharon-hutchinson/</loc>
+    <loc>https://alan-y.netlify.com/authors/heather-valerio/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/stephen-barclay/</loc>
+    <loc>https://alan-y.netlify.com/authors/john-dillon/</loc>
     <lastmod>2020-03-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/scot-babynames/</loc>
+    <loc>https://alan-y.netlify.com/authors/kate-templeton/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/kevin-pollock/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/nicholas-kennedy/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/peter-bramley/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/peter-hayes/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/publication/journal-article-hcv_daa_dc/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/raymond-fox/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/rory-gunson/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/scott-mcdonald/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/shanley-smith/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/stephen-barclay/</loc>
+    <lastmod>2020-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/post/scot-babynames/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/shiny/</loc>
+    <loc>https://alan-y.netlify.com/tags/shiny/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/api/</loc>
-    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/trying-ckanr/</loc>
+    <loc>https://alan-y.netlify.com/tags/api/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/open-data/</loc>
+    <loc>https://alan-y.netlify.com/tags/open-data/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/alex-murray/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/post/trying-ckanr/</loc>
+    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/andrew-mcauley/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/andrew-radley/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/ann-eriksen/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/anne-presanis/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/athene-lane/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/chris-metcalfe/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/daniela-de-angelis/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/david-liddell/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/david-whiteley/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/ellen-heinsbroek/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/emma-hamilton/</loc>
-    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article_hcv_epitope_protocol/</loc>
+    <loc>https://alan-y.netlify.com/authors/alex-murray/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/gabriele-vojt/</loc>
+    <loc>https://alan-y.netlify.com/authors/andrew-mcauley/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/gareth-myring/</loc>
+    <loc>https://alan-y.netlify.com/authors/andrew-radley/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/graham-foster/</loc>
+    <loc>https://alan-y.netlify.com/authors/ann-eriksen/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/hannah-fraser/</loc>
+    <loc>https://alan-y.netlify.com/authors/anne-presanis/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/helen-harris/</loc>
+    <loc>https://alan-y.netlify.com/authors/athene-lane/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/jade-meadows/</loc>
+    <loc>https://alan-y.netlify.com/authors/chris-metcalfe/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/jeremy-horwood/</loc>
+    <loc>https://alan-y.netlify.com/authors/daniela-de-angelis/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/kate-drysdale/</loc>
+    <loc>https://alan-y.netlify.com/authors/david-liddell/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/katy-sinka/</loc>
+    <loc>https://alan-y.netlify.com/authors/david-whiteley/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/lawrie-elliott/</loc>
+    <loc>https://alan-y.netlify.com/authors/ellen-heinsbroek/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/lesley-graham/</loc>
+    <loc>https://alan-y.netlify.com/authors/emma-hamilton/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/lewis-beer/</loc>
+    <loc>https://alan-y.netlify.com/publication/journal-article_hcv_epitope_protocol/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/magdalena-harris/</loc>
+    <loc>https://alan-y.netlify.com/authors/gabriele-vojt/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/mary-ramsay/</loc>
+    <loc>https://alan-y.netlify.com/authors/gareth-myring/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/matthew-hickman/</loc>
+    <loc>https://alan-y.netlify.com/authors/graham-foster/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/natasha-martin/</loc>
+    <loc>https://alan-y.netlify.com/authors/hannah-fraser/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/norah-palmateer/</loc>
+    <loc>https://alan-y.netlify.com/authors/helen-harris/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/pwid/</loc>
+    <loc>https://alan-y.netlify.com/authors/jade-meadows/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/pantelis-samartsidis/</loc>
+    <loc>https://alan-y.netlify.com/authors/jeremy-horwood/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/paul-flowers/</loc>
+    <loc>https://alan-y.netlify.com/authors/kate-drysdale/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/peter-donnan/</loc>
+    <loc>https://alan-y.netlify.com/authors/katy-sinka/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/peter-vickerman/</loc>
+    <loc>https://alan-y.netlify.com/authors/lawrie-elliott/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/rachel-glass/</loc>
+    <loc>https://alan-y.netlify.com/authors/lesley-graham/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/ross-harris/</loc>
+    <loc>https://alan-y.netlify.com/authors/lewis-beer/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/ruth-simmons/</loc>
+    <loc>https://alan-y.netlify.com/authors/magdalena-harris/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/samreen-ijaz/</loc>
+    <loc>https://alan-y.netlify.com/authors/mary-ramsay/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/sarah-karen-inglis/</loc>
+    <loc>https://alan-y.netlify.com/authors/matthew-hickman/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/sema-mandal/</loc>
+    <loc>https://alan-y.netlify.com/authors/natasha-martin/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/stephanie-migchelsen/</loc>
+    <loc>https://alan-y.netlify.com/authors/norah-palmateer/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/vivian-hope/</loc>
+    <loc>https://alan-y.netlify.com/authors/pantelis-samartsidis/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/william-hollingworth/</loc>
+    <loc>https://alan-y.netlify.com/authors/paul-flowers/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/zoe-ward/</loc>
+    <loc>https://alan-y.netlify.com/authors/peter-donnan/</loc>
     <lastmod>2019-09-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/addins/</loc>
-    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/authors/peter-vickerman/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/rstudio/</loc>
-    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/tags/pwid/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/objectremover-rstudio-addin/</loc>
+    <loc>https://alan-y.netlify.com/authors/rachel-glass/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/ross-harris/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/ruth-simmons/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/samreen-ijaz/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/sarah-karen-inglis/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/sema-mandal/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/stephanie-migchelsen/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/vivian-hope/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/william-hollingworth/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/zoe-ward/</loc>
+    <lastmod>2019-09-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/addins/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/ckan-dbplyr/</loc>
+    <loc>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/rstudio/</loc>
+    <lastmod>2019-08-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/post/ckan-dbplyr/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/ckan-api/</loc>
+    <loc>https://alan-y.netlify.com/post/ckan-api/</loc>
     <lastmod>2019-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/glasgow-r-user-group/</loc>
+    <loc>https://alan-y.netlify.com/post/glasgow-r-user-group/</loc>
     <lastmod>2019-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r-events/</loc>
+    <loc>https://alan-y.netlify.com/tags/r-events/</loc>
     <lastmod>2019-05-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/bio/</loc>
+    <loc>https://alan-y.netlify.com/bio/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/personal/</loc>
-    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/post/post-number-one/</loc>
+    <loc>https://alan-y.netlify.com/tags/blogdown/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/blogdown/</loc>
+    <loc>https://alan-y.netlify.com/categories/personal/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/project/</loc>
-    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/post/post-number-one/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
-    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/project/r-resources-tips/</loc>
+    <loc>https://alan-y.netlify.com/tags/bookdown/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/bookdown/</loc>
+    <loc>https://alan-y.netlify.com/project/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/tidyverse/</loc>
+    <loc>https://alan-y.netlify.com/tags/r/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/training/</loc>
+    <loc>https://alan-y.netlify.com/project/r-resources-tips/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/alison-munro/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/tags/tidyverse/</loc>
+    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/avril-taylor/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://alan-y.netlify.com/tags/training/</loc>
+    <lastmod>2019-05-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication/journal-article_nps_hcv/</loc>
+    <loc>https://alan-y.netlify.com/authors/alison-munro/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/nps/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/project/phstemplates/</loc>
+    <loc>https://alan-y.netlify.com/authors/avril-taylor/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/</loc>
+    <loc>https://alan-y.netlify.com/publication/journal-article_nps_hcv/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/nps/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/project/phstemplates/</loc>
+    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/talk/</loc>
     <lastmod>2019-03-26T11:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/talk/redoc/</loc>
+    <loc>https://alan-y.netlify.com/talk/redoc/</loc>
     <lastmod>2019-03-26T11:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/project/objectremover/</loc>
+    <loc>https://alan-y.netlify.com/project/objectremover/</loc>
     <lastmod>2019-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/publication_types/4/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/hiv/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/health-protection-scotland/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/report-hiv_prep_year_one/</loc>
+    <loc>https://alan-y.netlify.com/publication_types/4/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/information-services-division/</loc>
+    <loc>https://alan-y.netlify.com/authors/health-protection-scotland/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/privacy/</loc>
+    <loc>https://alan-y.netlify.com/publication/report-hiv_prep_year_one/</loc>
+    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/authors/information-services-division/</loc>
+    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/alan-mitchell/</loc>
-    <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/journal-article_hbv_prison/</loc>
+    <loc>https://alan-y.netlify.com/authors/alan-mitchell/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/celia-aitken/</loc>
+    <loc>https://alan-y.netlify.com/publication/journal-article_hbv_prison/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/hbv/</loc>
+    <loc>https://alan-y.netlify.com/authors/celia-aitken/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/lesley-wallace/</loc>
+    <loc>https://alan-y.netlify.com/tags/hbv/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/samantha-shepherd/</loc>
+    <loc>https://alan-y.netlify.com/tags/prison/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/prison/</loc>
+    <loc>https://alan-y.netlify.com/authors/samantha-shepherd/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/vaccination/</loc>
+    <loc>https://alan-y.netlify.com/tags/vaccination/</loc>
     <lastmod>2017-07-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/publication/journal-article_nps_tcdo/</loc>
+    <loc>https://alan-y.netlify.com/publication/journal-article_nps_tcdo/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/donald-inverarity/</loc>
+    <loc>https://alan-y.netlify.com/authors/donald-inverarity/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/hannah-austin/</loc>
+    <loc>https://alan-y.netlify.com/authors/hannah-austin/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/jim-sherval/</loc>
+    <loc>https://alan-y.netlify.com/authors/jim-sherval/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/kirsty-morrison/</loc>
+    <loc>https://alan-y.netlify.com/authors/kirsty-morrison/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/naomi-henderson/</loc>
+    <loc>https://alan-y.netlify.com/authors/naomi-henderson/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/roisin-ure/</loc>
+    <loc>https://alan-y.netlify.com/authors/roisin-ure/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/shruti-joshi/</loc>
+    <loc>https://alan-y.netlify.com/authors/shruti-joshi/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/time-series/</loc>
+    <loc>https://alan-y.netlify.com/tags/time-series/</loc>
     <lastmod>2017-06-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/authors/beth-cullen/</loc>
-    <lastmod>2017-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/report-hbv2015_hps/</loc>
+    <loc>https://alan-y.netlify.com/publication/report-hbv2015_hps/</loc>
     <lastmod>2017-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/authors/kirsten-trayner/</loc>
+    <loc>https://alan-y.netlify.com/authors/kirsten-trayner/</loc>
     <lastmod>2017-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/publication_types/7/</loc>
-    <lastmod>2016-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/authors/chris-robertson/</loc>
-    <lastmod>2016-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/publication/phd-thesis/</loc>
+    <loc>https://alan-y.netlify.com/publication_types/7/</loc>
     <lastmod>2016-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/statistics/</loc>
+    <loc>https://alan-y.netlify.com/authors/chris-robertson/</loc>
     <lastmod>2016-07-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blogroll/</loc>
+    <loc>https://alan-y.netlify.com/publication/phd-thesis/</loc>
+    <lastmod>2016-07-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/</loc>
+    <loc>https://alan-y.netlify.com/tags/statistics/</loc>
+    <lastmod>2016-07-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/blogroll/</loc>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/courses/</loc>
   </url>
   
 </urlset>

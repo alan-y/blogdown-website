@@ -1,23 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HIV on Alan Yeung</title>
-    <link>/tags/hiv/</link>
+    <link>https://alan-y.netlify.com/tags/hiv/</link>
     <description>Recent content in HIV on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 26 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/hiv/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/hiv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Population-level effectiveness of a national HIV pre-exposure prophylaxis programme in MSM</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-prep-incidence/</link>
+      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-prep-incidence/</guid>
+      <description>The study evaluated Scotland&amp;rsquo;s national HIV PrEP programme in relation to PrEP uptake and associated population-level impact on HIV incidence among MSM.</description>
+    </item>
+    
+    <item>
       <title>Implementation of HIV PrEP in Scotland: First Year Report</title>
-      <link>/publication/report-hiv_prep_year_one/</link>
+      <link>https://alan-y.netlify.com/publication/report-hiv_prep_year_one/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/report-hiv_prep_year_one/</guid>
+      <guid>https://alan-y.netlify.com/publication/report-hiv_prep_year_one/</guid>
       <description>This report looks at the first year of the HIV PrEP programme in Scotland, covering the period from July 2017 to June 2018.</description>
     </item>
     

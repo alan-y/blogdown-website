@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Addins on Alan Yeung</title>
-    <link>/tags/addins/</link>
+    <link>https://alan-y.netlify.com/tags/addins/</link>
     <description>Recent content in Addins on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Mon, 12 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/addins/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/addins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>objectremover RStudio Addin</title>
-      <link>/post/objectremover-rstudio-addin/</link>
+      <link>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/objectremover-rstudio-addin/</guid>
+      <guid>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</guid>
       <description>A Learning ExerciseWorkflowI created my first ever R package and got it released onto CRAN in March 2019. It’s taken me a while to get round to actually writing about this which tells me that despite many years of trying to overcome procrastination, I’m obviously still not there! The package is actually an RStudio addin called objectremover that helps you to quickly remove objects stored in memory (specifically objects saved in the Global environment) within an R session.</description>
     </item>
     

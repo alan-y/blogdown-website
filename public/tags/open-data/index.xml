@@ -1,41 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>open-data on Alan Yeung</title>
-    <link>/tags/open-data/</link>
+    <link>https://alan-y.netlify.com/tags/open-data/</link>
     <description>Recent content in open-data on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/open-data/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/open-data/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Trying the ckanr Package</title>
-      <link>/post/trying-ckanr/</link>
+      <link>https://alan-y.netlify.com/post/trying-ckanr/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/trying-ckanr/</guid>
+      <guid>https://alan-y.netlify.com/post/trying-ckanr/</guid>
       <description>How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!</description>
     </item>
     
     <item>
       <title>Hacking dbplyr for CKAN</title>
-      <link>/post/ckan-dbplyr/</link>
+      <link>https://alan-y.netlify.com/post/ckan-dbplyr/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ckan-dbplyr/</guid>
+      <guid>https://alan-y.netlify.com/post/ckan-dbplyr/</guid>
       <description>AimCreate a dummy databaseTest dbplyr’s SQL translationModify dbplyr’s SQL translationTesting the dbplyr hackConcluding notesAt the end of my first post on CKAN discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler.</description>
     </item>
     
     <item>
       <title>Getting Open Data into R from CKAN</title>
-      <link>/post/ckan-api/</link>
+      <link>https://alan-y.netlify.com/post/ckan-api/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ckan-api/</guid>
+      <guid>https://alan-y.netlify.com/post/ckan-api/</guid>
       <description>PreambleOpen Data in ScotlandQuerying CKANQuerying with Custom JSONQuerying with SQLConclusions and Further IdeasPreambleI’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!</description>
     </item>
     

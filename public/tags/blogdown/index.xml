@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blogdown on Alan Yeung</title>
-    <link>/tags/blogdown/</link>
+    <link>https://alan-y.netlify.com/tags/blogdown/</link>
     <description>Recent content in blogdown on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Post Number One</title>
-      <link>/post/post-number-one/</link>
+      <link>https://alan-y.netlify.com/post/post-number-one/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post-number-one/</guid>
+      <guid>https://alan-y.netlify.com/post/post-number-one/</guid>
       <description>I suppose this is my hello world post – I’ve never been good at getting my messages out there (I’m minimally active on social media, etc) but this is part of my attempt to rectify that a little. I have wanted to start a blog for a long time and in fact, I previously started one but failed to keep it going (hopefully this time it’ll be different!). I had called that one ‘Quietly Analysing’ which was mostly inspired from a quote by Ian Hacking in 1936.</description>
     </item>
     

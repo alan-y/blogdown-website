@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cirrhosis on Alan Yeung</title>
-    <link>/tags/cirrhosis/</link>
+    <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
     <description>Recent content in Cirrhosis on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/cirrhosis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/cirrhosis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Population impact of direct-acting antiviral treatment on new presentations of hepatitis C-related decompensated cirrhosis: a national record-linkage study</title>
-      <link>/publication/journal-article-hcv_daa_dc/</link>
+      <link>https://alan-y.netlify.com/publication/journal-article-hcv_daa_dc/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/publication/journal-article-hcv_daa_dc/</guid>
+      <guid>https://alan-y.netlify.com/publication/journal-article-hcv_daa_dc/</guid>
       <description>We examined the impact of the introduction of direct-acting antiviral (DAA) therapies on hepatitis C related decompensated cirrhosis (DC) through analysis of population-based data from Scotland.</description>
     </item>
     

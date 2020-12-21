@@ -1,97 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Alan Yeung</title>
-    <link>/post/</link>
+    <link>https://alan-y.netlify.com/post/</link>
     <description>Recent content in Posts on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Wed, 13 May 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Filtering with string statements in dplyr</title>
-      <link>/post/filtering-string-dplyr/</link>
+      <link>https://alan-y.netlify.com/post/filtering-string-dplyr/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/filtering-string-dplyr/</guid>
+      <guid>https://alan-y.netlify.com/post/filtering-string-dplyr/</guid>
       <description>A question came up recently at work about how to use a filter statement entered as a complete string variable inside dplyr’s filter() function – for example dplyr::filter(my_data, &#34;var1 == &#39;a&#39;&#34;). There does not seem to be much out there on this and I was not sure how to do it either but luckily jakeybob had a neat solution that seems to work well.
 some_data %&amp;gt;% filter(eval(rlang::parse_expr(selection_statement)))Let’s see it in action using the iris flowers dataset.</description>
     </item>
     
     <item>
       <title>Updating packages on a drat repo</title>
-      <link>/post/updating-packages-on-a-drat-repo/</link>
+      <link>https://alan-y.netlify.com/post/updating-packages-on-a-drat-repo/</link>
       <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/updating-packages-on-a-drat-repo/</guid>
+      <guid>https://alan-y.netlify.com/post/updating-packages-on-a-drat-repo/</guid>
       <description>This is just a small note (mainly for myself but hopefully may be of some use to a few others!) to remind of how to update a package on a drat repo.
 Create the source file for the package you want to host on the drat repo using devtools::build().Clone the drat repo hosting the package (in my case https://github.com/alan-y/drat).Use drat::insertPackage(&#34;package-source.tar.gz&#34;, getwd()) to add the package to the drat repo (getwd() works for me if my working directory is at the top level of the drat repo).</description>
     </item>
     
     <item>
       <title>Scotland&#39;s Most Popular Babynames</title>
-      <link>/post/scot-babynames/</link>
+      <link>https://alan-y.netlify.com/post/scot-babynames/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/scot-babynames/</guid>
+      <guid>https://alan-y.netlify.com/post/scot-babynames/</guid>
       <description>Downloading the dataShiny AppI recently saw this great post on Nathan Yau’s FlowingData website which guesses a person’s name based on what the name starts with. It also needs you to select a gender and a decade for when you were born before it can guess. Of course, it isn’t really a guess and is really just based on proportions calculated after restricting the data to what has been selected.</description>
     </item>
     
     <item>
       <title>Trying the ckanr Package</title>
-      <link>/post/trying-ckanr/</link>
+      <link>https://alan-y.netlify.com/post/trying-ckanr/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/trying-ckanr/</guid>
+      <guid>https://alan-y.netlify.com/post/trying-ckanr/</guid>
       <description>How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!</description>
     </item>
     
     <item>
       <title>objectremover RStudio Addin</title>
-      <link>/post/objectremover-rstudio-addin/</link>
+      <link>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/objectremover-rstudio-addin/</guid>
+      <guid>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</guid>
       <description>A Learning ExerciseWorkflowI created my first ever R package and got it released onto CRAN in March 2019. It’s taken me a while to get round to actually writing about this which tells me that despite many years of trying to overcome procrastination, I’m obviously still not there! The package is actually an RStudio addin called objectremover that helps you to quickly remove objects stored in memory (specifically objects saved in the Global environment) within an R session.</description>
     </item>
     
     <item>
       <title>Hacking dbplyr for CKAN</title>
-      <link>/post/ckan-dbplyr/</link>
+      <link>https://alan-y.netlify.com/post/ckan-dbplyr/</link>
       <pubDate>Sun, 07 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ckan-dbplyr/</guid>
+      <guid>https://alan-y.netlify.com/post/ckan-dbplyr/</guid>
       <description>AimCreate a dummy databaseTest dbplyr’s SQL translationModify dbplyr’s SQL translationTesting the dbplyr hackConcluding notesAt the end of my first post on CKAN discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler.</description>
     </item>
     
     <item>
       <title>Getting Open Data into R from CKAN</title>
-      <link>/post/ckan-api/</link>
+      <link>https://alan-y.netlify.com/post/ckan-api/</link>
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/ckan-api/</guid>
+      <guid>https://alan-y.netlify.com/post/ckan-api/</guid>
       <description>PreambleOpen Data in ScotlandQuerying CKANQuerying with Custom JSONQuerying with SQLConclusions and Further IdeasPreambleI’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!</description>
     </item>
     
     <item>
       <title>Glasgow R User Group</title>
-      <link>/post/glasgow-r-user-group/</link>
+      <link>https://alan-y.netlify.com/post/glasgow-r-user-group/</link>
       <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/glasgow-r-user-group/</guid>
+      <guid>https://alan-y.netlify.com/post/glasgow-r-user-group/</guid>
       <description>I am very excited to hear that there are attempts to create a brand new R user group in Glasgow! I had just talked in Post Number One about my guilt at not having been able to attend EdinbR as often as I wished but it should be much easier for me to find time to attend a group based in Glasgow. If you are based in (or near) Glasgow and would like to join the R community, this sounds like the place to be – I hope this idea takes off!</description>
     </item>
     
     <item>
       <title>Post Number One</title>
-      <link>/post/post-number-one/</link>
+      <link>https://alan-y.netlify.com/post/post-number-one/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/post-number-one/</guid>
+      <guid>https://alan-y.netlify.com/post/post-number-one/</guid>
       <description>I suppose this is my hello world post – I’ve never been good at getting my messages out there (I’m minimally active on social media, etc) but this is part of my attempt to rectify that a little. I have wanted to start a blog for a long time and in fact, I previously started one but failed to keep it going (hopefully this time it’ll be different!). I had called that one ‘Quietly Analysing’ which was mostly inspired from a quote by Ian Hacking in 1936.</description>
     </item>
     
