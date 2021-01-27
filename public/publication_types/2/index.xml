@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 07 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Implementation of a national HIV pre-exposure prophylaxis service is associated with changes in characteristics of people with newly diagnosed HIV: a retrospective cohort study</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-prep-char/</link>
+      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-prep-char/</guid>
+      <description>The study reviewed characteristics of individuals newly diagnosed with HIV following implementation of a national PrEP programme to inform future delivery and broader HIV prevention strategies.</description>
+    </item>
     
     <item>
       <title>Population-level effectiveness of a national HIV pre-exposure prophylaxis programme in MSM</title>
