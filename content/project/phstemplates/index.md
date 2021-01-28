@@ -1,6 +1,6 @@
 ---
 date: "2019-04-01"
-external_link: https://github.com/Health-SocialCare-Scotland/phstemplates
+external_link: https://github.com/Public-Health-Scotland/phstemplates
 image:
   caption: phstemplates
   focal_point: Smart
