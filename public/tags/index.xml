@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Wed, 13 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DAA</title>
+      <link>https://alan-y.netlify.com/tags/daa/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/daa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCV</title>
+      <link>https://alan-y.netlify.com/tags/hcv/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PWID</title>
+      <link>https://alan-y.netlify.com/tags/pwid/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HIV</title>
@@ -67,24 +94,6 @@
     </item>
     
     <item>
-      <title>DAA</title>
-      <link>https://alan-y.netlify.com/tags/daa/</link>
-      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/daa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCV</title>
-      <link>https://alan-y.netlify.com/tags/hcv/</link>
-      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Shiny</title>
       <link>https://alan-y.netlify.com/tags/shiny/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
@@ -108,15 +117,6 @@
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/open-data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWID</title>
-      <link>https://alan-y.netlify.com/tags/pwid/</link>
-      <pubDate>Tue, 24 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
       <description></description>
     </item>
     

@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 24 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/pwid/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reduction in the population prevalence of HCV viraemia among people who inject drugs associated with scale-up of direct-acting antiviral therapy in community drug services: real world data</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-hcv_prev_daa/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-hcv_prev_daa/</guid>
+      <description>We assessed the impact of rapid DAA scale‐up to PWID delivered through community services in the Tayside region of Scotland.</description>
+    </item>
     
     <item>
       <title>Evaluating the population impact of hepatitis C direct acting antiviral treatment as prevention for people who inject drugs (EPIToPe) – a natural experiment (protocol)</title>
