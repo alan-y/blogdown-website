@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A systematic review and meta-analysis of the prevalence of take-home naloxone (THN) ownership and carriage</title>
+      <link>https://alan-y.netlify.com/publication/journal-article_thn_meta/</link>
+      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article_thn_meta/</guid>
+      <description>This study aimed to assess the prevalence of ownership and carriage of Take-Home Naloxone internationally among people who use drugs</description>
+    </item>
     
     <item>
       <title>Reduction in the population prevalence of HCV viraemia among people who inject drugs associated with scale-up of direct-acting antiviral therapy in community drug services: real world data</title>

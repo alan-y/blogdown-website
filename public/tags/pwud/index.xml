@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PWUD on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/pwud/</link>
+    <description>Recent content in PWUD on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Sun, 30 May 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alan-y.netlify.com/tags/pwud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A systematic review and meta-analysis of the prevalence of take-home naloxone (THN) ownership and carriage</title>
+      <link>https://alan-y.netlify.com/publication/journal-article_thn_meta/</link>
+      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article_thn_meta/</guid>
+      <description>This study aimed to assess the prevalence of ownership and carriage of Take-Home Naloxone internationally among people who use drugs</description>
+    </item>
+    
+  </channel>
+</rss>
