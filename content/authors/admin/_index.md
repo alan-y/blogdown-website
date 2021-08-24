@@ -28,24 +28,27 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/alan_y
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=KScwYQ0AAAAJ&hl=en
 - icon: github
   icon_pack: fab
   link: https://github.com/alan-y
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/alanyeung1
+- icon: upwork-circle
+  icon_pack: ic
+  link: https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.co.uk/citations?user=KScwYQ0AAAAJ&hl=en
 - icon: orcid
   icon_pack: ai
   link: https://orcid.org/0000-0001-5226-3695
 - icon: researchgate
   icon_pack: fab
   link: https://www.researchgate.net/profile/Alan_Yeung2
-- icon: upwork-circle
-  icon_pack: ic
-  link: https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212
+- icon: publons
+  icon_pack: ai
+  link: https://publons.com/researcher/3500068/alan-yeung
 superuser: true
 user_groups:
 - Researchers
