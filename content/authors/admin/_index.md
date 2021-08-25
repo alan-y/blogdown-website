@@ -37,6 +37,9 @@ social:
 - icon: upwork-circle
   icon_pack: ic
   link: https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212
+- icon: stack-overflow
+  icon_pack: fab
+  link: https://stackoverflow.com/users/6008894/alan-y
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.co.uk/citations?user=KScwYQ0AAAAJ&hl=en
