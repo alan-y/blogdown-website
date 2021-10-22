@@ -16,9 +16,8 @@ slides:
 summary: We conducted an external validation of six HCC prediction models for UK patients with cirrhosis HCV virological cure.
 tags:
 - HCV
-- DAA
-- PWID
-- Reinfection
+- HCC
+- Cirrhosis
 title: 'Performance of models to predict hepatocellular carcinoma risk among UK patients with cirrhosis and cured hepatitis C infection'
 url_code: ""
 url_dataset: ""

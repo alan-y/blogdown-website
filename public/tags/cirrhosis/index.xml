@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Thu, 26 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Oct 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/cirrhosis/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Performance of models to predict hepatocellular carcinoma risk among UK patients with cirrhosis and cured hepatitis C infection</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-hcc-model/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-hcc-model/</guid>
+      <description>We conducted an external validation of six HCC prediction models for UK patients with cirrhosis HCV virological cure.</description>
+    </item>
     
     <item>
       <title>Population impact of direct-acting antiviral treatment on new presentations of hepatitis C-related decompensated cirrhosis: a national record-linkage study</title>
