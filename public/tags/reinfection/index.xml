@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reinfection on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/reinfection/</link>
+    <description>Recent content in Reinfection on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alan-y.netlify.com/tags/reinfection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Population-level estimates of hepatitis C reinfection post scale-up of direct-acting antivirals among people who inject drugs</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-hcv_reinf/</link>
+      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-hcv_reinf/</guid>
+      <description>We estimated HCV reinfection rates among PWID in Scotland pre and post-introduction of DAAs.</description>
+    </item>
+    
+    <item>
+      <title>Performance of models to predict hepatocellular carcinoma risk among UK patients with cirrhosis and cured hepatitis C infection</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-hcc-model/</link>
+      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-hcc-model/</guid>
+      <description>We conducted an external validation of six HCC prediction models for UK patients with cirrhosis HCV virological cure.</description>
+    </item>
+    
+  </channel>
+</rss>
