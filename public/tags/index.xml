@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Nov 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cirrhosis</title>
+      <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/cirrhosis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCC</title>
+      <link>https://alan-y.netlify.com/tags/hcc/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/hcc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCV</title>
+      <link>https://alan-y.netlify.com/tags/hcv/</link>
+      <pubDate>Wed, 17 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>DAA</title>
@@ -18,15 +45,6 @@
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/daa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCV</title>
-      <link>https://alan-y.netlify.com/tags/hcv/</link>
-      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
       <description></description>
     </item>
     
@@ -45,24 +63,6 @@
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/reinfection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cirrhosis</title>
-      <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
-      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/cirrhosis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCC</title>
-      <link>https://alan-y.netlify.com/tags/hcc/</link>
-      <pubDate>Thu, 07 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcc/</guid>
       <description></description>
     </item>
     
