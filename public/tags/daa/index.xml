@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sat, 09 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/daa/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Declining incidence of hepatitis C related hepatocellular carcinoma in the era of interferon-free therapies: A population-based cohort study</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-hcc-decline/</link>
+      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-hcc-decline/</guid>
+      <description>This study explores the impact of interferon-free therapies on hepatitis C virus related hepatocellular carcinoma at a population level.</description>
+    </item>
     
     <item>
       <title>Population-level estimates of hepatitis C reinfection post scale-up of direct-acting antivirals among people who inject drugs</title>
