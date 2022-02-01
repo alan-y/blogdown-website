@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BBV on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/bbv/</link>
+    <description>Recent content in BBV on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alan-y.netlify.com/tags/bbv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Examining the impact of the first wave of COVID-19 and associated control measures on interventions to prevent blood-borne viruses among people who inject drugs in Scotland: an interrupted time series study</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-covid_bbv_its/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-covid_bbv_its/</guid>
+      <description>We examined the impact of the first wave of COVID-19 in Scotland on drug and BBV services.</description>
+    </item>
+    
+  </channel>
+</rss>

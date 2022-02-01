@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BBV</title>
+      <link>https://alan-y.netlify.com/tags/bbv/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/bbv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>COVID-19</title>
+      <link>https://alan-y.netlify.com/tags/covid-19/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PWID</title>
+      <link>https://alan-y.netlify.com/tags/pwid/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time-series</title>
+      <link>https://alan-y.netlify.com/tags/time-series/</link>
+      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/time-series/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cirrhosis</title>
@@ -45,15 +81,6 @@
       <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/hcv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWID</title>
-      <link>https://alan-y.netlify.com/tags/pwid/</link>
-      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
       <description></description>
     </item>
     
@@ -279,15 +306,6 @@
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/vaccination/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>time-series</title>
-      <link>https://alan-y.netlify.com/tags/time-series/</link>
-      <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/time-series/</guid>
       <description></description>
     </item>
     
