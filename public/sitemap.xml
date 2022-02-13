@@ -18,17 +18,67 @@
   </url>
   
   <url>
+    <loc>https://alan-y.netlify.com/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/categories/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/gganimate/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/ggimage/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/ggplot2/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/categories/personal/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/post/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/categories/r/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/post/rafa-21-slams/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alan-y.netlify.com/tags/tennis/</loc>
+    <lastmod>2022-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://alan-y.netlify.com/authors/admin/</loc>
     <lastmod>2022-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alan-y.netlify.com/publication_types/2/</loc>
-    <lastmod>2022-01-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alan-y.netlify.com/</loc>
     <lastmod>2022-01-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -144,11 +194,6 @@
   
   <url>
     <loc>https://alan-y.netlify.com/authors/stuart-mctaggart/</loc>
-    <lastmod>2022-01-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alan-y.netlify.com/tags/</loc>
     <lastmod>2022-01-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -418,22 +463,7 @@
   </url>
   
   <url>
-    <loc>https://alan-y.netlify.com/categories/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://alan-y.netlify.com/post/filtering-string-dplyr/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alan-y.netlify.com/post/</loc>
-    <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alan-y.netlify.com/categories/r/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -764,11 +794,6 @@
   
   <url>
     <loc>https://alan-y.netlify.com/tags/blogdown/</loc>
-    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alan-y.netlify.com/categories/personal/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
   </url>
   

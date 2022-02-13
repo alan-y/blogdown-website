@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tennis on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/tennis/</link>
+    <description>Recent content in Tennis on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alan-y.netlify.com/tags/tennis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rafa 21 Grand Slams and gganimate</title>
+      <link>https://alan-y.netlify.com/post/rafa-21-slams/</link>
+      <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/rafa-21-slams/</guid>
+      <description>I’ve been a Nadal fan for a long time – right back to the days of the pirate-pants so yeah, really a long time. In all this time, Rafa has never been ahead in the grand slam race vs his biggest rivals… but that finally changed after the 2022 Australian Open! The win there was unexpected and came out of nowhere. The final against Medvedev has to go down as one of the best comebacks ever.</description>
+    </item>
+    
+  </channel>
+</rss>

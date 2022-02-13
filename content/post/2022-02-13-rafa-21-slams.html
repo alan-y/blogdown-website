@@ -1,0 +1,216 @@
+---
+title: Rafa 21 Grand Slams and gganimate
+author: Alan Yeung
+date: '2022-02-13'
+slug: rafa-21-slams
+categories:
+  - R
+  - Personal
+tags:
+  - gganimate
+  - ggimage
+  - ggplot2
+  - Tennis
+draft: no
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+toc: false
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>I’ve been a Nadal fan for a long time – right back to the days of the <a href="https://www.tennis365.com/tennis-features/t365-recall-when-the-pirate-pants-wearing-rafael-nadal-came-of-age-on-clay">pirate-pants</a> so yeah, really a long time. In all this time, Rafa has never been ahead in the grand slam race vs his biggest rivals… but that finally changed after the 2022 Australian Open! The win there was unexpected and came out of nowhere. The final against Medvedev has to go down as one of the best comebacks ever.</p>
+<p>It’s already been <code>as.Date("2022-02-13") - as.Date("2022-01-30")</code> (14 days) since he won that record 21st grand slam so I thought it has to be about time to do something to mark the achievement. Something that’s been on my list of things to learn is <a href="https://gganimate.com">gganimate</a> which is a very cool R package so I thought I’d take the opportunity here. My goal is to create an animated barplot, showing Rafa on top at the very end.</p>
+<div id="getting-the-data" class="section level2">
+<h2>Getting the data</h2>
+<p>I started by using <a href="https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slams.csv">this data on grand slam wins</a> from <a href="https://www.emilykuehler.com/portfolio/barchart-race">this blog post by Emily Kuehler</a> and filtering for just the data on the big 3 male players: Nadal, Djokovic and Federer. Since the grand slam data there does not go all the way up to the 2022 Australian Open, I had to manually add that in by looking up the required information on <a href="https://en.wikipedia.org">Wikipedia</a> and binding that to the end.</p>
+<pre class="r"><code>library(tidyverse)
+library(readxl)
+
+gs_df &lt;- read_csv(&quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-04-09/grand_slams.csv&quot;, 
+                  show_col_types = FALSE)
+
+gs_update &lt;- tibble::tribble(
+    ~year,       ~grand_slam,            ~name, ~rolling_win_count, ~tournament_date,
+    2019,     &quot;French Open&quot;,   &quot;Rafael Nadal&quot;,                18,     &quot;26/05/2019&quot;,
+    2019,       &quot;Wimbledon&quot;, &quot;Novak Djokovic&quot;,                16,     &quot;01/07/2019&quot;,
+    2019,         &quot;US Open&quot;,   &quot;Rafael Nadal&quot;,                19,     &quot;26/08/2019&quot;,
+    2020, &quot;Australian Open&quot;, &quot;Novak Djokovic&quot;,                17,     &quot;20/01/2020&quot;,
+    2020,     &quot;French Open&quot;,   &quot;Rafael Nadal&quot;,                20,     &quot;27/09/2020&quot;,
+    2021, &quot;Australian Open&quot;, &quot;Novak Djokovic&quot;,                18,     &quot;08/02/2021&quot;,
+    2021,     &quot;French Open&quot;, &quot;Novak Djokovic&quot;,                19,     &quot;30/05/2021&quot;,
+    2021,       &quot;Wimbledon&quot;, &quot;Novak Djokovic&quot;,                20,     &quot;28/07/2021&quot;,
+    2022, &quot;Australian Open&quot;,   &quot;Rafael Nadal&quot;,                21,     &quot;17/01/2022&quot;
+) %&gt;% 
+    mutate(tournament_date = as.Date(tournament_date, &quot;%d/%m/%Y&quot;))
+
+gs_df2 &lt;- gs_df %&gt;%
+    filter(name %in% c(&quot;Rafael Nadal&quot;, &quot;Novak Djokovic&quot;, &quot;Roger Federer&quot;)) %&gt;%
+    mutate(grand_slam = str_replace_all(grand_slam, &quot;_&quot;, &quot; &quot;),
+           grand_slam = str_to_title(grand_slam),
+           grand_slam = str_replace_all(grand_slam, &quot;Us&quot;, &quot;US&quot;)) %&gt;%
+    select(-gender) %&gt;%
+    bind_rows(gs_update)
+
+gs_df2
+# A tibble: 61 x 5
+#     year grand_slam      name          rolling_win_count tournament_date
+#    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;                     &lt;dbl&gt; &lt;date&gt;         
+#  1  2003 Wimbledon       Roger Federer                 1 2003-07-14     
+#  2  2004 Australian Open Roger Federer                 2 2004-01-10     
+#  3  2004 Wimbledon       Roger Federer                 3 2004-07-14     
+#  4  2004 US Open         Roger Federer                 4 2004-09-09     
+#  5  2005 French Open     Rafael Nadal                  1 2005-06-09     
+#  6  2005 Wimbledon       Roger Federer                 5 2005-07-14     
+#  7  2005 US Open         Roger Federer                 6 2005-09-09     
+#  8  2006 Australian Open Roger Federer                 7 2006-01-10     
+#  9  2006 French Open     Rafael Nadal                  2 2006-06-09     
+# 10  2006 Wimbledon       Roger Federer                 8 2006-07-14     
+# ... with 51 more rows</code></pre>
+</div>
+<div id="data-processing" class="section level2">
+<h2>Data processing</h2>
+<p>I had to do a bit of general data wrangling (isn’t this always the case unfortunately?) to set things up for gganimate. This is all fairly standard stuff so I’ll just show the code below but one thing to note is that for the rank order (<code>current_rank</code>) of the players at each time point, I sorted ascending on <code>rolling_win_count2</code> rather than descending (as would seem more logical to get the ranking by most slams) because when you use <code>ggplot2::coord_flip()</code>, it puts the highest value (lowest rank) at the top of the graph – so essentially I set it up so that rank 3 is the best and rank 1 is the worst.</p>
+<pre class="r"><code># Expand out for all combinations
+gs_df3 &lt;- gs_df2 %&gt;% 
+    arrange(tournament_date) %&gt;% 
+    mutate(year = fct_inorder(factor(year)),
+           grand_slam = factor(grand_slam, 
+                               levels = c(&quot;Australian Open&quot;, &quot;French Open&quot;, 
+                                          &quot;Wimbledon&quot;, &quot;US Open&quot;)),
+           name = factor(name, levels = c(&quot;Rafael Nadal&quot;, &quot;Novak Djokovic&quot;, 
+                                          &quot;Roger Federer&quot;))) %&gt;% 
+    complete(year, grand_slam, name) %&gt;% 
+    replace_na(list(rolling_win_count = 0))
+
+# Drop tournaments before first slam win or not yet played
+gs_df4 &lt;- gs_df3 %&gt;% 
+    filter(!(year == 2003 &amp; grand_slam %in% c(&quot;Australian Open&quot;, &quot;French Open&quot;)),
+           !(year == 2022 &amp; grand_slam %in% c(&quot;French Open&quot;, &quot;Wimbledon&quot;, &quot;US Open&quot;))) %&gt;% 
+    mutate(yr_slam = paste(year, grand_slam), .before = year)
+
+# Recalculate rolling win count
+gs_df5 &lt;- gs_df4 %&gt;% 
+    mutate(win = as.numeric(rolling_win_count &gt; 0)) %&gt;% 
+    group_by(name) %&gt;% 
+    mutate(rolling_win_count2 = cumsum(win)) %&gt;% 
+    ungroup() 
+
+# Set the rank for each time point
+gs_df6 &lt;- gs_df5 %&gt;% 
+    arrange(year, grand_slam, rolling_win_count2, desc(name)) %&gt;% 
+    group_by(yr_slam) %&gt;% 
+    mutate(current_rank = row_number()) %&gt;% 
+    ungroup()
+
+select(gs_df6, yr_slam, name, rolling_win_count2, current_rank)
+# A tibble: 225 x 4
+#    yr_slam              name           rolling_win_count2 current_rank
+#    &lt;chr&gt;                &lt;fct&gt;                       &lt;dbl&gt;        &lt;int&gt;
+#  1 2003 Wimbledon       Novak Djokovic                  0            1
+#  2 2003 Wimbledon       Rafael Nadal                    0            2
+#  3 2003 Wimbledon       Roger Federer                   1            3
+#  4 2003 US Open         Novak Djokovic                  0            1
+#  5 2003 US Open         Rafael Nadal                    0            2
+#  6 2003 US Open         Roger Federer                   1            3
+#  7 2004 Australian Open Novak Djokovic                  0            1
+#  8 2004 Australian Open Rafael Nadal                    0            2
+#  9 2004 Australian Open Roger Federer                   2            3
+# 10 2004 French Open     Novak Djokovic                  0            1
+# ... with 215 more rows</code></pre>
+</div>
+<div id="ggimage" class="section level2">
+<h2>ggimage</h2>
+<p>Next I prepared some cartoon faces for the 3 players to go on the ends of the bars and stored these on Github so they can be loaded into R with the help of the <a href="https://github.com/GuangchuangYu/ggimage">ggimage</a> package. I won’t go into much detail on the image processing side but the online tools I used to help with this are all in the references section of this blog post.</p>
+<pre class="r"><code>library(ggimage)
+
+img_rafa &lt;- &quot;https://raw.githubusercontent.com/alan-y/img/master/rafa2.png&quot;
+img_novak &lt;- &quot;https://raw.githubusercontent.com/alan-y/img/master/novak2.png&quot;
+img_roger &lt;- &quot;https://raw.githubusercontent.com/alan-y/img/master/roger2.png&quot;
+
+gs_df7 &lt;- gs_df6 %&gt;% 
+    mutate(img_player = case_when(
+        name == &quot;Rafael Nadal&quot; ~ img_rafa,
+        name == &quot;Novak Djokovic&quot; ~ img_novak,
+        name == &quot;Roger Federer&quot; ~ img_roger,
+    ))
+
+select(gs_df7, name, img_player)
+# A tibble: 225 x 2
+#    name           img_player                                                    
+#    &lt;fct&gt;          &lt;chr&gt;                                                         
+#  1 Novak Djokovic https://raw.githubusercontent.com/alan-y/img/master/novak2.png
+#  2 Rafael Nadal   https://raw.githubusercontent.com/alan-y/img/master/rafa2.png 
+#  3 Roger Federer  https://raw.githubusercontent.com/alan-y/img/master/roger2.png
+#  4 Novak Djokovic https://raw.githubusercontent.com/alan-y/img/master/novak2.png
+#  5 Rafael Nadal   https://raw.githubusercontent.com/alan-y/img/master/rafa2.png 
+#  6 Roger Federer  https://raw.githubusercontent.com/alan-y/img/master/roger2.png
+#  7 Novak Djokovic https://raw.githubusercontent.com/alan-y/img/master/novak2.png
+#  8 Rafael Nadal   https://raw.githubusercontent.com/alan-y/img/master/rafa2.png 
+#  9 Roger Federer  https://raw.githubusercontent.com/alan-y/img/master/roger2.png
+# 10 Novak Djokovic https://raw.githubusercontent.com/alan-y/img/master/novak2.png
+# ... with 215 more rows</code></pre>
+</div>
+<div id="gganimate" class="section level2">
+<h2>gganimate</h2>
+<p>Firstly I’ll mention that for the gganimate package to work well, you’ll also need to install the <a href="https://cran.r-project.org/web/packages/gifski/index.html">gifski</a> package. To get things ready for the animated plot in <code>plot_df</code>, I just had to make a couple of minor manipulations. Then everything up to the use of <code>transition_states()</code> in the code below is standard ggplot2 code except maybe the use of <code>geom_image()</code> to add the cartoon faces to the end of the bars (note that I subtract 0.5 from <code>rolling_win_count</code> as the function doesn’t seem to have a <code>nudge_y</code> argument even though it has one for <code>nudge_x</code>) and the use of <code>{closest_state}</code> in the subtitle – this tracks the variable that the animation transitions over which for me, is <code>yr_slam</code>, i.e. the combination of year and grand slam name. The fill colours are from <code>scale_fill_hue()</code> but manually picked so that the fill colour of each player’s bar matches their favourite surface.</p>
+<p>For <code>transition_states()</code>, the <code>transition_length()</code> is the relative length of the transition and <code>state_length()</code> is the relative length of the pause at the states (I stole this from the help page); I set <code>wrap = FALSE</code> as I don’t want the last state to transition into the first when looping the animation. I am not sure how much difference the <code>ease_aes("quadratic-in-out")</code> makes here to be honest but that’s what I used. In general I know this function is for messing around with the effects applied to how frames/states transition into one another. <strong>If somebody can give me a good layman’s explanation of these functions, I’d be grateful if you can do so in the comments.</strong></p>
+<p>In the <code>animate()</code> function, I set <code>nframes = 500</code>. Some things to note here are that the default is only 50 frames so if you have more than 50 states (and I do as I have more than 50 year-slam combinations) then you need to set this to a larger number but this number should be <em>suitably</em> larger so the animation looks smoother. I set <code>end_pause</code> to 30 frames so that it pauses at the end for a little bit. Finally I applied very specific <code>width</code> and <code>height</code> as I wanted to add something to the end of the animation which happened to have these dimensions – that’s a surprise which you will see!</p>
+<pre class="r"><code>library(gganimate)
+
+plot_df &lt;- gs_df7 %&gt;% 
+    select(-rolling_win_count) %&gt;% 
+    rename(rolling_win_count = rolling_win_count2) %&gt;% 
+    mutate(yr_slam = fct_inorder(factor(yr_slam)),
+           name_count = paste(name, rolling_win_count))
+
+# Set up ggplot2 theme
+theme_set(theme_minimal())
+theme_update(plot.title = element_text(face = &quot;bold&quot;, size = 18),
+             plot.subtitle = element_text(size = 14),
+             panel.grid.major.y = element_blank(),
+             panel.grid.minor.y = element_blank(),
+             panel.grid.major.x = element_line(color = &quot;grey75&quot;),
+             panel.grid.minor.x = element_line(color = &quot;grey75&quot;),
+             legend.position = &quot;none&quot;,
+             axis.ticks = element_blank(),
+             axis.text.y =  element_blank())
+
+barplot_slams &lt;- ggplot(plot_df, 
+                        aes(x = current_rank, y = rolling_win_count, 
+                            fill = name)) +
+    geom_bar(stat = &quot;identity&quot;, width = 0.3, colour = &quot;black&quot;) +
+    geom_text(aes(label = name_count), 
+              nudge_x = -0.25, nudge_y = -0.75, 
+              size = 3, fontface = &quot;bold&quot;, hjust = 0) +
+    geom_image(aes(image = img_player, y = rolling_win_count - 0.5), size = 0.09) +
+    scale_fill_manual(values = c(&quot;#FF7969&quot;, &quot;#569EFF&quot;, &quot;#00B73A&quot;)) +
+    scale_y_continuous(limits = c(-0.75, 25), breaks = seq(0, 25, by = 5)) +
+    coord_flip() +
+    labs(title = &quot;Men&#39;s Tennis Grand Slam Singles Championships&quot;,
+         subtitle = &quot;{closest_state}&quot;,
+         x = NULL, y = NULL) +
+    transition_states(yr_slam, transition_length = 3, state_length = 1, 
+                      wrap = FALSE) +
+    ease_aes(&quot;quadratic-in-out&quot;)
+
+animate(barplot_slams, nframes = 500, end_pause = 30, fps = 20, 
+        width = 469, height = 334,
+        renderer = gifski_renderer(&quot;barplot_slams.gif&quot;)) </code></pre>
+<p>So without further ado, here is the final result for your enjoyment.</p>
+<p><img src="/img/barplot_slams2.gif" /></p>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<p><a href="https://www.archyworldys.com/before-talking-about-greatest-of-all-time-what-you-need-to-know-about-big-3-tennis" class="uri">https://www.archyworldys.com/before-talking-about-greatest-of-all-time-what-you-need-to-know-about-big-3-tennis</a><br />
+<a href="https://www.cutout.pro" class="uri">https://www.cutout.pro</a><br />
+<a href="https://www.eurosport.com/tennis/watch-historic-moment-rafael-nadal-wins-australian-open-and-claims-historic-21st-grand-slam-singles-_vid1618912/video.shtml" class="uri">https://www.eurosport.com/tennis/watch-historic-moment-rafael-nadal-wins-australian-open-and-claims-historic-21st-grand-slam-singles-_vid1618912/video.shtml</a><br />
+<a href="https://www.downloadhelper.net" class="uri">https://www.downloadhelper.net</a><br />
+<a href="https://online-video-cutter.com" class="uri">https://online-video-cutter.com</a><br />
+<a href="https://ezgif.com" class="uri">https://ezgif.com</a><br />
+<a href="https://gif.ski" class="uri">https://gif.ski</a><br />
+<a href="https://gifyu.com" class="uri">https://gifyu.com</a></p>
+</div>
