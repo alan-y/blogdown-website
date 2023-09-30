@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: Applied statistician, currently working mainly on blood borne viruses. Supporter of all things R.
+bio: Applied statistician, currently working mainly on blood borne viruses and drugs. Supporter of all things R.
 education:
   courses:
   - course: PhD in Statistics
@@ -20,7 +20,7 @@ name: Alan Yeung
 organizations:
 - name: Glasgow Caledonian University and Public Health Scotland
   url: "http://researchonline.gcu.ac.uk/portal/en/persons/alan-yeung(614524b9-0129-49e1-802b-34bf2f9f7c8c).html"
-role: Research Fellow and Analyst
+role: Research Fellow and Healthcare Scientist
 social:
 #- icon: envelope
 #  icon_pack: fas
@@ -59,7 +59,7 @@ user_groups:
 ---
 
 <DIV align="justify">
-I am a research fellow at Glasgow Caledonian University and an analyst at Public Health Scotland. My research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV. I am a supporter for the widespread adoption of open-source statistical software within the public sector in Scotland, particularly for the use of R.  
+I am a research fellow at Glasgow Caledonian University and a healthcare scientist at Public Health Scotland. My research interests relate to the epidemiology and prevention of blood borne viruses as well as the evaluation of policies related to this field. I provide analytical and statistical support for a broad range of blood borne viruses including hepatitis B, hepatitis C and HIV. I am a supporter for the widespread adoption of open-source statistical software within the public sector in Scotland, particularly for the use of R.  
   
 I also work as a freelancer on the [Upwork](https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212) platform and I am interested in taking on data science projects, ranging from the simple to the more complex. If you have a project that you feel I could help with, please get in touch.  
   

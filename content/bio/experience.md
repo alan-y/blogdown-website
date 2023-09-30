@@ -31,6 +31,21 @@ date_format = "Jan 2006"
   * Analysing
   * Modelling
   """
+  
+[[experience]]
+  title = "Healthcare Scientist (Advanced)"
+  company = "Public Health Scotland"
+  company_url = "https://www.publichealthscotland.scot/"
+  location = "Glasgow"
+  date_start = "2020-10-26"
+  date_end = ""
+  description = """
+  Responsibilities include:
+  
+  * Scientific support
+  * Public health exercises
+  * Managing analysts and data managers
+  """
 
 [[experience]]
   title = "Senior Information Analyst"
@@ -38,7 +53,7 @@ date_format = "Jan 2006"
   company_url = "https://www.hps.scot.nhs.uk"
   location = "Glasgow"
   date_start = "2014-12-01"
-  date_end = ""
-  description = """Providing analytical and statistical support to the blood borne viruses and sexually transmitted infections team."""
+  date_end = "2020-10-25"
+  description = "Providing analytical and statistical support to the blood borne viruses and sexually transmitted infections team."
 
 +++
