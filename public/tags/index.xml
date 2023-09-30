@@ -7,10 +7,109 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DAA</title>
+      <link>https://alan-y.netlify.com/tags/daa/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/daa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Drugs</title>
+      <link>https://alan-y.netlify.com/tags/drugs/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/drugs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PWID</title>
+      <link>https://alan-y.netlify.com/tags/pwid/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Naloxone</title>
+      <link>https://alan-y.netlify.com/tags/naloxone/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/naloxone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time-series</title>
+      <link>https://alan-y.netlify.com/tags/time-series/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/time-series/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCV</title>
+      <link>https://alan-y.netlify.com/tags/hcv/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Liver Disease</title>
+      <link>https://alan-y.netlify.com/tags/liver-disease/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/liver-disease/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mortality</title>
+      <link>https://alan-y.netlify.com/tags/mortality/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/mortality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OAT</title>
+      <link>https://alan-y.netlify.com/tags/oat/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/oat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cirrhosis</title>
+      <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
+      <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/cirrhosis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HCC</title>
+      <link>https://alan-y.netlify.com/tags/hcc/</link>
+      <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/tags/hcc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>gganimate</title>
@@ -67,60 +166,6 @@
     </item>
     
     <item>
-      <title>PWID</title>
-      <link>https://alan-y.netlify.com/tags/pwid/</link>
-      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>time-series</title>
-      <link>https://alan-y.netlify.com/tags/time-series/</link>
-      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/time-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cirrhosis</title>
-      <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
-      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/cirrhosis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DAA</title>
-      <link>https://alan-y.netlify.com/tags/daa/</link>
-      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/daa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCC</title>
-      <link>https://alan-y.netlify.com/tags/hcc/</link>
-      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCV</title>
-      <link>https://alan-y.netlify.com/tags/hcv/</link>
-      <pubDate>Thu, 23 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Reinfection</title>
       <link>https://alan-y.netlify.com/tags/reinfection/</link>
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
@@ -130,29 +175,11 @@
     </item>
     
     <item>
-      <title>drugs</title>
-      <link>https://alan-y.netlify.com/tags/drugs/</link>
-      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/drugs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meta-analysis</title>
+      <title>Meta-analysis</title>
       <link>https://alan-y.netlify.com/tags/meta-analysis/</link>
       <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/meta-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>naloxone</title>
-      <link>https://alan-y.netlify.com/tags/naloxone/</link>
-      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/naloxone/</guid>
       <description></description>
     </item>
     

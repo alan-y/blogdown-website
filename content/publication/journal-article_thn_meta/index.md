@@ -15,10 +15,10 @@ publication_types:
 slides: ""
 summary: This study aimed to assess the prevalence of ownership and carriage of Take-Home Naloxone internationally among people who use drugs
 tags:
-- drugs
+- Drugs
 - PWUD
-- naloxone
-- meta-analysis
+- Naloxone
+- Meta-analysis
 title: A systematic review and meta-analysis of the prevalence of take-home naloxone (THN) ownership and carriage
 url_code: ""
 url_dataset: ""

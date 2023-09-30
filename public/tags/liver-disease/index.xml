@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Liver Disease on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/liver-disease/</link>
+    <description>Recent content in Liver Disease on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Wed, 02 Aug 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alan-y.netlify.com/tags/liver-disease/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mortality rates among patients successfully treated for hepatitis C in the era of interferon-free antivirals: population based cohort study</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-mortality_treated_hcv/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-mortality_treated_hcv/</guid>
+      <description>This study compared mortality rates for patients treated for hepatitis C in the era of direct acting antivirals with the general population</description>
+    </item>
+    
+  </channel>
+</rss>

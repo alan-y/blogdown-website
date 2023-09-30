@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>drugs on Alan Yeung</title>
+    <title>Drugs on Alan Yeung</title>
     <link>https://alan-y.netlify.com/tags/drugs/</link>
-    <description>Recent content in drugs on Alan Yeung</description>
+    <description>Recent content in Drugs on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 30 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/drugs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A transient positive association between direct-acting antiviral therapy for hepatitis C infection and drug-related hospitalization among people who inject drugs: Self-controlled case-series analysis of national data</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-transient_daa/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-transient_daa/</guid>
+      <description>We investigated associations between outcomes and DAA treatment by comparing post-treatment to baseline periods using a within-subjects design</description>
+    </item>
+    
+    <item>
+      <title>National increase in the community supply of take-home naloxone associated with a mass media campaign in Scotland: a segmented time series analysis</title>
+      <link>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</guid>
+      <description>The aim of this study was to assess the effect of the &amp;lsquo;How to save a life&amp;rsquo; campaign on the supply of take-home naloxone</description>
+    </item>
+    
+    <item>
+      <title>Mortality among individuals prescribed opioid-agonist therapy in Scotland, UK, 2011-20: a national retrospective cohort study</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-oat_mortality/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-oat_mortality/</guid>
+      <description>We assessed the extent to which opioid-agonist therapy is protective against drug-related mortality in Scotland</description>
+    </item>
     
     <item>
       <title>A systematic review and meta-analysis of the prevalence of take-home naloxone (THN) ownership and carriage</title>

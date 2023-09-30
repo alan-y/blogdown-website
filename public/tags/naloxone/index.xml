@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>naloxone on Alan Yeung</title>
+    <title>Naloxone on Alan Yeung</title>
     <link>https://alan-y.netlify.com/tags/naloxone/</link>
-    <description>Recent content in naloxone on Alan Yeung</description>
+    <description>Recent content in Naloxone on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 30 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/naloxone/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>National increase in the community supply of take-home naloxone associated with a mass media campaign in Scotland: a segmented time series analysis</title>
+      <link>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</guid>
+      <description>The aim of this study was to assess the effect of the &amp;lsquo;How to save a life&amp;rsquo; campaign on the supply of take-home naloxone</description>
+    </item>
     
     <item>
       <title>A systematic review and meta-analysis of the prevalence of take-home naloxone (THN) ownership and carriage</title>

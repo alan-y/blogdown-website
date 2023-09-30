@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>National increase in the community supply of take-home naloxone associated with a mass media campaign in Scotland: a segmented time series analysis</title>
+      <link>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</link>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</guid>
+      <description>The aim of this study was to assess the effect of the &amp;lsquo;How to save a life&amp;rsquo; campaign on the supply of take-home naloxone</description>
+    </item>
     
     <item>
       <title>Examining the impact of the first wave of COVID-19 and associated control measures on interventions to prevent blood-borne viruses among people who inject drugs in Scotland: an interrupted time series study</title>

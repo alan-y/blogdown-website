@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 31 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/pwid/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A transient positive association between direct-acting antiviral therapy for hepatitis C infection and drug-related hospitalization among people who inject drugs: Self-controlled case-series analysis of national data</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-transient_daa/</link>
+      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-transient_daa/</guid>
+      <description>We investigated associations between outcomes and DAA treatment by comparing post-treatment to baseline periods using a within-subjects design</description>
+    </item>
     
     <item>
       <title>Examining the impact of the first wave of COVID-19 and associated control measures on interventions to prevent blood-borne viruses among people who inject drugs in Scotland: an interrupted time series study</title>

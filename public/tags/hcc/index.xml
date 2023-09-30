@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Thu, 23 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Sep 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/hcc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Comparing Predicted Probability of Hepatocellular Carcinoma in Patients With Cirrhosis With the General Population: An Opportunity to Improve Risk Communication?</title>
+      <link>https://alan-y.netlify.com/publication/journal-article-comparing_hcc_prob/</link>
+      <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/publication/journal-article-comparing_hcc_prob/</guid>
+      <description>We compared the predicted hepatocellular carcinoma probability for individuals with cirrhosis and cured hepatitis C with the general population</description>
+    </item>
     
     <item>
       <title>Declining incidence of hepatitis C related hepatocellular carcinoma in the era of interferon-free therapies: A population-based cohort study</title>
