@@ -1,0 +1,84 @@
+---
+title: Summarising Dates with Missing Values
+author: Alan Yeung
+date: '2023-10-02'
+slug: summarising-dates-with-missing-values
+categories:
+  - R
+tags:
+  - tidyverse
+  - dates
+draft: no
+image:
+  caption: ''
+  focal_point: ''
+toc: false
+---
+
+This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have **all** missing values, it will return `Inf`. This means that the summary will not show up as an `NA` and this can cause issues in analysis if you are not careful.
+
+```{r setup-example, eval=FALSE}
+library(tidyverse)
+
+df <- tibble::tribble(
+    ~id,          ~dt,
+    1L, "01/01/2001",
+    1L,           NA,
+    2L,           NA,
+    2L,           NA
+) %>% 
+    mutate(dt = dmy(dt))
+
+z1 <- df %>% 
+    group_by(id) %>% 
+    summarise(dt_min = min(dt, na.rm = TRUE),
+              .groups = "drop")
+
+z1
+# A tibble: 2 × 2
+#      id dt_min    
+#   <int> <date>    
+# 1     1 2001-01-01
+# 2     2 Inf
+
+sum(is.na(z1$dt_min))
+# [1] 0
+```
+
+There are a couple of ways around this. Firstly you can use an `if()` statement.
+
+```{r if, eval=FALSE}
+z2 <- df %>% 
+    group_by(id) %>% 
+    summarise(dt_min = if (all(is.na(dt))) NA_Date_ else min(dt, na.rm = TRUE),
+              .groups = "drop")
+
+z2
+# A tibble: 2 × 2
+#      id dt_min    
+#   <int> <date>    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z2$dt_min))
+# [1] 1
+```
+
+Or you can summary functions from the [`hablar`](https://cran.r-project.org/web/packages/hablar/vignettes/hablar.html) package.
+
+```{r hablar, eval=FALSE}
+z3 <- df %>% 
+    group_by(id) %>% 
+    summarise(dt_min = hablar::min_(dt),
+              .groups = "drop")
+
+z3
+# A tibble: 2 × 2
+#      id dt_min    
+#   <int> <date>    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z3$dt_min))
+# [1] 1
+```
+
+Is there a reason why R decides to return `Inf` when summarising dates? Are there any other solutions to summarising date variables that contain missing values? Leave me a comment if you know thanks.

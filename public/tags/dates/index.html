@@ -30,7 +30,7 @@
   <meta name="description" content="Research Fellow and Healthcare Scientist">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/tags/tidyverse/">
+  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/tags/dates/">
 
   
 
@@ -127,15 +127,15 @@
   
 
   
-  <link rel="alternate" href="/tags/tidyverse/index.xml" type="application/rss+xml" title="Alan Yeung">
-  <link rel="feed" href="/tags/tidyverse/index.xml" type="application/rss+xml" title="Alan Yeung">
+  <link rel="alternate" href="/tags/dates/index.xml" type="application/rss+xml" title="Alan Yeung">
+  <link rel="feed" href="/tags/dates/index.xml" type="application/rss+xml" title="Alan Yeung">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://alan-y.netlify.com/tags/tidyverse/">
+  <link rel="canonical" href="https://alan-y.netlify.com/tags/dates/">
 
   
   
@@ -150,8 +150,8 @@
   <meta property="twitter:creator" content="@alan_y">
   
   <meta property="og:site_name" content="Alan Yeung">
-  <meta property="og:url" content="https://alan-y.netlify.com/tags/tidyverse/">
-  <meta property="og:title" content="tidyverse | Alan Yeung">
+  <meta property="og:url" content="https://alan-y.netlify.com/tags/dates/">
+  <meta property="og:title" content="dates | Alan Yeung">
   <meta property="og:description" content="Research Fellow and Healthcare Scientist"><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
@@ -162,7 +162,7 @@
 
   
 
-  <title>tidyverse | Alan Yeung</title>
+  <title>dates | Alan Yeung</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -506,7 +506,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">tidyverse</h1>
+  <h1 itemprop="name">dates</h1>
 
   
 
@@ -526,15 +526,6 @@
       
       This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
 library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/r-resources-tips/">R Training Resources and Tips</a></h2>
-    <div class="article-style">
-      
-      A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.
       
     </div>
   </div>

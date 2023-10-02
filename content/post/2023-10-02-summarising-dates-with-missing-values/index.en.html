@@ -1,0 +1,74 @@
+---
+title: Summarising Dates with Missing Values
+author: Alan Yeung
+date: '2023-10-02'
+slug: summarising-dates-with-missing-values
+categories:
+  - R
+tags:
+  - tidyverse
+  - dates
+draft: no
+image:
+  caption: ''
+  focal_point: ''
+toc: false
+---
+
+
+
+<p>This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have <strong>all</strong> missing values, it will return <code>Inf</code>. This means that the summary will not show up as an <code>NA</code> and this can cause issues in analysis if you are not careful.</p>
+<pre class="r"><code>library(tidyverse)
+
+df &lt;- tibble::tribble(
+    ~id,          ~dt,
+    1L, &quot;01/01/2001&quot;,
+    1L,           NA,
+    2L,           NA,
+    2L,           NA
+) %&gt;% 
+    mutate(dt = dmy(dt))
+
+z1 &lt;- df %&gt;% 
+    group_by(id) %&gt;% 
+    summarise(dt_min = min(dt, na.rm = TRUE),
+              .groups = &quot;drop&quot;)
+
+z1
+# A tibble: 2 × 2
+#      id dt_min    
+#   &lt;int&gt; &lt;date&gt;    
+# 1     1 2001-01-01
+# 2     2 Inf
+
+sum(is.na(z1$dt_min))
+# [1] 0</code></pre>
+<p>There are a couple of ways around this. Firstly you can use an <code>if()</code> statement.</p>
+<pre class="r"><code>z2 &lt;- df %&gt;% 
+    group_by(id) %&gt;% 
+    summarise(dt_min = if (all(is.na(dt))) NA_Date_ else min(dt, na.rm = TRUE),
+              .groups = &quot;drop&quot;)
+
+z2
+# A tibble: 2 × 2
+#      id dt_min    
+#   &lt;int&gt; &lt;date&gt;    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z2$dt_min))
+# [1] 1</code></pre>
+<p>Or you can summary functions from the <a href="https://cran.r-project.org/web/packages/hablar/vignettes/hablar.html"><code>hablar</code></a> package.</p>
+<pre class="r"><code>z3 &lt;- df %&gt;% 
+    group_by(id) %&gt;% 
+    summarise(dt_min = hablar::min_(dt),
+              .groups = &quot;drop&quot;)
+
+z3
+# A tibble: 2 × 2
+#      id dt_min    
+#   &lt;int&gt; &lt;date&gt;    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z3$dt_min))
+# [1] 1</code></pre>
+<p>Is there a reason why R decides to return <code>Inf</code> when summarising dates? Are there any other solutions to summarising date variables that contain missing values? Leave me a comment if you know thanks.</p>

@@ -7,10 +7,77 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 13 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alan-y.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Summarising Dates with Missing Values</title>
+      <link>https://alan-y.netlify.com/post/summarising-dates-with-missing-values/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/summarising-dates-with-missing-values/</guid>
+      <description>
+
+
+&lt;p&gt;This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have &lt;strong&gt;all&lt;/strong&gt; missing values, it will return &lt;code&gt;Inf&lt;/code&gt;. This means that the summary will not show up as an &lt;code&gt;NA&lt;/code&gt; and this can cause issues in analysis if you are not careful.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+
+df &amp;lt;- tibble::tribble(
+    ~id,          ~dt,
+    1L, &amp;quot;01/01/2001&amp;quot;,
+    1L,           NA,
+    2L,           NA,
+    2L,           NA
+) %&amp;gt;% 
+    mutate(dt = dmy(dt))
+
+z1 &amp;lt;- df %&amp;gt;% 
+    group_by(id) %&amp;gt;% 
+    summarise(dt_min = min(dt, na.rm = TRUE),
+              .groups = &amp;quot;drop&amp;quot;)
+
+z1
+# A tibble: 2 × 2
+#      id dt_min    
+#   &amp;lt;int&amp;gt; &amp;lt;date&amp;gt;    
+# 1     1 2001-01-01
+# 2     2 Inf
+
+sum(is.na(z1$dt_min))
+# [1] 0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There are a couple of ways around this. Firstly you can use an &lt;code&gt;if()&lt;/code&gt; statement.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;z2 &amp;lt;- df %&amp;gt;% 
+    group_by(id) %&amp;gt;% 
+    summarise(dt_min = if (all(is.na(dt))) NA_Date_ else min(dt, na.rm = TRUE),
+              .groups = &amp;quot;drop&amp;quot;)
+
+z2
+# A tibble: 2 × 2
+#      id dt_min    
+#   &amp;lt;int&amp;gt; &amp;lt;date&amp;gt;    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z2$dt_min))
+# [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or you can summary functions from the &lt;a href=&#34;https://cran.r-project.org/web/packages/hablar/vignettes/hablar.html&#34;&gt;&lt;code&gt;hablar&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;z3 &amp;lt;- df %&amp;gt;% 
+    group_by(id) %&amp;gt;% 
+    summarise(dt_min = hablar::min_(dt),
+              .groups = &amp;quot;drop&amp;quot;)
+
+z3
+# A tibble: 2 × 2
+#      id dt_min    
+#   &amp;lt;int&amp;gt; &amp;lt;date&amp;gt;    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z3$dt_min))
+# [1] 1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Is there a reason why R decides to return &lt;code&gt;Inf&lt;/code&gt; when summarising dates? Are there any other solutions to summarising date variables that contain missing values? Leave me a comment if you know thanks.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Rafa 21 Grand Slams and gganimate</title>

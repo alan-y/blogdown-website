@@ -27,10 +27,11 @@
   
     
   
-  <meta name="description" content="Research Fellow and Healthcare Scientist">
+  <meta name="description" content="This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
+library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/tags/tidyverse/">
+  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/post/summarising-dates-with-missing-values/">
 
   
 
@@ -127,15 +128,12 @@
   
 
   
-  <link rel="alternate" href="/tags/tidyverse/index.xml" type="application/rss+xml" title="Alan Yeung">
-  <link rel="feed" href="/tags/tidyverse/index.xml" type="application/rss+xml" title="Alan Yeung">
-  
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://alan-y.netlify.com/tags/tidyverse/">
+  <link rel="canonical" href="https://alan-y.netlify.com/post/summarising-dates-with-missing-values/">
 
   
   
@@ -150,19 +148,22 @@
   <meta property="twitter:creator" content="@alan_y">
   
   <meta property="og:site_name" content="Alan Yeung">
-  <meta property="og:url" content="https://alan-y.netlify.com/tags/tidyverse/">
-  <meta property="og:title" content="tidyverse | Alan Yeung">
-  <meta property="og:description" content="Research Fellow and Healthcare Scientist"><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
+  <meta property="og:url" content="https://alan-y.netlify.com/post/summarising-dates-with-missing-values/">
+  <meta property="og:title" content="Summarising Dates with Missing Values | Alan Yeung">
+  <meta property="og:description" content="This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
+library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na."><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2023-10-02T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2023-10-02T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2023-10-02T00:00:00&#43;00:00">
   
 
   
 
   
 
-  <title>tidyverse | Alan Yeung</title>
+  <title>Summarising Dates with Missing Values | Alan Yeung</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -485,7 +486,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -502,47 +505,406 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Summarising Dates with Missing Values</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">tidyverse</h1>
+
+
+
+<meta content="2023-10-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2023-10-02 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
 
   
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Oct 2, 2023</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/r/">R</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-  <div>
-    <h2><a href="/post/summarising-dates-with-missing-values/">Summarising Dates with Missing Values</a></h2>
-    <div class="article-style">
+    <div class="article-style" itemprop="articleBody">
       
-      This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
-library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na.
-      
+
+
+<p>This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have <strong>all</strong> missing values, it will return <code>Inf</code>. This means that the summary will not show up as an <code>NA</code> and this can cause issues in analysis if you are not careful.</p>
+<pre class="r"><code>library(tidyverse)
+
+df &lt;- tibble::tribble(
+    ~id,          ~dt,
+    1L, &quot;01/01/2001&quot;,
+    1L,           NA,
+    2L,           NA,
+    2L,           NA
+) %&gt;% 
+    mutate(dt = dmy(dt))
+
+z1 &lt;- df %&gt;% 
+    group_by(id) %&gt;% 
+    summarise(dt_min = min(dt, na.rm = TRUE),
+              .groups = &quot;drop&quot;)
+
+z1
+# A tibble: 2 × 2
+#      id dt_min    
+#   &lt;int&gt; &lt;date&gt;    
+# 1     1 2001-01-01
+# 2     2 Inf
+
+sum(is.na(z1$dt_min))
+# [1] 0</code></pre>
+<p>There are a couple of ways around this. Firstly you can use an <code>if()</code> statement.</p>
+<pre class="r"><code>z2 &lt;- df %&gt;% 
+    group_by(id) %&gt;% 
+    summarise(dt_min = if (all(is.na(dt))) NA_Date_ else min(dt, na.rm = TRUE),
+              .groups = &quot;drop&quot;)
+
+z2
+# A tibble: 2 × 2
+#      id dt_min    
+#   &lt;int&gt; &lt;date&gt;    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z2$dt_min))
+# [1] 1</code></pre>
+<p>Or you can summary functions from the <a href="https://cran.r-project.org/web/packages/hablar/vignettes/hablar.html"><code>hablar</code></a> package.</p>
+<pre class="r"><code>z3 &lt;- df %&gt;% 
+    group_by(id) %&gt;% 
+    summarise(dt_min = hablar::min_(dt),
+              .groups = &quot;drop&quot;)
+
+z3
+# A tibble: 2 × 2
+#      id dt_min    
+#   &lt;int&gt; &lt;date&gt;    
+# 1     1 2001-01-01
+# 2     2 NA  
+sum(is.na(z3$dt_min))
+# [1] 1</code></pre>
+<p>Is there a reason why R decides to return <code>Inf</code> when summarising dates? Are there any other solutions to summarising date variables that contain missing values? Leave me a comment if you know thanks.</p>
+
     </div>
-  </div>
-  
-  <div>
-    <h2><a href="/project/r-resources-tips/">R Training Resources and Tips</a></h2>
-    <div class="article-style">
-      
-      A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.
-      
-    </div>
-  </div>
-  
 
-  
+    
 
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/tidyverse/">tidyverse</a>
+  
+  <a class="badge badge-light" href="/tags/dates/">dates</a>
+  
 </div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu83c7a36ebecf434484f99f4fe62dcf37_44401_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/admin/">Alan Yeung</a></h5>
+      <h6 class="card-subtitle">Research Fellow and Healthcare Scientist</h6>
+      <p class="card-text" itemprop="description">Applied statistician, currently working mainly on blood borne viruses and drugs. Supporter of all things R.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/alan_y" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alan-y" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alanyeung1" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212" target="_blank" rel="noopener">
+              <i class="ic ic-upwork-circle"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://stackoverflow.com/users/6008894/alan-y" target="_blank" rel="noopener">
+              <i class="fab fa-stack-overflow"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=KScwYQ0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://orcid.org/0000-0001-5226-3695" target="_blank" rel="noopener">
+              <i class="ai ai-orcid"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.researchgate.net/profile/Alan_Yeung2" target="_blank" rel="noopener">
+              <i class="fab fa-researchgate"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://publons.com/researcher/3500068/alan-yeung" target="_blank" rel="noopener">
+              <i class="ai ai-publons"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/project/r-resources-tips/">R Training Resources and Tips</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    <script src="https://utteranc.es/client.js"
+        repo="alan-y/blogdown-website"
+        issue-term="title"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   

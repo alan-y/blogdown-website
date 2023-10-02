@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tidyverse on Alan Yeung</title>
-    <link>https://alan-y.netlify.com/tags/tidyverse/</link>
-    <description>Recent content in tidyverse on Alan Yeung</description>
+    <title>dates on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/dates/</link>
+    <description>Recent content in dates on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://alan-y.netlify.com/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://alan-y.netlify.com/tags/dates/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <guid>https://alan-y.netlify.com/post/summarising-dates-with-missing-values/</guid>
       <description>This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
 library(tidyverse)df &amp;lt;- tibble::tribble(~id, ~dt,1L, &amp;quot;01/01/2001&amp;quot;,1L, NA,2L, NA,2L, NA) %&amp;gt;% mutate(dt = dmy(dt))z1 &amp;lt;- df %&amp;gt;% group_by(id) %&amp;gt;% summarise(dt_min = min(dt, na.</description>
-    </item>
-    
-    <item>
-      <title>R Training Resources and Tips</title>
-      <link>https://alan-y.netlify.com/project/r-resources-tips/</link>
-      <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/project/r-resources-tips/</guid>
-      <description>A short list of resources and tips to help with learning some R basics, with particular focus on the tidyverse.</description>
     </item>
     
   </channel>

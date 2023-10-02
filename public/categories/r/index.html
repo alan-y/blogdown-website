@@ -155,7 +155,7 @@
   <meta property="og:description" content="Research Fellow and Healthcare Scientist"><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2022-02-13T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2023-10-02T00:00:00&#43;00:00">
   
 
   
@@ -519,6 +519,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/summarising-dates-with-missing-values/">Summarising Dates with Missing Values</a></h2>
+    <div class="article-style">
+      
+      This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
+library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na.
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/rafa-21-slams/">Rafa 21 Grand Slams and gganimate</a></h2>
