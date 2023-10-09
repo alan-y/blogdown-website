@@ -155,7 +155,7 @@
   <meta property="og:description" content="Research Fellow and Healthcare Scientist"><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2023-10-02T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2023-10-09T00:00:00&#43;00:00">
   
 
   
@@ -519,6 +519,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="/post/couple-of-casewhen-tricks/">A couple of case_when() tricks</a></h2>
+    <div class="article-style">
+      
+      Combining case_when() and across()If you want to use case_when() and across() different variables, then here is an example that can do this with the help of the get() and cur_column() functions.
+library(tidyverse)iris_df &lt;- as_tibble(iris) %&gt;% mutate(flag_Petal.Length = as.integer(Petal.Length &gt; 1.5),flag_Petal.Width = as.integer(Petal.Width &gt; 0.2))iris_df %&gt;% mutate(across(c(Petal.Length, Petal.Width),~case_when(get(glue::glue(&quot;flag_{cur_column()}&quot;)) == 1 ~ NA_real_,TRUE ~ .x))) %&gt;% select(contains(&quot;Petal&quot;))## # A tibble: 150 × 4## Petal.
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/post/summarising-dates-with-missing-values/">Summarising Dates with Missing Values</a></h2>

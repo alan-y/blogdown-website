@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data manipulation on Alan Yeung</title>
+    <link>https://alan-y.netlify.com/tags/data-manipulation/</link>
+    <description>Recent content in data manipulation on Alan Yeung</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019 Alan Yeung</copyright>
+    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alan-y.netlify.com/tags/data-manipulation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A couple of case_when() tricks</title>
+      <link>https://alan-y.netlify.com/post/couple-of-casewhen-tricks/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/couple-of-casewhen-tricks/</guid>
+      <description>Combining case_when() and across()If you want to use case_when() and across() different variables, then here is an example that can do this with the help of the get() and cur_column() functions.
+library(tidyverse)iris_df &amp;lt;- as_tibble(iris) %&amp;gt;% mutate(flag_Petal.Length = as.integer(Petal.Length &amp;gt; 1.5),flag_Petal.Width = as.integer(Petal.Width &amp;gt; 0.2))iris_df %&amp;gt;% mutate(across(c(Petal.Length, Petal.Width),~case_when(get(glue::glue(&amp;quot;flag_{cur_column()}&amp;quot;)) == 1 ~ NA_real_,TRUE ~ .x))) %&amp;gt;% select(contains(&amp;quot;Petal&amp;quot;))## # A tibble: 150 × 4## Petal.</description>
+    </item>
+    
+  </channel>
+</rss>

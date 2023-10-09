@@ -16,13 +16,14 @@ image:
 
 <div id="TOC">
 <ul>
-<li><a href="#preamble">Preamble</a></li>
-<li><a href="#open-data-in-scotland">Open Data in Scotland</a></li>
-<li><a href="#querying-ckan">Querying CKAN</a><ul>
-<li><a href="#querying-with-custom-json">Querying with Custom JSON</a></li>
-<li><a href="#querying-with-sql">Querying with SQL</a></li>
+<li><a href="#preamble" id="toc-preamble">Preamble</a></li>
+<li><a href="#open-data-in-scotland" id="toc-open-data-in-scotland">Open Data in Scotland</a></li>
+<li><a href="#querying-ckan" id="toc-querying-ckan">Querying CKAN</a>
+<ul>
+<li><a href="#querying-with-custom-json" id="toc-querying-with-custom-json">Querying with Custom JSON</a></li>
+<li><a href="#querying-with-sql" id="toc-querying-with-sql">Querying with SQL</a></li>
 </ul></li>
-<li><a href="#conclusions-and-further-ideas">Conclusions and Further Ideas</a></li>
+<li><a href="#conclusions-and-further-ideas" id="toc-conclusions-and-further-ideas">Conclusions and Further Ideas</a></li>
 </ul>
 </div>
 
@@ -108,7 +109,7 @@ glimpse(dz2011_150r, width = 50)
 <code>datastore_search_sql?</code> +<br />
 <code>sql=</code> +<br />
 <code>your-SQL-query</code></p>
-<p>There are a couple of quirks about how to make SQL query work in R. You need to enclose the name of the resource ID in speech marks (“resource-ID”) so if like me, your default method of creating strings is to use speech marks rather than the apostrophe character (’), you will need to escape the speech mark using the backslash (\"). Similarly, you need to enclose other things such as variable names in speech marks when making more complicated queries. You also need to <a href="https://en.wikipedia.org/wiki/Percent-encoding">percent-encode</a> your special characters to make them work as a URL – luckily the <code>URLencode()</code> function makes this easy!</p>
+<p>There are a couple of quirks about how to make SQL query work in R. You need to enclose the name of the resource ID in speech marks (“resource-ID”) so if like me, your default method of creating strings is to use speech marks rather than the apostrophe character (’), you will need to escape the speech mark using the backslash (\“). Similarly, you need to enclose other things such as variable names in speech marks when making more complicated queries. You also need to <a href="https://en.wikipedia.org/wiki/Percent-encoding">percent-encode</a> your special characters to make them work as a URL – luckily the <code>URLencode()</code> function makes this easy!</p>
 <pre class="r"><code># Download the whole dataset using a SQL query
 url_sql &lt;- paste0(&quot;https://www.opendata.nhs.scot/api/3/action/&quot;,
                   &quot;datastore_search_sql?&quot;,

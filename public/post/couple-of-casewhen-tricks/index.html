@@ -27,10 +27,11 @@
   
     
   
-  <meta name="description" content="Research Fellow and Healthcare Scientist">
+  <meta name="description" content="Combining case_when() and across()If you want to use case_when() and across() different variables, then here is an example that can do this with the help of the get() and cur_column() functions.
+library(tidyverse)iris_df &lt;- as_tibble(iris) %&gt;% mutate(flag_Petal.Length = as.integer(Petal.Length &gt; 1.5),flag_Petal.Width = as.integer(Petal.Width &gt; 0.2))iris_df %&gt;% mutate(across(c(Petal.Length, Petal.Width),~case_when(get(glue::glue(&quot;flag_{cur_column()}&quot;)) == 1 ~ NA_real_,TRUE ~ .x))) %&gt;% select(contains(&quot;Petal&quot;))## # A tibble: 150 × 4## Petal.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/categories/r/">
+  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/post/couple-of-casewhen-tricks/">
 
   
 
@@ -127,15 +128,12 @@
   
 
   
-  <link rel="alternate" href="/categories/r/index.xml" type="application/rss+xml" title="Alan Yeung">
-  <link rel="feed" href="/categories/r/index.xml" type="application/rss+xml" title="Alan Yeung">
-  
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://alan-y.netlify.com/categories/r/">
+  <link rel="canonical" href="https://alan-y.netlify.com/post/couple-of-casewhen-tricks/">
 
   
   
@@ -150,19 +148,22 @@
   <meta property="twitter:creator" content="@alan_y">
   
   <meta property="og:site_name" content="Alan Yeung">
-  <meta property="og:url" content="https://alan-y.netlify.com/categories/r/">
-  <meta property="og:title" content="R | Alan Yeung">
-  <meta property="og:description" content="Research Fellow and Healthcare Scientist"><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
+  <meta property="og:url" content="https://alan-y.netlify.com/post/couple-of-casewhen-tricks/">
+  <meta property="og:title" content="A couple of case_when() tricks | Alan Yeung">
+  <meta property="og:description" content="Combining case_when() and across()If you want to use case_when() and across() different variables, then here is an example that can do this with the help of the get() and cur_column() functions.
+library(tidyverse)iris_df &lt;- as_tibble(iris) %&gt;% mutate(flag_Petal.Length = as.integer(Petal.Length &gt; 1.5),flag_Petal.Width = as.integer(Petal.Width &gt; 0.2))iris_df %&gt;% mutate(across(c(Petal.Length, Petal.Width),~case_when(get(glue::glue(&quot;flag_{cur_column()}&quot;)) == 1 ~ NA_real_,TRUE ~ .x))) %&gt;% select(contains(&quot;Petal&quot;))## # A tibble: 150 × 4## Petal."><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2023-10-09T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2023-10-09T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2023-10-09T00:00:00&#43;00:00">
   
 
   
 
   
 
-  <title>R | Alan Yeung</title>
+  <title>A couple of case_when() tricks | Alan Yeung</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -485,7 +486,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -502,131 +505,405 @@
 
   
   
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">A couple of case_when() tricks</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">R</h1>
-
-  
-
-  
-</div>
 
 
 
-<div class="universal-wrapper">
-  
+<meta content="2023-10-09 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2023-10-09 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+
+<div class="article-metadata">
 
   
   
-  <div>
-    <h2><a href="/post/couple-of-casewhen-tricks/">A couple of case_when() tricks</a></h2>
-    <div class="article-style">
-      
-      Combining case_when() and across()If you want to use case_when() and across() different variables, then here is an example that can do this with the help of the get() and cur_column() functions.
-library(tidyverse)iris_df &lt;- as_tibble(iris) %&gt;% mutate(flag_Petal.Length = as.integer(Petal.Length &gt; 1.5),flag_Petal.Width = as.integer(Petal.Width &gt; 0.2))iris_df %&gt;% mutate(across(c(Petal.Length, Petal.Width),~case_when(get(glue::glue(&quot;flag_{cur_column()}&quot;)) == 1 ~ NA_real_,TRUE ~ .x))) %&gt;% select(contains(&quot;Petal&quot;))## # A tibble: 150 × 4## Petal.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/summarising-dates-with-missing-values/">Summarising Dates with Missing Values</a></h2>
-    <div class="article-style">
-      
-      This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
-library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/rafa-21-slams/">Rafa 21 Grand Slams and gganimate</a></h2>
-    <div class="article-style">
-      
-      I’ve been a Nadal fan for a long time – right back to the days of the pirate-pants so yeah, really a long time. In all this time, Rafa has never been ahead in the grand slam race vs his biggest rivals… but that finally changed after the 2022 Australian Open! The win there was unexpected and came out of nowhere. The final against Medvedev has to go down as one of the best comebacks ever.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/filtering-string-dplyr/">Filtering with string statements in dplyr</a></h2>
-    <div class="article-style">
-      
-      A question came up recently at work about how to use a filter statement entered as a complete string variable inside dplyr’s filter() function – for example dplyr::filter(my_data, "var1 == 'a'"). There does not seem to be much out there on this and I was not sure how to do it either but luckily jakeybob had a neat solution that seems to work well.
-some_data %&gt;% filter(eval(rlang::parse_expr(selection_statement)))Let’s see it in action using the iris flowers dataset.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/updating-packages-on-a-drat-repo/">Updating packages on a drat repo</a></h2>
-    <div class="article-style">
-      
-      This is just a small note (mainly for myself but hopefully may be of some use to a few others!) to remind of how to update a package on a drat repo.
-Create the source file for the package you want to host on the drat repo using devtools::build().Clone the drat repo hosting the package (in my case https://github.com/alan-y/drat).Use drat::insertPackage("package-source.tar.gz", getwd()) to add the package to the drat repo (getwd() works for me if my working directory is at the top level of the drat repo).
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/scot-babynames/">Scotland&#39;s Most Popular Babynames</a></h2>
-    <div class="article-style">
-      
-      Downloading the dataShiny AppI recently saw this great post on Nathan Yau’s FlowingData website which guesses a person’s name based on what the name starts with. It also needs you to select a gender and a decade for when you were born before it can guess. Of course, it isn’t really a guess and is really just based on proportions calculated after restricting the data to what has been selected.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/trying-ckanr/">Trying the ckanr Package</a></h2>
-    <div class="article-style">
-      
-      How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/objectremover-rstudio-addin/">objectremover RStudio Addin</a></h2>
-    <div class="article-style">
-      
-      A Learning ExerciseWorkflowI created my first ever R package and got it released onto CRAN in March 2019. It’s taken me a while to get round to actually writing about this which tells me that despite many years of trying to overcome procrastination, I’m obviously still not there! The package is actually an RStudio addin called objectremover that helps you to quickly remove objects stored in memory (specifically objects saved in the Global environment) within an R session.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/ckan-dbplyr/">Hacking dbplyr for CKAN</a></h2>
-    <div class="article-style">
-      
-      AimCreate a dummy databaseTest dbplyr’s SQL translationModify dbplyr’s SQL translationTesting the dbplyr hackConcluding notesAt the end of my first post on CKAN discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/ckan-api/">Getting Open Data into R from CKAN</a></h2>
-    <div class="article-style">
-      
-      PreambleOpen Data in ScotlandQuerying CKANQuerying with Custom JSONQuerying with SQLConclusions and Further IdeasPreambleI’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!
-      
-    </div>
-  </div>
-  
 
   
-<nav>
-  <ul class="pagination justify-content-center">
+  <span class="article-date">
     
     
-    <li class="page-item"><a class="page-link" href="/categories/r/page/2/">&raquo;</a></li>
+      
     
+    <time>Oct 9, 2023</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/r/">R</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url="
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u="
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
   </ul>
-</nav>
+</div>
 
+
+  
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<div id="combining-case_when-and-across" class="section level2">
+<h2>Combining case_when() and across()</h2>
+<p>If you want to use <code>case_when()</code> and <code>across()</code> different variables, then here is an example that can do this with the help of the <code>get()</code> and <code>cur_column()</code> functions.</p>
+<pre class="r"><code>library(tidyverse)
+
+iris_df &lt;- as_tibble(iris) %&gt;% 
+  mutate(flag_Petal.Length = as.integer(Petal.Length &gt; 1.5),
+         flag_Petal.Width = as.integer(Petal.Width &gt; 0.2))
+
+iris_df %&gt;% 
+  mutate(across(c(Petal.Length, Petal.Width),
+                ~case_when(
+                  get(glue::glue(&quot;flag_{cur_column()}&quot;)) == 1 ~ NA_real_,
+                  TRUE ~ .x
+                ))) %&gt;% 
+    select(contains(&quot;Petal&quot;))</code></pre>
+<pre><code>## # A tibble: 150 × 4
+##    Petal.Length Petal.Width flag_Petal.Length flag_Petal.Width
+##           &lt;dbl&gt;       &lt;dbl&gt;             &lt;int&gt;            &lt;int&gt;
+##  1          1.4         0.2                 0                0
+##  2          1.4         0.2                 0                0
+##  3          1.3         0.2                 0                0
+##  4          1.5         0.2                 0                0
+##  5          1.4         0.2                 0                0
+##  6         NA          NA                   1                1
+##  7          1.4        NA                   0                1
+##  8          1.5         0.2                 0                0
+##  9          1.4         0.2                 0                0
+## 10          1.5         0.1                 0                0
+## # ℹ 140 more rows</code></pre>
+<p>Is there any way to use this with a function from the <code>rlang</code> packages instead of <code>get()</code>? It’s a little beyond my current understanding of tidy evaluation but let me know in the comments if you know please.</p>
+</div>
+<div id="combining-case_when-with-if_any-and-if_all" class="section level2">
+<h2>Combining case_when() with if_any() and if_all()</h2>
+<p>The <code>if_any()</code> and <code>if_all()</code> functions can be used to save typing lots of variables (as these allow the use of <code>tidyselect</code> helpers) within <code>case_when()</code>.</p>
+<pre class="r"><code>df1 &lt;- tibble(var1 = c(1, 0, 1, NA),
+              var2 = c(1, 0, 0, NA))
+
+df1 %&gt;% 
+  mutate(category = case_when(
+    if_any(c(var1, var2), ~.x &gt; 0) ~ 1, 
+    if_all(c(var1, var2), is.na) ~ NA_real_,
+    TRUE ~ 0
+  ))</code></pre>
+<pre><code>## # A tibble: 4 × 3
+##    var1  var2 category
+##   &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
+## 1     1     1        1
+## 2     0     0        0
+## 3     1     0        1
+## 4    NA    NA       NA</code></pre>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/tidyverse/">tidyverse</a>
+  
+  <a class="badge badge-light" href="/tags/data-manipulation/">data manipulation</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu83c7a36ebecf434484f99f4fe62dcf37_44401_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/authors/admin/">Alan Yeung</a></h5>
+      <h6 class="card-subtitle">Research Fellow and Healthcare Scientist</h6>
+      <p class="card-text" itemprop="description">Applied statistician, currently working mainly on blood borne viruses and drugs. Supporter of all things R.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/alan_y" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/alan-y" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/alanyeung1" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.upwork.com/o/profiles/users/_~011c6bb8051210f212" target="_blank" rel="noopener">
+              <i class="ic ic-upwork-circle"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://stackoverflow.com/users/6008894/alan-y" target="_blank" rel="noopener">
+              <i class="fab fa-stack-overflow"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=KScwYQ0AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://orcid.org/0000-0001-5226-3695" target="_blank" rel="noopener">
+              <i class="ai ai-orcid"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.researchgate.net/profile/Alan_Yeung2" target="_blank" rel="noopener">
+              <i class="fab fa-researchgate"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://publons.com/researcher/3500068/alan-yeung" target="_blank" rel="noopener">
+              <i class="ai ai-publons"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/post/summarising-dates-with-missing-values/">Summarising Dates with Missing Values</a></li>
+          
+          <li><a href="/project/r-resources-tips/">R Training Resources and Tips</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    <script src="https://utteranc.es/client.js"
+        repo="alan-y/blogdown-website"
+        issue-term="title"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   

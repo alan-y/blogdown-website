@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A couple of case_when() tricks</title>
+      <link>https://alan-y.netlify.com/post/couple-of-casewhen-tricks/</link>
+      <pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/couple-of-casewhen-tricks/</guid>
+      <description>Combining case_when() and across()If you want to use case_when() and across() different variables, then here is an example that can do this with the help of the get() and cur_column() functions.
+library(tidyverse)iris_df &amp;lt;- as_tibble(iris) %&amp;gt;% mutate(flag_Petal.Length = as.integer(Petal.Length &amp;gt; 1.5),flag_Petal.Width = as.integer(Petal.Width &amp;gt; 0.2))iris_df %&amp;gt;% mutate(across(c(Petal.Length, Petal.Width),~case_when(get(glue::glue(&amp;quot;flag_{cur_column()}&amp;quot;)) == 1 ~ NA_real_,TRUE ~ .x))) %&amp;gt;% select(contains(&amp;quot;Petal&amp;quot;))## # A tibble: 150 × 4## Petal.</description>
+    </item>
     
     <item>
       <title>Summarising Dates with Missing Values</title>
@@ -93,7 +103,7 @@ Create the source file for the package you want to host on the drat repo using d
       <pubDate>Wed, 05 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/post/ckan-api/</guid>
-      <description>PreambleOpen Data in ScotlandQuerying CKANQuerying with Custom JSONQuerying with SQLConclusions and Further IdeasPreambleI’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!</description>
+      <description>PreambleOpen Data in ScotlandQuerying CKANQuerying with Custom JSONQuerying with SQLConclusions and Further IdeasPreambleI’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!</description>
     </item>
     
     <item>

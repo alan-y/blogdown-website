@@ -30,7 +30,7 @@
   <meta name="description" content="Research Fellow and Healthcare Scientist">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/categories/r/">
+  <link rel="alternate" hreflang="en-us" href="https://alan-y.netlify.com/tags/data-manipulation/">
 
   
 
@@ -127,15 +127,15 @@
   
 
   
-  <link rel="alternate" href="/categories/r/index.xml" type="application/rss+xml" title="Alan Yeung">
-  <link rel="feed" href="/categories/r/index.xml" type="application/rss+xml" title="Alan Yeung">
+  <link rel="alternate" href="/tags/data-manipulation/index.xml" type="application/rss+xml" title="Alan Yeung">
+  <link rel="feed" href="/tags/data-manipulation/index.xml" type="application/rss+xml" title="Alan Yeung">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://alan-y.netlify.com/categories/r/">
+  <link rel="canonical" href="https://alan-y.netlify.com/tags/data-manipulation/">
 
   
   
@@ -150,8 +150,8 @@
   <meta property="twitter:creator" content="@alan_y">
   
   <meta property="og:site_name" content="Alan Yeung">
-  <meta property="og:url" content="https://alan-y.netlify.com/categories/r/">
-  <meta property="og:title" content="R | Alan Yeung">
+  <meta property="og:url" content="https://alan-y.netlify.com/tags/data-manipulation/">
+  <meta property="og:title" content="data manipulation | Alan Yeung">
   <meta property="og:description" content="Research Fellow and Healthcare Scientist"><meta property="og:image" content="https://alan-y.netlify.com/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
@@ -162,7 +162,7 @@
 
   
 
-  <title>R | Alan Yeung</title>
+  <title>data manipulation | Alan Yeung</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -506,7 +506,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1 itemprop="name">R</h1>
+  <h1 itemprop="name">data manipulation</h1>
 
   
 
@@ -530,101 +530,8 @@ library(tidyverse)iris_df &lt;- as_tibble(iris) %&gt;% mutate(flag_Petal.Length
     </div>
   </div>
   
-  <div>
-    <h2><a href="/post/summarising-dates-with-missing-values/">Summarising Dates with Missing Values</a></h2>
-    <div class="article-style">
-      
-      This blog post is just a note that when you try to do a grouped summary of a date variable but some groups have all missing values, it will return Inf. This means that the summary will not show up as an NA and this can cause issues in analysis if you are not careful.
-library(tidyverse)df &lt;- tibble::tribble(~id, ~dt,1L, &quot;01/01/2001&quot;,1L, NA,2L, NA,2L, NA) %&gt;% mutate(dt = dmy(dt))z1 &lt;- df %&gt;% group_by(id) %&gt;% summarise(dt_min = min(dt, na.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/rafa-21-slams/">Rafa 21 Grand Slams and gganimate</a></h2>
-    <div class="article-style">
-      
-      I’ve been a Nadal fan for a long time – right back to the days of the pirate-pants so yeah, really a long time. In all this time, Rafa has never been ahead in the grand slam race vs his biggest rivals… but that finally changed after the 2022 Australian Open! The win there was unexpected and came out of nowhere. The final against Medvedev has to go down as one of the best comebacks ever.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/filtering-string-dplyr/">Filtering with string statements in dplyr</a></h2>
-    <div class="article-style">
-      
-      A question came up recently at work about how to use a filter statement entered as a complete string variable inside dplyr’s filter() function – for example dplyr::filter(my_data, "var1 == 'a'"). There does not seem to be much out there on this and I was not sure how to do it either but luckily jakeybob had a neat solution that seems to work well.
-some_data %&gt;% filter(eval(rlang::parse_expr(selection_statement)))Let’s see it in action using the iris flowers dataset.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/updating-packages-on-a-drat-repo/">Updating packages on a drat repo</a></h2>
-    <div class="article-style">
-      
-      This is just a small note (mainly for myself but hopefully may be of some use to a few others!) to remind of how to update a package on a drat repo.
-Create the source file for the package you want to host on the drat repo using devtools::build().Clone the drat repo hosting the package (in my case https://github.com/alan-y/drat).Use drat::insertPackage("package-source.tar.gz", getwd()) to add the package to the drat repo (getwd() works for me if my working directory is at the top level of the drat repo).
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/scot-babynames/">Scotland&#39;s Most Popular Babynames</a></h2>
-    <div class="article-style">
-      
-      Downloading the dataShiny AppI recently saw this great post on Nathan Yau’s FlowingData website which guesses a person’s name based on what the name starts with. It also needs you to select a gender and a decade for when you were born before it can guess. Of course, it isn’t really a guess and is really just based on proportions calculated after restricting the data to what has been selected.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/trying-ckanr/">Trying the ckanr Package</a></h2>
-    <div class="article-style">
-      
-      How resources are grouped in CKANInitialising ckanr and exploring groups of resourcesConnect to CKAN with dplyr and download from one resourceDownloading all resources from a datasetIn previous blog posts (Hacking dbplyr for CKAN, Getting Open Data into R from CKAN) I have been exploring how to download data from the NHS Scotland open data platform into R. I’ve recently discovered that ROpenSci has a package to help with just this called ckanr and I wish I’d known about it earlier as it is really pretty handy!
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/objectremover-rstudio-addin/">objectremover RStudio Addin</a></h2>
-    <div class="article-style">
-      
-      A Learning ExerciseWorkflowI created my first ever R package and got it released onto CRAN in March 2019. It’s taken me a while to get round to actually writing about this which tells me that despite many years of trying to overcome procrastination, I’m obviously still not there! The package is actually an RStudio addin called objectremover that helps you to quickly remove objects stored in memory (specifically objects saved in the Global environment) within an R session.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/ckan-dbplyr/">Hacking dbplyr for CKAN</a></h2>
-    <div class="article-style">
-      
-      AimCreate a dummy databaseTest dbplyr’s SQL translationModify dbplyr’s SQL translationTesting the dbplyr hackConcluding notesAt the end of my first post on CKAN discussing how to use the CKAN API to extract data from the NHS open data platform directly into R, I talked about how it would be neat to write some wrapper functions to make this process a little simpler.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="/post/ckan-api/">Getting Open Data into R from CKAN</a></h2>
-    <div class="article-style">
-      
-      PreambleOpen Data in ScotlandQuerying CKANQuerying with Custom JSONQuerying with SQLConclusions and Further IdeasPreambleI’ve got lots of rough pieces of R code written as I’ve been exploring/testing various things in the past. A lot of this is currently stored in a pretty disorganised fashion so I thought it would be a good idea to start writing some of these up into blog posts – at the very least, this should make it easier for me to find things later!
-      
-    </div>
-  </div>
-  
 
   
-<nav>
-  <ul class="pagination justify-content-center">
-    
-    
-    <li class="page-item"><a class="page-link" href="/categories/r/page/2/">&raquo;</a></li>
-    
-  </ul>
-</nav>
-
 
 </div>
 <div class="container">

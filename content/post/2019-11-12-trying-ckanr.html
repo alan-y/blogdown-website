@@ -18,10 +18,10 @@ editor_options:
 
 <div id="TOC">
 <ul>
-<li><a href="#how-resources-are-grouped-in-ckan">How resources are grouped in CKAN</a></li>
-<li><a href="#initialising-ckanr-and-exploring-groups-of-resources">Initialising ckanr and exploring groups of resources</a></li>
-<li><a href="#connect-to-ckan-with-dplyr-and-download-from-one-resource">Connect to CKAN with dplyr and download from one resource</a></li>
-<li><a href="#downloading-all-resources-from-a-dataset">Downloading all resources from a dataset</a></li>
+<li><a href="#how-resources-are-grouped-in-ckan" id="toc-how-resources-are-grouped-in-ckan">How resources are grouped in CKAN</a></li>
+<li><a href="#initialising-ckanr-and-exploring-groups-of-resources" id="toc-initialising-ckanr-and-exploring-groups-of-resources">Initialising ckanr and exploring groups of resources</a></li>
+<li><a href="#connect-to-ckan-with-dplyr-and-download-from-one-resource" id="toc-connect-to-ckan-with-dplyr-and-download-from-one-resource">Connect to CKAN with dplyr and download from one resource</a></li>
+<li><a href="#downloading-all-resources-from-a-dataset" id="toc-downloading-all-resources-from-a-dataset">Downloading all resources from a dataset</a></li>
 </ul>
 </div>
 
@@ -29,9 +29,9 @@ editor_options:
 <div id="how-resources-are-grouped-in-ckan" class="section level2">
 <h2>How resources are grouped in CKAN</h2>
 <p>Before we start testing out some code from ckanr, it is important to consider how resources (<em>I am going to call the individual data items such as specific csv files hosted on CKAN as ‘resources’ but I am not sure if this is necessarily correct</em>) on CKAN are grouped up as this helps to understand the design of some functions within ckanr. Resources can be grouped within ‘Datasets’, ‘Groups’, ‘Tags’ and ‘Themes’ (and possibly more that I don’t yet know about). Out of these, it is clear to me that ckanr offers functions for exploring resources by all of these groupings except themes (although I could also be mistaken about this). With this out of the way, let’s delve into some code.</p>
-<div class="figure">
-<img src="/img/ckan_groupings.PNG" alt="Figure: How resources are grouped in CKAN." style="width:75.0%" />
-<p class="caption"><strong>Figure</strong>: How resources are grouped in CKAN.</p>
+<div class="float">
+<img src="/img/ckan_groupings.PNG" style="width:75.0%" alt="Figure: How resources are grouped in CKAN." />
+<div class="figcaption"><strong>Figure</strong>: How resources are grouped in CKAN.</div>
 </div>
 </div>
 <div id="initialising-ckanr-and-exploring-groups-of-resources" class="section level2">

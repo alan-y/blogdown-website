@@ -11,6 +11,7 @@ tags:
 image:
   caption: ''
   focal_point: ''
+draft: no
 toc: false
 ---
 
