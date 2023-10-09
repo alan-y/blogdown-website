@@ -1,0 +1,71 @@
+---
+title: A couple of case_when() tricks
+author: Alan Yeung
+date: '2023-10-09'
+slug: couple-of-casewhen-tricks
+categories:
+  - R
+tags:
+  - tidyverse
+  - data manipulation
+image:
+  caption: ''
+  focal_point: ''
+draft: true
+toc: false
+---
+
+
+
+<div id="combining-case_when-and-across" class="section level2">
+<h2>Combining case_when() and across()</h2>
+<p>If you want to use <code>case_when()</code> and <code>across()</code> different variables, then here is an example that can do this with the help of the <code>get()</code> and <code>cur_column()</code> functions.</p>
+<pre class="r"><code>library(tidyverse)
+
+iris_df &lt;- as_tibble(iris) %&gt;% 
+  mutate(flag_Petal.Length = as.integer(Petal.Length &gt; 1.5),
+         flag_Petal.Width = as.integer(Petal.Width &gt; 0.2))
+
+iris_df %&gt;% 
+  mutate(across(c(Petal.Length, Petal.Width),
+                ~case_when(
+                  get(glue::glue(&quot;flag_{cur_column()}&quot;)) == 1 ~ NA_real_,
+                  TRUE ~ .x
+                ))) %&gt;% 
+    select(contains(&quot;Petal&quot;))</code></pre>
+<pre><code>## # A tibble: 150 × 4
+##    Petal.Length Petal.Width flag_Petal.Length flag_Petal.Width
+##           &lt;dbl&gt;       &lt;dbl&gt;             &lt;int&gt;            &lt;int&gt;
+##  1          1.4         0.2                 0                0
+##  2          1.4         0.2                 0                0
+##  3          1.3         0.2                 0                0
+##  4          1.5         0.2                 0                0
+##  5          1.4         0.2                 0                0
+##  6         NA          NA                   1                1
+##  7          1.4        NA                   0                1
+##  8          1.5         0.2                 0                0
+##  9          1.4         0.2                 0                0
+## 10          1.5         0.1                 0                0
+## # ℹ 140 more rows</code></pre>
+<p>Is there any way to use this with a function from the <code>rlang</code> packages instead of <code>get()</code>? It’s a little beyond my current understanding of tidy evaluation but let me know in the comments if you know please.</p>
+</div>
+<div id="combining-case_when-with-if_any-and-if_all" class="section level2">
+<h2>Combining case_when() with if_any() and if_all()</h2>
+<p>The <code>if_any()</code> and <code>if_all()</code> functions can be used to save typing lots of variables (as these allow the use of <code>tidyselect</code> helpers) within <code>case_when()</code>.</p>
+<pre class="r"><code>df1 &lt;- tibble(var1 = c(1, 0, 1, NA),
+              var2 = c(1, 0, 0, NA))
+
+df1 %&gt;% 
+  mutate(category = case_when(
+    if_any(c(var1, var2), ~.x &gt; 0) ~ 1, 
+    if_all(c(var1, var2), is.na) ~ NA_real_,
+    TRUE ~ 0
+  ))</code></pre>
+<pre><code>## # A tibble: 4 × 3
+##    var1  var2 category
+##   &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;
+## 1     1     1        1
+## 2     0     0        0
+## 3     1     0        1
+## 4    NA    NA       NA</code></pre>
+</div>

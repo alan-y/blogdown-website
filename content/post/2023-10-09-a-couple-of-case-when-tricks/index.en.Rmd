@@ -1,0 +1,52 @@
+---
+title: A couple of case_when() tricks
+author: Alan Yeung
+date: '2023-10-09'
+slug: couple-of-casewhen-tricks
+categories:
+  - R
+tags:
+  - tidyverse
+  - data manipulation
+image:
+  caption: ''
+  focal_point: ''
+toc: false
+---
+
+## Combining case_when() and across()
+If you want to use `case_when()` and `across()` different variables, then here is an example that can do this with the help of the `get()` and `cur_column()` functions.
+
+```{r casewhen-across, message=FALSE}
+library(tidyverse)
+
+iris_df <- as_tibble(iris) %>% 
+  mutate(flag_Petal.Length = as.integer(Petal.Length > 1.5),
+         flag_Petal.Width = as.integer(Petal.Width > 0.2))
+
+iris_df %>% 
+  mutate(across(c(Petal.Length, Petal.Width),
+                ~case_when(
+                  get(glue::glue("flag_{cur_column()}")) == 1 ~ NA_real_,
+                  TRUE ~ .x
+                ))) %>% 
+    select(contains("Petal"))
+```
+
+Is there any way to use this with a function from the `rlang` packages instead of `get()`? It's a little beyond my current understanding of tidy evaluation but let me know in the comments if you know please.
+
+
+## Combining case_when() with if_any() and if_all()
+The `if_any()` and `if_all()` functions can be used to save typing lots of variables (as these allow the use of `tidyselect` helpers) within `case_when()`.
+
+```{r casewhen-if}
+df1 <- tibble(var1 = c(1, 0, 1, NA),
+              var2 = c(1, 0, 0, NA))
+
+df1 %>% 
+  mutate(category = case_when(
+    if_any(c(var1, var2), ~.x > 0) ~ 1, 
+    if_all(c(var1, var2), is.na) ~ NA_real_,
+    TRUE ~ 0
+  ))
+```
