@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grouped Sequences in dplyr</title>
+      <link>https://alan-y.netlify.com/post/2023-11-05-grouped-sequences-in-dplyr/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/2023-11-05-grouped-sequences-in-dplyr/</guid>
+      <description>For a piece of work I had to calculate the number of matches that a team plays away from home in a row, which we will call days_on_the_road. I was not sure how to do this with dplyr but it’s basically a ‘grouped sequence’. For this post, I’ve created some dummy data to illustrate this idea. The num_matches_away variable is what we want to mimic using some data manipulation.</description>
+    </item>
     
     <item>
       <title>A couple of case_when() tricks</title>

@@ -7,10 +7,95 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Mon, 09 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alan-y.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Grouped Sequences in dplyr</title>
+      <link>https://alan-y.netlify.com/post/2023-11-05-grouped-sequences-in-dplyr/</link>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/2023-11-05-grouped-sequences-in-dplyr/</guid>
+      <description>
+
+
+&lt;p&gt;For a piece of work I had to calculate the number of matches that a team plays away from home in a row, which we will call &lt;code&gt;days_on_the_road&lt;/code&gt;. I was not sure how to do this with &lt;code&gt;dplyr&lt;/code&gt; but it’s basically a ‘grouped sequence’. For this post, I’ve created some dummy data to illustrate this idea. The &lt;code&gt;num_matches_away&lt;/code&gt; variable is what we want to mimic using some data manipulation.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+
+sports_df &amp;lt;- tibble::tribble(
+  ~team,    ~date,        ~home_or_away, ~num_matches_away,
+  &amp;quot;Team A&amp;quot;, &amp;quot;07/10/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;14/10/2022&amp;quot;, &amp;quot;A&amp;quot;,           1L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;21/10/2022&amp;quot;, &amp;quot;A&amp;quot;,           2L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;28/10/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;04/11/2022&amp;quot;, &amp;quot;A&amp;quot;,           1L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;11/11/2022&amp;quot;, &amp;quot;A&amp;quot;,           2L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;18/11/2022&amp;quot;, &amp;quot;A&amp;quot;,           3L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;25/11/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;02/12/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team A&amp;quot;, &amp;quot;09/12/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;07/10/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;14/10/2022&amp;quot;, &amp;quot;A&amp;quot;,           1L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;21/10/2022&amp;quot;, &amp;quot;A&amp;quot;,           2L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;28/10/2022&amp;quot;, &amp;quot;A&amp;quot;,           3L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;04/11/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;11/11/2022&amp;quot;, &amp;quot;A&amp;quot;,           1L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;18/11/2022&amp;quot;, &amp;quot;A&amp;quot;,           2L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;25/11/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;02/12/2022&amp;quot;, &amp;quot;H&amp;quot;,           0L,
+  &amp;quot;Team B&amp;quot;, &amp;quot;09/12/2022&amp;quot;, &amp;quot;A&amp;quot;,           1L
+) %&amp;gt;%      
+  mutate(date = as.Date(date, &amp;quot;%d/%m/%Y&amp;quot;)) %&amp;gt;% 
+  arrange(team, date)
+
+sports_df&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 20 × 4
+##    team   date       home_or_away num_matches_away
+##    &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;     &amp;lt;chr&amp;gt;                   &amp;lt;int&amp;gt;
+##  1 Team A 2022-10-07 H                           0
+##  2 Team A 2022-10-14 A                           1
+##  3 Team A 2022-10-21 A                           2
+##  4 Team A 2022-10-28 H                           0
+##  5 Team A 2022-11-04 A                           1
+##  6 Team A 2022-11-11 A                           2
+##  7 Team A 2022-11-18 A                           3
+##  8 Team A 2022-11-25 H                           0
+##  9 Team A 2022-12-02 H                           0
+## 10 Team A 2022-12-09 H                           0
+## 11 Team B 2022-10-07 H                           0
+## 12 Team B 2022-10-14 A                           1
+## 13 Team B 2022-10-21 A                           2
+## 14 Team B 2022-10-28 A                           3
+## 15 Team B 2022-11-04 H                           0
+## 16 Team B 2022-11-11 A                           1
+## 17 Team B 2022-11-18 A                           2
+## 18 Team B 2022-11-25 H                           0
+## 19 Team B 2022-12-02 H                           0
+## 20 Team B 2022-12-09 A                           1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I firstly came up with a complicated solution for this using a combination of &lt;code&gt;slider::slide()&lt;/code&gt; and &lt;code&gt;rle()&lt;/code&gt; (run length encoding).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sports_df2 &amp;lt;- sports_df %&amp;gt;% 
+  group_by(team) %&amp;gt;% 
+  mutate(days_on_road = unlist(slider::slide(rle(home_or_away)$length, ~1:.x)),
+         days_on_road = if_else(home_or_away == &amp;quot;H&amp;quot;, 0L, days_on_road)) %&amp;gt;% 
+  ungroup()
+
+identical(sports_df2$days_on_road, sports_df$num_matches_away)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;These are some pretty cool functions and it was nice to know &lt;code&gt;rle()&lt;/code&gt; existed but I was never really happy with this solution as it seemed overly complex and it’s difficult to understand what the code is doing by simply reading it. So I asked a colleague to try to solve this problem and they came up with a better solution which I’m grateful for! It involves using a combination of &lt;code&gt;group_by()&lt;/code&gt; and &lt;code&gt;seq_len()&lt;/code&gt; which is a whole lot simpler to understand in my opinion.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sports_df3 &amp;lt;- sports_df2 %&amp;gt;%
+  mutate(away = cumsum(home_or_away == &amp;quot;H&amp;quot;)) %&amp;gt;%
+  group_by(team, home_or_away, away) %&amp;gt;%
+  mutate(days_on_road = seq_len(n())) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  mutate(days_on_road = if_else(home_or_away == &amp;quot;H&amp;quot;, 0L, days_on_road))
+
+identical(sports_df3$days_on_road, sports_df$num_matches_away)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I hope this is useful for some of you out there coding with R!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A couple of case_when() tricks</title>

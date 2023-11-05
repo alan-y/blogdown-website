@@ -1,0 +1,77 @@
+---
+title: Grouped Sequences in dplyr
+author: Alan Yeung
+date: '2023-11-05'
+slug: []
+categories:
+  - R
+tags:
+  - data manipulation
+  - tidyverse
+image:
+  caption: ''
+  focal_point: ''
+draft: no
+toc: false
+---
+
+For a piece of work I had to calculate the number of matches that a team plays away from home in a row, which we will call `days_on_the_road`. I was not sure how to do this with `dplyr` but it's basically a 'grouped sequence'. For this post, I've created some dummy data to illustrate this idea. The `num_matches_away` variable is what we want to mimic using some data manipulation.
+
+```{r dummy-date, message=FALSE}
+library(tidyverse)
+
+sports_df <- tibble::tribble(
+  ~team,    ~date,        ~home_or_away, ~num_matches_away,
+  "Team A", "07/10/2022", "H",           0L,
+  "Team A", "14/10/2022", "A",           1L,
+  "Team A", "21/10/2022", "A",           2L,
+  "Team A", "28/10/2022", "H",           0L,
+  "Team A", "04/11/2022", "A",           1L,
+  "Team A", "11/11/2022", "A",           2L,
+  "Team A", "18/11/2022", "A",           3L,
+  "Team A", "25/11/2022", "H",           0L,
+  "Team A", "02/12/2022", "H",           0L,
+  "Team A", "09/12/2022", "H",           0L,
+  "Team B", "07/10/2022", "H",           0L,
+  "Team B", "14/10/2022", "A",           1L,
+  "Team B", "21/10/2022", "A",           2L,
+  "Team B", "28/10/2022", "A",           3L,
+  "Team B", "04/11/2022", "H",           0L,
+  "Team B", "11/11/2022", "A",           1L,
+  "Team B", "18/11/2022", "A",           2L,
+  "Team B", "25/11/2022", "H",           0L,
+  "Team B", "02/12/2022", "H",           0L,
+  "Team B", "09/12/2022", "A",           1L
+) %>%      
+  mutate(date = as.Date(date, "%d/%m/%Y")) %>% 
+  arrange(team, date)
+
+sports_df
+```
+
+I firstly came up with a complicated solution for this using a combination of `slider::slide()` and `rle()` (run length encoding).
+
+```{r slide-solution}
+sports_df2 <- sports_df %>% 
+  group_by(team) %>% 
+  mutate(days_on_road = unlist(slider::slide(rle(home_or_away)$length, ~1:.x)),
+         days_on_road = if_else(home_or_away == "H", 0L, days_on_road)) %>% 
+  ungroup()
+
+identical(sports_df2$days_on_road, sports_df$num_matches_away)
+```
+
+These are some pretty cool functions and it was nice to know `rle()` existed but I was never really happy with this solution as it seemed overly complex and it's difficult to understand what the code is doing by simply reading it. So I asked a colleague to try to solve this problem and they came up with a better solution which I'm grateful for! It involves using a combination of `group_by()` and `seq_len()` which is a whole lot simpler to understand in my opinion.
+
+```{r grouped-seq}
+sports_df3 <- sports_df2 %>%
+  mutate(away = cumsum(home_or_away == "H")) %>%
+  group_by(team, home_or_away, away) %>%
+  mutate(days_on_road = seq_len(n())) %>%
+  ungroup() %>%
+  mutate(days_on_road = if_else(home_or_away == "H", 0L, days_on_road))
+
+identical(sports_df3$days_on_road, sports_df$num_matches_away)
+```
+
+I hope this is useful for some of you out there coding with R!

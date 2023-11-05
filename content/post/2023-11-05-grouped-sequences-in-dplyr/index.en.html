@@ -1,0 +1,92 @@
+---
+title: Grouped Sequences in dplyr
+author: Alan Yeung
+date: '2023-11-05'
+slug: []
+categories:
+  - R
+tags:
+  - data manipulation
+  - tidyverse
+image:
+  caption: ''
+  focal_point: ''
+draft: no
+toc: false
+---
+
+
+
+<p>For a piece of work I had to calculate the number of matches that a team plays away from home in a row, which we will call <code>days_on_the_road</code>. I was not sure how to do this with <code>dplyr</code> but it’s basically a ‘grouped sequence’. For this post, I’ve created some dummy data to illustrate this idea. The <code>num_matches_away</code> variable is what we want to mimic using some data manipulation.</p>
+<pre class="r"><code>library(tidyverse)
+
+sports_df &lt;- tibble::tribble(
+  ~team,    ~date,        ~home_or_away, ~num_matches_away,
+  &quot;Team A&quot;, &quot;07/10/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team A&quot;, &quot;14/10/2022&quot;, &quot;A&quot;,           1L,
+  &quot;Team A&quot;, &quot;21/10/2022&quot;, &quot;A&quot;,           2L,
+  &quot;Team A&quot;, &quot;28/10/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team A&quot;, &quot;04/11/2022&quot;, &quot;A&quot;,           1L,
+  &quot;Team A&quot;, &quot;11/11/2022&quot;, &quot;A&quot;,           2L,
+  &quot;Team A&quot;, &quot;18/11/2022&quot;, &quot;A&quot;,           3L,
+  &quot;Team A&quot;, &quot;25/11/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team A&quot;, &quot;02/12/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team A&quot;, &quot;09/12/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team B&quot;, &quot;07/10/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team B&quot;, &quot;14/10/2022&quot;, &quot;A&quot;,           1L,
+  &quot;Team B&quot;, &quot;21/10/2022&quot;, &quot;A&quot;,           2L,
+  &quot;Team B&quot;, &quot;28/10/2022&quot;, &quot;A&quot;,           3L,
+  &quot;Team B&quot;, &quot;04/11/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team B&quot;, &quot;11/11/2022&quot;, &quot;A&quot;,           1L,
+  &quot;Team B&quot;, &quot;18/11/2022&quot;, &quot;A&quot;,           2L,
+  &quot;Team B&quot;, &quot;25/11/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team B&quot;, &quot;02/12/2022&quot;, &quot;H&quot;,           0L,
+  &quot;Team B&quot;, &quot;09/12/2022&quot;, &quot;A&quot;,           1L
+) %&gt;%      
+  mutate(date = as.Date(date, &quot;%d/%m/%Y&quot;)) %&gt;% 
+  arrange(team, date)
+
+sports_df</code></pre>
+<pre><code>## # A tibble: 20 × 4
+##    team   date       home_or_away num_matches_away
+##    &lt;chr&gt;  &lt;date&gt;     &lt;chr&gt;                   &lt;int&gt;
+##  1 Team A 2022-10-07 H                           0
+##  2 Team A 2022-10-14 A                           1
+##  3 Team A 2022-10-21 A                           2
+##  4 Team A 2022-10-28 H                           0
+##  5 Team A 2022-11-04 A                           1
+##  6 Team A 2022-11-11 A                           2
+##  7 Team A 2022-11-18 A                           3
+##  8 Team A 2022-11-25 H                           0
+##  9 Team A 2022-12-02 H                           0
+## 10 Team A 2022-12-09 H                           0
+## 11 Team B 2022-10-07 H                           0
+## 12 Team B 2022-10-14 A                           1
+## 13 Team B 2022-10-21 A                           2
+## 14 Team B 2022-10-28 A                           3
+## 15 Team B 2022-11-04 H                           0
+## 16 Team B 2022-11-11 A                           1
+## 17 Team B 2022-11-18 A                           2
+## 18 Team B 2022-11-25 H                           0
+## 19 Team B 2022-12-02 H                           0
+## 20 Team B 2022-12-09 A                           1</code></pre>
+<p>I firstly came up with a complicated solution for this using a combination of <code>slider::slide()</code> and <code>rle()</code> (run length encoding).</p>
+<pre class="r"><code>sports_df2 &lt;- sports_df %&gt;% 
+  group_by(team) %&gt;% 
+  mutate(days_on_road = unlist(slider::slide(rle(home_or_away)$length, ~1:.x)),
+         days_on_road = if_else(home_or_away == &quot;H&quot;, 0L, days_on_road)) %&gt;% 
+  ungroup()
+
+identical(sports_df2$days_on_road, sports_df$num_matches_away)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>These are some pretty cool functions and it was nice to know <code>rle()</code> existed but I was never really happy with this solution as it seemed overly complex and it’s difficult to understand what the code is doing by simply reading it. So I asked a colleague to try to solve this problem and they came up with a better solution which I’m grateful for! It involves using a combination of <code>group_by()</code> and <code>seq_len()</code> which is a whole lot simpler to understand in my opinion.</p>
+<pre class="r"><code>sports_df3 &lt;- sports_df2 %&gt;%
+  mutate(away = cumsum(home_or_away == &quot;H&quot;)) %&gt;%
+  group_by(team, home_or_away, away) %&gt;%
+  mutate(days_on_road = seq_len(n())) %&gt;%
+  ungroup() %&gt;%
+  mutate(days_on_road = if_else(home_or_away == &quot;H&quot;, 0L, days_on_road))
+
+identical(sports_df3$days_on_road, sports_df$num_matches_away)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>I hope this is useful for some of you out there coding with R!</p>
