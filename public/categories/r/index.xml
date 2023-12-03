@@ -7,10 +7,119 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 07 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://alan-y.netlify.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Trying out timeplyr</title>
+      <link>https://alan-y.netlify.com/post/trying-out-timeplyr/</link>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alan-y.netlify.com/post/trying-out-timeplyr/</guid>
+      <description>
+
+
+&lt;p&gt;The &lt;a href=&#34;https://github.com/NicChr/timeplyr&#34;&gt;timeplyr&lt;/a&gt; R package, created by my colleague &lt;a href=&#34;https://github.com/NicChr&#34;&gt;Nick&lt;/a&gt;, was accepted on CRAN in October 2023. A direct quote from the CRAN page is that it provides &lt;em&gt;a set of fast tidy functions for wrangling, completing and summarising date and date-time data&lt;/em&gt;. It looks like a really neat package for working with time series data in a way consistent with what people have become used to with the tidyverse. From my chats with Nick, I believe some of the ideas for this package were inspired by problems that came up repeatedly while working with COVID-19 data. So the lesson here is that if you want to get clever solutions to problems that come up time and time again during analyses, you just have to sufficiently annoy a good programmer!&lt;/p&gt;
+&lt;p&gt;I’m going to give &lt;code&gt;timeplyr&lt;/code&gt; a quick try out here, with the help of a &lt;a href=&#34;https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales&#34;&gt;supermarket sales dataset&lt;/a&gt; that I can handily pilfer from Kaggle. To keep the dataset simple, I’ve dropped some variables that I’ve considered surplus to requirements for this try out.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(janitor)
+library(timeplyr)
+
+sales_df &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/sushantag9/Supermarket-Sales-Data-Analysis/master/supermarket_sales%20-%20Sheet1.csv&amp;quot;,
+                     show_col_types = FALSE, name_repair = make_clean_names) %&amp;gt;% 
+    mutate(date_time = mdy_hms(paste(date, time)), .after = invoice_id) %&amp;gt;% 
+    select(-(date:rating), -city, -gender)
+
+glimpse(sales_df)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Rows: 1,000
+## Columns: 9
+## $ invoice_id    &amp;lt;chr&amp;gt; &amp;quot;750-67-8428&amp;quot;, &amp;quot;226-31-3081&amp;quot;, &amp;quot;631-41-3108&amp;quot;, &amp;quot;123-19-117…
+## $ date_time     &amp;lt;dttm&amp;gt; 2019-01-05 13:08:00, 2019-03-08 10:29:00, 2019-03-03 13…
+## $ branch        &amp;lt;chr&amp;gt; &amp;quot;A&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;A&amp;quot;, &amp;quot;A&amp;quot;, &amp;quot;A&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;A&amp;quot;, &amp;quot;C&amp;quot;, &amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;…
+## $ customer_type &amp;lt;chr&amp;gt; &amp;quot;Member&amp;quot;, &amp;quot;Normal&amp;quot;, &amp;quot;Normal&amp;quot;, &amp;quot;Member&amp;quot;, &amp;quot;Normal&amp;quot;, &amp;quot;Norma…
+## $ product_line  &amp;lt;chr&amp;gt; &amp;quot;Health and beauty&amp;quot;, &amp;quot;Electronic accessories&amp;quot;, &amp;quot;Home and…
+## $ unit_price    &amp;lt;dbl&amp;gt; 74.69, 15.28, 46.33, 58.22, 86.31, 85.39, 68.84, 73.56, …
+## $ quantity      &amp;lt;dbl&amp;gt; 7, 5, 7, 8, 7, 7, 6, 10, 2, 3, 4, 4, 5, 10, 10, 6, 7, 6,…
+## $ tax_5_percent &amp;lt;dbl&amp;gt; 26.1415, 3.8200, 16.2155, 23.2880, 30.2085, 29.8865, 20.…
+## $ total         &amp;lt;dbl&amp;gt; 548.9715, 80.2200, 340.5255, 489.0480, 634.3785, 627.616…&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As there are many sales per day, I’ll start with aggregating up to get daily sales for each branch, which we can do with &lt;code&gt;time_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;daily_df &amp;lt;- sales_df %&amp;gt;% 
+    group_by(branch) %&amp;gt;% 
+    time_by(date_time, &amp;quot;day&amp;quot;, .add = TRUE, time_floor = TRUE) %&amp;gt;% 
+    summarise(daily_total = sum(total), .groups = &amp;quot;drop&amp;quot;)
+
+daily_df&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 263 × 3
+##    branch date_time           daily_total
+##    &amp;lt;chr&amp;gt;  &amp;lt;dttm&amp;gt;                    &amp;lt;dbl&amp;gt;
+##  1 A      2019-01-01 00:00:00       2371.
+##  2 A      2019-01-02 00:00:00        307.
+##  3 A      2019-01-03 00:00:00        937.
+##  4 A      2019-01-04 00:00:00        483.
+##  5 A      2019-01-05 00:00:00       2025.
+##  6 A      2019-01-06 00:00:00       1310.
+##  7 A      2019-01-07 00:00:00       1106.
+##  8 A      2019-01-08 00:00:00        683.
+##  9 A      2019-01-09 00:00:00        202.
+## 10 A      2019-01-10 00:00:00        731.
+## # ℹ 253 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can plot this data quickly using &lt;code&gt;time_ggplot()&lt;/code&gt; which is flexible enough to allow facets as well - we’ll use this here as the lines for each branch overlap a lot. It also has nice defaults to ensure the x-axis does not get overly cluttered with text.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;time_ggplot(daily_df, date_time, daily_total, group = branch, facet = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://alan-y.netlify.com/post/trying-out-timeplyr/index.en_files/figure-html/time-ggplot-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another thing &lt;code&gt;timeplyr&lt;/code&gt; offers is to fill in missing dates in a dataset using &lt;code&gt;time_complete()&lt;/code&gt;. Across the 3 branches, there are 4 days missing and these should have sales of zero which didn’t appear in the first plot. We’ll do some data manipulation to clearly shows the points that have been added in and to also demonstrate that standard ggplot2 operations can be added in with &lt;code&gt;time_ggplot()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;daily_df2 &amp;lt;- daily_df %&amp;gt;% 
+    time_complete(date_time, .by = branch, time_by = &amp;quot;day&amp;quot;, 
+                  fill = list(daily_total = 0))
+
+anti_join(daily_df2, daily_df, join_by(branch, date_time))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4 × 3
+##   branch date_time           daily_total
+##   &amp;lt;chr&amp;gt;  &amp;lt;dttm&amp;gt;                    &amp;lt;dbl&amp;gt;
+## 1 B      2019-01-11 00:00:00           0
+## 2 B      2019-01-23 00:00:00           0
+## 3 B      2019-02-01 00:00:00           0
+## 4 C      2019-03-22 00:00:00           0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;daily_df2 %&amp;gt;% 
+    mutate(zero = if_else(daily_total == 0, &amp;quot;Zero&amp;quot;, NA_character_)) %&amp;gt;% 
+    time_ggplot(date_time, daily_total, group = branch, facet = TRUE) +
+    geom_point(aes(colour = zero), show.legend = FALSE) +
+    labs(x = NULL, y = &amp;quot;Daily Sales&amp;quot;) +
+    theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://alan-y.netlify.com/post/trying-out-timeplyr/index.en_files/figure-html/time-complete-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To finish off, let’s take a quick look at weekly sales by customer type, just to show another variation with &lt;code&gt;time_by()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;weekly_df &amp;lt;- sales_df %&amp;gt;% 
+    group_by(branch, customer_type) %&amp;gt;% 
+    time_by(date_time, &amp;quot;week&amp;quot;, .add = TRUE, time_floor = TRUE) %&amp;gt;% 
+    summarise(weekly_total = sum(total), .groups = &amp;quot;drop&amp;quot;)
+
+weekly_df&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 78 × 4
+##    branch customer_type date_time           weekly_total
+##    &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;         &amp;lt;dttm&amp;gt;                     &amp;lt;dbl&amp;gt;
+##  1 A      Member        2018-12-31 00:00:00        3642.
+##  2 A      Member        2019-01-07 00:00:00        4142.
+##  3 A      Member        2019-01-14 00:00:00        6202.
+##  4 A      Member        2019-01-21 00:00:00        4427.
+##  5 A      Member        2019-01-28 00:00:00        5771.
+##  6 A      Member        2019-02-04 00:00:00        2677.
+##  7 A      Member        2019-02-11 00:00:00        2361.
+##  8 A      Member        2019-02-18 00:00:00        4232.
+##  9 A      Member        2019-02-25 00:00:00        3359.
+## 10 A      Member        2019-03-04 00:00:00        5791.
+## # ℹ 68 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(weekly_df, aes(x = date_time, y = weekly_total, fill = customer_type)) +
+    geom_bar(stat = &amp;quot;identity&amp;quot;) +
+    facet_grid(rows = vars(branch)) +
+    scale_x_datetime(date_breaks = &amp;quot;2 week&amp;quot;, date_labels = &amp;quot;%d %b\n%Y&amp;quot;) +
+    labs(x = NULL, y = &amp;quot;Weekly Sales&amp;quot;) +
+    scale_fill_hue(&amp;quot;Customer Type&amp;quot;) +
+    theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://alan-y.netlify.com/post/trying-out-timeplyr/index.en_files/figure-html/weekly-1.svg&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;This package definitely looks useful to me and does allow you to e.g. easily summarise and plot time-series data according to different time units. There’s a lot more that can be done with &lt;code&gt;timeplyr&lt;/code&gt; and it’s been designed with efficiency in mind so the functions are generally speedy. If you’re interested to find out more about it, then take a look at the &lt;a href=&#34;https://github.com/NicChr/timeplyr&#34;&gt;Github page&lt;/a&gt; which has ample examples already on it.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Grouped Sequences in dplyr Part 2</title>

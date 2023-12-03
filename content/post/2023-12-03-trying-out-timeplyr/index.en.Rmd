@@ -1,0 +1,88 @@
+---
+title: Trying out timeplyr
+author: Alan Yeung
+date: '2023-12-03'
+slug: trying-out-timeplyr
+categories:
+  - R
+tags:
+  - data manipulation
+  - time-series
+image:
+  caption: ''
+  focal_point: ''
+draft: yes
+toc: false
+---
+
+The [timeplyr](https://github.com/NicChr/timeplyr) R package, created by my colleague [Nick](https://github.com/NicChr), was accepted on CRAN in October 2023. A direct quote from the CRAN page is that it provides *a set of fast tidy functions for wrangling, completing and summarising date and date-time data*. It looks like a really neat package for working with time series data in a way consistent with what people have become used to with the tidyverse. From my chats with Nick, I believe some of the ideas for this package were inspired by problems that came up repeatedly while working with COVID-19 data. So the lesson here is that if you want to get clever solutions to problems that come up time and time again during analyses, you just have to sufficiently annoy a good programmer!  
+
+I'm going to give `timeplyr` a quick try out here, with the help of a [supermarket sales dataset](https://www.kaggle.com/datasets/aungpyaeap/supermarket-sales) that I can handily pilfer from Kaggle. To keep the dataset simple, I've dropped some variables that I've considered surplus to requirements for this try out.
+
+```{r load-data, message=FALSE}
+library(tidyverse)
+library(janitor)
+library(timeplyr)
+
+sales_df <- read_csv("https://raw.githubusercontent.com/sushantag9/Supermarket-Sales-Data-Analysis/master/supermarket_sales%20-%20Sheet1.csv",
+                     show_col_types = FALSE, name_repair = make_clean_names) %>% 
+    mutate(date_time = mdy_hms(paste(date, time)), .after = invoice_id) %>% 
+    select(-(date:rating), -city, -gender)
+
+glimpse(sales_df)
+```
+
+As there are many sales per day, I'll start with aggregating up to get daily sales for each branch, which we can do with `time_by()`.
+
+```{r time-by}
+daily_df <- sales_df %>% 
+    group_by(branch) %>% 
+    time_by(date_time, "day", .add = TRUE, time_floor = TRUE) %>% 
+    summarise(daily_total = sum(total), .groups = "drop")
+
+daily_df
+```
+
+We can plot this data quickly using `time_ggplot()` which is flexible enough to allow facets as well - we'll use this here as the lines for each branch overlap a lot. It also has nice defaults to ensure the x-axis does not get overly cluttered with text.
+
+```{r time-ggplot}
+time_ggplot(daily_df, date_time, daily_total, group = branch, facet = TRUE)
+```
+
+Another thing `timeplyr` offers is to fill in missing dates in a dataset using `time_complete()`. Across the 3 branches, there are 4 days missing and these should have sales of zero which didn't appear in the first plot. We'll do some data manipulation to clearly shows the points that have been added in and to also demonstrate that standard ggplot2 operations can be added in with `time_ggplot()`.
+
+```{r time-complete}
+daily_df2 <- daily_df %>% 
+    time_complete(date_time, .by = branch, time_by = "day", 
+                  fill = list(daily_total = 0))
+
+anti_join(daily_df2, daily_df, join_by(branch, date_time))
+
+daily_df2 %>% 
+    mutate(zero = if_else(daily_total == 0, "Zero", NA_character_)) %>% 
+    time_ggplot(date_time, daily_total, group = branch, facet = TRUE) +
+    geom_point(aes(colour = zero), show.legend = FALSE) +
+    labs(x = NULL, y = "Daily Sales") +
+    theme(legend.position = "top")
+```
+
+To finish off, let's take a quick look at weekly sales by customer type, just to show another variation with `time_by()`.
+
+```{r weekly}
+weekly_df <- sales_df %>% 
+    group_by(branch, customer_type) %>% 
+    time_by(date_time, "week", .add = TRUE, time_floor = TRUE) %>% 
+    summarise(weekly_total = sum(total), .groups = "drop")
+
+weekly_df
+
+ggplot(weekly_df, aes(x = date_time, y = weekly_total, fill = customer_type)) +
+    geom_bar(stat = "identity") +
+    facet_grid(rows = vars(branch)) +
+    scale_x_datetime(date_breaks = "2 week", date_labels = "%d %b\n%Y") +
+    labs(x = NULL, y = "Weekly Sales") +
+    scale_fill_hue("Customer Type") +
+    theme(legend.position = "top")
+```
+
+This package definitely looks useful to me and does allow you to e.g. easily summarise and plot time-series data according to different time units. There's a lot more that can be done with `timeplyr` and it's been designed with efficiency in mind so the functions are generally speedy. If you're interested to find out more about it, then take a look at the [Github page](https://github.com/NicChr/timeplyr) which has ample examples already on it.
