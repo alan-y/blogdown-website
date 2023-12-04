@@ -8,7 +8,7 @@ image:
   caption: ''
   focal_point: ""
 projects: []
-publication: '*BMJ*'
+publication: '*Addiction*'
 publication_short: ""
 publication_types:
 - "2"
