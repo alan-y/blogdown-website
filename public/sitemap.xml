@@ -1,270 +1,163 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://alan-y.netlify.com/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/categories/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/data-manipulation/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/2023-11-05-grouped-sequences-in-dplyr/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/categories/r/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/tidyverse/</loc>
     <lastmod>2023-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/couple-of-casewhen-tricks/</loc>
     <lastmod>2023-10-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/dates/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/summarising-dates-with-missing-values/</loc>
     <lastmod>2023-10-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/gganimate/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/ggimage/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/ggplot2/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/categories/personal/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/rafa-21-slams/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/tennis/</loc>
     <lastmod>2022-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/filtering-string-dplyr/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/tidy-evaluation/</loc>
     <lastmod>2020-05-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/r-packages/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/updating-packages-on-a-drat-repo/</loc>
     <lastmod>2020-05-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/scot-babynames/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/shiny/</loc>
     <lastmod>2020-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/api/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/open-data/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/trying-ckanr/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/addins/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/objectremover-rstudio-addin/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/rstudio/</loc>
     <lastmod>2019-08-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/ckan-dbplyr/</loc>
     <lastmod>2019-07-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/ckan-api/</loc>
     <lastmod>2019-06-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/glasgow-r-user-group/</loc>
     <lastmod>2019-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/r-events/</loc>
     <lastmod>2019-05-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/bio/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/blogdown/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/post/post-number-one/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/bookdown/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/project/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/r/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/project/r-resources-tips/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/tags/training/</loc>
     <lastmod>2019-05-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://alan-y.netlify.com/courses/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://alan-y.netlify.com/project/phstemplates/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/talk/</loc>
     <lastmod>2019-03-26T11:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/talk/redoc/</loc>
     <lastmod>2019-03-26T11:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/project/objectremover/</loc>
     <lastmod>2019-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/privacy/</loc>
     <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/authors/admin/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/authors/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/blogroll/</loc>
-  </url>
-  
-  <url>
-    <loc>https://alan-y.netlify.com/courses/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://alan-y.netlify.com/publication_types/</loc>
   </url>
-  
 </urlset>

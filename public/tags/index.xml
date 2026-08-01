@@ -5,183 +5,142 @@
     <link>https://alan-y.netlify.com/tags/</link>
     <description>Recent content in Tags on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>data manipulation</title>
       <link>https://alan-y.netlify.com/tags/data-manipulation/</link>
       <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/data-manipulation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>tidyverse</title>
       <link>https://alan-y.netlify.com/tags/tidyverse/</link>
       <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/tidyverse/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>dates</title>
       <link>https://alan-y.netlify.com/tags/dates/</link>
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/dates/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>gganimate</title>
       <link>https://alan-y.netlify.com/tags/gganimate/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/gganimate/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ggimage</title>
       <link>https://alan-y.netlify.com/tags/ggimage/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/ggimage/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ggplot2</title>
       <link>https://alan-y.netlify.com/tags/ggplot2/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/ggplot2/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Tennis</title>
       <link>https://alan-y.netlify.com/tags/tennis/</link>
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/tennis/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>tidy-evaluation</title>
       <link>https://alan-y.netlify.com/tags/tidy-evaluation/</link>
       <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/tidy-evaluation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R-packages</title>
       <link>https://alan-y.netlify.com/tags/r-packages/</link>
       <pubDate>Sun, 03 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/r-packages/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Shiny</title>
       <link>https://alan-y.netlify.com/tags/shiny/</link>
       <pubDate>Sat, 25 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/shiny/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>API</title>
       <link>https://alan-y.netlify.com/tags/api/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/api/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>open-data</title>
       <link>https://alan-y.netlify.com/tags/open-data/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/open-data/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Addins</title>
       <link>https://alan-y.netlify.com/tags/addins/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/addins/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RStudio</title>
       <link>https://alan-y.netlify.com/tags/rstudio/</link>
       <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/rstudio/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R-events</title>
       <link>https://alan-y.netlify.com/tags/r-events/</link>
       <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/r-events/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>blogdown</title>
       <link>https://alan-y.netlify.com/tags/blogdown/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/blogdown/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>bookdown</title>
       <link>https://alan-y.netlify.com/tags/bookdown/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/bookdown/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>https://alan-y.netlify.com/tags/r/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/r/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>training</title>
       <link>https://alan-y.netlify.com/tags/training/</link>
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/tags/training/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

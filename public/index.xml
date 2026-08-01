@@ -5,7 +5,7 @@
     <link>https://alan-y.netlify.com/</link>
     <description>Recent content on Alan Yeung</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate>
     
@@ -40,6 +40,15 @@
     </item>
     
     <item>
+      <title>Courses</title>
+      <link>https://alan-y.netlify.com/courses/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://alan-y.netlify.com/courses/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://alan-y.netlify.com/talk/</link>
       <pubDate>Tue, 26 Mar 2019 11:00:00 +0000</pubDate>
@@ -54,17 +63,8 @@
       <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
       
       <guid>https://alan-y.netlify.com/privacy/</guid>
-      <description>&lt;p&gt;Any original content created by me for this website such as blog posts are licensed under the &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0&#34; target=&#34;_blank&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Any original content created by me for this website such as blog posts are licensed under the &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0&#34;&gt;Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link></link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid></guid>
-      <description></description>
     </item>
     
     <item>
@@ -73,18 +73,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/blogroll/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com&#34; target=&#34;_blank&#34;&gt;R Bloggers&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://yihui.name/en&#34; target=&#34;_blank&#34;&gt;Yihui Xie&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.r-bloggers.com&#34;&gt;R Bloggers&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://yihui.name/en&#34;&gt;Yihui Xie&lt;/a&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Courses</title>
-      <link>https://alan-y.netlify.com/courses/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/courses/</guid>
-      <description></description>
     </item>
     
   </channel>
