@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Nov 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,25 +15,16 @@
     <item>
       <title>data manipulation</title>
       <link>https://alan-y.netlify.com/tags/data-manipulation/</link>
-      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/data-manipulation/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>time-series</title>
-      <link>https://alan-y.netlify.com/tags/time-series/</link>
-      <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/time-series/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tidyverse</title>
       <link>https://alan-y.netlify.com/tags/tidyverse/</link>
-      <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/tidyverse/</guid>
       <description></description>
@@ -45,96 +36,6 @@
       <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/dates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DAA</title>
-      <link>https://alan-y.netlify.com/tags/daa/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/daa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Drugs</title>
-      <link>https://alan-y.netlify.com/tags/drugs/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/drugs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWID</title>
-      <link>https://alan-y.netlify.com/tags/pwid/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/pwid/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Naloxone</title>
-      <link>https://alan-y.netlify.com/tags/naloxone/</link>
-      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/naloxone/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCV</title>
-      <link>https://alan-y.netlify.com/tags/hcv/</link>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Liver Disease</title>
-      <link>https://alan-y.netlify.com/tags/liver-disease/</link>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/liver-disease/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mortality</title>
-      <link>https://alan-y.netlify.com/tags/mortality/</link>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/mortality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OAT</title>
-      <link>https://alan-y.netlify.com/tags/oat/</link>
-      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/oat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cirrhosis</title>
-      <link>https://alan-y.netlify.com/tags/cirrhosis/</link>
-      <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/cirrhosis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HCC</title>
-      <link>https://alan-y.netlify.com/tags/hcc/</link>
-      <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hcc/</guid>
       <description></description>
     </item>
     
@@ -171,78 +72,6 @@
       <pubDate>Sun, 13 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/tennis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BBV</title>
-      <link>https://alan-y.netlify.com/tags/bbv/</link>
-      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/bbv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>COVID-19</title>
-      <link>https://alan-y.netlify.com/tags/covid-19/</link>
-      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/covid-19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reinfection</title>
-      <link>https://alan-y.netlify.com/tags/reinfection/</link>
-      <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/reinfection/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Meta-analysis</title>
-      <link>https://alan-y.netlify.com/tags/meta-analysis/</link>
-      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/meta-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWUD</title>
-      <link>https://alan-y.netlify.com/tags/pwud/</link>
-      <pubDate>Sun, 30 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/pwud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HIV</title>
-      <link>https://alan-y.netlify.com/tags/hiv/</link>
-      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hiv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PrEP</title>
-      <link>https://alan-y.netlify.com/tags/prep/</link>
-      <pubDate>Wed, 13 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/prep/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Incidence</title>
-      <link>https://alan-y.netlify.com/tags/incidence/</link>
-      <pubDate>Mon, 07 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/incidence/</guid>
       <description></description>
     </item>
     
@@ -351,51 +180,6 @@
       <pubDate>Tue, 07 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alan-y.netlify.com/tags/training/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>NPS</title>
-      <link>https://alan-y.netlify.com/tags/nps/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/nps/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HBV</title>
-      <link>https://alan-y.netlify.com/tags/hbv/</link>
-      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/hbv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>prison</title>
-      <link>https://alan-y.netlify.com/tags/prison/</link>
-      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/prison/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vaccination</title>
-      <link>https://alan-y.netlify.com/tags/vaccination/</link>
-      <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/vaccination/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>statistics</title>
-      <link>https://alan-y.netlify.com/tags/statistics/</link>
-      <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/tags/statistics/</guid>
       <description></description>
     </item>
     

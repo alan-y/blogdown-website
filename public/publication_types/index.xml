@@ -7,37 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
-    <lastBuildDate>Tue, 19 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alan-y.netlify.com/publication_types/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>2</title>
-      <link>https://alan-y.netlify.com/publication_types/2/</link>
-      <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/publication_types/2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>4</title>
-      <link>https://alan-y.netlify.com/publication_types/4/</link>
-      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/publication_types/4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>7</title>
-      <link>https://alan-y.netlify.com/publication_types/7/</link>
-      <pubDate>Sun, 24 Jul 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/publication_types/7/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
