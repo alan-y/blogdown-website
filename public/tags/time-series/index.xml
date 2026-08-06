@@ -5,48 +5,16 @@
     <link>https://alan-y.netlify.com/tags/time-series/</link>
     <description>Recent content in time-series on Alan Yeung</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <copyright>&amp;copy; 2019 Alan Yeung</copyright>
     <lastBuildDate>Sun, 03 Dec 2023 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://alan-y.netlify.com/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://alan-y.netlify.com/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Trying out timeplyr</title>
       <link>https://alan-y.netlify.com/post/trying-out-timeplyr/</link>
       <pubDate>Sun, 03 Dec 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alan-y.netlify.com/post/trying-out-timeplyr/</guid>
       <description>The timeplyr R package, created by my colleague Nick, was accepted on CRAN in October 2023. A direct quote from the CRAN page is that it provides a set of fast tidy functions for wrangling, completing and summarising date and date-time data. It looks like a really neat package for working with time series data in a way consistent with what people have become used to with the tidyverse. From my chats with Nick, I believe some of the ideas for this package were inspired by problems that came up repeatedly while working with COVID-19 data.</description>
     </item>
-    
-    <item>
-      <title>National increase in the community supply of take-home naloxone associated with a mass media campaign in Scotland: a segmented time series analysis</title>
-      <link>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</link>
-      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/publication/journal-article_naloxone_media/</guid>
-      <description>The aim of this study was to assess the effect of the &amp;lsquo;How to save a life&amp;rsquo; campaign on the supply of take-home naloxone</description>
-    </item>
-    
-    <item>
-      <title>Examining the impact of the first wave of COVID-19 and associated control measures on interventions to prevent blood-borne viruses among people who inject drugs in Scotland: an interrupted time series study</title>
-      <link>https://alan-y.netlify.com/publication/journal-article-covid_bbv_its/</link>
-      <pubDate>Mon, 31 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/publication/journal-article-covid_bbv_its/</guid>
-      <description>We examined the impact of the first wave of COVID-19 in Scotland on drug and BBV services.</description>
-    </item>
-    
-    <item>
-      <title>Assessing the impact of a temporary class drug order on ethylphenidate-related infections among people who inject drugs in Lothian, Scotland: an interrupted time-series analysis</title>
-      <link>https://alan-y.netlify.com/publication/journal-article_nps_tcdo/</link>
-      <pubDate>Sat, 10 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://alan-y.netlify.com/publication/journal-article_nps_tcdo/</guid>
-      <description>In April 2015, the UK government enacted a temporary class drug order (TCDO) on ethylphenidate in response to reported harms associated with its use, in particular an outbreak of infections among people who inject drugs (PWID) in Lothian, Scotland.</description>
-    </item>
-    
   </channel>
 </rss>
